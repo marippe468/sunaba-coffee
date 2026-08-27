@@ -1,3 +1,4 @@
+```css
 * {
   box-sizing: border-box;
 }
@@ -9,13 +10,14 @@ html {
 body {
   margin: 0;
   font-family:
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
+    "Segoe UI",
+    "Noto Sans JP",
+    "Yu Gothic UI",
     "Meiryo",
     sans-serif;
   color: #4a4038;
   background: #f8f5ef;
-  line-height: 1.8;
+  line-height: 1.55;
 }
 
 
@@ -25,52 +27,25 @@ body {
 
 .header {
   text-align: center;
-  padding: 55px 20px 35px;
+  padding: 35px 20px 22px;
   background: #f3eee5;
 }
 
 .header h1 {
   margin: 0;
-  font-family:
-    "Yu Mincho",
-    "Hiragino Mincho ProN",
-    serif;
-  font-size: 42px;
+  font-size: 38px;
   letter-spacing: 0.12em;
   font-weight: 600;
 }
 
-.header-sub {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  font-size: 17px;
-  letter-spacing: 0.08em;
-}
-
-.header-sub strong {
-  font-size: 21px;
-  font-weight: 600;
-}
-
-.header-sub span {
-  font-size: 16px;
-}
-
-
-/* =========================
-   営業状況
-========================= */
-
 #business-status {
   display: inline-block;
-  margin-top: 22px;
-  padding: 7px 22px;
+  margin-top: 14px;
+  padding: 6px 20px;
   border-radius: 30px;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 0.08em;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
 }
 
 .status-open {
@@ -102,8 +77,8 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px 28px;
-  padding: 15px 20px;
+  gap: 6px 25px;
+  padding: 11px 20px;
   background: #fff;
   border-bottom: 1px solid #e5ddd2;
   position: sticky;
@@ -114,9 +89,9 @@ body {
 .main-nav a {
   color: #5a4b40;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 5px 0;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 0;
 }
 
 .main-nav a:hover {
@@ -131,27 +106,23 @@ body {
 .section {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 80px 25px;
+  padding: 60px 25px;
 }
 
 .section h2 {
-  margin: 0 0 45px;
+  margin: 0 0 35px;
   text-align: center;
-  font-family:
-    "Yu Mincho",
-    "Hiragino Mincho ProN",
-    serif;
-  font-size: 32px;
+  font-size: 29px;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
 }
 
 .section h2::after {
   content: "";
   display: block;
-  width: 45px;
-  height: 2px;
-  margin: 18px auto 0;
+  width: 40px;
+  height: 1px;
+  margin: 13px auto 0;
   background: #9d8977;
 }
 
@@ -167,7 +138,7 @@ body {
 
 .hero img {
   width: 100%;
-  height: 600px;
+  height: 560px;
   display: block;
   object-fit: cover;
 }
@@ -175,37 +146,28 @@ body {
 .hero-text {
   position: absolute;
   left: 50%;
-  bottom: 55px;
+  bottom: 40px;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 850px;
-  padding: 30px 25px;
+  max-width: 900px;
+  padding: 25px 20px;
   text-align: center;
   color: #fff;
-  background: rgba(50, 42, 36, 0.58);
-  border-radius: 5px;
+  background: rgba(50, 42, 36, 0.55);
+  border-radius: 4px;
 }
 
 .hero-text h2 {
-  margin: 0 0 5px;
-  font-family:
-    "Yu Mincho",
-    "Hiragino Mincho ProN",
-    serif;
-  font-size: 40px;
-  letter-spacing: 0.15em;
-}
-
-.hero-text h3 {
   margin: 0 0 10px;
-  font-size: 21px;
-  font-weight: normal;
-  letter-spacing: 0.08em;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
 }
 
 .hero-text p {
-  margin: 5px 0;
+  margin: 0;
   font-size: 16px;
+  letter-spacing: 0.04em;
 }
 
 
@@ -215,30 +177,30 @@ body {
 
 .instagram-top {
   text-align: center;
-  padding: 55px 20px;
+  padding: 45px 20px;
   background: #fff;
 }
 
 .instagram-top h2 {
-  margin: 0 0 15px;
-  font-size: 28px;
-  letter-spacing: 0.08em;
+  margin: 0 0 12px;
+  font-size: 25px;
+  letter-spacing: 0.06em;
 }
 
 .instagram-top p {
-  margin: 0 0 25px;
-  font-size: 15px;
+  margin: 0 0 20px;
+  font-size: 14px;
 }
 
 .instagram-button {
   display: inline-block;
-  padding: 11px 28px;
+  padding: 9px 25px;
   color: #fff;
   background: #6e625a;
   text-decoration: none;
   border-radius: 30px;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .instagram-button:hover {
@@ -263,10 +225,10 @@ body {
 
 .news-item {
   display: grid;
-  grid-template-columns: 120px 1fr 25px;
-  gap: 15px;
+  grid-template-columns: 110px 1fr 20px;
+  gap: 12px;
   align-items: center;
-  padding: 20px 25px;
+  padding: 16px 20px;
   color: #4a4038;
   text-decoration: none;
   border-bottom: 1px solid #e5ddd2;
@@ -277,16 +239,16 @@ body {
 }
 
 .news-date {
-  font-size: 13px;
+  font-size: 12px;
   color: #8a7a6d;
 }
 
 .news-title {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .news-arrow {
-  font-size: 24px;
+  font-size: 21px;
   text-align: right;
 }
 
@@ -303,18 +265,18 @@ body {
 
 .calendar-guide {
   text-align: center;
-  margin: -20px 0 30px;
+  margin: -12px 0 25px;
   color: #8b7c70;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .calendar-slider {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   max-width: 1100px;
   margin: 0 auto;
   overflow-x: auto;
-  padding: 5px 5px 20px;
+  padding: 5px 5px 15px;
   scroll-snap-type: x mandatory;
 }
 
@@ -323,44 +285,44 @@ body {
   scroll-snap-align: start;
   max-width: 900px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 20px;
   background: #faf8f4;
   border: 1px solid #e4ddd4;
-  border-radius: 8px;
+  border-radius: 7px;
 }
 
 .calendar h3 {
-  margin: 0 0 20px;
+  margin: 0 0 15px;
   text-align: center;
-  font-size: 21px;
+  font-size: 19px;
   font-weight: 500;
 }
 
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  gap: 4px;
 }
 
 .weekday {
-  padding: 8px 2px;
+  padding: 6px 2px;
   text-align: center;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: 600;
   background: #eee8df;
 }
 
 .day {
-  min-height: 75px;
-  padding: 7px;
+  min-height: 68px;
+  padding: 6px;
   background: #fff;
   border: 1px solid #eee7de;
   position: relative;
 }
 
 .day-number {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .day.empty {
@@ -378,9 +340,9 @@ body {
 
 .holiday-text,
 .event-text {
-  margin-top: 5px;
-  font-size: 11px;
-  font-weight: bold;
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 600;
 }
 
 .holiday-text {
@@ -399,29 +361,33 @@ body {
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 55px;
+  gap: 45px;
   align-items: center;
 }
 
 .about-image img {
   width: 100%;
   display: block;
-  border-radius: 5px;
+  border-radius: 4px;
+}
+
+.about-text {
+  text-align: center;
 }
 
 .about-text h3 {
-  margin-top: 0;
-  font-size: 23px;
+  margin: 0 0 20px;
+  font-size: 22px;
   font-weight: 500;
 }
 
 .about-text p {
-  margin: 0 0 20px;
+  margin: 0 0 15px;
 }
 
 .strong-text {
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 17px;
 }
 
 
@@ -431,47 +397,47 @@ body {
 
 .menu-title-image {
   max-width: 700px;
-  margin: 0 auto 45px;
+  margin: 0 auto 35px;
   text-align: center;
 }
 
 .menu-title-image img {
   width: 100%;
   display: block;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .menu-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  gap: 20px;
 }
 
 .menu-card {
-  padding: 28px;
+  padding: 23px;
   background: #fff;
   border: 1px solid #e6ded4;
-  border-radius: 7px;
+  border-radius: 6px;
 }
 
 .menu-card h3 {
-  margin: 0 0 20px;
-  font-size: 22px;
+  margin: 0 0 15px;
+  font-size: 20px;
   font-weight: 500;
 }
 
 .menu-card h3 small {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: normal;
 }
 
 .menu-row {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
-  padding: 12px 0;
+  gap: 12px;
+  padding: 9px 0;
   border-bottom: 1px dotted #d9d0c6;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .menu-row:last-child {
@@ -479,22 +445,22 @@ body {
 }
 
 .menu-note {
-  margin: 18px 0 0;
-  font-size: 12px;
+  margin: 14px 0 0;
+  font-size: 11px;
   color: #8b7c70;
 }
 
 .coffee-menu {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   align-items: center;
 }
 
 .coffee-menu > img {
-  width: 38%;
-  height: 180px;
+  width: 36%;
+  height: 165px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .coffee-menu-content {
@@ -515,19 +481,23 @@ body {
 
 .owner-box {
   display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 55px;
+  grid-template-columns: 340px 1fr;
+  gap: 45px;
   align-items: center;
 }
 
 .owner-image img {
   width: 100%;
   display: block;
-  border-radius: 5px;
+  border-radius: 4px;
+}
+
+.owner-text {
+  text-align: center;
 }
 
 .owner-text p {
-  margin: 0 0 22px;
+  margin: 0 0 17px;
 }
 
 
@@ -541,13 +511,13 @@ body {
 
 .seats-image {
   max-width: 800px;
-  margin: 0 auto 35px;
+  margin: 0 auto 25px;
 }
 
 .seats-image img {
   width: 100%;
   display: block;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .seats-text {
@@ -556,26 +526,26 @@ body {
 }
 
 .seats-text p {
-  margin: 8px 0;
-  font-size: 17px;
+  margin: 6px 0;
+  font-size: 16px;
 }
 
 .pet-ok {
   display: inline-block;
-  margin: 22px 0 !important;
-  padding: 5px 20px;
+  margin: 17px 0 !important;
+  padding: 4px 18px;
   border: 1px solid #9d8977;
   border-radius: 25px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .parking-title {
-  margin-top: 25px !important;
-  font-weight: bold;
+  margin-top: 20px !important;
+  font-weight: 600;
 }
 
 .parking-note {
-  font-size: 14px !important;
+  font-size: 13px !important;
   color: #8a7a6d;
 }
 
@@ -594,12 +564,13 @@ body {
 .info-box {
   background: #faf8f4;
   border: 1px solid #e5ddd2;
-  border-radius: 7px;
+  border-radius: 6px;
   overflow: hidden;
 }
 
 .info-item {
-  padding: 22px 25px;
+  padding: 18px 20px;
+  text-align: center;
   border-bottom: 1px solid #e5ddd2;
 }
 
@@ -608,28 +579,29 @@ body {
 }
 
 .info-label {
-  margin-bottom: 7px;
-  font-weight: bold;
-  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 13px;
   color: #806f61;
 }
 
 .address-map {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   align-items: center;
+  text-align: center;
 }
 
 .map-button,
 .phone-button {
   display: inline-block;
-  padding: 8px 17px;
+  padding: 7px 15px;
   color: #fff;
   background: #6e625a;
   text-decoration: none;
   border-radius: 25px;
-  font-size: 13px;
+  font-size: 12px;
   white-space: nowrap;
 }
 
@@ -639,9 +611,9 @@ body {
 }
 
 .phone {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 
@@ -650,61 +622,46 @@ body {
 ========================= */
 
 footer {
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
   background: #403a35;
   color: #fff;
 }
 
 .footer-name {
-  font-family:
-    "Yu Mincho",
-    "Hiragino Mincho ProN",
-    serif;
-  font-size: 25px;
+  font-size: 23px;
   letter-spacing: 0.12em;
 }
 
 .footer-message {
-  margin-top: 12px;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.footer-sub {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 13px;
-  opacity: 0.9;
 }
 
 .footer-sns {
   display: flex;
   justify-content: center;
-  gap: 18px;
-  margin: 22px 0;
+  gap: 15px;
+  margin: 18px 0;
 }
 
 .footer-sns a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   color: #403a35;
   background: #fff;
   border-radius: 50%;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.footer-sns a:hover {
-  opacity: 0.7;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 footer p {
   margin: 0;
-  font-size: 12px;
+  font-size: 11px;
   opacity: 0.8;
 }
 
@@ -715,65 +672,88 @@ footer p {
 
 @media (max-width: 768px) {
 
+  body {
+    line-height: 1.5;
+  }
+
+
   .header {
-    padding: 40px 15px 28px;
+    padding: 18px 15px 12px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
   }
 
   .header h1 {
-    font-size: 31px;
+    font-size: 27px;
   }
 
-  .header-sub strong {
-    font-size: 17px;
-  }
-
-  .header-sub span {
-    font-size: 13px;
-  }
-
-  .main-nav {
-    gap: 4px 14px;
-    padding: 11px 10px;
-  }
-
-  .main-nav a {
+  #business-status {
+    margin-top: 7px;
+    padding: 5px 16px;
     font-size: 12px;
   }
 
+
+  .main-nav {
+    position: sticky;
+    top: 74px;
+    z-index: 190;
+    gap: 2px 11px;
+    padding: 8px 8px;
+  }
+
+  .main-nav a {
+    font-size: 11px;
+  }
+
+
   .hero img {
-    height: 480px;
+    height: 420px;
   }
 
   .hero-text {
-    bottom: 25px;
-    padding: 22px 15px;
+    bottom: 18px;
+    padding: 18px 12px;
   }
 
   .hero-text h2 {
-    font-size: 29px;
-  }
-
-  .hero-text h3 {
-    font-size: 16px;
+    font-size: 20px;
+    margin-bottom: 7px;
   }
 
   .hero-text p {
+    font-size: 12px;
+  }
+
+
+  .instagram-top {
+    padding: 35px 15px;
+  }
+
+  .instagram-top h2 {
+    font-size: 22px;
+  }
+
+  .instagram-top p {
     font-size: 13px;
   }
 
+
   .section {
-    padding: 60px 18px;
+    padding: 45px 15px;
   }
 
   .section h2 {
-    font-size: 26px;
-    margin-bottom: 35px;
+    font-size: 24px;
+    margin-bottom: 27px;
   }
 
+
   .news-item {
-    grid-template-columns: 1fr 20px;
-    gap: 5px;
-    padding: 16px;
+    grid-template-columns: 1fr 18px;
+    gap: 3px;
+    padding: 13px 14px;
   }
 
   .news-date {
@@ -789,36 +769,52 @@ footer p {
     grid-row: 2;
   }
 
+
   .calendar {
-    padding: 15px;
+    padding: 12px;
+  }
+
+  .calendar-grid {
+    gap: 3px;
   }
 
   .day {
-    min-height: 58px;
-    padding: 5px;
+    min-height: 53px;
+    padding: 4px;
   }
 
   .weekday {
-    font-size: 10px;
+    font-size: 9px;
+    padding: 5px 1px;
   }
 
   .day-number {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .holiday-text,
   .event-text {
-    font-size: 9px;
+    font-size: 8px;
   }
+
 
   .about {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
+  }
+
+  .about-text {
+    text-align: center;
   }
 
   .about-text h3 {
-    font-size: 20px;
+    font-size: 19px;
   }
+
+  .about-text p {
+    margin-bottom: 12px;
+  }
+
 
   .menu-box {
     grid-template-columns: 1fr;
@@ -831,12 +827,13 @@ footer p {
 
   .coffee-menu > img {
     width: 100%;
-    height: 220px;
+    height: 200px;
   }
+
 
   .owner-box {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 
   .owner-image {
@@ -844,21 +841,25 @@ footer p {
     margin: 0 auto;
   }
 
-  .address-map {
-    flex-direction: column;
-    align-items: flex-start;
+  .owner-text {
+    text-align: center;
   }
 
-  .map-button {
-    margin-top: 10px;
-  }
 
   .seats-text p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
+
+  .address-map {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
   .footer-name {
-    font-size: 22px;
+    font-size: 21px;
   }
 
 }
+```
