@@ -1,3 +1,7 @@
+/* =========================
+   基本設定
+========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -8,6 +12,7 @@ html {
 
 body {
   margin: 0;
+
   font-family:
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
@@ -16,16 +21,18 @@ body {
 
   color: #4a4038;
   background: #faf7f2;
+
   line-height: 1.8;
 }
 
 
-/* ====================
+/* =========================
    ヘッダー
-==================== */
+========================= */
 
-header {
-  background: #fff;
+.header {
+  background: #ffffff;
+
   padding: 18px 30px;
 
   display: flex;
@@ -34,15 +41,17 @@ header {
 
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 
-  box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
 }
 
 .logo {
   font-family: Georgia, serif;
+
   font-size: 1.8rem;
   font-weight: bold;
+
   letter-spacing: 1px;
 }
 
@@ -53,7 +62,9 @@ nav {
 
 nav a {
   color: #4a4038;
+
   text-decoration: none;
+
   font-size: 0.9rem;
 }
 
@@ -62,53 +73,58 @@ nav a:hover {
 }
 
 
-/* ====================
+/* =========================
    トップ
-==================== */
+========================= */
 
 .hero {
   position: relative;
 }
 
-.hero img {
+.hero > img {
   width: 100%;
   height: 620px;
+
   object-fit: cover;
+
   display: block;
 }
 
-.hero-text {
+.hero-content {
   position: absolute;
 
   left: 8%;
   bottom: 10%;
 
-  background: rgba(255,255,255,0.88);
+  background: rgba(255, 255, 255, 0.9);
+
   padding: 30px 40px;
 
   border-radius: 8px;
 }
 
-.hero-text h1 {
+.hero-content h1 {
   font-family: Georgia, serif;
 
   font-size: 3.2rem;
+
   margin: 0 0 15px;
 
   letter-spacing: 2px;
 }
 
-.hero-text p {
+.hero-content p {
   font-size: 1.2rem;
+
   margin: 0 0 15px;
 }
 
 
-/* ====================
+/* =========================
    営業中
-==================== */
+========================= */
 
-.open-status {
+.business-status {
   display: inline-block;
 
   font-size: 0.95rem;
@@ -117,38 +133,45 @@ nav a:hover {
   padding: 5px 15px;
 
   border: 1px solid #8b6f47;
-  border-radius: 20px;
 
-  color: #6d593f;
+  border-radius: 20px;
 }
 
 
-/* ====================
+/* =========================
    共通セクション
-==================== */
+========================= */
 
 .section {
   max-width: 850px;
 
   margin: 0 auto;
+
   padding: 80px 30px;
 
   text-align: center;
 }
 
 .section h2,
-.news h2 {
+.news h2,
+.parking-section h2 {
   font-size: 2.2rem;
-  margin-bottom: 35px;
+
+  margin: 0 0 35px;
 
   font-weight: bold;
+
   letter-spacing: 2px;
 }
 
+.section p {
+  font-size: 1rem;
+}
 
-/* ====================
+
+/* =========================
    お知らせ
-==================== */
+========================= */
 
 .news {
   max-width: 850px;
@@ -167,12 +190,13 @@ nav a:hover {
 }
 
 
-/* ====================
-   オーナー
-==================== */
+/* =========================
+   About
+========================= */
 
 .owner-image {
   width: 300px;
+
   max-width: 100%;
 
   border-radius: 8px;
@@ -180,77 +204,78 @@ nav a:hover {
   margin-bottom: 30px;
 }
 
-.section p {
-  font-size: 1rem;
+.about-text p {
+  margin: 15px 0;
 }
 
 
-/* ====================
+/* =========================
    メニュー
-==================== */
+========================= */
 
 .menu-section {
-  background: #f5f0e8;
   max-width: none;
-}
 
-.menu-section > * {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  background: #f5f0e8;
 }
 
 .menu-image {
   width: 350px;
+
   max-width: 90%;
 
   border-radius: 8px;
 
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
-.menu-category {
+.menu-item {
+  max-width: 650px;
+
   margin: 35px auto;
 }
 
-.menu-category h3 {
+.menu-item h3 {
   font-size: 1.4rem;
+
   margin-bottom: 10px;
 }
 
-.menu-category p {
+.menu-item p {
   font-size: 1rem;
 }
 
+.price {
+  font-weight: bold;
+}
 
-/* ====================
+
+/* =========================
    店内写真
-==================== */
+========================= */
 
-.interior-image {
+.photo-section {
+  text-align: center;
+
+  padding: 60px 20px;
+}
+
+.photo-section img {
   width: 100%;
+
   max-width: 700px;
 
   border-radius: 8px;
 }
 
 
-/* ====================
+/* =========================
    店内・お席
-==================== */
-
-.info-section {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-.info-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-}
+========================= */
 
 .seat-info p {
   font-size: 1.1rem;
+
   margin: 15px 0;
 }
 
@@ -267,53 +292,71 @@ nav a:hover {
   margin-left: 8px;
 
   border: 1px solid #8b6f47;
+
   border-radius: 20px;
 
   white-space: nowrap;
 }
 
 
-/* ====================
+/* =========================
    駐車場
-==================== */
+========================= */
 
 .parking-section {
-  background: #f5f0e8;
   max-width: none;
+
+  padding: 80px 30px;
+
+  text-align: center;
+
+  background: #f5f0e8;
+}
+
+.parking-section p {
+  font-size: 1rem;
 }
 
 .no-parking {
   font-weight: bold;
+
   font-size: 1.1rem !important;
 }
 
 
-/* ====================
+/* =========================
    営業時間
-==================== */
+========================= */
 
-.business-hours {
+.hours {
   font-size: 1.4rem !important;
+
   font-weight: bold;
 }
 
 
-/* ====================
+/* =========================
    アクセス
-==================== */
+========================= */
+
+.address {
+  line-height: 2;
+}
 
 .map {
   margin-top: 30px;
 }
 
 .map iframe {
+  width: 100%;
+
   border-radius: 8px;
 }
 
 
-/* ====================
-   SNS
-==================== */
+/* =========================
+   Instagram
+========================= */
 
 .instagram-button {
   display: inline-block;
@@ -321,7 +364,8 @@ nav a:hover {
   padding: 12px 28px;
 
   background: #4a4038;
-  color: #fff;
+
+  color: #ffffff;
 
   text-decoration: none;
 
@@ -335,36 +379,46 @@ nav a:hover {
 }
 
 
-/* ====================
+/* =========================
    フッター
-==================== */
+========================= */
 
 footer {
   background: #4a4038;
 
-  color: #fff;
+  color: #ffffff;
 
   text-align: center;
 
   padding: 40px 20px;
 }
 
+.footer-logo {
+  font-family: Georgia, serif;
+
+  font-size: 1.4rem;
+
+  margin-bottom: 15px;
+}
+
 footer p {
   margin: 8px 0;
+
   font-size: 0.9rem;
 }
 
 
-/* ====================
-   スマホ
-==================== */
+/* =========================
+   スマートフォン
+========================= */
 
 @media (max-width: 600px) {
 
-  header {
+  .header {
     padding: 15px 18px;
 
     flex-direction: column;
+
     gap: 10px;
   }
 
@@ -373,23 +427,25 @@ footer p {
   }
 
   nav {
-    gap: 12px;
+    gap: 10px;
+
     flex-wrap: wrap;
+
     justify-content: center;
   }
 
   nav a {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
   }
 
 
   /* トップ */
 
-  .hero img {
+  .hero > img {
     height: 500px;
   }
 
-  .hero-text {
+  .hero-content {
     left: 5%;
     right: 5%;
     bottom: 6%;
@@ -397,28 +453,25 @@ footer p {
     padding: 22px 20px;
   }
 
-  .hero-text h1 {
+  .hero-content h1 {
     font-size: 2.3rem;
   }
 
-  .hero-text p {
+  .hero-content p {
     font-size: 1rem;
   }
 
 
-  /* セクションタイトル */
-
-  .section h2,
-  .news h2,
-  .info-section h2 {
-    font-size: 1.8rem;
-  }
-
-
-  /* 内容 */
+  /* セクション */
 
   .section {
     padding: 60px 20px;
+  }
+
+  .section h2,
+  .news h2,
+  .parking-section h2 {
+    font-size: 1.8rem;
   }
 
   .section p {
@@ -426,7 +479,7 @@ footer p {
   }
 
 
-  /* 席 */
+  /* 店内・お席 */
 
   .seat-info p {
     font-size: 1rem;
@@ -434,6 +487,7 @@ footer p {
 
   .pet-ok {
     font-size: 0.75rem;
+
     padding: 2px 8px;
   }
 
@@ -445,7 +499,21 @@ footer p {
   }
 
 
-  /* 地図 */
+  /* 店内写真 */
+
+  .photo-section {
+    padding: 40px 20px;
+  }
+
+
+  /* 駐車場 */
+
+  .parking-section {
+    padding: 60px 20px;
+  }
+
+
+  /* Google Map */
 
   .map iframe {
     height: 280px;
