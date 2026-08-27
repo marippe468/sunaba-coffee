@@ -1,5 +1,5 @@
 /* =========================
-   基本設定
+   BASIC
 ========================= */
 
 * {
@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     sans-serif;
 
   color: #4a4038;
+
   background: #f8f5ef;
 
   line-height: 1.8;
@@ -27,226 +29,252 @@ body {
 
 
 /* =========================
-   ヘッダー
+   HEADER
 ========================= */
 
 .header {
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
 
-  background: rgba(248, 245, 239, 0.96);
+  width: 100%;
 
-  border-bottom: 1px solid #e6ded2;
+  background: rgba(248, 245, 239, 0.97);
+
+  border-bottom: 1px solid #e3dbd0;
+
+  backdrop-filter: blur(5px);
 }
 
 .header-inner {
-  max-width: 1100px;
+  max-width: 1200px;
+
   margin: 0 auto;
 
-  padding: 15px 25px;
+  padding: 15px 30px;
 
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
 }
 
 .logo {
   color: #4a4038;
+
   text-decoration: none;
 
   font-family: Georgia, serif;
 
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 21px;
 
-  line-height: 1.05;
-  letter-spacing: 2px;
-}
+  font-weight: normal;
 
-.logo span {
-  font-size: 11px;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
+
+  white-space: nowrap;
 }
 
 .nav {
   display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
   gap: 25px;
 }
 
 .nav a {
   color: #4a4038;
+
   text-decoration: none;
 
-  font-size: 13px;
-  letter-spacing: 1px;
+  font-size: 14px;
+
+  white-space: nowrap;
+
+  transition: opacity 0.3s;
 }
 
 .nav a:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 
 /* =========================
-   HERO
+   TOP
 ========================= */
 
-.hero {
-  max-width: 1200px;
+.top-section {
+  max-width: 1100px;
+
   margin: 0 auto;
 
-  padding: 55px 25px 70px;
+  padding: 70px 30px 110px;
 
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-
-  gap: 55px;
-
-  align-items: center;
+  text-align: center;
 }
 
-.hero-image img {
+.top-location {
+  margin: 0 0 35px;
+
+  font-size: 20px;
+
+  letter-spacing: 3px;
+}
+
+.top-image {
   width: 100%;
-  height: 620px;
+
+  margin: 0 auto 55px;
+}
+
+.top-image img {
+  display: block;
+
+  width: 100%;
+
+  height: 600px;
 
   object-fit: cover;
-
-  border-radius: 2px;
 }
 
-.hero-text {
-  text-align: center;
-}
-
-.hero-small {
-  font-size: 15px;
-  letter-spacing: 2px;
-
-  margin: 0 0 25px;
-}
-
-.hero h1 {
+.top-section h1 {
   margin: 0;
 
-  font-family: Georgia, serif;
-
-  font-size: clamp(45px, 6vw, 78px);
-
-  line-height: 0.95;
-
-  letter-spacing: 5px;
-
-  font-weight: normal;
-}
-
-.hero-location {
-  margin: 25px 0;
-
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-
-.hero-line {
-  width: 55px;
-  height: 1px;
-
-  margin: 25px auto;
-
-  background: #9c8c7b;
-}
-
-.hero-concept {
-  margin: 0;
-
-  font-size: 27px;
-  letter-spacing: 4px;
-}
-
-.hero-sub {
-  margin: 4px 0 25px;
-
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-
-.hero-message {
-  font-size: 15px;
-  letter-spacing: 2px;
-
-  margin-top: 25px;
-}
-
-
-/* =========================
-   共通セクション
-========================= */
-
-.section {
-  max-width: 900px;
-  margin: 0 auto;
-
-  padding: 100px 25px;
-}
-
-.section-label {
-  margin: 0 0 10px;
-
-  font-family: Georgia, serif;
-
-  font-size: 13px;
-
-  letter-spacing: 4px;
-
-  text-align: center;
-
-  color: #8c7966;
-}
-
-.section h2 {
-  margin: 0 0 45px;
-
-  text-align: center;
-
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(32px, 4vw, 50px);
 
   font-weight: normal;
 
   line-height: 1.5;
 
+  letter-spacing: 3px;
+}
+
+.top-message {
+  margin: 30px 0 0;
+
+  font-size: 22px;
+
   letter-spacing: 2px;
+}
+
+.mobile-only {
+  display: none;
 }
 
 
 /* =========================
-   CONCEPT
+   SECTION
 ========================= */
 
-.concept {
+.section {
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  padding: 110px 30px;
+}
+
+.section-label {
+  margin: 0 0 10px;
+
+  text-align: center;
+
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+
+  letter-spacing: 4px;
+
+  color: #8d7967;
+}
+
+.section h2 {
+  margin: 0 0 50px;
+
+  text-align: center;
+
+  font-size: 40px;
+
+  font-weight: normal;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================
+   NEWS
+========================= */
+
+.news-section {
   text-align: center;
 }
 
-.section-image {
-  margin-bottom: 45px;
-}
+.news-box {
+  max-width: 700px;
 
-.section-image img {
-  width: 100%;
-  max-height: 550px;
-
-  object-fit: cover;
-
-  display: block;
-}
-
-.text-area {
-  max-width: 650px;
   margin: 0 auto;
+
+  padding: 35px;
+
+  background: #f0ebe3;
+
+  border: 1px solid #e1d8cc;
+}
+
+.news-box p {
+  margin: 0 0 15px;
 
   font-size: 16px;
 }
 
+.news-box p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.section-image {
+  margin-bottom: 50px;
+}
+
+.section-image img {
+  display: block;
+
+  width: 100%;
+
+  height: 500px;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.text-area {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  font-size: 17px;
+}
+
 .text-area p {
-  margin: 0 0 22px;
+  margin: 0 0 25px;
 }
 
 
@@ -255,31 +283,31 @@ body {
 ========================= */
 
 .menu-section {
-  max-width: 850px;
+  max-width: 900px;
 }
 
 .menu-image {
-  margin-bottom: 55px;
+  margin-bottom: 60px;
 }
 
 .menu-image img {
+  display: block;
+
   width: 100%;
 
-  max-height: 500px;
+  height: 500px;
 
   object-fit: cover;
-
-  display: block;
 }
 
 .menu-box {
   padding: 30px 0;
 
-  border-top: 1px solid #ded5c9;
+  border-top: 1px solid #ded5ca;
 }
 
 .menu-box:last-child {
-  border-bottom: 1px solid #ded5c9;
+  border-bottom: 1px solid #ded5ca;
 }
 
 .menu-box h3 {
@@ -287,105 +315,125 @@ body {
 
   font-family: Georgia, serif;
 
-  font-size: 19px;
-
-  letter-spacing: 3px;
+  font-size: 20px;
 
   font-weight: normal;
+
+  letter-spacing: 3px;
 }
 
 .menu-item {
   display: flex;
 
-  justify-content: space-between;
   align-items: center;
+
+  justify-content: space-between;
 
   padding: 10px 0;
 
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .menu-item strong {
-  display: block;
-
-  font-size: 17px;
-
   font-weight: normal;
 }
 
 .menu-item span {
   display: block;
 
-  margin-top: 2px;
-
   color: #82766b;
 
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .menu-item b {
   font-family: Georgia, serif;
 
-  font-size: 16px;
+  font-size: 17px;
 
   font-weight: normal;
 }
 
 
 /* =========================
-   SPACE
+   OWNER
 ========================= */
 
-.space-section {
-  max-width: 850px;
+.owner-section {
+  text-align: center;
 }
 
-.space-image {
-  margin-bottom: 45px;
+.owner-image {
+  max-width: 650px;
+
+  margin: 0 auto 50px;
 }
 
-.space-image img {
+.owner-image img {
+  display: block;
+
   width: 100%;
 
   max-height: 550px;
 
   object-fit: cover;
-
-  display: block;
 }
 
-.space-card {
+
+/* =========================
+   SEATS
+========================= */
+
+.seats-section {
+  max-width: 900px;
+
+  text-align: center;
+}
+
+.seats-image {
+  margin-bottom: 50px;
+}
+
+.seats-image img {
+  display: block;
+
+  width: 100%;
+
+  height: 500px;
+
+  object-fit: cover;
+}
+
+.seat-card {
   margin-bottom: 30px;
 
   padding: 35px;
 
-  text-align: center;
+  background: #f0ebe3;
 
-  background: #f1ece4;
-
-  border: 1px solid #e2d9cd;
+  border: 1px solid #e0d7cc;
 }
 
-.space-card h3 {
+.seat-card h3 {
   margin: 0 0 15px;
 
-  font-size: 24px;
+  font-size: 25px;
 
   font-weight: normal;
 }
 
-.space-card p {
+.seat-card p {
   margin: 0 0 20px;
 
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .pet-ok {
   display: inline-block;
 
-  padding: 5px 16px;
+  padding: 5px 18px;
 
-  border: 1px solid #a99987;
+  border: 1px solid #a89988;
 
   border-radius: 30px;
 
@@ -401,25 +449,24 @@ body {
 
 .photo-section {
   width: 100%;
-  padding: 0;
 }
 
 .photo-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
-  gap: 4px;
+  gap: 5px;
 }
 
 .photo-grid img {
+  display: block;
+
   width: 100%;
-  height: 350px;
+
+  height: 400px;
 
   object-fit: cover;
-
-  display: block;
 }
 
 
@@ -428,80 +475,56 @@ body {
 ========================= */
 
 .access-section {
-  max-width: 850px;
-
   text-align: center;
 }
 
-.access-image {
-  margin-bottom: 45px;
-}
-
-.access-image img {
-  width: 100%;
-
-  max-height: 500px;
-
-  object-fit: cover;
-}
-
 .access-info h3 {
-  margin: 0 0 20px;
+  margin: 0 0 25px;
 
   font-family: Georgia, serif;
 
-  font-size: 25px;
-
-  letter-spacing: 2px;
+  font-size: 27px;
 
   font-weight: normal;
+
+  letter-spacing: 3px;
 }
 
 .access-info p {
-  font-size: 15px;
-}
-
-.access-note {
-  margin-top: 25px;
-
-  color: #7f7063;
+  font-size: 17px;
 }
 
 .map {
-  margin-top: 40px;
-
-  width: 100%;
+  margin-top: 50px;
 }
 
 .map iframe {
+  display: block;
+
   width: 100%;
 
-  height: 400px;
+  height: 450px;
 
   border: 0;
 }
 
 
 /* =========================
-   営業時間
+   OPEN
 ========================= */
 
 .open-section {
-  padding: 100px 25px;
+  padding: 110px 30px;
 
   text-align: center;
 
   background: #eee8df;
 }
 
-.open-section .section-label {
-  margin-bottom: 10px;
-}
-
 .open-section h2 {
   margin: 0 0 25px;
 
-  font-size: 32px;
+  font-size: 40px;
 
   font-weight: normal;
 }
@@ -511,7 +534,7 @@ body {
 
   font-family: Georgia, serif;
 
-  font-size: 35px;
+  font-size: 38px;
 
   letter-spacing: 3px;
 }
@@ -519,9 +542,9 @@ body {
 .closing-note {
   margin-top: 25px;
 
-  font-size: 13px;
+  font-size: 14px;
 
-  color: #82766b;
+  color: #817569;
 }
 
 
@@ -530,39 +553,39 @@ body {
 ========================= */
 
 .sns-section {
-  padding: 100px 25px;
+  padding: 110px 30px;
 
   text-align: center;
 }
 
 .sns-section h2 {
-  margin-bottom: 25px;
+  margin: 0 0 25px;
 
-  font-size: 30px;
+  font-size: 35px;
 
   font-weight: normal;
 }
 
-.sns-section p {
-  font-size: 14px;
+.sns-section > p {
+  font-size: 16px;
 }
 
 .sns-links {
-  max-width: 500px;
+  max-width: 600px;
 
-  margin: 40px auto 0;
+  margin: 45px auto 0;
 
   display: flex;
 
   justify-content: center;
 
-  gap: 12px;
+  gap: 15px;
 }
 
 .sns-button {
-  min-width: 120px;
+  min-width: 150px;
 
-  padding: 12px 18px;
+  padding: 13px 20px;
 
   display: flex;
 
@@ -580,7 +603,7 @@ body {
 
   border-radius: 30px;
 
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .sns-button:hover {
@@ -601,7 +624,7 @@ body {
 ========================= */
 
 .footer {
-  padding: 60px 25px;
+  padding: 65px 30px;
 
   text-align: center;
 
@@ -613,123 +636,148 @@ body {
 .footer-logo {
   font-family: Georgia, serif;
 
-  font-size: 24px;
+  font-size: 25px;
 
   letter-spacing: 4px;
 }
 
-.footer p {
-  margin: 8px 0;
+.footer-country {
+  margin-top: 10px;
+
+  font-family: Georgia, serif;
 
   font-size: 13px;
 
-  letter-spacing: 1px;
-}
+  letter-spacing: 2px;
 
-.footer-line {
-  width: 40px;
-  height: 1px;
-
-  margin: 25px auto;
-
-  background: #b9ada0;
-}
-
-.footer-copy {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 
 /* =========================
-   スマホ
+   TABLET
 ========================= */
 
-@media screen and (max-width: 700px) {
-
-  /* ヘッダー */
+@media screen and (max-width: 900px) {
 
   .header-inner {
-    padding: 13px 16px;
+    padding: 14px 20px;
   }
 
   .logo {
     font-size: 17px;
   }
 
-  .logo span {
-    font-size: 9px;
-  }
-
   .nav {
-    gap: 12px;
+    gap: 14px;
   }
 
   .nav a {
-    font-size: 10px;
+    font-size: 12px;
   }
 
+}
 
-  /* HERO */
 
-  .hero {
+/* =========================
+   SMARTPHONE
+========================= */
+
+@media screen and (max-width: 700px) {
+
+
+  /* HEADER */
+
+  .header-inner {
+    padding: 12px 10px;
+
     display: block;
 
-    padding: 25px 16px 60px;
+    text-align: center;
   }
 
-  .hero-image img {
-    height: 330px;
+  .logo {
+    display: block;
 
-    margin-bottom: 45px;
-  }
+    margin-bottom: 10px;
 
-  .hero-small {
-    font-size: 12px;
-
-    letter-spacing: 1.5px;
-  }
-
-  .hero h1 {
-    font-size: 47px;
-
-    letter-spacing: 3px;
-  }
-
-  .hero-location {
-    font-size: 11px;
-
-    letter-spacing: 1px;
-  }
-
-  .hero-concept {
-    font-size: 23px;
+    font-size: 16px;
 
     letter-spacing: 2px;
   }
 
-  .hero-sub {
-    font-size: 12px;
+  .nav {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 0;
+  }
+
+  .nav a {
+    flex: 1;
+
+    font-size: 10px;
+
+    letter-spacing: 0;
+
+    line-height: 1.3;
+
+    white-space: normal;
+  }
+
+
+  /* TOP */
+
+  .top-section {
+    padding: 45px 16px 75px;
+  }
+
+  .top-location {
+    margin-bottom: 25px;
+
+    font-size: 14px;
 
     letter-spacing: 1px;
   }
 
-  .hero-message {
-    font-size: 13px;
+  .top-image {
+    margin-bottom: 35px;
+  }
+
+  .top-image img {
+    height: 300px;
+  }
+
+  .top-section h1 {
+    font-size: 27px;
+
+    line-height: 1.7;
 
     letter-spacing: 1px;
   }
 
+  .top-message {
+    margin-top: 22px;
 
-  /* セクション */
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+
+  /* SECTION */
 
   .section {
     padding: 75px 16px;
-  }
-
-  .section h2 {
-    font-size: 27px;
-
-    margin-bottom: 35px;
   }
 
   .section-label {
@@ -738,12 +786,34 @@ body {
     letter-spacing: 3px;
   }
 
+  .section h2 {
+    margin-bottom: 35px;
 
-  /* コンセプト */
+    font-size: 28px;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* NEWS */
+
+  .news-box {
+    padding: 25px 18px;
+  }
+
+  .news-box p {
+    font-size: 14px;
+  }
+
+
+  /* IMAGE */
 
   .section-image img {
     height: 280px;
   }
+
+
+  /* TEXT */
 
   .text-area {
     font-size: 14px;
@@ -765,10 +835,6 @@ body {
   }
 
   .menu-item {
-    font-size: 13px;
-  }
-
-  .menu-item strong {
     font-size: 15px;
   }
 
@@ -777,44 +843,51 @@ body {
   }
 
 
-  /* SPACE */
+  /* OWNER */
 
-  .space-image img {
+  .owner-image img {
+    height: 330px;
+  }
+
+
+  /* SEATS */
+
+  .seats-image img {
     height: 280px;
   }
 
-  .space-card {
-    padding: 28px 20px;
+  .seat-card {
+    padding: 27px 18px;
   }
 
-  .space-card h3 {
+  .seat-card h3 {
     font-size: 21px;
   }
 
+  .seat-card p {
+    font-size: 14px;
+  }
 
-  /* 写真 */
+
+  /* PHOTO */
 
   .photo-grid {
     grid-template-columns: 1fr;
   }
 
   .photo-grid img {
-    height: 260px;
+    height: 280px;
   }
 
 
   /* ACCESS */
-
-  .access-image img {
-    height: 280px;
-  }
 
   .access-info h3 {
     font-size: 22px;
   }
 
   .access-info p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .map iframe {
@@ -822,14 +895,14 @@ body {
   }
 
 
-  /* 営業時間 */
+  /* OPEN */
 
   .open-section {
     padding: 75px 16px;
   }
 
   .open-section h2 {
-    font-size: 27px;
+    font-size: 28px;
   }
 
   .business-hours {
@@ -844,15 +917,19 @@ body {
   }
 
   .sns-section h2 {
-    font-size: 25px;
+    font-size: 26px;
+  }
+
+  .sns-section > p {
+    font-size: 14px;
   }
 
   .sns-links {
-    display: flex;
-
     flex-direction: column;
 
     max-width: 300px;
+
+    gap: 10px;
   }
 
   .sns-button {
@@ -863,11 +940,21 @@ body {
   /* FOOTER */
 
   .footer {
-    padding: 50px 16px;
+    padding: 45px 16px;
+
+    text-align: center;
   }
 
   .footer-logo {
-    font-size: 20px;
+    font-size: 21px;
+
+    letter-spacing: 3px;
+  }
+
+  .footer-country {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
   }
 
 }
