@@ -13,9 +13,11 @@ body {
     "Hiragino Kaku Gothic ProN",
     Meiryo,
     sans-serif;
+
   color: #4a4038;
   background: #f8f5ef;
-  line-height: 1.8;
+
+  line-height: 1.7;
 }
 
 img {
@@ -24,34 +26,30 @@ img {
   display: block;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-}
-
 
 /* =========================
-   ヘッダー
+   Header
 ========================= */
 
 header {
   text-align: center;
-  padding: 55px 20px 35px;
-  background: #f8f5ef;
+  padding: 50px 20px 30px;
 }
 
 header h1 {
-  margin-bottom: 10px;
-  font-size: 2.4rem;
-  letter-spacing: 0.12em;
+  margin: 0 0 8px;
+
+  font-size: 2.3rem;
   font-weight: 500;
+
+  letter-spacing: 0.12em;
 }
 
 .shop-info {
-  margin-bottom: 20px;
-  font-size: 0.95rem;
+  margin: 0 0 18px;
+
+  font-size: 0.9rem;
+
   letter-spacing: 0.08em;
 }
 
@@ -60,118 +58,150 @@ header h1 {
 
 #business-status {
   display: inline-block;
+
   padding: 5px 18px;
+
   border-radius: 20px;
-  font-size: 0.85rem;
+
+  font-size: 0.82rem;
 }
 
 .status-open {
-  background: #e6eee5;
-  color: #486044;
+  background: #e5eee3;
+  color: #496044;
 }
 
 .status-soon {
   background: #f4ead8;
-  color: #8a6835;
+  color: #85663a;
 }
 
 .status-closed,
 .status-holiday {
   background: #e9e4df;
-  color: #776b62;
+  color: #756b63;
 }
 
 
 /* =========================
-   ナビ
+   Navigation
 ========================= */
 
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  flex-wrap: wrap;
-  padding: 12px 15px;
-  background: #fff;
-  border-top: 1px solid #e9e2d9;
-  border-bottom: 1px solid #e9e2d9;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
+
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  background: rgba(255,255,255,0.96);
+
+  border-top: 1px solid #e7dfd6;
+  border-bottom: 1px solid #e7dfd6;
 }
 
 nav a {
-  color: #55483f;
+  padding: 10px 14px;
+
+  color: #554a42;
+
   text-decoration: none;
-  padding: 8px 13px;
-  font-size: 0.9rem;
+
+  font-size: 0.85rem;
 }
 
 nav a:hover {
   background: #f1ece5;
-  border-radius: 20px;
 }
 
 
 /* =========================
-   トップ
+   Hero
 ========================= */
 
 .hero {
   max-width: 1100px;
   margin: 0 auto;
-  position: relative;
+
+  background: #fff;
 }
 
 .hero > img {
   width: 100%;
-  height: 520px;
+
+  height: 530px;
+
   object-fit: cover;
 }
 
 .hero-text {
   text-align: center;
-  padding: 30px 20px 35px;
-  background: rgba(255, 255, 255, 0.94);
+
+  padding: 30px 20px 38px;
 }
 
 .hero-text h2 {
-  margin-bottom: 10px;
-  font-size: 1.35rem;
+  margin: 0 0 3px;
+
+  font-size: 1.5rem;
+
   font-weight: 400;
-  letter-spacing: 0.08em;
+
+  letter-spacing: 0.14em;
 }
 
-.hero-text h2 span {
-  display: block;
+.hero-subtitle {
+  margin: 0 0 20px;
+
   font-size: 1rem;
-  margin-top: 5px;
+
   letter-spacing: 0.08em;
 }
 
 .hero-message {
-  margin-bottom: 0;
-  font-size: 0.95rem;
+  margin: 0 0 10px;
+
+  font-size: 1.05rem;
+
   letter-spacing: 0.12em;
+}
+
+.hero-trip {
+  margin: 0;
+
+  font-size: 0.85rem;
+
+  letter-spacing: 0.08em;
+
+  color: #776a61;
 }
 
 
 /* =========================
-   共通セクション
+   共通
 ========================= */
 
 section:not(.hero) {
   max-width: 1100px;
+
   margin: 0 auto;
-  padding: 75px 25px;
+
+  padding: 70px 25px;
 }
 
 section h2 {
+  margin: 0 0 35px;
+
   text-align: center;
-  font-size: 1.7rem;
+
+  font-size: 1.65rem;
+
   font-weight: 500;
+
   letter-spacing: 0.12em;
-  margin-bottom: 40px;
 }
 
 
@@ -181,25 +211,30 @@ section h2 {
 
 .instagram-top {
   text-align: center;
+
   background: #eee9e1;
 }
 
 .instagram-top p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .instagram-button {
   display: inline-block;
-  margin-top: 10px;
-  padding: 11px 28px;
-  color: #fff;
-  background: #66584e;
-  text-decoration: none;
-  border-radius: 30px;
-}
 
-.instagram-button:hover {
-  opacity: 0.85;
+  margin-top: 8px;
+
+  padding: 10px 28px;
+
+  border-radius: 30px;
+
+  background: #66584e;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
 }
 
 
@@ -213,36 +248,42 @@ section h2 {
 
 .news-list {
   max-width: 800px;
+
   margin: 0 auto;
 }
 
 .news-item {
   display: flex;
+
   align-items: center;
-  gap: 18px;
-  padding: 10px 5px;
-  color: #4a4038;
-  text-decoration: none;
+
+  gap: 15px;
+
+  padding: 8px 4px;
+
   border-bottom: 1px solid #e8e0d7;
+
+  color: #4a4038;
+
+  text-decoration: none;
+
   line-height: 1.3;
 }
 
-.news-item:hover {
-  background: #f8f5ef;
-}
-
 .news-date {
-  min-width: 95px;
-  font-size: 0.82rem;
+  min-width: 90px;
+
+  font-size: 0.78rem;
 }
 
 .news-title {
   flex: 1;
-  font-size: 0.9rem;
+
+  font-size: 0.88rem;
 }
 
 .news-arrow {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 
@@ -252,74 +293,144 @@ section h2 {
 
 .calendar-section {
   background: #f3eee7;
+
+  overflow: hidden;
 }
 
-.calendar-wrap {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.calendar {
-  background: #fff;
-  padding: 22px;
-  border-radius: 8px;
-}
-
-.calendar h3 {
+.calendar-description {
   text-align: center;
-  font-size: 1.1rem;
+
+  margin-top: -20px;
+  margin-bottom: 25px;
+
+  font-size: 0.8rem;
+
+  color: #7a6e65;
+}
+
+.calendar-slider {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.calendar-container {
+  width: 100%;
+  max-width: 650px;
+
+  overflow: hidden;
+
+  touch-action: pan-y;
+
+  background: #fff;
+
+  border-radius: 8px;
+
+  padding: 25px;
+}
+
+.calendar-container h3 {
+  text-align: center;
+
+  margin: 0 0 20px;
+
+  font-size: 1.2rem;
+
   font-weight: 500;
-  margin-bottom: 18px;
+}
+
+.calendar-button {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #66584e;
+
+  color: #fff;
+
+  font-size: 1.8rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.calendar-button:hover {
+  opacity: 0.8;
 }
 
 .calendar-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
   gap: 4px;
 }
 
 .weekday {
   text-align: center;
-  font-size: 0.75rem;
+
   padding: 5px 0;
-  color: #776b62;
+
+  font-size: 0.75rem;
+
+  color: #756b63;
 }
 
 .day {
-  min-height: 62px;
-  padding: 5px;
+  min-height: 70px;
+
+  padding: 6px;
+
   border: 1px solid #eee8df;
+
   text-align: center;
-  position: relative;
+
   font-size: 0.8rem;
 }
 
 .day.empty {
   border: none;
-  background: transparent;
 }
 
 .day-number {
   font-size: 0.82rem;
 }
 
-.event-day {
-  display: block;
-  margin-top: 4px;
+.holiday {
+  margin-top: 5px;
+
   padding: 2px;
-  background: #e7ded3;
-  color: #5a4d43;
-  text-decoration: none;
+
   border-radius: 3px;
-  font-size: 0.65rem;
+
+  background: #eee5df;
+
+  color: #8a6d61;
+
+  font-size: 0.62rem;
 }
 
-.holiday {
-  display: block;
-  margin-top: 4px;
+.event-day {
+  margin-top: 5px;
+
+  padding: 2px;
+
+  border-radius: 3px;
+
+  background: #e7ded3;
+
+  color: #5c5048;
+
   font-size: 0.62rem;
-  color: #8a6f61;
 }
 
 
@@ -329,14 +440,20 @@ section h2 {
 
 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap: 45px;
+
   align-items: center;
 }
 
 .about-image img {
   width: 100%;
-  max-height: 420px;
+
+  max-height: 430px;
+
   object-fit: cover;
 }
 
@@ -346,11 +463,12 @@ section h2 {
 
 .about-text h3 {
   font-size: 1.25rem;
+
   font-weight: 500;
 }
 
 .about-text p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 
@@ -362,78 +480,98 @@ section h2 {
   background: #fff;
 }
 
-.menu-title {
-  text-align: center;
-}
-
 .menu-title img {
   width: 100%;
-  max-width: 700px;
-  max-height: 520px;
+
+  max-width: 760px;
+
+  max-height: 550px;
+
   object-fit: cover;
+
   margin: 0 auto 40px;
-  border-radius: 5px;
+
+  border-radius: 6px;
 }
 
 .menu-box {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
   gap: 25px;
 }
 
 .menu-card {
   padding: 25px;
+
   background: #f8f5ef;
+
   border-radius: 8px;
 }
 
 .menu-card h3 {
+  margin: 0 0 18px;
+
   text-align: center;
+
   font-size: 1.15rem;
+
   font-weight: 500;
-  margin-bottom: 20px;
 }
 
 .menu-card small {
-  font-size: 0.75rem;
-  font-weight: normal;
+  font-size: 0.72rem;
 }
 
 .menu-row {
   display: flex;
+
   justify-content: space-between;
+
   align-items: flex-start;
+
   gap: 15px;
-  padding: 10px 0;
+
+  padding: 9px 0;
+
   border-bottom: 1px dotted #d8cfc4;
+
+  font-size: 0.86rem;
 }
 
-.menu-name {
-  font-size: 0.9rem;
-}
-
-.menu-price {
+.menu-row strong {
   white-space: nowrap;
+
   font-weight: 500;
 }
 
 .menu-note {
-  margin: 15px 0 0;
-  font-size: 0.75rem;
+  margin: 14px 0 0;
+
   text-align: center;
+
+  font-size: 0.72rem;
 }
 
 .coffee-menu {
   display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 20px;
+
+  grid-template-columns:
+    200px 1fr;
+
+  gap: 25px;
+
   align-items: center;
 }
 
 .coffee-menu > img {
-  width: 190px;
-  height: 190px;
+  width: 200px;
+  height: 200px;
+
   object-fit: cover;
+
   border-radius: 5px;
 }
 
@@ -448,16 +586,24 @@ section h2 {
 
 .owner-box {
   display: grid;
-  grid-template-columns: 300px 1fr;
+
+  grid-template-columns:
+    300px 1fr;
+
   gap: 45px;
+
   align-items: center;
+
   max-width: 850px;
+
   margin: 0 auto;
 }
 
 .owner-image img {
   width: 100%;
+
   max-height: 350px;
+
   object-fit: cover;
 }
 
@@ -466,12 +612,13 @@ section h2 {
 }
 
 .owner-text h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+
   font-weight: 500;
 }
 
 .owner-text p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 
@@ -485,42 +632,57 @@ section h2 {
 
 .info-box {
   max-width: 700px;
+
   margin: 0 auto;
 }
 
 .info-item {
-  padding: 15px 5px;
+  padding: 14px 5px;
+
   border-bottom: 1px solid #e8e0d7;
+
   text-align: center;
+
+  font-size: 0.9rem;
 }
 
 .info-label {
-  margin-bottom: 5px;
-  font-size: 0.8rem;
+  margin-bottom: 4px;
+
   color: #806f62;
+
+  font-size: 0.78rem;
+
   letter-spacing: 0.1em;
 }
 
 .phone {
-  font-size: 1.2rem;
-  letter-spacing: 0.05em;
+  font-size: 1.15rem;
 }
 
 .phone-button,
 .map-button {
   display: inline-block;
-  margin-top: 10px;
+
+  margin-top: 8px;
+
   padding: 8px 20px;
-  background: #66584e;
-  color: #fff;
-  text-decoration: none;
+
   border-radius: 25px;
-  font-size: 0.85rem;
+
+  background: #66584e;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 0.82rem;
 }
 
 .access {
-  text-align: center;
   padding: 25px 5px;
+
+  text-align: center;
 }
 
 
@@ -529,15 +691,66 @@ section h2 {
 ========================= */
 
 footer {
-  text-align: center;
   padding: 40px 20px;
+
+  text-align: center;
+
   background: #51473f;
+
   color: #fff;
 }
 
-footer p {
-  margin-bottom: 5px;
-  font-size: 0.85rem;
+.footer-shop {
+  margin-bottom: 18px;
+
+  font-size: 1rem;
+
+  letter-spacing: 0.12em;
+}
+
+.social-links {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255,255,255,0.7);
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 1.2rem;
+
+  font-weight: 500;
+}
+
+.social-icon:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.copyright {
+  margin: 0;
+
+  font-size: 0.75rem;
+
+  opacity: 0.8;
 }
 
 
@@ -555,33 +768,34 @@ footer p {
     font-size: 1.9rem;
   }
 
-  nav {
-    gap: 0;
-  }
-
   nav a {
-    padding: 6px 8px;
-    font-size: 0.75rem;
+    padding: 7px 8px;
+
+    font-size: 0.72rem;
   }
 
   .hero > img {
-    height: 300px;
+    height: 320px;
   }
 
   .hero-text {
-    padding: 22px 15px 25px;
+    padding: 25px 15px 30px;
   }
 
   .hero-text h2 {
-    font-size: 1.05rem;
+    font-size: 1.25rem;
   }
 
-  .hero-text h2 span {
-    font-size: 0.85rem;
+  .hero-subtitle {
+    font-size: 0.82rem;
   }
 
   .hero-message {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-trip {
+    font-size: 0.72rem;
   }
 
   section:not(.hero) {
@@ -590,33 +804,53 @@ footer p {
 
   section h2 {
     font-size: 1.4rem;
-    margin-bottom: 30px;
   }
 
   .news-item {
     gap: 8px;
+
     padding: 8px 2px;
   }
 
   .news-date {
-    min-width: 78px;
-    font-size: 0.7rem;
+    min-width: 75px;
+
+    font-size: 0.68rem;
   }
 
   .news-title {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
   }
 
-  .calendar-wrap {
-    grid-template-columns: 1fr;
+  .calendar-slider {
+    gap: 6px;
+  }
+
+  .calendar-container {
+    padding: 15px 8px;
+  }
+
+  .calendar-button {
+    width: 35px;
+    height: 35px;
+
+    font-size: 1.5rem;
   }
 
   .day {
     min-height: 55px;
+
+    padding: 4px 2px;
+  }
+
+  .holiday,
+  .event-day {
+    font-size: 0.55rem;
   }
 
   .about {
     grid-template-columns: 1fr;
+
     gap: 25px;
   }
 
@@ -625,7 +859,7 @@ footer p {
   }
 
   .menu-title img {
-    max-height: 400px;
+    max-height: 420px;
   }
 
   .coffee-menu {
@@ -634,22 +868,19 @@ footer p {
 
   .coffee-menu > img {
     width: 100%;
-    height: 240px;
-    margin: 0 auto;
+    height: 250px;
   }
 
   .owner-box {
     grid-template-columns: 1fr;
+
     gap: 25px;
   }
 
   .owner-image {
     max-width: 300px;
-    margin: 0 auto;
-  }
 
-  .owner-text {
-    text-align: center;
+    margin: 0 auto;
   }
 
 }
