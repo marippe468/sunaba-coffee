@@ -2,19 +2,27 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
 
+
 body {
   margin: 0;
+
   font-family:
-    "Yu Gothic",
     "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "Meiryo",
     sans-serif;
+
   color: #3f352e;
-  background: #faf8f4;
-  line-height: 1.6;
+
+  background:
+    #f8f5ef;
+
+  line-height: 1.7;
 }
 
 
@@ -22,152 +30,350 @@ body {
    ヘッダー
 ========================= */
 
-header {
+.header {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
   text-align: center;
-  padding: 18px 8px 10px;
-  background: #fff;
+
+  padding:
+    8px 15px 10px;
+
+  border-bottom:
+    1px solid #e5ded5;
+
 }
 
-header h1 {
-  margin: 0;
-  font-size: 21px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  white-space: nowrap;
+
+.logo {
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size:
+    20px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    2px;
+
+  color:
+    #4b382c;
+
   text-shadow:
-    1px 1px 0 #fff,
-    -1px -1px 0 #fff;
-}
+    1px 1px 0 white,
+    2px 2px 2px rgba(0,0,0,0.18);
 
-.concept {
-  margin-top: 5px;
-  text-align: center;
-  line-height: 1.2;
-}
+  white-space:
+    nowrap;
 
-.concept div:first-child {
-  font-size: 17px;
-  font-weight: bold;
-}
-
-.concept div:last-child {
-  font-size: 17px;
 }
 
 
-/* =========================
-   営業状況
-========================= */
+.hero-title h1 {
+
+  margin:
+    2px 0 0;
+
+  font-size:
+    25px;
+
+  line-height:
+    1.2;
+
+  font-weight:
+    700;
+
+}
+
+
+.hero-title p {
+
+  margin:
+    0;
+
+  font-size:
+    17px;
+
+  line-height:
+    1.25;
+
+}
+
 
 #business-status {
-  width: fit-content;
-  margin: 5px auto;
-  padding: 3px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
+
+  display:
+    inline-block;
+
+  margin-top:
+    5px;
+
+  padding:
+    3px 16px;
+
+  border-radius:
+    20px;
+
+  font-size:
+    14px;
+
+  font-weight:
+    bold;
+
 }
+
+
+/* 営業中 */
 
 .status-open {
-  background: #e4f1e3;
-  color: #39733b;
+
+  background:
+    #e6f3e8;
+
+  color:
+    #28743b;
+
 }
+
+
+/* まもなく終了 */
 
 .status-soon {
-  background: #fff0d8;
-  color: #a05c00;
+
+  background:
+    #fff0d9;
+
+  color:
+    #a85b00;
+
 }
 
-.status-closed,
+
+/* 定休日 */
+
 .status-holiday {
-  background: #eee;
-  color: #666;
+
+  background:
+    #eee8e4;
+
+  color:
+    #765f51;
+
+}
+
+
+/* 営業前・営業終了 */
+
+.status-closed {
+
+  background:
+    #eeeeee;
+
+  color:
+    #666666;
+
 }
 
 
 /* =========================
-   ナビ
+   ナビゲーション
 ========================= */
 
-nav {
-  text-align: center;
-  padding: 6px 3px;
-  border-top: 1px solid #ddd5cc;
-  border-bottom: 1px solid #ddd5cc;
-  background: #fff;
+.main-nav {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  width:
+    100%;
+
+  padding:
+    7px 8px;
+
+  gap:
+    0;
+
+  background:
+    #ffffff;
+
+  border-bottom:
+    1px solid #e7e0d8;
+
 }
 
-.nav-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
-  margin: 2px 0;
+
+.main-nav a {
+
+  flex:
+    1;
+
+  text-align:
+    center;
+
+  text-decoration:
+    none;
+
+  color:
+    #51463e;
+
+  font-size:
+    13px;
+
+  font-weight:
+    bold;
+
+  white-space:
+    nowrap;
+
+  padding:
+    2px 3px;
+
 }
 
-nav a {
-  color: #4a3b32;
-  text-decoration: none;
-  font-size: 14px;
-  white-space: nowrap;
+
+.main-nav a:hover {
+
+  color:
+    #9b6d48;
+
 }
 
 
 /* =========================
-   トップ写真
-========================= */
-
-.hero {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  max-width: 1100px;
-  height: auto;
-  margin: 0 auto;
-}
-
-
-/* =========================
-   キャッチコピー
-========================= */
-
-.hero-copy {
-  text-align: center;
-  padding: 16px 10px 8px;
-}
-
-.hero-copy h2 {
-  margin: 0 0 4px;
-  font-size: 19px;
-  line-height: 1.4;
-  font-weight: bold;
-}
-
-.hero-copy p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-
-/* =========================
-   セクション
+   共通
 ========================= */
 
 section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 30px 18px;
+
+  max-width:
+    1100px;
+
+  margin:
+    0 auto;
+
+  padding:
+    45px 20px;
+
 }
 
+
 section h2 {
-  text-align: center;
-  margin: 0 0 17px;
-  font-size: 23px;
+
+  text-align:
+    center;
+
+  font-size:
+    26px;
+
+  margin:
+    0 0 25px;
+
+  color:
+    #4c3b31;
+
+}
+
+
+/* =========================
+   トップ
+========================= */
+
+.hero {
+
+  max-width:
+    1100px;
+
+  margin:
+    0 auto;
+
+  padding:
+    20px 15px 40px;
+
+  text-align:
+    center;
+
+}
+
+
+.hero > img {
+
+  width:
+    100%;
+
+  max-height:
+    520px;
+
+  object-fit:
+    cover;
+
+  display:
+    block;
+
+  margin:
+    0 auto;
+
+  border-radius:
+    10px;
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,0.12);
+
+}
+
+
+.hero-message {
+
+  padding:
+    15px 10px 0;
+
+}
+
+
+.hero-message h2 {
+
+  margin:
+    0 0 5px;
+
+  font-size:
+    21px;
+
+  line-height:
+    1.5;
+
+  text-align:
+    center;
+
+}
+
+
+.hero-message p {
+
+  margin:
+    0;
+
+  font-size:
+    16px;
+
+  text-align:
+    center;
+
 }
 
 
@@ -176,17 +382,72 @@ section h2 {
 ========================= */
 
 .instagram-top {
-  text-align: center;
+
+  text-align:
+    center;
+
+  padding-top:
+    15px;
+
+  padding-bottom:
+    30px;
+
 }
 
+
+.instagram-top h2 {
+
+  margin-bottom:
+    5px;
+
+}
+
+
+.instagram-top p {
+
+  margin:
+    0 0 15px;
+
+  font-size:
+    14px;
+
+}
+
+
 .instagram-button {
-  display: inline-block;
-  padding: 8px 20px;
-  border-radius: 20px;
-  background: #4a3b32;
-  color: #fff;
-  text-decoration: none;
-  font-size: 13px;
+
+  display:
+    inline-block;
+
+  padding:
+    9px 22px;
+
+  border-radius:
+    25px;
+
+  background:
+    #4b382c;
+
+  color:
+    white;
+
+  text-decoration:
+    none;
+
+  font-size:
+    14px;
+
+  font-weight:
+    bold;
+
+}
+
+
+.instagram-button:hover {
+
+  opacity:
+    0.8;
+
 }
 
 
@@ -194,34 +455,78 @@ section h2 {
    お知らせ
 ========================= */
 
-.news-list {
-  max-width: 800px;
-  margin: 0 auto;
+.news-section {
+
+  padding-top:
+    30px;
+
 }
+
+
+.news-list {
+
+  max-width:
+    850px;
+
+  margin:
+    0 auto;
+
+}
+
 
 .news-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 7px 3px;
-  border-bottom: 1px solid #ddd5cc;
-  color: #3f352e;
-  text-decoration: none;
-  line-height: 1.3;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  text-decoration:
+    none;
+
+  color:
+    #44382f;
+
+  padding:
+    8px 5px;
+
+  border-bottom:
+    1px solid #ddd4cb;
+
 }
+
 
 .news-date {
-  flex: 0 0 85px;
-  font-size: 12px;
+
+  font-size:
+    13px;
+
+  white-space:
+    nowrap;
+
 }
+
 
 .news-title {
-  flex: 1;
-  font-size: 14px;
+
+  flex:
+    1;
+
+  font-size:
+    14px;
+
 }
 
+
 .news-arrow {
-  font-size: 20px;
+
+  font-size:
+    22px;
+
 }
 
 
@@ -229,77 +534,223 @@ section h2 {
    カレンダー
 ========================= */
 
-.calendar-slider {
-  display: flex;
-  gap: 25px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 5px 5px 12px;
+.calendar-section {
+
+  overflow:
+    hidden;
+
 }
 
-.calendar {
-  flex: 0 0 min(100%, 650px);
-  scroll-snap-align: center;
-  background: #fff;
-  padding: 16px;
-  border-radius: 9px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-
-.calendar h3 {
-  text-align: center;
-  margin: 0 0 12px;
-  font-size: 19px;
-}
-
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 3px;
-}
-
-.weekday {
-  text-align: center;
-  font-weight: bold;
-  font-size: 12px;
-  padding: 4px 0;
-}
-
-.day {
-  min-height: 55px;
-  padding: 4px;
-  border: 1px solid #eee7df;
-  border-radius: 4px;
-  text-align: center;
-  background: #fff;
-}
-
-.day span {
-  display: block;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.day small {
-  display: block;
-  font-size: 9px;
-  line-height: 1.2;
-  margin-top: 3px;
-}
-
-.day.holiday {
-  background: #f1eeee;
-  color: #777;
-}
-
-.day.event {
-  background: #f8f0e6;
-}
 
 .calendar-note {
-  text-align: center;
-  font-size: 11px;
-  color: #777;
+
+  text-align:
+    center;
+
+  font-size:
+    12px;
+
+  color:
+    #85766c;
+
+  margin-top:
+    -15px;
+
+  margin-bottom:
+    15px;
+
+}
+
+
+.calendar-slider {
+
+  display:
+    flex;
+
+  gap:
+    20px;
+
+  overflow-x:
+    auto;
+
+  scroll-snap-type:
+    x mandatory;
+
+  padding:
+    5px 5px 15px;
+
+}
+
+
+.calendar-slider::-webkit-scrollbar {
+
+  height:
+    7px;
+
+}
+
+
+.calendar-slider::-webkit-scrollbar-thumb {
+
+  background:
+    #c8b9aa;
+
+  border-radius:
+    10px;
+
+}
+
+
+.calendar {
+
+  flex:
+    0 0 100%;
+
+  max-width:
+    760px;
+
+  margin:
+    0 auto;
+
+  scroll-snap-align:
+    center;
+
+}
+
+
+.calendar h3 {
+
+  text-align:
+    center;
+
+  margin:
+    0 0 12px;
+
+  font-size:
+    20px;
+
+}
+
+
+.calendar-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap:
+    4px;
+
+}
+
+
+.weekday {
+
+  text-align:
+    center;
+
+  font-size:
+    12px;
+
+  font-weight:
+    bold;
+
+  padding:
+    5px 0;
+
+  background:
+    #e9e1d8;
+
+}
+
+
+.day {
+
+  min-height:
+    55px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #e5ddd5;
+
+  text-align:
+    center;
+
+  padding:
+    4px;
+
+  border-radius:
+    4px;
+
+}
+
+
+.day.empty {
+
+  background:
+    transparent;
+
+  border:
+    none;
+
+}
+
+
+.day-number {
+
+  font-size:
+    14px;
+
+  font-weight:
+    bold;
+
+  line-height:
+    1.2;
+
+}
+
+
+.holiday {
+
+  margin-top:
+    4px;
+
+  font-size:
+    10px;
+
+  color:
+    #a45d50;
+
+  font-weight:
+    bold;
+
+}
+
+
+.event-day {
+
+  display:
+    block;
+
+  margin-top:
+    4px;
+
+  font-size:
+    10px;
+
+  text-decoration:
+    none;
+
+  color:
+    #8b5d3b;
+
+  font-weight:
+    bold;
+
 }
 
 
@@ -308,40 +759,71 @@ section h2 {
 ========================= */
 
 .about {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    40px;
+
 }
 
-.about-image,
-.about-text {
-  flex: 1;
+
+.about-image {
+
+  flex:
+    1;
+
 }
+
 
 .about-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+
+  width:
+    100%;
+
+  display:
+    block;
+
+  border-radius:
+    10px;
+
 }
+
 
 .about-text {
-  text-align: center;
+
+  flex:
+    1;
+
+  text-align:
+    center;
+
 }
+
 
 .about-text h3 {
-  margin: 0 0 12px;
-  font-size: 19px;
+
+  font-size:
+    21px;
+
+  margin-top:
+    0;
+
 }
+
 
 .about-text p {
-  margin: 6px 0;
-  line-height: 1.6;
-}
 
-.about-text .strong {
-  margin-top: 13px;
-  font-weight: bold;
+  font-size:
+    15px;
+
+  margin:
+    12px 0;
+
 }
 
 
@@ -350,77 +832,187 @@ section h2 {
 ========================= */
 
 .menu-title {
-  text-align: center;
-  margin-bottom: 20px;
+
+  text-align:
+    center;
+
 }
+
 
 .menu-title img {
-  display: block;
-  width: 100%;
-  max-width: 680px;
-  margin: 0 auto;
-  border-radius: 8px;
+
+  width:
+    100%;
+
+  max-width:
+    650px;
+
+  height:
+    auto;
+
+  display:
+    block;
+
+  margin:
+    0 auto 25px;
+
+  border-radius:
+    10px;
+
 }
+
 
 .menu-box {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap:
+    18px;
+
 }
+
 
 .menu-card {
-  background: #fff;
-  padding: 17px;
-  border-radius: 8px;
-  box-shadow: 0 2px 7px rgba(0,0,0,0.05);
+
+  background:
+    white;
+
+  padding:
+    18px;
+
+  border-radius:
+    10px;
+
+  box-shadow:
+    0 2px 10px rgba(0,0,0,0.06);
+
 }
+
 
 .menu-card h3 {
-  margin: 0 0 11px;
-  text-align: center;
-  font-size: 17px;
+
+  margin:
+    0 0 12px;
+
+  font-size:
+    19px;
+
+  border-bottom:
+    1px solid #ddd4cb;
+
+  padding-bottom:
+    7px;
+
 }
+
 
 .menu-card h3 small {
-  font-size: 11px;
-  font-weight: normal;
+
+  font-size:
+    12px;
+
+  font-weight:
+    normal;
+
 }
+
 
 .menu-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 6px 0;
-  border-bottom: 1px dotted #ddd;
-  line-height: 1.4;
-  font-size: 14px;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    flex-start;
+
+  gap:
+    10px;
+
+  padding:
+    6px 0;
+
+  border-bottom:
+    1px dotted #ddd4cb;
+
 }
 
-.menu-row strong {
-  white-space: nowrap;
+
+.menu-name {
+
+  font-size:
+    13px;
+
 }
+
+
+.menu-price {
+
+  white-space:
+    nowrap;
+
+  font-size:
+    13px;
+
+  font-weight:
+    bold;
+
+}
+
 
 .menu-note {
-  text-align: center;
-  font-size: 11px;
-  margin: 8px 0 0;
+
+  font-size:
+    11px;
+
+  color:
+    #75665c;
+
 }
 
-.sandwich {
-  text-align: left;
-}
 
 .coffee-menu {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+
+  display:
+    flex;
+
+  gap:
+    15px;
+
+  align-items:
+    center;
+
 }
 
+
 .coffee-menu img {
-  width: 38%;
-  height: auto;
-  border-radius: 6px;
+
+  width:
+    145px;
+
+  height:
+    145px;
+
+  object-fit:
+    cover;
+
+  border-radius:
+    8px;
+
+}
+
+
+.coffee-menu-content {
+
+  flex:
+    1;
+
 }
 
 
@@ -429,29 +1021,60 @@ section h2 {
 ========================= */
 
 .owner-box {
-  max-width: 850px;
-  margin: 0 auto;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    35px;
+
 }
+
 
 .owner-image {
-  text-align: center;
-  margin-bottom: 18px;
+
+  flex:
+    0 0 40%;
+
 }
+
 
 .owner-image img {
-  width: 210px;
-  max-width: 75%;
-  height: auto;
-  border-radius: 8px;
+
+  width:
+    100%;
+
+  display:
+    block;
+
+  border-radius:
+    10px;
+
 }
+
 
 .owner-text {
-  text-align: center;
+
+  flex:
+    1;
+
+  text-align:
+    center;
+
 }
 
+
 .owner-text p {
-  margin: 9px 0;
-  line-height: 1.75;
+
+  font-size:
+    14px;
+
+  margin:
+    14px 0;
+
 }
 
 
@@ -459,42 +1082,122 @@ section h2 {
    アクセス
 ========================= */
 
-.info-box {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
+.info-section {
+
+  text-align:
+    center;
+
 }
+
+
+.info-box {
+
+  max-width:
+    700px;
+
+  margin:
+    0 auto;
+
+  background:
+    white;
+
+  padding:
+    25px;
+
+  border-radius:
+    10px;
+
+}
+
 
 .info-item {
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd5cc;
+
+  padding:
+    12px 0;
+
+  border-bottom:
+    1px solid #e5ddd5;
+
 }
 
-.info-item h3 {
-  margin: 0 0 4px;
-  font-size: 16px;
+
+.info-label {
+
+  font-weight:
+    bold;
+
+  font-size:
+    14px;
+
+  margin-bottom:
+    3px;
+
+  color:
+    #725947;
+
 }
+
 
 .address-link {
-  color: #3f352e;
-  text-decoration: underline;
+
+  color:
+    #4f6f91;
+
+  text-decoration:
+    underline;
+
+  line-height:
+    1.8;
+
 }
 
-.map-hint {
-  font-size: 11px;
-  color: #777;
-  margin: 3px 0 0;
+
+.phone {
+
+  font-size:
+    18px;
+
+  font-weight:
+    bold;
+
 }
 
-.phone-button {
-  display: inline-block;
-  margin-top: 5px;
-  padding: 6px 17px;
-  border-radius: 20px;
-  background: #eee7df;
-  color: #3f352e;
-  text-decoration: none;
-  font-size: 13px;
+
+.phone-button,
+.map-button {
+
+  display:
+    inline-block;
+
+  margin-top:
+    8px;
+
+  padding:
+    7px 18px;
+
+  background:
+    #5c493b;
+
+  color:
+    white;
+
+  text-decoration:
+    none;
+
+  border-radius:
+    20px;
+
+  font-size:
+    13px;
+
+}
+
+
+.access {
+
+  padding-top:
+    15px;
+
 }
 
 
@@ -503,43 +1206,103 @@ section h2 {
 ========================= */
 
 footer {
-  text-align: center;
-  padding: 25px 10px;
-  background: #4a3b32;
-  color: #fff;
+
+  text-align:
+    center;
+
+  background:
+    #49382d;
+
+  color:
+    white;
+
+  padding:
+    30px 15px;
+
 }
+
 
 .footer-logo {
-  font-size: 19px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px #222;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-weight:
+    900;
+
+  font-size:
+    18px;
+
+  letter-spacing:
+    2px;
+
+  text-shadow:
+    1px 1px 2px rgba(0,0,0,0.5);
+
 }
 
-.sns-links {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin: 13px 0;
+
+.footer-sns {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    18px;
+
+  margin:
+    12px 0;
+
 }
 
-.sns-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.7);
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 17px;
+
+.footer-sns a {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    36px;
+
+  height:
+    36px;
+
+  border:
+    1px solid rgba(255,255,255,0.7);
+
+  border-radius:
+    50%;
+
+  color:
+    white;
+
+  text-decoration:
+    none;
+
+  font-weight:
+    bold;
+
 }
+
 
 footer p {
-  margin: 4px 0;
-  font-size: 11px;
+
+  margin:
+    5px 0;
+
+  font-size:
+    11px;
+
 }
 
 
@@ -547,186 +1310,316 @@ footer p {
    スマートフォン
 ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-  header {
-    padding: 13px 5px 7px;
+
+  .logo {
+
+    font-size:
+      18px;
+
+    letter-spacing:
+      1.5px;
+
   }
 
-  header h1 {
-    font-size: 20px;
+
+  .hero-title h1 {
+
+    font-size:
+      20px;
+
   }
 
-  .concept {
-    margin-top: 3px;
-  }
 
-  .concept div:first-child,
-  .concept div:last-child {
-    font-size: 15px;
+  .hero-title p {
+
+    font-size:
+      14px;
+
   }
 
 
   #business-status {
-    margin: 4px auto;
-    font-size: 11px;
-    padding: 3px 12px;
+
+    font-size:
+      12px;
+
+    padding:
+      2px 12px;
+
   }
 
 
-  nav {
-    padding: 5px 2px;
-  }
+  .main-nav {
 
-  .nav-row {
-    gap: 18px;
-    margin: 2px 0;
-  }
+    padding:
+      5px 2px;
 
-  nav a {
-    font-size: 12px;
   }
 
 
-  .hero-copy {
-    padding: 13px 7px 7px;
-  }
+  .main-nav a {
 
-  .hero-copy h2 {
-    font-size: 17px;
-  }
+    font-size:
+      11px;
 
-  .hero-copy p {
-    font-size: 13px;
+    padding:
+      2px 1px;
+
   }
 
 
   section {
-    padding: 25px 12px;
+
+    padding:
+      35px 15px;
+
   }
+
 
   section h2 {
-    font-size: 21px;
-    margin-bottom: 13px;
+
+    font-size:
+      22px;
+
   }
 
 
-  .news-item {
-    gap: 6px;
-    padding: 6px 2px;
-  }
+  .hero {
 
-  .news-date {
-    flex: 0 0 72px;
-    font-size: 10px;
-  }
+    padding:
+      12px 10px 30px;
 
-  .news-title {
-    font-size: 12px;
   }
 
 
-  .calendar-slider {
-    gap: 12px;
-    padding-left: 0;
-    padding-right: 0;
+  .hero > img {
+
+    max-height:
+      360px;
+
   }
 
-  .calendar {
-    flex-basis: 100%;
-    padding: 10px 6px;
+
+  .hero-message h2 {
+
+    font-size:
+      17px;
+
   }
 
-  .calendar h3 {
-    font-size: 17px;
-    margin-bottom: 9px;
-  }
 
-  .calendar-grid {
-    gap: 2px;
-  }
+  .hero-message p {
 
-  .day {
-    min-height: 46px;
-    padding: 3px 1px;
-  }
+    font-size:
+      14px;
 
-  .day span {
-    font-size: 11px;
-  }
-
-  .day small {
-    font-size: 8px;
-  }
-
-  .weekday {
-    font-size: 10px;
   }
 
 
   .about {
-    display: block;
+
+    display:
+      block;
+
   }
+
 
   .about-image {
-    margin-bottom: 15px;
+
+    margin-bottom:
+      20px;
+
   }
 
-  .about-text h3 {
-    font-size: 17px;
-  }
 
-  .about-text p {
-    margin: 5px 0;
-    line-height: 1.5;
+  .about-text {
+
+    text-align:
+      center;
+
   }
 
 
   .menu-box {
-    display: block;
+
+    grid-template-columns:
+      1fr;
+
   }
 
-  .menu-card {
-    margin-bottom: 12px;
-    padding: 14px 11px;
-  }
-
-  .menu-card h3 {
-    font-size: 16px;
-  }
-
-  .menu-row {
-    font-size: 12px;
-    padding: 5px 0;
-  }
 
   .menu-title img {
-    width: 97%;
+
+    max-width:
+      100%;
+
   }
+
+
+  .menu-card {
+
+    padding:
+      15px;
+
+  }
+
+
+  .menu-card h3 {
+
+    font-size:
+      17px;
+
+  }
+
+
+  .menu-name {
+
+    font-size:
+      12px;
+
+  }
+
+
+  .menu-price {
+
+    font-size:
+      12px;
+
+  }
+
 
   .coffee-menu {
-    display: block;
+
+    display:
+      block;
+
   }
+
 
   .coffee-menu img {
-    display: block;
-    width: 62%;
-    margin: 0 auto 12px;
+
+    width:
+      100%;
+
+    height:
+      auto;
+
+    max-height:
+      300px;
+
+    object-fit:
+      cover;
+
+    margin-bottom:
+      10px;
+
   }
 
 
-  .owner-image img {
-    width: 175px;
+  .owner-box {
+
+    display:
+      block;
+
   }
+
+
+  .owner-image {
+
+    margin-bottom:
+      20px;
+
+  }
+
+
+  .owner-text {
+
+    text-align:
+      center;
+
+  }
+
 
   .owner-text p {
-    line-height: 1.6;
-    margin: 7px 0;
+
+    font-size:
+      13px;
+
   }
 
 
-  .info-item {
-    padding: 8px 0;
+  .news-item {
+
+    gap:
+      7px;
+
+  }
+
+
+  .news-date {
+
+    font-size:
+      11px;
+
+  }
+
+
+  .news-title {
+
+    font-size:
+      12px;
+
+  }
+
+
+  .calendar {
+
+    flex-basis:
+      100%;
+
+  }
+
+
+  .day {
+
+    min-height:
+      50px;
+
+  }
+
+
+  .weekday {
+
+    font-size:
+      11px;
+
+  }
+
+
+  .day-number {
+
+    font-size:
+      12px;
+
+  }
+
+
+  .holiday,
+  .event-day {
+
+    font-size:
+      9px;
+
+  }
+
+
+  .info-box {
+
+    padding:
+      18px;
+
   }
 
 }
