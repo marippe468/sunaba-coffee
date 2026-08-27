@@ -2,26 +2,20 @@
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
   margin: 0;
-
   font-family:
-    "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
-    "Meiryo",
+    "Hiragino Kaku Gothic ProN",
+    Meiryo,
     sans-serif;
 
-  color: #3f352e;
-
-  background:
-    #f8f5ef;
-
+  color: #3d342d;
+  background: #faf8f4;
   line-height: 1.7;
 }
 
@@ -30,229 +24,128 @@ body {
    ヘッダー
 ========================= */
 
-.header {
-
-  position: sticky;
-
-  top: 0;
-
-  z-index: 1000;
-
-  background:
-    rgba(255, 255, 255, 0.96);
-
+header {
   text-align: center;
-
-  padding:
-    8px 15px 10px;
-
-  border-bottom:
-    1px solid #e5ded5;
-
+  padding: 18px 15px 12px;
+  background: #fffdf9;
 }
 
+
+/* スマホでも1行 */
 
 .logo {
-
-  font-family:
-    Arial,
-    sans-serif;
-
-  font-size:
-    20px;
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    2px;
-
-  color:
-    #4b382c;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #3b3028;
 
   text-shadow:
-    1px 1px 0 white,
-    2px 2px 2px rgba(0,0,0,0.18);
+    1px 1px 0 #fff,
+    2px 2px 3px rgba(0,0,0,0.25);
 
-  white-space:
-    nowrap;
-
+  white-space: nowrap;
 }
 
 
-.hero-title h1 {
+/* しまなみ海道 */
 
-  margin:
-    2px 0 0;
-
-  font-size:
-    25px;
-
-  line-height:
-    1.2;
-
-  font-weight:
-    700;
-
+.shima {
+  margin-top: 3px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 
-.hero-title p {
+/* 店舗説明 */
 
-  margin:
-    0;
-
-  font-size:
-    17px;
-
-  line-height:
-    1.25;
-
+.subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 0;
 }
 
+
+/* 営業状況 */
 
 #business-status {
+  display: inline-block;
 
-  display:
-    inline-block;
+  margin-top: 7px;
+  padding: 4px 18px;
 
-  margin-top:
-    5px;
+  border-radius: 20px;
 
-  padding:
-    3px 16px;
-
-  border-radius:
-    20px;
-
-  font-size:
-    14px;
-
-  font-weight:
-    bold;
-
+  font-size: 17px;
+  font-weight: bold;
 }
 
 
 /* 営業中 */
 
 .status-open {
-
-  background:
-    #e6f3e8;
-
-  color:
-    #28743b;
-
+  color: #fff;
+  background: #6b8e23;
 }
 
 
 /* まもなく終了 */
 
 .status-soon {
-
-  background:
-    #fff0d9;
-
-  color:
-    #a85b00;
-
+  color: #fff;
+  background: #c77932;
 }
 
 
 /* 定休日 */
 
 .status-holiday {
-
-  background:
-    #eee8e4;
-
-  color:
-    #765f51;
-
+  color: #fff;
+  background: #a65d5d;
 }
 
 
-/* 営業前・営業終了 */
+/* 営業前・終了 */
 
 .status-closed {
-
-  background:
-    #eeeeee;
-
-  color:
-    #666666;
-
+  color: #666;
+  background: #eee;
 }
 
 
 /* =========================
-   ナビゲーション
+   ナビ
 ========================= */
 
-.main-nav {
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  display:
-    flex;
+  max-width: 850px;
+  margin: 0 auto;
 
-  justify-content:
-    center;
+  padding: 7px 12px;
 
-  align-items:
-    center;
+  background: #fff;
 
-  width:
-    100%;
-
-  padding:
-    7px 8px;
-
-  gap:
-    0;
-
-  background:
-    #ffffff;
-
-  border-bottom:
-    1px solid #e7e0d8;
-
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
+nav a {
+  flex: 1;
 
-.main-nav a {
+  text-align: center;
 
-  flex:
-    1;
+  color: #4a4039;
+  text-decoration: none;
 
-  text-align:
-    center;
+  font-size: 13px;
+  font-weight: bold;
 
-  text-decoration:
-    none;
-
-  color:
-    #51463e;
-
-  font-size:
-    13px;
-
-  font-weight:
-    bold;
-
-  white-space:
-    nowrap;
-
-  padding:
-    2px 3px;
-
-}
-
-
-.main-nav a:hover {
-
-  color:
-    #9b6d48;
-
+  white-space: nowrap;
 }
 
 
@@ -261,119 +154,67 @@ body {
 ========================= */
 
 section {
-
-  max-width:
-    1100px;
-
-  margin:
-    0 auto;
-
-  padding:
-    45px 20px;
-
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 35px 18px;
 }
 
-
 section h2 {
+  text-align: center;
 
-  text-align:
-    center;
-
-  font-size:
-    26px;
+  font-size: 26px;
 
   margin:
-    0 0 25px;
+    0 0 22px;
 
-  color:
-    #4c3b31;
-
+  color: #3d342d;
 }
 
 
 /* =========================
-   トップ
+   トップ写真
 ========================= */
 
 .hero {
+  max-width: 1100px;
+  padding: 0;
+  position: relative;
+}
 
-  max-width:
-    1100px;
+.hero img {
+  display: block;
 
-  margin:
-    0 auto;
+  width: 100%;
+  height: auto;
 
-  padding:
-    20px 15px 40px;
+  max-height: 570px;
 
-  text-align:
-    center;
-
+  object-fit: cover;
 }
 
 
-.hero > img {
+/* 写真下の文字 */
 
-  width:
-    100%;
-
-  max-height:
-    520px;
-
-  object-fit:
-    cover;
-
-  display:
-    block;
-
-  margin:
-    0 auto;
-
-  border-radius:
-    10px;
-
-  box-shadow:
-    0 5px 20px rgba(0,0,0,0.12);
-
+.hero-text {
+  text-align: center;
+  padding: 15px 15px 8px;
 }
 
 
-.hero-message {
+.hero-text h1 {
+  margin: 0;
 
-  padding:
-    15px 10px 0;
-
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 
-.hero-message h2 {
+.hero-text p {
+  margin: 6px 0 0;
 
-  margin:
-    0 0 5px;
-
-  font-size:
-    21px;
-
-  line-height:
-    1.5;
-
-  text-align:
-    center;
-
-}
-
-
-.hero-message p {
-
-  margin:
-    0;
-
-  font-size:
-    16px;
-
-  text-align:
-    center;
-
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 
@@ -382,72 +223,27 @@ section h2 {
 ========================= */
 
 .instagram-top {
+  text-align: center;
 
-  text-align:
-    center;
-
-  padding-top:
-    15px;
-
-  padding-bottom:
-    30px;
-
-}
-
-
-.instagram-top h2 {
-
-  margin-bottom:
-    5px;
-
-}
-
-
-.instagram-top p {
-
-  margin:
-    0 0 15px;
-
-  font-size:
-    14px;
-
+  padding-top: 8px;
+  padding-bottom: 12px;
 }
 
 
 .instagram-button {
+  display: inline-block;
 
-  display:
-    inline-block;
+  padding: 8px 24px;
 
-  padding:
-    9px 22px;
+  border-radius: 25px;
 
-  border-radius:
-    25px;
+  background: #3d342d;
+  color: white;
 
-  background:
-    #4b382c;
+  text-decoration: none;
 
-  color:
-    white;
-
-  text-decoration:
-    none;
-
-  font-size:
-    14px;
-
-  font-weight:
-    bold;
-
-}
-
-
-.instagram-button:hover {
-
-  opacity:
-    0.8;
-
+  font-size: 14px;
+  font-weight: bold;
 }
 
 
@@ -455,78 +251,36 @@ section h2 {
    お知らせ
 ========================= */
 
-.news-section {
-
-  padding-top:
-    30px;
-
-}
-
-
 .news-list {
-
-  max-width:
-    850px;
-
-  margin:
-    0 auto;
-
+  max-width: 700px;
+  margin: auto;
 }
 
 
 .news-item {
+  display: flex;
+  align-items: center;
 
-  display:
-    flex;
+  gap: 12px;
 
-  align-items:
-    center;
+  padding: 8px 5px;
 
-  gap:
-    12px;
+  border-bottom: 1px solid #ddd;
 
-  text-decoration:
-    none;
+  color: #3d342d;
+  text-decoration: none;
 
-  color:
-    #44382f;
+  font-size: 15px;
 
-  padding:
-    8px 5px;
-
-  border-bottom:
-    1px solid #ddd4cb;
-
+  line-height: 1.3;
 }
 
 
 .news-date {
+  white-space: nowrap;
 
-  font-size:
-    13px;
-
-  white-space:
-    nowrap;
-
-}
-
-
-.news-title {
-
-  flex:
-    1;
-
-  font-size:
-    14px;
-
-}
-
-
-.news-arrow {
-
-  font-size:
-    22px;
-
+  font-size: 13px;
+  color: #777;
 }
 
 
@@ -534,223 +288,151 @@ section h2 {
    カレンダー
 ========================= */
 
-.calendar-section {
-
-  overflow:
-    hidden;
-
-}
-
-
 .calendar-note {
+  text-align: center;
 
-  text-align:
-    center;
+  font-size: 12px;
+  color: #777;
 
-  font-size:
-    12px;
-
-  color:
-    #85766c;
-
-  margin-top:
-    -15px;
-
-  margin-bottom:
-    15px;
-
+  margin-top: -12px;
+  margin-bottom: 12px;
 }
 
 
-.calendar-slider {
+/* 横スライド */
 
-  display:
-    flex;
+.calendar-scroll {
+  display: flex;
 
-  gap:
-    20px;
+  gap: 18px;
 
-  overflow-x:
-    auto;
+  overflow-x: auto;
 
-  scroll-snap-type:
-    x mandatory;
+  scroll-snap-type: x mandatory;
 
-  padding:
-    5px 5px 15px;
-
-}
-
-
-.calendar-slider::-webkit-scrollbar {
-
-  height:
-    7px;
-
-}
-
-
-.calendar-slider::-webkit-scrollbar-thumb {
-
-  background:
-    #c8b9aa;
-
-  border-radius:
-    10px;
-
+  padding-bottom: 10px;
 }
 
 
 .calendar {
+  flex: 0 0 100%;
 
-  flex:
-    0 0 100%;
+  scroll-snap-align: start;
 
-  max-width:
-    760px;
+  background: #fff;
 
-  margin:
-    0 auto;
+  padding: 15px;
 
-  scroll-snap-align:
-    center;
+  border-radius: 10px;
 
+  box-shadow:
+    0 2px 10px rgba(0,0,0,0.06);
 }
 
 
 .calendar h3 {
-
-  text-align:
-    center;
+  text-align: center;
 
   margin:
     0 0 12px;
 
-  font-size:
-    20px;
-
+  font-size: 20px;
 }
 
 
 .calendar-grid {
-
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
     repeat(7, 1fr);
 
-  gap:
-    4px;
+  gap: 3px;
+}
 
+
+.weekday,
+.day {
+  text-align: center;
+
+  min-height: 47px;
 }
 
 
 .weekday {
+  font-weight: bold;
 
-  text-align:
-    center;
-
-  font-size:
-    12px;
-
-  font-weight:
-    bold;
-
-  padding:
-    5px 0;
-
-  background:
-    #e9e1d8;
-
+  font-size: 13px;
 }
 
 
 .day {
-
-  min-height:
-    55px;
-
-  background:
-    #ffffff;
-
   border:
-    1px solid #e5ddd5;
+    1px solid #eee;
 
-  text-align:
-    center;
+  padding-top: 4px;
 
-  padding:
-    4px;
+  background: #fff;
 
-  border-radius:
-    4px;
+  border-radius: 4px;
 
+  font-size: 13px;
 }
 
 
-.day.empty {
+/* 日曜日・祝日 */
 
-  background:
-    transparent;
+.sun {
+  color: #d34b4b;
+}
 
-  border:
-    none;
 
+/* 土曜日 */
+
+.sat {
+  color: #3574b8;
+}
+
+
+/* 定休日 */
+
+.closed {
+  background: #f7eded;
 }
 
 
 .day-number {
-
-  font-size:
-    14px;
-
-  font-weight:
-    bold;
-
-  line-height:
-    1.2;
-
+  font-size: 14px;
+  font-weight: bold;
 }
 
 
 .holiday {
+  color: #b34b4b;
 
-  margin-top:
-    4px;
+  font-size: 9px;
 
-  font-size:
-    10px;
+  line-height: 1.1;
 
-  color:
-    #a45d50;
-
-  font-weight:
-    bold;
-
+  margin-top: 2px;
 }
 
 
 .event-day {
+  display: block;
 
-  display:
-    block;
+  color: #6c573e;
 
-  margin-top:
-    4px;
+  font-size: 9px;
 
-  font-size:
-    10px;
+  line-height: 1.1;
 
-  text-decoration:
-    none;
+  margin-top: 2px;
+}
 
-  color:
-    #8b5d3b;
 
-  font-weight:
-    bold;
-
+.empty {
+  background: transparent;
+  border: none;
 }
 
 
@@ -759,71 +441,52 @@ section h2 {
 ========================= */
 
 .about {
+  display: flex;
 
-  display:
-    flex;
+  align-items: center;
 
-  align-items:
-    center;
-
-  gap:
-    40px;
-
+  gap: 35px;
 }
 
 
 .about-image {
-
-  flex:
-    1;
-
+  flex: 1;
 }
 
 
 .about-image img {
+  width: 100%;
 
-  width:
-    100%;
+  display: block;
 
-  display:
-    block;
-
-  border-radius:
-    10px;
-
+  border-radius: 8px;
 }
 
 
 .about-text {
+  flex: 1;
 
-  flex:
-    1;
+  text-align: center;
 
-  text-align:
-    center;
-
+  font-size: 16px;
 }
 
 
 .about-text h3 {
+  font-size: 20px;
 
-  font-size:
-    21px;
-
-  margin-top:
-    0;
-
+  margin-top: 0;
 }
 
 
 .about-text p {
-
-  font-size:
-    15px;
-
   margin:
     12px 0;
+}
 
+
+.strong {
+  font-weight: bold;
 }
 
 
@@ -832,187 +495,111 @@ section h2 {
 ========================= */
 
 .menu-title {
-
-  text-align:
-    center;
-
+  text-align: center;
 }
 
 
 .menu-title img {
+  width: 75%;
 
-  width:
-    100%;
+  max-width: 620px;
 
-  max-width:
-    650px;
+  border-radius: 8px;
 
-  height:
-    auto;
-
-  display:
-    block;
-
-  margin:
-    0 auto 25px;
-
-  border-radius:
-    10px;
-
+  margin-bottom: 20px;
 }
 
 
 .menu-box {
+  display: grid;
 
-  display:
-    grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
-  gap:
-    18px;
-
+  gap: 15px;
 }
 
 
 .menu-card {
+  background: #fff;
 
-  background:
-    white;
+  padding: 18px;
 
-  padding:
-    18px;
-
-  border-radius:
-    10px;
+  border-radius: 8px;
 
   box-shadow:
-    0 2px 10px rgba(0,0,0,0.06);
-
+    0 2px 8px rgba(0,0,0,0.05);
 }
 
 
 .menu-card h3 {
-
   margin:
-    0 0 12px;
+    0 0 10px;
 
-  font-size:
-    19px;
+  font-size: 20px;
 
   border-bottom:
-    1px solid #ddd4cb;
+    1px solid #ddd;
 
-  padding-bottom:
-    7px;
-
+  padding-bottom: 6px;
 }
 
 
-.menu-card h3 small {
-
-  font-size:
-    12px;
-
-  font-weight:
-    normal;
-
+.menu-card small {
+  font-size: 12px;
+  font-weight: normal;
 }
 
 
 .menu-row {
+  display: flex;
 
-  display:
-    flex;
+  justify-content: space-between;
 
-  justify-content:
-    space-between;
+  align-items: flex-start;
 
-  align-items:
-    flex-start;
+  gap: 15px;
 
-  gap:
-    10px;
-
-  padding:
-    6px 0;
+  padding: 6px 0;
 
   border-bottom:
-    1px dotted #ddd4cb;
+    1px dotted #ddd;
 
+  font-size: 14px;
+
+  line-height: 1.5;
 }
 
 
-.menu-name {
-
-  font-size:
-    13px;
-
-}
-
-
-.menu-price {
-
-  white-space:
-    nowrap;
-
-  font-size:
-    13px;
-
-  font-weight:
-    bold;
-
+.menu-row strong {
+  white-space: nowrap;
 }
 
 
 .menu-note {
+  font-size: 11px;
 
-  font-size:
-    11px;
+  color: #777;
 
-  color:
-    #75665c;
-
+  margin-bottom: 0;
 }
 
 
 .coffee-menu {
+  display: flex;
 
-  display:
-    flex;
+  gap: 18px;
 
-  gap:
-    15px;
-
-  align-items:
-    center;
-
+  align-items: center;
 }
 
 
 .coffee-menu img {
+  width: 30%;
 
-  width:
-    145px;
-
-  height:
-    145px;
-
-  object-fit:
-    cover;
-
-  border-radius:
-    8px;
-
+  border-radius: 6px;
 }
 
 
-.coffee-menu-content {
-
-  flex:
-    1;
-
+.coffee-menu > div {
+  flex: 1;
 }
 
 
@@ -1021,60 +608,40 @@ section h2 {
 ========================= */
 
 .owner-box {
+  display: flex;
 
-  display:
-    flex;
+  align-items: center;
 
-  align-items:
-    center;
-
-  gap:
-    35px;
-
+  gap: 35px;
 }
 
 
 .owner-image {
-
-  flex:
-    0 0 40%;
-
+  flex: 1;
 }
 
 
 .owner-image img {
+  width: 100%;
 
-  width:
-    100%;
+  display: block;
 
-  display:
-    block;
-
-  border-radius:
-    10px;
-
+  border-radius: 8px;
 }
 
 
 .owner-text {
+  flex: 1;
 
-  flex:
-    1;
+  text-align: center;
 
-  text-align:
-    center;
-
+  font-size: 15px;
 }
 
 
 .owner-text p {
-
-  font-size:
-    14px;
-
   margin:
-    14px 0;
-
+    13px 0;
 }
 
 
@@ -1082,122 +649,64 @@ section h2 {
    アクセス
 ========================= */
 
-.info-section {
-
-  text-align:
-    center;
-
-}
-
-
 .info-box {
+  max-width: 650px;
 
-  max-width:
-    700px;
+  margin: auto;
 
-  margin:
-    0 auto;
-
-  background:
-    white;
-
-  padding:
-    25px;
-
-  border-radius:
-    10px;
-
+  text-align: center;
 }
 
 
 .info-item {
-
-  padding:
-    12px 0;
+  padding: 13px 0;
 
   border-bottom:
-    1px solid #e5ddd5;
+    1px solid #ddd;
 
+  font-size: 15px;
 }
 
 
 .info-label {
+  font-weight: bold;
 
-  font-weight:
-    bold;
-
-  font-size:
-    14px;
-
-  margin-bottom:
-    3px;
-
-  color:
-    #725947;
-
+  margin-bottom: 4px;
 }
 
 
 .address-link {
+  color: #3d342d;
 
-  color:
-    #4f6f91;
+  text-decoration: underline;
 
-  text-decoration:
-    underline;
-
-  line-height:
-    1.8;
-
+  font-weight: bold;
 }
 
 
-.phone {
+.map-hint {
+  font-size: 11px;
 
-  font-size:
-    18px;
-
-  font-weight:
-    bold;
-
+  color: #777;
 }
 
 
-.phone-button,
-.map-button {
+.phone-button {
+  display: inline-block;
 
-  display:
-    inline-block;
+  margin-top: 3px;
 
-  margin-top:
-    8px;
+  padding: 6px 18px;
 
-  padding:
-    7px 18px;
+  background: #3d342d;
 
-  background:
-    #5c493b;
+  color: white;
 
-  color:
-    white;
+  border-radius: 20px;
 
-  text-decoration:
-    none;
+  text-decoration: none;
 
-  border-radius:
-    20px;
-
-  font-size:
-    13px;
-
-}
-
-
-.access {
-
-  padding-top:
-    15px;
-
+  font-size: 14px;
 }
 
 
@@ -1206,420 +715,301 @@ section h2 {
 ========================= */
 
 footer {
+  text-align: center;
 
-  text-align:
-    center;
+  padding: 30px 15px;
 
-  background:
-    #49382d;
+  background: #3d342d;
 
-  color:
-    white;
-
-  padding:
-    30px 15px;
-
+  color: white;
 }
 
 
 .footer-logo {
+  font-size: 20px;
 
-  font-family:
-    Arial,
-    sans-serif;
-
-  font-weight:
-    900;
-
-  font-size:
-    18px;
-
-  letter-spacing:
-    2px;
-
-  text-shadow:
-    1px 1px 2px rgba(0,0,0,0.5);
-
+  font-weight: bold;
 }
 
 
 .footer-sns {
+  display: flex;
 
-  display:
-    flex;
+  justify-content: center;
 
-  justify-content:
-    center;
+  gap: 15px;
 
-  gap:
-    18px;
-
-  margin:
-    12px 0;
-
+  margin: 15px 0;
 }
 
 
 .footer-sns a {
+  display: flex;
 
-  display:
-    flex;
+  align-items: center;
+  justify-content: center;
 
-  align-items:
-    center;
+  width: 38px;
+  height: 38px;
 
-  justify-content:
-    center;
+  border: 1px solid white;
 
-  width:
-    36px;
+  border-radius: 50%;
 
-  height:
-    36px;
+  color: white;
 
-  border:
-    1px solid rgba(255,255,255,0.7);
+  text-decoration: none;
 
-  border-radius:
-    50%;
+  font-weight: bold;
 
-  color:
-    white;
-
-  text-decoration:
-    none;
-
-  font-weight:
-    bold;
-
+  font-size: 18px;
 }
 
 
 footer p {
+  margin: 5px 0;
 
-  margin:
-    5px 0;
-
-  font-size:
-    11px;
-
+  font-size: 11px;
 }
 
 
 /* =========================
-   スマートフォン
+   スマホ
 ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+
+
+  /* ヘッダー */
+
+  header {
+    padding:
+      12px 8px 9px;
+  }
 
 
   .logo {
+    font-size: 29px;
 
-    font-size:
-      18px;
-
-    letter-spacing:
-      1.5px;
-
+    letter-spacing: 0.5px;
   }
 
 
-  .hero-title h1 {
+  .shima {
+    font-size: 14px;
 
-    font-size:
-      20px;
-
+    margin-top: 1px;
   }
 
 
-  .hero-title p {
+  .subtitle {
+    font-size: 14px;
 
-    font-size:
-      14px;
-
+    line-height: 1.2;
   }
 
 
   #business-status {
+    font-size: 16px;
 
-    font-size:
-      12px;
+    margin-top: 5px;
 
     padding:
-      2px 12px;
-
+      3px 16px;
   }
 
 
-  .main-nav {
+  /* ナビ */
 
+  nav {
     padding:
-      5px 2px;
+      6px 3px;
 
+    gap: 0;
   }
 
 
-  .main-nav a {
+  nav a {
+    font-size: 11px;
 
-    font-size:
-      11px;
-
-    padding:
-      2px 1px;
-
+    letter-spacing: -0.4px;
   }
 
+
+  /* トップ */
+
+  .hero img {
+    max-height: none;
+
+    width: 100%;
+  }
+
+
+  .hero-text {
+    padding:
+      12px 8px 5px;
+  }
+
+
+  .hero-text h1 {
+    font-size: 18px;
+
+    line-height: 1.35;
+  }
+
+
+  .hero-text p {
+    font-size: 15px;
+
+    line-height: 1.45;
+
+    margin-top: 5px;
+  }
+
+
+  /* セクション */
 
   section {
-
     padding:
-      35px 15px;
-
+      25px 12px;
   }
 
 
   section h2 {
+    font-size: 22px;
 
-    font-size:
-      22px;
-
+    margin-bottom: 16px;
   }
 
 
-  .hero {
-
-    padding:
-      12px 10px 30px;
-
-  }
-
-
-  .hero > img {
-
-    max-height:
-      360px;
-
-  }
-
-
-  .hero-message h2 {
-
-    font-size:
-      17px;
-
-  }
-
-
-  .hero-message p {
-
-    font-size:
-      14px;
-
-  }
-
-
-  .about {
-
-    display:
-      block;
-
-  }
-
-
-  .about-image {
-
-    margin-bottom:
-      20px;
-
-  }
-
-
-  .about-text {
-
-    text-align:
-      center;
-
-  }
-
-
-  .menu-box {
-
-    grid-template-columns:
-      1fr;
-
-  }
-
-
-  .menu-title img {
-
-    max-width:
-      100%;
-
-  }
-
-
-  .menu-card {
-
-    padding:
-      15px;
-
-  }
-
-
-  .menu-card h3 {
-
-    font-size:
-      17px;
-
-  }
-
-
-  .menu-name {
-
-    font-size:
-      12px;
-
-  }
-
-
-  .menu-price {
-
-    font-size:
-      12px;
-
-  }
-
-
-  .coffee-menu {
-
-    display:
-      block;
-
-  }
-
-
-  .coffee-menu img {
-
-    width:
-      100%;
-
-    height:
-      auto;
-
-    max-height:
-      300px;
-
-    object-fit:
-      cover;
-
-    margin-bottom:
-      10px;
-
-  }
-
-
-  .owner-box {
-
-    display:
-      block;
-
-  }
-
-
-  .owner-image {
-
-    margin-bottom:
-      20px;
-
-  }
-
-
-  .owner-text {
-
-    text-align:
-      center;
-
-  }
-
-
-  .owner-text p {
-
-    font-size:
-      13px;
-
-  }
-
+  /* お知らせ */
 
   .news-item {
+    font-size: 13px;
 
-    gap:
-      7px;
+    padding:
+      7px 2px;
 
+    gap: 8px;
   }
 
 
   .news-date {
-
-    font-size:
-      11px;
-
+    font-size: 11px;
   }
 
 
-  .news-title {
-
-    font-size:
-      12px;
-
-  }
-
+  /* カレンダー */
 
   .calendar {
-
-    flex-basis:
-      100%;
-
+    padding: 10px;
   }
 
 
+  .calendar h3 {
+    font-size: 18px;
+  }
+
+
+  .weekday,
   .day {
-
-    min-height:
-      50px;
-
-  }
-
-
-  .weekday {
-
-    font-size:
-      11px;
-
+    min-height: 43px;
   }
 
 
   .day-number {
-
-    font-size:
-      12px;
-
+    font-size: 13px;
   }
 
 
-  .holiday,
-  .event-day {
+  /* お店 */
 
-    font-size:
-      9px;
+  .about {
+    flex-direction: column;
 
+    gap: 18px;
   }
 
 
-  .info-box {
-
-    padding:
-      18px;
-
+  .about-image,
+  .about-text {
+    width: 100%;
   }
+
+
+  .about-text {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+
+  .about-text h3 {
+    font-size: 18px;
+  }
+
+
+  /* メニュー */
+
+  .menu-title img {
+    width: 90%;
+  }
+
+
+  .menu-card {
+    padding: 14px;
+  }
+
+
+  .menu-card h3 {
+    font-size: 18px;
+  }
+
+
+  .menu-row {
+    font-size: 13px;
+
+    gap: 8px;
+  }
+
+
+  .coffee-menu {
+    gap: 12px;
+  }
+
+
+  .coffee-menu img {
+    width: 32%;
+  }
+
+
+  /* 店主 */
+
+  .owner-box {
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+
+  .owner-image,
+  .owner-text {
+    width: 100%;
+  }
+
+
+  .owner-text {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+
+  /* アクセス */
+
+  .info-item {
+    font-size: 14px;
+  }
+
 
 }
