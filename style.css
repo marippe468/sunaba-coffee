@@ -1,0 +1,743 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans JP",
+    "Yu Gothic",
+    sans-serif;
+  color: #4b3621;
+  background: #f8f3eb;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  background: #4b3621;
+  color: white;
+  text-align: center;
+  padding: 24px 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 6px 0 16px;
+  font-size: 18px;
+}
+
+#business-status {
+  display: inline-block;
+  padding: 10px 25px;
+  background: white;
+  border-radius: 30px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.status-open {
+  color: #2e7d32;
+}
+
+.status-soon {
+  color: #d66a00;
+}
+
+.status-closed {
+  color: #777;
+}
+
+.status-holiday {
+  color: #c62828;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fffaf3;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 5px;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+nav a {
+  color: #4b3621;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.hero {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.hero-text {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 800px;
+  padding: 28px 20px;
+  background: rgba(45, 28, 15, 0.72);
+  color: white;
+  text-align: center;
+}
+
+.hero-text h2 {
+  margin: 0 0 12px;
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 23px;
+}
+
+.instagram-top {
+  background: white;
+  padding: 45px 20px;
+  text-align: center;
+}
+
+.instagram-top h2 {
+  margin: 0 0 18px;
+  font-size: 29px;
+}
+
+.instagram-top p {
+  font-size: 17px;
+}
+
+.instagram-button {
+  display: inline-block;
+  padding: 13px 30px;
+  background: #4b3621;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.qr-code {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 22px auto 0;
+  object-fit: cover;
+}
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+section h2 {
+  margin: 0 0 35px;
+  text-align: center;
+  font-size: 30px;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: #a66a3f;
+}
+
+/* お知らせ */
+
+.news-section {
+  background: #f8f3eb;
+}
+
+.news-list {
+  max-width: 850px;
+  margin: auto;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 14px;
+  padding: 18px;
+  background: white;
+  border-left: 5px solid #a66a3f;
+  color: #4b3621;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.news-date {
+  white-space: nowrap;
+  color: #777;
+  font-size: 15px;
+}
+
+.news-title {
+  flex: 1;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.news-arrow {
+  font-size: 23px;
+  color: #a66a3f;
+}
+
+/* カレンダー */
+
+.calendar-section {
+  max-width: none;
+  background: #fffaf3;
+}
+
+.calendar-wrap {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  gap: 25px;
+}
+
+.calendar {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.calendar h3 {
+  margin: 0 0 15px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.weekday {
+  padding: 5px 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.day {
+  min-height: 65px;
+  padding: 5px 2px;
+  border: 1px solid #eee;
+  background: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+.day.empty {
+  background: #fafafa;
+}
+
+.day-number {
+  font-weight: 700;
+}
+
+.holiday {
+  color: #d32f2f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.event-day {
+  display: block;
+  margin-top: 4px;
+  padding: 3px;
+  background: #a66a3f;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+/* お店について */
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.about-image,
+.about-text {
+  width: 50%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-text h3 {
+  margin-top: 0;
+  font-size: 25px;
+}
+
+.about-text p {
+  font-size: 18px;
+}
+
+/* メニュー */
+
+.menu-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.menu-title h2 {
+  margin: 0;
+}
+
+.menu-title img {
+  width: 170px;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.menu-card {
+  padding: 22px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.menu-card h3 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #6b4328;
+  font-size: 22px;
+}
+
+.menu-card h3 small {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.menu-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 17px;
+}
+
+.menu-name {
+  flex: 1;
+}
+
+.menu-price {
+  white-space: nowrap;
+  color: #a0522d;
+  font-weight: 700;
+  text-align: right;
+}
+
+.menu-note {
+  margin-top: 12px;
+  color: #777;
+  font-size: 15px;
+}
+
+/* 飲み物 */
+
+.coffee-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.coffee-menu img {
+  width: 170px;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.coffee-menu-content {
+  text-align: center;
+}
+
+.coffee-menu h3 {
+  border: none;
+}
+
+/* オーナー */
+
+.owner-section {
+  max-width: none;
+  background: #efe5d7;
+}
+
+.owner-box {
+  max-width: 950px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.owner-image {
+  width: 40%;
+  text-align: center;
+}
+
+.owner-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+}
+
+.owner-text {
+  width: 60%;
+  font-size: 17px;
+}
+
+.owner-text h3 {
+  font-size: 25px;
+}
+
+/* アクセス */
+
+.info-section {
+  max-width: none;
+  background: #efe5d7;
+}
+
+.info-box {
+  max-width: 750px;
+  margin: auto;
+  padding: 32px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.info-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 17px;
+}
+
+.info-label {
+  color: #6b4328;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.phone {
+  margin-top: 5px;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.phone-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 13px 32px;
+  background: #4b3621;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.access {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.map-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 13px 28px;
+  background: #4b3621;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 700;
+}
+
+/* SNS */
+
+.sns {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.sns h3 {
+  margin-bottom: 18px;
+}
+
+.sns-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sns-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: #4b3621;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+footer {
+  padding: 28px 15px;
+  background: #4b3621;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin: 4px;
+}
+
+
+/* =========================
+   スマートフォン
+========================= */
+
+@media (max-width: 700px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
+  header h1 {
+    font-size: 29px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  #business-status {
+    font-size: 20px;
+  }
+
+  nav {
+    padding: 13px 4px;
+  }
+
+  nav a {
+    margin: 0 7px;
+    font-size: 17px;
+  }
+
+  .hero {
+    height: 380px;
+  }
+
+  .hero-text {
+    bottom: 15px;
+    width: 94%;
+    padding: 20px 12px;
+  }
+
+  .hero-text h2 {
+    font-size: 25px;
+  }
+
+  .hero-text p {
+    font-size: 20px;
+  }
+
+  section {
+    padding: 50px 15px;
+  }
+
+  section h2 {
+    font-size: 27px;
+  }
+
+  .instagram-top p {
+    font-size: 16px;
+  }
+
+  .news-item {
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .news-date {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .news-title {
+    font-size: 16px;
+  }
+
+  .calendar-wrap {
+    flex-direction: column;
+  }
+
+  .calendar {
+    padding: 12px;
+  }
+
+  .calendar h3 {
+    font-size: 21px;
+  }
+
+  .day {
+    min-height: 55px;
+    font-size: 13px;
+  }
+
+  .weekday {
+    font-size: 13px;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .about-image,
+  .about-text {
+    width: 100%;
+  }
+
+  .about-text p {
+    font-size: 17px;
+  }
+
+  .menu-title {
+    flex-direction: column;
+  }
+
+  .menu-box {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-row {
+    font-size: 16px;
+  }
+
+  .menu-card h3 {
+    font-size: 21px;
+  }
+
+  .coffee-menu {
+    flex-direction: column;
+  }
+
+  .coffee-menu img {
+    width: 180px;
+    height: 120px;
+  }
+
+  .owner-box {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .owner-image,
+  .owner-text {
+    width: 100%;
+  }
+
+  .owner-text {
+    font-size: 16px;
+  }
+
+  .owner-text h3 {
+    font-size: 23px;
+  }
+
+  .info-box {
+    padding: 25px 15px;
+  }
+
+  .info-item {
+    font-size: 16px;
+  }
+
+}
