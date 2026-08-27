@@ -11,62 +11,64 @@
 
 <body>
 
-<header>
+<header class="header">
 
-  <h1>SUNABA COFFEE</h1>
-
-  <div id="business-status">
-    営業状況を確認中...
+  <div class="logo">
+    SUNABA COFFEE
   </div>
 
-  <div class="concept">
-    <div>しまなみ海道</div>
-    <div>～今治駅前・夫婦で営む小さなカフェ～</div>
+  <div class="hero-title">
+    <h1>しまなみ海道</h1>
+
+    <p>
+      ～今治駅前・夫婦で営む小さなカフェ～
+    </p>
+
+    <div id="business-status">
+      営業状況を確認中...
+    </div>
   </div>
 
 </header>
 
 
-<!-- ナビ -->
-<nav>
+<!-- ナビゲーション -->
+<nav class="main-nav">
 
-  <div class="nav-row">
-    <a href="#news">お知らせ</a>
-    <a href="#about">お店について</a>
-    <a href="#menu">メニュー</a>
-  </div>
+  <a href="#news">お知らせ</a>
 
-  <div class="nav-row">
-    <a href="#owner">店主の想い</a>
-    <a href="#info">アクセス・住所</a>
-  </div>
+  <a href="#about">お店について</a>
+
+  <a href="#menu">メニュー</a>
+
+  <a href="#owner">店主の想い</a>
+
+  <a href="#info">アクセス・住所</a>
 
 </nav>
 
 
-<!-- トップ写真 -->
-<div class="hero">
+<!-- トップ -->
+<section class="hero">
 
   <img
     src="image/gaikan.jpg"
     alt="Sunaba Coffee 外観"
   >
 
-</div>
+  <div class="hero-message">
 
+    <h2>
+      ～ いつもの一杯に、旅の途中の一杯にも。 ～
+    </h2>
 
-<!-- キャッチコピー -->
-<div class="hero-copy">
+    <p>
+      電車の音を聞きながら、ゆっくり時間が流れる。
+    </p>
 
-  <h2>
-    ～いつもの一杯に、旅の途中の一杯にも。～
-  </h2>
+  </div>
 
-  <p>
-    電車の音を聞きながら、ゆっくり時間が流れる。
-  </p>
-
-</div>
+</section>
 
 
 <!-- Instagram -->
@@ -91,28 +93,60 @@
 
 
 <!-- お知らせ -->
-<section id="news">
+<section id="news" class="news-section">
 
   <h2>お知らせ</h2>
 
   <div class="news-list">
 
     <a class="news-item" href="#calendar">
-      <span class="news-date">2026.08.28</span>
-      <span class="news-title">店内イベント開催のお知らせ</span>
-      <span class="news-arrow">›</span>
+
+      <span class="news-date">
+        2026.08.28
+      </span>
+
+      <span class="news-title">
+        店内イベント開催のお知らせ
+      </span>
+
+      <span class="news-arrow">
+        ›
+      </span>
+
     </a>
 
-    <a class="news-item" href="#calendar">
-      <span class="news-date">2026.09.05</span>
-      <span class="news-title">コーヒーを楽しむ小さな会</span>
-      <span class="news-arrow">›</span>
-    </a>
 
     <a class="news-item" href="#calendar">
-      <span class="news-date">2026.09.19</span>
-      <span class="news-title">秋の小さなイベント</span>
-      <span class="news-arrow">›</span>
+
+      <span class="news-date">
+        2026.09.05
+      </span>
+
+      <span class="news-title">
+        コーヒーを楽しむ小さな会
+      </span>
+
+      <span class="news-arrow">
+        ›
+      </span>
+
+    </a>
+
+
+    <a class="news-item" href="#calendar">
+
+      <span class="news-date">
+        2026.09.19
+      </span>
+
+      <span class="news-title">
+        秋の小さなイベント
+      </span>
+
+      <span class="news-arrow">
+        ›
+      </span>
+
     </a>
 
   </div>
@@ -121,14 +155,18 @@
 
 
 <!-- カレンダー -->
-<section id="calendar">
+<section id="calendar" class="calendar-section">
 
   <h2>イベントカレンダー</h2>
+
+  <p class="calendar-note">
+    横にスライドして次月をご覧いただけます
+  </p>
 
   <div class="calendar-slider">
 
 
-    <!-- 8月 -->
+    <!-- 2026年8月 -->
     <div class="calendar">
 
       <h3>2026年8月</h3>
@@ -143,6 +181,7 @@
         <div class="weekday">金</div>
         <div class="weekday">土</div>
 
+
         <div class="day empty"></div>
         <div class="day empty"></div>
         <div class="day empty"></div>
@@ -150,136 +189,138 @@
         <div class="day empty"></div>
         <div class="day empty"></div>
 
-        <div class="day">
-          <span>1</span>
-        </div>
 
         <div class="day">
-          <span>2</span>
-        </div>
-
-        <div class="day holiday">
-          <span>3</span>
-          <small>定休日</small>
+          <div class="day-number">1</div>
         </div>
 
         <div class="day">
-          <span>4</span>
+          <div class="day-number">2</div>
         </div>
 
-        <div class="day holiday">
-          <span>5</span>
-          <small>定休日</small>
-        </div>
-
-        <div class="day">
-          <span>6</span>
+        <div class="day holiday-day">
+          <div class="day-number">3</div>
+          <div class="holiday">定休日</div>
         </div>
 
         <div class="day">
-          <span>7</span>
+          <div class="day-number">4</div>
         </div>
 
         <div class="day">
-          <span>8</span>
+          <div class="day-number">5</div>
         </div>
 
         <div class="day">
-          <span>9</span>
-        </div>
-
-        <div class="day holiday">
-          <span>10</span>
-          <small>定休日</small>
+          <div class="day-number">6</div>
         </div>
 
         <div class="day">
-          <span>11</span>
+          <div class="day-number">7</div>
         </div>
 
         <div class="day">
-          <span>12</span>
+          <div class="day-number">8</div>
         </div>
 
         <div class="day">
-          <span>13</span>
+          <div class="day-number">9</div>
+        </div>
+
+        <div class="day holiday-day">
+          <div class="day-number">10</div>
+          <div class="holiday">定休日</div>
         </div>
 
         <div class="day">
-          <span>14</span>
+          <div class="day-number">11</div>
         </div>
 
         <div class="day">
-          <span>15</span>
+          <div class="day-number">12</div>
         </div>
 
         <div class="day">
-          <span>16</span>
-        </div>
-
-        <div class="day holiday">
-          <span>17</span>
-          <small>定休日</small>
+          <div class="day-number">13</div>
         </div>
 
         <div class="day">
-          <span>18</span>
-        </div>
-
-        <div class="day holiday">
-          <span>19</span>
-          <small>定休日</small>
+          <div class="day-number">14</div>
         </div>
 
         <div class="day">
-          <span>20</span>
+          <div class="day-number">15</div>
         </div>
 
         <div class="day">
-          <span>21</span>
+          <div class="day-number">16</div>
+        </div>
+
+        <div class="day holiday-day">
+          <div class="day-number">17</div>
+          <div class="holiday">定休日</div>
         </div>
 
         <div class="day">
-          <span>22</span>
+          <div class="day-number">18</div>
         </div>
 
         <div class="day">
-          <span>23</span>
+          <div class="day-number">19</div>
         </div>
 
-        <div class="day holiday">
-          <span>24</span>
-          <small>定休日</small>
-        </div>
-
-        <div class="day">
-          <span>25</span>
+        <div class="day holiday-day">
+          <div class="day-number">20</div>
+          <div class="holiday">定休日</div>
         </div>
 
         <div class="day">
-          <span>26</span>
+          <div class="day-number">21</div>
         </div>
 
         <div class="day">
-          <span>27</span>
-        </div>
-
-        <div class="day event">
-          <span>28</span>
-          <small>イベント</small>
+          <div class="day-number">22</div>
         </div>
 
         <div class="day">
-          <span>29</span>
+          <div class="day-number">23</div>
+        </div>
+
+        <div class="day holiday-day">
+          <div class="day-number">24</div>
+          <div class="holiday">定休日</div>
         </div>
 
         <div class="day">
-          <span>30</span>
+          <div class="day-number">25</div>
         </div>
 
-        <div class="day holiday">
-          <span>31</span>
-          <small>定休日</small>
+        <div class="day">
+          <div class="day-number">26</div>
+        </div>
+
+        <div class="day">
+          <div class="day-number">27</div>
+        </div>
+
+        <div class="day event-day-box">
+          <div class="day-number">28</div>
+          <a class="event-day" href="#event-0828">
+            イベント
+          </a>
+        </div>
+
+        <div class="day">
+          <div class="day-number">29</div>
+        </div>
+
+        <div class="day">
+          <div class="day-number">30</div>
+        </div>
+
+        <div class="day holiday-day">
+          <div class="day-number">31</div>
+          <div class="holiday">定休日</div>
         </div>
 
       </div>
@@ -287,7 +328,7 @@
     </div>
 
 
-    <!-- 9月 -->
+    <!-- 2026年9月 -->
     <div class="calendar">
 
       <h3>2026年9月</h3>
@@ -302,134 +343,141 @@
         <div class="weekday">金</div>
         <div class="weekday">土</div>
 
+
         <div class="day empty"></div>
 
-        <div class="day">
-          <span>1</span>
+
+        <div class="day holiday-day">
+          <div class="day-number">1</div>
+          <div class="holiday">定休日</div>
+        </div>
+
+        <div class="day holiday-day">
+          <div class="day-number">2</div>
+          <div class="holiday">定休日</div>
         </div>
 
         <div class="day">
-          <span>2</span>
-        </div>
-
-        <div class="day holiday">
-          <span>3</span>
-          <small>定休日</small>
+          <div class="day-number">3</div>
         </div>
 
         <div class="day">
-          <span>4</span>
+          <div class="day-number">4</div>
         </div>
 
-        <div class="day event">
-          <span>5</span>
-          <small>イベント</small>
-        </div>
-
-        <div class="day">
-          <span>6</span>
-        </div>
-
-        <div class="day holiday">
-          <span>7</span>
-          <small>定休日</small>
+        <div class="day event-day-box">
+          <div class="day-number">5</div>
+          <a class="event-day" href="#event-0905">
+            イベント
+          </a>
         </div>
 
         <div class="day">
-          <span>8</span>
+          <div class="day-number">6</div>
+        </div>
+
+        <div class="day holiday-day">
+          <div class="day-number">7</div>
+          <div class="holiday">定休日</div>
         </div>
 
         <div class="day">
-          <span>9</span>
+          <div class="day-number">8</div>
         </div>
 
         <div class="day">
-          <span>10</span>
+          <div class="day-number">9</div>
         </div>
 
         <div class="day">
-          <span>11</span>
+          <div class="day-number">10</div>
         </div>
 
         <div class="day">
-          <span>12</span>
+          <div class="day-number">11</div>
         </div>
 
         <div class="day">
-          <span>13</span>
-        </div>
-
-        <div class="day holiday">
-          <span>14</span>
-          <small>定休日</small>
+          <div class="day-number">12</div>
         </div>
 
         <div class="day">
-          <span>15</span>
+          <div class="day-number">13</div>
         </div>
 
-        <div class="day holiday">
-          <span>16</span>
-          <small>定休日</small>
-        </div>
-
-        <div class="day">
-          <span>17</span>
+        <div class="day holiday-day">
+          <div class="day-number">14</div>
+          <div class="holiday">定休日</div>
         </div>
 
         <div class="day">
-          <span>18</span>
+          <div class="day-number">15</div>
         </div>
 
-        <div class="day event">
-          <span>19</span>
-          <small>イベント</small>
-        </div>
-
-        <div class="day">
-          <span>20</span>
-        </div>
-
-        <div class="day holiday">
-          <span>21</span>
-          <small>定休日</small>
+        <div class="day holiday-day">
+          <div class="day-number">16</div>
+          <div class="holiday">定休日</div>
         </div>
 
         <div class="day">
-          <span>22</span>
+          <div class="day-number">17</div>
         </div>
 
         <div class="day">
-          <span>23</span>
+          <div class="day-number">18</div>
+        </div>
+
+        <div class="day event-day-box">
+          <div class="day-number">19</div>
+          <a class="event-day" href="#event-0919">
+            イベント
+          </a>
         </div>
 
         <div class="day">
-          <span>24</span>
+          <div class="day-number">20</div>
+        </div>
+
+        <div class="day holiday-day">
+          <div class="day-number">21</div>
+          <div class="holiday">定休日</div>
         </div>
 
         <div class="day">
-          <span>25</span>
+          <div class="day-number">22</div>
         </div>
 
         <div class="day">
-          <span>26</span>
+          <div class="day-number">23</div>
         </div>
 
         <div class="day">
-          <span>27</span>
-        </div>
-
-        <div class="day holiday">
-          <span>28</span>
-          <small>定休日</small>
+          <div class="day-number">24</div>
         </div>
 
         <div class="day">
-          <span>29</span>
+          <div class="day-number">25</div>
         </div>
 
         <div class="day">
-          <span>30</span>
+          <div class="day-number">26</div>
+        </div>
+
+        <div class="day">
+          <div class="day-number">27</div>
+        </div>
+
+        <div class="day holiday-day">
+          <div class="day-number">28</div>
+          <div class="holiday">定休日</div>
+        </div>
+
+        <div class="day">
+          <div class="day-number">29</div>
+        </div>
+
+        <div class="day">
+          <div class="day-number">30</div>
         </div>
 
       </div>
@@ -437,10 +485,6 @@
     </div>
 
   </div>
-
-  <p class="calendar-note">
-    ※カレンダーは横にスライドして次月をご覧いただけます。
-  </p>
 
 </section>
 
@@ -470,27 +514,27 @@
       </p>
 
       <p>
-        電車の音を聞きながら、
+        電車の音を聞きながら、<br>
         ゆっくりと時間が流れる。
       </p>
 
       <p>
-        コーヒーを一杯飲みながら、
+        コーヒーを一杯飲みながら、<br>
         ほっとひと息。
       </p>
 
       <p>
-        少しだけ気を抜いて、
+        少しだけ気を抜いて、<br>
         自分の時間を過ごす。
       </p>
 
       <p>
-        電車やバスを待つ時間にも、
+        電車やバスを待つ時間にも、<br>
         出張や旅の途中のひと休みにも。
       </p>
 
-      <p class="strong">
-        日常の中に、穏やかな時間を。
+      <p>
+        <strong>日常の中に、穏やかな時間を。</strong>
       </p>
 
     </div>
@@ -503,9 +547,9 @@
 <!-- メニュー -->
 <section id="menu">
 
-  <h2>メニュー</h2>
-
   <div class="menu-title">
+
+    <h2>メニュー</h2>
 
     <img
       src="image/menu.jpg"
@@ -527,18 +571,33 @@
       </h3>
 
       <div class="menu-row">
-        <span>トーストセット</span>
-        <strong>500円</strong>
+        <span class="menu-name">
+          トーストセット
+        </span>
+
+        <span class="menu-price">
+          500円
+        </span>
       </div>
 
       <div class="menu-row">
-        <span>フレンチトースト セット</span>
-        <strong>600円</strong>
+        <span class="menu-name">
+          フレンチトースト セット
+        </span>
+
+        <span class="menu-price">
+          600円
+        </span>
       </div>
 
       <div class="menu-row">
-        <span>ホットサンド（卵）セット</span>
-        <strong>650円</strong>
+        <span class="menu-name">
+          ホットサンド（卵）セット
+        </span>
+
+        <span class="menu-price">
+          650円
+        </span>
       </div>
 
       <p class="menu-note">
@@ -553,38 +612,78 @@
 
       <h3>軽食</h3>
 
-      <div class="menu-row sandwich">
-        <span>
+      <div class="menu-row">
+
+        <span class="menu-name sandwich-name">
           サンドイッチ<br>
           （おすすめ・限定20食）<br>
           （内容は日替わり）
         </span>
-        <strong>650円</strong>
+
+        <span class="menu-price">
+          650円
+        </span>
+
       </div>
 
       <div class="menu-row">
-        <span>サンドイッチ（卵）</span>
-        <strong>500円</strong>
+
+        <span class="menu-name">
+          サンドイッチ（卵）
+        </span>
+
+        <span class="menu-price">
+          500円
+        </span>
+
       </div>
 
       <div class="menu-row">
-        <span>サンドイッチ（ハム・野菜）</span>
-        <strong>500円</strong>
+
+        <span class="menu-name">
+          サンドイッチ（ハム・野菜）
+        </span>
+
+        <span class="menu-price">
+          500円
+        </span>
+
       </div>
 
       <div class="menu-row">
-        <span>グラタン</span>
-        <strong>700円</strong>
+
+        <span class="menu-name">
+          グラタン
+        </span>
+
+        <span class="menu-price">
+          700円
+        </span>
+
       </div>
 
       <div class="menu-row">
-        <span>カレー</span>
-        <strong>800円</strong>
+
+        <span class="menu-name">
+          カレー
+        </span>
+
+        <span class="menu-price">
+          800円
+        </span>
+
       </div>
 
       <div class="menu-row">
-        <span>季節のサラダ</span>
-        <strong>500円</strong>
+
+        <span class="menu-name">
+          季節のサラダ
+        </span>
+
+        <span class="menu-price">
+          500円
+        </span>
+
       </div>
 
     </div>
@@ -603,18 +702,39 @@
         <h3>飲み物</h3>
 
         <div class="menu-row">
-          <span>コーヒー（ホット・アイス）</span>
-          <strong>400円</strong>
+
+          <span class="menu-name">
+            コーヒー（ホット・アイス）
+          </span>
+
+          <span class="menu-price">
+            400円
+          </span>
+
         </div>
 
         <div class="menu-row">
-          <span>カフェオレ</span>
-          <strong>450円</strong>
+
+          <span class="menu-name">
+            カフェオレ
+          </span>
+
+          <span class="menu-price">
+            450円
+          </span>
+
         </div>
 
         <div class="menu-row">
-          <span>ウィンナーコーヒー</span>
-          <strong>450円</strong>
+
+          <span class="menu-name">
+            ウィンナーコーヒー
+          </span>
+
+          <span class="menu-price">
+            450円
+          </span>
+
         </div>
 
       </div>
@@ -628,18 +748,39 @@
       <h3>デザート</h3>
 
       <div class="menu-row">
-        <span>パンケーキ</span>
-        <strong>600円</strong>
+
+        <span class="menu-name">
+          パンケーキ
+        </span>
+
+        <span class="menu-price">
+          600円
+        </span>
+
       </div>
 
       <div class="menu-row">
-        <span>日替わりデザート</span>
-        <strong>500円</strong>
+
+        <span class="menu-name">
+          日替わりデザート
+        </span>
+
+        <span class="menu-price">
+          500円
+        </span>
+
       </div>
 
       <div class="menu-row">
-        <span>デザートセット</span>
-        <strong>＋300円</strong>
+
+        <span class="menu-name">
+          デザートセット
+        </span>
+
+        <span class="menu-price">
+          ＋300円
+        </span>
+
       </div>
 
     </div>
@@ -651,17 +792,29 @@
       <h3>テイクアウト</h3>
 
       <div class="menu-row">
-        <span>コーヒー（ホット・アイス）</span>
-        <strong>400円</strong>
+
+        <span class="menu-name">
+          コーヒー（ホット・アイス）
+        </span>
+
+        <span class="menu-price">
+          400円
+        </span>
+
       </div>
 
-      <div class="menu-row sandwich">
-        <span>
+      <div class="menu-row">
+
+        <span class="menu-name">
           サンドイッチ<br>
           （おすすめ・限定20食）<br>
           （内容は日替わり）
         </span>
-        <strong>650円</strong>
+
+        <span class="menu-price">
+          650円
+        </span>
+
       </div>
 
     </div>
@@ -672,7 +825,7 @@
 
 
 <!-- 店主の想い -->
-<section id="owner">
+<section id="owner" class="owner-section">
 
   <h2>店主の想い</h2>
 
@@ -690,9 +843,10 @@
     <div class="owner-text">
 
       <p>
-        40歳で会社員を辞め、ブラジル旅行で出会った
-        コーヒー豆とともに、幼い頃からの念願だった
-        喫茶店を始め30年が経ちました。
+        40歳で会社員を辞め、
+        ブラジル旅行で出会ったコーヒー豆とともに、
+        幼い頃からの念願だった喫茶店を始め
+        30年が経ちました。
       </p>
 
       <p>
@@ -720,15 +874,18 @@
 
 
 <!-- アクセス -->
-<section id="info">
+<section id="info" class="info-section">
 
   <h2>アクセス・住所</h2>
 
   <div class="info-box">
 
+
     <div class="info-item">
 
-      <h3>住所</h3>
+      <div class="info-label">
+        住所
+      </div>
 
       <a
         class="address-link"
@@ -740,16 +897,14 @@
         しまなみイノベーションビル 2階
       </a>
 
-      <p class="map-hint">
-        ↑ 住所を押すとGoogleマップが開きます
-      </p>
-
     </div>
 
 
     <div class="info-item">
 
-      <h3>最寄り駅</h3>
+      <div class="info-label">
+        最寄り駅
+      </div>
 
       今治駅 徒歩5分
 
@@ -758,7 +913,9 @@
 
     <div class="info-item">
 
-      <h3>営業時間</h3>
+      <div class="info-label">
+        営業時間
+      </div>
 
       10：00～17：00
 
@@ -767,25 +924,48 @@
 
     <div class="info-item">
 
-      <h3>定休日</h3>
+      <div class="info-label">
+        定休日
+      </div>
 
       毎週月曜日<br>
-      第1・第3水曜日
+      第1・3水曜日
 
     </div>
 
 
     <div class="info-item">
 
-      <h3>電話</h3>
+      <div class="info-label">
+        電話
+      </div>
 
-      0898-11-2222<br>
+      <div class="phone">
+        0898-11-2222
+      </div>
 
       <a
         class="phone-button"
         href="tel:0898112222"
       >
         📞 電話する
+      </a>
+
+    </div>
+
+
+    <div class="access">
+
+      <div class="info-label">
+        Googleマップ
+      </div>
+
+      <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=愛媛県今治市常盤町4丁目8-18"
+        target="_blank"
+      >
+        📍 地図を見る
       </a>
 
     </div>
@@ -802,17 +982,29 @@
     SUNABA COFFEE
   </div>
 
-  <div class="sns-links">
+  <div class="footer-sns">
 
-    <a href="#" target="_blank" aria-label="X">
-      𝕏
-    </a>
-
-    <a href="#" target="_blank" aria-label="Instagram">
+    <a
+      href="#"
+      target="_blank"
+      aria-label="Instagram"
+    >
       ◎
     </a>
 
-    <a href="#" target="_blank" aria-label="Facebook">
+    <a
+      href="#"
+      target="_blank"
+      aria-label="X"
+    >
+      𝕏
+    </a>
+
+    <a
+      href="#"
+      target="_blank"
+      aria-label="Facebook"
+    >
       f
     </a>
 
@@ -834,8 +1026,14 @@ function updateBusinessStatus() {
 
   const day = now.getDay();
 
+  const date = now.getDate();
+
+  const hours = now.getHours();
+
+  const minutes = now.getMinutes();
+
   const currentMinutes =
-    now.getHours() * 60 + now.getMinutes();
+    hours * 60 + minutes;
 
   const openTime = 10 * 60;
 
@@ -845,36 +1043,28 @@ function updateBusinessStatus() {
     document.getElementById("business-status");
 
 
-  /* 第1・第3水曜日 */
-
-  function isFirstOrThirdWednesday(date) {
-
-    if (date.getDay() !== 3) {
-      return false;
-    }
-
-    const week =
-      Math.ceil(date.getDate() / 7);
-
-    return week === 1 || week === 3;
-  }
-
-
   /* 毎週月曜日 */
-
-  const mondayHoliday =
+  const isMonday =
     day === 1;
 
 
   /* 第1・第3水曜日 */
+  const weekNumber =
+    Math.ceil(date / 7);
 
-  const wednesdayHoliday =
-    isFirstOrThirdWednesday(now);
+  const isFirstOrThirdWednesday =
+    day === 3 &&
+    (
+      weekNumber === 1 ||
+      weekNumber === 3
+    );
 
 
   /* 定休日 */
-
-  if (mondayHoliday || wednesdayHoliday) {
+  if (
+    isMonday ||
+    isFirstOrThirdWednesday
+  ) {
 
     status.textContent =
       "本日は定休日です";
@@ -883,11 +1073,11 @@ function updateBusinessStatus() {
       "status-holiday";
 
     return;
+
   }
 
 
   /* 営業前 */
-
   if (currentMinutes < openTime) {
 
     status.textContent =
@@ -897,11 +1087,11 @@ function updateBusinessStatus() {
       "status-closed";
 
     return;
+
   }
 
 
   /* まもなく終了 */
-
   if (
     currentMinutes >= closeTime - 60 &&
     currentMinutes < closeTime
@@ -914,11 +1104,11 @@ function updateBusinessStatus() {
       "status-soon";
 
     return;
+
   }
 
 
   /* 営業中 */
-
   if (
     currentMinutes >= openTime &&
     currentMinutes < closeTime
@@ -931,11 +1121,11 @@ function updateBusinessStatus() {
       "status-open";
 
     return;
+
   }
 
 
   /* 営業終了 */
-
   status.textContent =
     "本日の営業は終了しました";
 
