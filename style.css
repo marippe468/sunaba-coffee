@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+
   font-family:
     "Yu Gothic",
     "Hiragino Kaku Gothic ProN",
@@ -15,6 +16,7 @@ body {
 
   color: #4a4038;
   background: #faf8f4;
+
   line-height: 1.8;
 }
 
@@ -25,55 +27,96 @@ body {
 
 header {
   text-align: center;
+
   padding: 55px 20px 35px;
+
   background: #f3eee7;
 }
 
+
 header h1 {
   margin: 0;
+
   font-family: Georgia, serif;
-  font-size: 42px;
-  letter-spacing: 3px;
+
+  font-size: 44px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  color: #4d4038;
+
+  /*
+    白い影
+  */
+  text-shadow:
+    1px 1px 3px rgba(255,255,255,0.95),
+    -1px -1px 3px rgba(255,255,255,0.95),
+    1px -1px 3px rgba(255,255,255,0.95),
+    -1px 1px 3px rgba(255,255,255,0.95);
 }
+
 
 .header-subtitle {
   margin: 18px 0 2px;
-  font-size: 32px;
+
+  font-size: 34px;
+
   font-weight: bold;
-  letter-spacing: 4px;
+
+  letter-spacing: 5px;
+
+  text-align: center;
 }
+
 
 .header-cafe {
   margin: 0 0 25px;
+
   font-size: 18px;
+
   letter-spacing: 1px;
+
+  text-align: center;
 }
 
 
-/* 営業状況 */
+/* =========================
+   営業状況
+========================= */
 
 #business-status {
+
   display: inline-block;
+
   padding: 7px 22px;
+
   border-radius: 30px;
+
   font-weight: bold;
+
   font-size: 15px;
 }
+
 
 .status-open {
   background: #e3f1df;
   color: #35633a;
 }
 
+
 .status-soon {
   background: #fff0cf;
   color: #8a641e;
 }
 
+
 .status-closed {
   background: #eeeeee;
   color: #666;
 }
+
 
 .status-holiday {
   background: #eee4e0;
@@ -86,23 +129,38 @@ header h1 {
 ========================= */
 
 nav {
+
   display: flex;
+
   justify-content: center;
+
   flex-wrap: wrap;
+
   gap: 28px;
+
   padding: 18px;
+
   background: white;
+
   border-bottom: 1px solid #e5ded6;
+
   position: sticky;
+
   top: 0;
+
   z-index: 10;
 }
 
+
 nav a {
+
   text-decoration: none;
+
   color: #5b4c41;
+
   font-weight: bold;
 }
+
 
 nav a:hover {
   opacity: 0.65;
@@ -114,15 +172,23 @@ nav a:hover {
 ========================= */
 
 section {
+
   max-width: 1000px;
+
   margin: auto;
+
   padding: 75px 25px;
 }
 
+
 section h2 {
+
   text-align: center;
+
   font-size: 30px;
+
   margin-bottom: 40px;
+
   letter-spacing: 2px;
 }
 
@@ -132,33 +198,55 @@ section h2 {
 ========================= */
 
 .hero {
+
   max-width: 1100px;
+
   padding-top: 45px;
+
   padding-bottom: 45px;
+
   text-align: center;
 }
 
+
 .hero > img {
+
   width: 100%;
+
   max-height: 570px;
+
   object-fit: cover;
+
   display: block;
+
   margin: auto;
+
   border-radius: 6px;
 }
 
+
 .hero-text {
+
   text-align: center;
+
   padding: 30px 15px 5px;
 }
 
+
 .hero-text h2 {
+
   font-size: 28px;
+
   margin: 0 0 10px;
+
+  letter-spacing: 1px;
 }
 
+
 .hero-text p {
+
   font-size: 18px;
+
   margin: 0;
 }
 
@@ -168,22 +256,34 @@ section h2 {
 ========================= */
 
 .instagram-top {
+
   text-align: center;
+
   background: #f3eee7;
+
   max-width: none;
 }
+
 
 .instagram-top h2 {
   margin-bottom: 15px;
 }
 
+
 .instagram-button {
+
   display: inline-block;
+
   margin-top: 15px;
+
   padding: 12px 28px;
+
   background: #4d4038;
+
   color: white;
+
   text-decoration: none;
+
   border-radius: 30px;
 }
 
@@ -193,30 +293,47 @@ section h2 {
 ========================= */
 
 .news-list {
+
   max-width: 800px;
+
   margin: auto;
 }
 
+
 .news-item {
+
   display: flex;
+
   align-items: center;
+
   gap: 20px;
-  padding: 13px 10px;
+
+  padding: 10px;
+
   border-bottom: 1px solid #ddd3ca;
+
   text-decoration: none;
+
   color: #4a4038;
 }
 
+
 .news-date {
+
   font-size: 14px;
+
   white-space: nowrap;
 }
 
+
 .news-title {
+
   flex: 1;
 }
 
+
 .news-arrow {
+
   font-size: 25px;
 }
 
@@ -226,73 +343,128 @@ section h2 {
 ========================= */
 
 .calendar-slider {
+
   display: flex;
+
   overflow-x: auto;
+
   gap: 25px;
+
   scroll-snap-type: x mandatory;
+
   padding-bottom: 15px;
+
+  scrollbar-width: thin;
 }
 
+
 .calendar {
+
   min-width: 100%;
+
+  width: 100%;
+
   scroll-snap-align: start;
 }
 
+
 .calendar h3 {
+
   text-align: center;
+
   font-size: 22px;
 }
 
+
 .calendar-grid {
+
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
   gap: 4px;
+
   max-width: 750px;
+
   margin: auto;
 }
 
+
 .weekday {
+
   text-align: center;
+
   font-weight: bold;
+
   padding: 8px 2px;
 }
 
+
 .day {
+
   min-height: 70px;
+
   padding: 6px;
+
   background: white;
+
   border: 1px solid #e5ddd5;
+
   border-radius: 5px;
+
   text-align: center;
 }
 
+
 .day-number {
+
   font-weight: bold;
 }
 
+
 .holiday {
+
   display: inline-block;
+
   margin-top: 3px;
+
   padding: 1px 5px;
+
   font-size: 11px;
+
   background: #eaded9;
+
   color: #74554d;
+
   border-radius: 3px;
 }
 
+
 .event-day {
+
   display: block;
+
   margin-top: 3px;
+
   font-size: 11px;
+
   color: #76583e;
+
   text-decoration: none;
+
   font-weight: bold;
 }
 
+
 .calendar-note {
+
   text-align: center;
+
   color: #777;
+
   font-size: 13px;
+
   margin-top: 15px;
 }
 
@@ -302,31 +474,47 @@ section h2 {
 ========================= */
 
 .about {
+
   display: flex;
+
   gap: 45px;
+
   align-items: center;
 }
 
+
 .about-image {
+
   flex: 1;
 }
 
+
 .about-image img {
+
   width: 100%;
+
   border-radius: 6px;
 }
 
+
 .about-text {
+
   flex: 1;
+
   text-align: center;
 }
 
+
 .about-text h3 {
+
   font-size: 24px;
 }
 
+
 .about-emphasis {
+
   font-weight: bold;
+
   font-size: 18px;
 }
 
@@ -336,78 +524,129 @@ section h2 {
 ========================= */
 
 .menu-title {
+
   text-align: center;
 }
 
+
 .menu-title img {
+
   width: 100%;
+
   max-width: 700px;
+
   display: block;
+
   margin: 0 auto 45px;
+
   border-radius: 6px;
 }
 
+
 .menu-box {
+
   display: grid;
+
   gap: 25px;
 }
 
+
 .menu-card {
+
   background: white;
+
   padding: 28px;
+
   border-radius: 8px;
+
   border: 1px solid #e6ded6;
 }
 
+
 .menu-card h3 {
+
   margin-top: 0;
+
   font-size: 22px;
+
   border-bottom: 1px solid #ddd3ca;
+
   padding-bottom: 10px;
 }
 
+
 .menu-card small {
+
   font-size: 13px;
+
   font-weight: normal;
 }
 
+
 .menu-row {
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: flex-start;
+
   gap: 20px;
+
   padding: 9px 0;
+
   border-bottom: 1px dotted #ddd;
 }
 
+
 .menu-name {
+
   flex: 1;
 }
 
+
 .menu-price {
+
   white-space: nowrap;
+
   font-weight: bold;
 }
 
+
 .menu-note {
+
   font-size: 13px;
+
   color: #777;
 }
 
+
+/* コーヒー */
+
 .coffee-menu {
+
   display: flex;
+
   gap: 30px;
+
   align-items: center;
 }
 
+
 .coffee-menu img {
-  width: 190px;
-  height: 190px;
+
+  width: 210px;
+
+  height: 210px;
+
   object-fit: cover;
+
   border-radius: 6px;
 }
 
+
 .coffee-menu-content {
+
   flex: 1;
 }
 
@@ -417,31 +656,47 @@ section h2 {
 ========================= */
 
 .owner-section {
+
   background: #f3eee7;
+
   max-width: none;
 }
 
+
 .owner-box {
+
   max-width: 900px;
+
   margin: auto;
 }
 
+
 .owner-image {
+
   text-align: center;
+
   margin-bottom: 35px;
 }
 
+
 .owner-image img {
+
   width: 280px;
+
   max-width: 100%;
+
   border-radius: 6px;
 }
 
+
 .owner-text {
+
   text-align: center;
 }
 
+
 .owner-text p {
+
   margin: 0 0 28px;
 }
 
@@ -451,43 +706,69 @@ section h2 {
 ========================= */
 
 .info-box {
+
   max-width: 700px;
+
   margin: auto;
 }
 
+
 .info-item {
+
   padding: 20px 10px;
+
   border-bottom: 1px solid #ddd3ca;
+
   text-align: center;
 }
 
+
 .info-label {
+
   font-weight: bold;
+
   font-size: 18px;
+
   margin-bottom: 7px;
 }
 
+
 .address-link {
+
   color: #4a4038;
+
   text-decoration: underline;
+
+  line-height: 1.8;
 }
 
+
 .map-hint {
+
   font-size: 12px;
+
   color: #777;
 }
 
+
 .phone {
+
   margin-bottom: 10px;
 }
 
-.phone-button,
-.map-button {
+
+.phone-button {
+
   display: inline-block;
+
   padding: 8px 20px;
+
   border-radius: 25px;
+
   text-decoration: none;
+
   background: #4d4038;
+
   color: white;
 }
 
@@ -497,36 +778,72 @@ section h2 {
 ========================= */
 
 footer {
+
   text-align: center;
+
   padding: 45px 20px;
+
   background: #4d4038;
+
   color: white;
 }
 
+
 .footer-name {
+
   font-family: Georgia, serif;
-  font-size: 24px;
+
+  font-size: 25px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
 }
 
+
 .social-icons {
+
   display: flex;
+
   justify-content: center;
+
   gap: 15px;
+
   margin: 20px 0;
 }
 
+
 .social-icons a {
-  width: 42px;
-  height: 42px;
+
+  width: 44px;
+
+  height: 44px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   border: 1px solid white;
+
   border-radius: 50%;
+
   color: white;
+
   text-decoration: none;
+
   font-weight: bold;
+
   font-size: 20px;
+}
+
+
+.social-icons a:hover {
+
+  background: white;
+
+  color: #4d4038;
 }
 
 
@@ -536,84 +853,136 @@ footer {
 
 @media (max-width: 700px) {
 
+
   header {
+
     padding: 40px 15px 30px;
   }
 
+
   header h1 {
-    font-size: 34px;
+
+    font-size: 36px;
+
+    letter-spacing: 3px;
   }
+
 
   .header-subtitle {
-    font-size: 27px;
+
+    font-size: 28px;
+
+    letter-spacing: 3px;
   }
 
+
   .header-cafe {
+
     font-size: 15px;
   }
 
+
   nav {
+
     gap: 12px 18px;
+
     font-size: 14px;
   }
 
+
   section {
+
     padding: 55px 18px;
   }
 
+
   section h2 {
+
     font-size: 26px;
   }
 
+
   .hero > img {
+
     max-height: 420px;
   }
 
+
   .hero-text h2 {
-    font-size: 22px;
+
+    font-size: 21px;
   }
 
+
   .hero-text p {
+
     font-size: 15px;
   }
 
+
   .about {
+
     display: block;
   }
 
+
   .about-image {
+
     margin-bottom: 30px;
   }
 
+
   .menu-title img {
+
     max-width: 100%;
   }
 
+
   .coffee-menu {
+
     display: block;
   }
 
+
   .coffee-menu img {
+
     width: 100%;
+
     height: auto;
+
     margin-bottom: 20px;
   }
 
+
   .news-item {
+
     gap: 8px;
   }
 
+
   .news-date {
+
     font-size: 12px;
   }
 
+
   .day {
+
     min-height: 58px;
+
     font-size: 13px;
   }
 
+
   .calendar-grid {
+
     gap: 2px;
+  }
+
+
+  .calendar-note {
+
+    font-size: 12px;
   }
 
 }
