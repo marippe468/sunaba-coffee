@@ -1,5 +1,6 @@
 /* =========================
-   全体
+   SUNABA COFFEE
+   style.css
 ========================= */
 
 * {
@@ -15,100 +16,73 @@ body {
   font-family:
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
-    "Meiryo",
+    Meiryo,
     sans-serif;
   color: #333;
-  background: #fffdf9;
-  line-height: 1.7;
-  text-align: center;
+  background: #faf8f4;
+  line-height: 1.8;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 55px 20px;
-}
-
-h2 {
-  margin-top: 0;
-}
-
 
 /* =========================
    ヘッダー
 ========================= */
 
 header {
-  padding: 28px 15px 15px;
   text-align: center;
+  padding: 28px 15px 18px;
+  background: #6b4a35;
+  color: white;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.2rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-shadow:
-    2px 2px 0 #fff,
-    -1px -1px 0 #fff;
+    2px 2px 3px rgba(0, 0, 0, 0.45);
 }
 
 header h2 {
   margin: 3px 0 0;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .subtitle {
   margin: 0;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.3;
 }
-
 
 /* =========================
    営業状況
 ========================= */
 
 #business-status {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   display: inline-block;
   margin-top: 8px;
-  padding: 6px 22px;
-  border-radius: 30px;
+  padding: 5px 18px;
+  border-radius: 20px;
   font-size: 1rem;
   font-weight: bold;
-  background: #f5eee5;
 }
 
 .status-open {
-  color: #fff;
-  background: #6d8b55 !important;
+  background: #e7f3e7;
+  color: #287a32;
 }
 
 .status-soon {
-  color: #fff;
-  background: #c58a3a !important;
+  background: #fff0d5;
+  color: #a85d00;
 }
 
 .status-closed,
 .status-holiday {
-  color: #fff;
-  background: #777 !important;
+  background: #eeeeee;
+  color: #555;
 }
-
 
 /* =========================
    ナビゲーション
@@ -119,116 +93,145 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 10px 10px;
-  text-align: center;
-  flex-wrap: wrap;
+  padding: 9px 8px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
 }
 
 nav a {
-  color: #333;
+  flex: 1;
+  text-align: center;
+  color: #4d382b;
   text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: bold;
-  padding: 3px 12px;
-  white-space: nowrap;
+  font-size: 0.78rem;
+  line-height: 1.2;
+  padding: 2px 4px;
+  border-right: 1px solid #ddd;
+}
+
+nav a:last-child {
+  border-right: none;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-
 /* =========================
-   トップ写真
+   トップ
 ========================= */
 
 .hero {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 15px 20px 35px;
   text-align: center;
+  padding: 28px 15px 25px;
 }
 
 .hero img {
-  width: 100%;
-  max-width: 850px;
-  max-height: 520px;
+  display: block;
+  width: min(100%, 850px);
+  max-height: 500px;
   object-fit: cover;
+  margin: 0 auto;
   border-radius: 8px;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
 .hero-text {
-  padding-top: 18px;
+  text-align: center;
 }
 
 .hero-text h2 {
-  margin: 0 0 8px;
-  font-size: 1.35rem;
-  font-weight: 600;
+  margin: 25px 0 8px;
+  font-size: 1.15rem;
+  font-weight: bold;
   white-space: nowrap;
 }
 
 .hero-text p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
-
 
 /* =========================
    Instagram
 ========================= */
 
 .instagram-top {
-  padding-top: 5px;
-  padding-bottom: 25px;
+  text-align: center;
+  padding: 5px 15px 25px;
 }
 
 .instagram-button {
   display: inline-block;
-  padding: 8px 22px;
-  border-radius: 30px;
+  padding: 8px 20px;
+  border-radius: 25px;
   background: #333;
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: bold;
 }
 
+.instagram-button:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   セクション共通
+========================= */
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 55px 20px;
+  text-align: center;
+}
+
+section > h2 {
+  margin: 0 0 25px;
+  color: #5a3c2c;
+  font-size: 1.6rem;
+}
 
 /* =========================
    お知らせ
 ========================= */
 
 #news {
-  padding-top: 35px;
+  text-align: left;
+}
+
+#news > h2 {
+  text-align: center;
 }
 
 .news-list {
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
 .news-item {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 15px;
-  padding: 6px 10px;
+  gap: 20px;
+  padding: 8px 5px;
   border-bottom: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
   font-size: 0.9rem;
+  line-height: 1.4;
 }
 
-.news-item span:first-child {
-  min-width: 95px;
+.news-date {
+  flex: 0 0 95px;
+  font-size: 0.75rem;
+  color: #777;
 }
 
-.news-item span:last-child {
-  text-align: left;
+.news-title {
+  flex: 1;
 }
-
 
 /* =========================
    カレンダー
@@ -238,76 +241,93 @@ nav a:hover {
   overflow: hidden;
 }
 
+.calendar-note {
+  margin: -12px 0 18px;
+  font-size: 0.75rem;
+  color: #777;
+}
+
 .calendar-slider {
   display: flex;
+  gap: 25px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 20px;
-  padding: 10px 5px 20px;
+  padding: 5px 5px 20px;
   -webkit-overflow-scrolling: touch;
 }
 
+.calendar-slider::-webkit-scrollbar {
+  height: 6px;
+}
+
 .calendar {
-  flex: 0 0 100%;
-  max-width: 700px;
-  margin: 0 auto;
+  flex: 0 0 min(100%, 720px);
   scroll-snap-align: center;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
 .calendar h3 {
   margin: 0 0 15px;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  color: #5a3c2c;
 }
 
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-}
-
-.weekday,
-.day {
-  min-height: 65px;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  gap: 4px;
 }
 
 .weekday {
-  padding: 6px 2px;
+  padding: 5px 0;
+  font-size: 0.8rem;
   font-weight: bold;
-  background: #f3eee7;
-  font-size: 0.85rem;
+  background: #eee;
 }
 
 .day {
-  position: relative;
-  padding: 6px 3px;
-  color: #333;
+  min-height: 65px;
+  padding: 5px 2px;
+  border: 1px solid #eee;
   background: #fff;
-  font-size: 0.9rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.85rem;
 }
 
 .day.empty {
-  background: #fafafa;
+  background: transparent;
+  border: none;
 }
 
 .day span {
   display: block;
-  font-weight: 500;
+  font-weight: 600;
+  color: #333;
 }
 
 /* 定休日だけ赤 */
-.day.holiday {
+
+.day.holiday,
+.day.holiday span {
   color: #d33;
-  font-weight: bold;
 }
 
 .day small {
   display: block;
-  margin-top: 3px;
-  font-size: 0.68rem;
-  line-height: 1.2;
+  margin-top: 1px;
+  font-size: 0.62rem;
+  line-height: 1.1;
+}
+
+.day.holiday small {
   color: #d33;
 }
 
@@ -315,16 +335,22 @@ nav a:hover {
   color: #555;
 }
 
-
 /* =========================
    お店について
 ========================= */
 
-#about img {
-  width: 90%;
-  max-width: 650px;
+#about {
+  background: #f4efe8;
+  max-width: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#about > img {
+  display: block;
+  width: min(100%, 650px);
+  margin: 0 auto 30px;
   border-radius: 8px;
-  margin-bottom: 30px;
 }
 
 .about-text {
@@ -334,91 +360,101 @@ nav a:hover {
 }
 
 .about-text h3 {
-  font-size: 1.3rem;
   margin-bottom: 25px;
+  font-size: 1.25rem;
 }
 
 .about-text p {
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
-
 
 /* =========================
    メニュー
 ========================= */
 
+#menu {
+  max-width: 900px;
+}
+
 .menu-photo {
-  width: 80%;
-  max-width: 550px;
-  margin-bottom: 35px;
+  display: block;
+  width: min(100%, 620px);
+  margin: 0 auto 30px;
   border-radius: 8px;
 }
 
 .menu-box {
-  max-width: 800px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
 .menu-card {
-  margin-bottom: 30px;
+  background: white;
   padding: 22px;
-  background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.07);
+  text-align: left;
 }
 
 .menu-card h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin: 0 0 14px;
+  text-align: center;
+  color: #5a3c2c;
   font-size: 1.15rem;
 }
 
 .menu-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 15px;
-  padding: 7px 0;
+  padding: 8px 0;
   border-bottom: 1px dotted #ccc;
-  text-align: left;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
-.menu-row span:first-child {
+.menu-row > span:first-child {
   flex: 1;
 }
 
-.menu-row span:last-child {
-  min-width: 65px;
+.menu-row > span:last-child {
+  flex: 0 0 auto;
   text-align: right;
   white-space: nowrap;
   font-weight: bold;
+}
+
+.menu-card p {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 0.72rem;
+  color: #777;
 }
 
 .sandwich {
   align-items: center;
 }
 
-.menu-card p {
-  margin: 12px 0 0;
-  font-size: 0.78rem;
-}
-
-
 /* =========================
    店主の想い
 ========================= */
 
-#owner img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 30px;
+#owner {
+  background: #f4efe8;
+  max-width: none;
+}
+
+#owner > img {
+  display: block;
+  width: min(100%, 400px);
+  margin: 0 auto 30px;
+  border-radius: 8px;
 }
 
 .owner-text {
-  max-width: 750px;
+  max-width: 720px;
   margin: 0 auto;
   text-align: center;
 }
@@ -427,10 +463,17 @@ nav a:hover {
   margin: 0 0 22px;
 }
 
+.thank-you {
+  font-weight: bold;
+}
 
 /* =========================
    アクセス
 ========================= */
+
+#info {
+  max-width: 900px;
+}
 
 .info-box {
   max-width: 700px;
@@ -438,59 +481,88 @@ nav a:hover {
   text-align: center;
 }
 
-.info-box p {
-  margin: 0 0 18px;
+.address-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
 }
 
-.map-button,
-.phone-button {
-  display: inline-block;
-  margin: 5px;
-  padding: 9px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
+.address {
+  text-align: left;
+}
+
+.address p {
+  margin: 0;
 }
 
 .map-button {
-  color: #fff;
-  background: #777;
+  display: inline-block;
+  padding: 8px 14px;
+  background: #5a3c2c;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.map-button:hover {
+  opacity: 0.8;
+}
+
+.info-box > p {
+  margin: 8px 0;
 }
 
 .phone-button {
-  color: #fff;
-  background: #6d8b55;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 18px;
+  background: #5a3c2c;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 0.85rem;
 }
-
 
 /* =========================
    フッター
 ========================= */
 
 footer {
-  padding: 35px 15px;
-  background: #4b4038;
-  color: #fff;
+  padding: 30px 15px;
   text-align: center;
-}
-
-.footer-sns {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 18px;
-}
-
-.footer-sns a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.85rem;
+  background: #4b3528;
+  color: white;
 }
 
 footer p {
   margin: 5px 0;
 }
 
+.footer-sns {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.footer-sns a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 45px;
+  height: 35px;
+  padding: 0 10px;
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 18px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
 
 /* =========================
    スマホ
@@ -498,58 +570,78 @@ footer p {
 
 @media (max-width: 600px) {
 
+  body {
+    font-size: 14px;
+  }
+
+  /* ヘッダー */
+
   header {
-    padding-top: 20px;
+    padding: 18px 8px 14px;
   }
 
   header h1 {
-    font-size: 1.75rem;
-    letter-spacing: 0.02em;
+    font-size: 2.1rem;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
   }
 
   header h2 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-top: 1px;
   }
 
   .subtitle {
     font-size: 0.82rem;
+    white-space: nowrap;
   }
 
   #business-status {
-    font-size: 0.95rem;
-    padding: 5px 18px;
+    font-size: 0.85rem;
+    padding: 4px 14px;
+    margin-top: 7px;
   }
 
+  /* ナビ */
+
   nav {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 6px 5px;
+    padding: 7px 3px;
   }
 
   nav a {
-    font-size: 0.66rem;
-    padding: 2px 3px;
+    font-size: 0.63rem;
+    padding: 2px 1px;
   }
 
+  /* トップ */
+
   .hero {
-    padding: 8px 10px 25px;
+    padding: 18px 10px 18px;
   }
 
   .hero img {
-    max-height: 350px;
-  }
-
-  .hero-text {
-    padding-top: 12px;
+    width: 100%;
+    max-height: 330px;
   }
 
   .hero-text h2 {
-    font-size: 0.9rem;
+    margin-top: 18px;
+    font-size: 0.82rem;
+    white-space: nowrap;
   }
 
   .hero-text p {
-    font-size: 0.82rem;
+    font-size: 0.72rem;
+    white-space: nowrap;
   }
+
+  /* Instagram */
+
+  .instagram-top {
+    padding-bottom: 18px;
+  }
+
+  /* セクション */
 
   section {
     padding: 40px 12px;
@@ -557,101 +649,154 @@ footer p {
 
   section > h2 {
     font-size: 1.35rem;
+    margin-bottom: 20px;
   }
+
+  /* お知らせ */
 
   .news-item {
     gap: 8px;
-    font-size: 0.76rem;
+    padding: 7px 2px;
+    font-size: 0.72rem;
   }
 
-  .news-item span:first-child {
-    min-width: 78px;
+  .news-date {
+    flex: 0 0 72px;
+    font-size: 0.63rem;
   }
+
+  .news-title {
+    font-size: 0.72rem;
+  }
+
+  /* カレンダー */
 
   .calendar-slider {
     gap: 12px;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .calendar {
     flex-basis: 100%;
+    padding: 10px 6px;
   }
 
   .calendar h3 {
     font-size: 1rem;
   }
 
-  .weekday,
-  .day {
-    min-height: 58px;
+  .calendar-note {
+    font-size: 0.65rem;
+  }
+
+  .calendar-grid {
+    gap: 2px;
   }
 
   .weekday {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    padding: 3px 0;
   }
 
   .day {
-    font-size: 0.75rem;
-    padding: 5px 2px;
+    min-height: 48px;
+    font-size: 0.7rem;
+    padding: 3px 1px;
   }
 
   .day small {
-    font-size: 0.57rem;
+    font-size: 0.48rem;
   }
 
-  #about img {
+  /* お店について */
+
+  #about > img {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   .about-text {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
 
   .about-text h3 {
-    font-size: 1.1rem;
-  }
-
-  .menu-photo {
-    width: 95%;
-  }
-
-  .menu-card {
-    padding: 16px 12px;
-  }
-
-  .menu-card h3 {
     font-size: 1rem;
   }
 
-  .menu-row {
-    font-size: 0.8rem;
-    gap: 8px;
+  /* メニュー */
+
+  .menu-photo {
+    width: 95%;
+    margin-bottom: 20px;
   }
 
-  .menu-row span:last-child {
-    min-width: 55px;
+  .menu-box {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .menu-card {
+    padding: 15px;
+  }
+
+  .menu-card h3 {
+    font-size: 0.98rem;
+  }
+
+  .menu-row {
+    font-size: 0.72rem;
+    gap: 8px;
+    padding: 7px 0;
   }
 
   .menu-card p {
-    font-size: 0.7rem;
+    font-size: 0.62rem;
   }
 
-  #owner img {
-    width: 180px;
-    height: 180px;
+  /* 店主 */
+
+  #owner > img {
+    width: 85%;
+    margin-bottom: 20px;
   }
 
   .owner-text {
-    font-size: 0.88rem;
+    font-size: 0.8rem;
+  }
+
+  /* アクセス */
+
+  .address-row {
+    gap: 8px;
+    align-items: center;
+  }
+
+  .address {
+    font-size: 0.7rem;
+  }
+
+  .map-button {
+    padding: 7px 8px;
+    font-size: 0.62rem;
   }
 
   .info-box {
-    font-size: 0.88rem;
+    font-size: 0.75rem;
   }
 
+  /* フッター */
+
   footer {
-    padding: 28px 10px;
+    padding: 25px 10px;
+  }
+
+  .footer-sns {
+    gap: 10px;
+  }
+
+  .footer-sns a {
+    min-width: 42px;
+    height: 32px;
+    font-size: 0.62rem;
   }
 
 }
