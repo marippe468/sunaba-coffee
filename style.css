@@ -6,11 +6,14 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
 
+
 body {
+
   margin: 0;
 
   font-family:
@@ -20,90 +23,128 @@ body {
     sans-serif;
 
   color: #4a4038;
+
   background: #faf7f2;
 
   line-height: 1.8;
+
 }
 
 
+
 /* =========================
-   ヘッダー
+   HEADER
 ========================= */
 
 .header {
+
   background: #ffffff;
 
   padding: 18px 30px;
 
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
 
   position: sticky;
+
   top: 0;
+
   z-index: 100;
 
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 1px 8px rgba(0, 0, 0, 0.08);
+
 }
 
+
 .logo {
+
   font-family: Georgia, serif;
 
   font-size: 1.8rem;
+
   font-weight: bold;
 
   letter-spacing: 1px;
+
 }
+
 
 nav {
+
   display: flex;
+
   gap: 22px;
+
 }
 
+
 nav a {
+
   color: #4a4038;
 
   text-decoration: none;
 
   font-size: 0.9rem;
+
 }
 
+
 nav a:hover {
+
   opacity: 0.6;
+
 }
+
 
 
 /* =========================
-   トップ
+   TOP
 ========================= */
 
 .hero {
+
   position: relative;
+
 }
 
+
 .hero > img {
+
   width: 100%;
+
   height: 620px;
 
   object-fit: cover;
 
   display: block;
+
 }
 
-.hero-content {
+
+.hero-text {
+
   position: absolute;
 
   left: 8%;
+
   bottom: 10%;
 
-  background: rgba(255, 255, 255, 0.9);
+  background:
+    rgba(255, 255, 255, 0.9);
 
   padding: 30px 40px;
 
   border-radius: 8px;
+
 }
 
-.hero-content h1 {
+
+.hero-text h1 {
+
   font-family: Georgia, serif;
 
   font-size: 3.2rem;
@@ -111,13 +152,18 @@ nav a:hover {
   margin: 0 0 15px;
 
   letter-spacing: 2px;
+
 }
 
-.hero-content p {
+
+.hero-text p {
+
   font-size: 1.2rem;
 
   margin: 0 0 15px;
+
 }
+
 
 
 /* =========================
@@ -125,48 +171,22 @@ nav a:hover {
 ========================= */
 
 .business-status {
+
   display: inline-block;
 
   font-size: 0.95rem;
+
   font-weight: bold;
 
   padding: 5px 15px;
 
-  border: 1px solid #8b6f47;
+  border:
+    1px solid #8b6f47;
 
   border-radius: 20px;
+
 }
 
-
-/* =========================
-   共通セクション
-========================= */
-
-.section {
-  max-width: 850px;
-
-  margin: 0 auto;
-
-  padding: 80px 30px;
-
-  text-align: center;
-}
-
-.section h2,
-.news h2,
-.parking-section h2 {
-  font-size: 2.2rem;
-
-  margin: 0 0 35px;
-
-  font-weight: bold;
-
-  letter-spacing: 2px;
-}
-
-.section p {
-  font-size: 1rem;
-}
 
 
 /* =========================
@@ -174,6 +194,7 @@ nav a:hover {
 ========================= */
 
 .news {
+
   max-width: 850px;
 
   margin: 0 auto;
@@ -182,19 +203,75 @@ nav a:hover {
 
   text-align: center;
 
-  border-bottom: 1px solid #ddd;
+  border-bottom:
+    1px solid #ddd;
+
 }
 
-.news p {
-  font-size: 1rem;
+
+.news h2 {
+
+  font-size: 2.2rem;
+
+  margin-bottom: 30px;
+
+  letter-spacing: 2px;
+
 }
+
+
+.news p {
+
+  font-size: 1rem;
+
+}
+
 
 
 /* =========================
-   About
+   共通 SECTION
+========================= */
+
+.section {
+
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding: 80px 30px;
+
+  text-align: center;
+
+}
+
+
+.section h2 {
+
+  font-size: 2.2rem;
+
+  margin: 0 0 35px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+}
+
+
+.section p {
+
+  font-size: 1rem;
+
+}
+
+
+
+/* =========================
+   ABOUT
 ========================= */
 
 .owner-image {
+
   width: 300px;
 
   max-width: 100%;
@@ -202,24 +279,31 @@ nav a:hover {
   border-radius: 8px;
 
   margin-bottom: 30px;
+
 }
 
+
 .about-text p {
+
   margin: 15px 0;
+
 }
+
 
 
 /* =========================
-   メニュー
+   MENU
 ========================= */
 
 .menu-section {
-  max-width: none;
 
   background: #f5f0e8;
+
 }
 
+
 .menu-image {
+
   width: 350px;
 
   max-width: 90%;
@@ -227,27 +311,41 @@ nav a:hover {
   border-radius: 8px;
 
   margin-bottom: 30px;
+
 }
 
+
 .menu-item {
+
   max-width: 650px;
 
   margin: 35px auto;
+
 }
 
+
 .menu-item h3 {
+
   font-size: 1.4rem;
 
   margin-bottom: 10px;
+
 }
+
 
 .menu-item p {
+
   font-size: 1rem;
+
 }
 
-.price {
+
+.menu-item .price {
+
   font-weight: bold;
+
 }
+
 
 
 /* =========================
@@ -255,18 +353,24 @@ nav a:hover {
 ========================= */
 
 .photo-section {
+
   text-align: center;
 
   padding: 60px 20px;
+
 }
 
+
 .photo-section img {
+
   width: 100%;
 
   max-width: 700px;
 
   border-radius: 8px;
+
 }
+
 
 
 /* =========================
@@ -274,15 +378,19 @@ nav a:hover {
 ========================= */
 
 .seat-info p {
+
   font-size: 1.1rem;
 
   margin: 15px 0;
+
 }
+
 
 
 /* ペットOK */
 
 .pet-ok {
+
   display: inline-block;
 
   font-size: 0.85rem;
@@ -291,12 +399,15 @@ nav a:hover {
 
   margin-left: 8px;
 
-  border: 1px solid #8b6f47;
+  border:
+    1px solid #8b6f47;
 
   border-radius: 20px;
 
   white-space: nowrap;
+
 }
+
 
 
 /* =========================
@@ -304,6 +415,7 @@ nav a:hover {
 ========================= */
 
 .parking-section {
+
   max-width: none;
 
   padding: 80px 30px;
@@ -311,17 +423,36 @@ nav a:hover {
   text-align: center;
 
   background: #f5f0e8;
+
 }
+
+
+.parking-section h2 {
+
+  font-size: 2.2rem;
+
+  margin-bottom: 30px;
+
+  letter-spacing: 2px;
+
+}
+
 
 .parking-section p {
+
   font-size: 1rem;
+
 }
+
 
 .no-parking {
-  font-weight: bold;
 
   font-size: 1.1rem !important;
+
+  font-weight: bold;
+
 }
+
 
 
 /* =========================
@@ -329,29 +460,41 @@ nav a:hover {
 ========================= */
 
 .hours {
+
   font-size: 1.4rem !important;
 
   font-weight: bold;
+
 }
+
 
 
 /* =========================
-   アクセス
+   ACCESS
 ========================= */
 
 .address {
+
   line-height: 2;
+
 }
+
 
 .map {
+
   margin-top: 30px;
+
 }
 
+
 .map iframe {
+
   width: 100%;
 
   border-radius: 8px;
+
 }
+
 
 
 /* =========================
@@ -359,6 +502,7 @@ nav a:hover {
 ========================= */
 
 .instagram-button {
+
   display: inline-block;
 
   padding: 12px 28px;
@@ -372,18 +516,24 @@ nav a:hover {
   border-radius: 30px;
 
   margin-top: 15px;
+
 }
 
+
 .instagram-button:hover {
+
   opacity: 0.8;
+
 }
+
 
 
 /* =========================
-   フッター
+   FOOTER
 ========================= */
 
 footer {
+
   background: #4a4038;
 
   color: #ffffff;
@@ -391,21 +541,27 @@ footer {
   text-align: center;
 
   padding: 40px 20px;
+
 }
 
+
 .footer-logo {
+
   font-family: Georgia, serif;
 
   font-size: 1.4rem;
 
-  margin-bottom: 15px;
 }
 
+
 footer p {
+
   margin: 8px 0;
 
   font-size: 0.9rem;
+
 }
+
 
 
 /* =========================
@@ -414,109 +570,162 @@ footer p {
 
 @media (max-width: 600px) {
 
+
   .header {
+
     padding: 15px 18px;
 
     flex-direction: column;
 
     gap: 10px;
+
   }
+
 
   .logo {
+
     font-size: 1.6rem;
+
   }
 
+
   nav {
+
     gap: 10px;
 
     flex-wrap: wrap;
 
     justify-content: center;
+
   }
+
 
   nav a {
+
     font-size: 0.72rem;
+
   }
 
 
-  /* トップ */
+
+  /* TOP */
 
   .hero > img {
+
     height: 500px;
+
   }
 
-  .hero-content {
+
+  .hero-text {
+
     left: 5%;
+
     right: 5%;
+
     bottom: 6%;
 
     padding: 22px 20px;
+
   }
 
-  .hero-content h1 {
+
+  .hero-text h1 {
+
     font-size: 2.3rem;
+
   }
 
-  .hero-content p {
+
+  .hero-text p {
+
     font-size: 1rem;
+
   }
 
 
-  /* セクション */
+
+  /* SECTION */
 
   .section {
+
     padding: 60px 20px;
+
   }
+
 
   .section h2,
   .news h2,
   .parking-section h2 {
+
     font-size: 1.8rem;
+
   }
+
 
   .section p {
+
     font-size: 0.95rem;
+
   }
 
 
-  /* 店内・お席 */
+
+  /* お席 */
 
   .seat-info p {
+
     font-size: 1rem;
+
   }
 
+
   .pet-ok {
+
     font-size: 0.75rem;
 
     padding: 2px 8px;
+
   }
+
 
 
   /* メニュー */
 
   .menu-image {
+
     width: 280px;
+
   }
+
 
 
   /* 店内写真 */
 
   .photo-section {
+
     padding: 40px 20px;
+
   }
+
 
 
   /* 駐車場 */
 
   .parking-section {
+
     padding: 60px 20px;
+
   }
 
 
-  /* Google Map */
+
+  /* MAP */
 
   .map iframe {
+
     height: 280px;
+
   }
 
 }
