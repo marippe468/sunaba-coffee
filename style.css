@@ -9,253 +9,268 @@ html {
 body {
   margin: 0;
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Noto Sans JP",
     "Yu Gothic",
+    "Hiragino Kaku Gothic ProN",
+    Meiryo,
     sans-serif;
-  color: #4b3621;
-  background: #f8f3eb;
+  color: #4a4038;
+  background: #f8f5ef;
   line-height: 1.8;
-  font-size: 17px;
 }
 
 img {
   max-width: 100%;
   height: auto;
-}
-
-header {
-  background: #4b3621;
-  color: white;
-  text-align: center;
-  padding: 24px 15px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 34px;
-  letter-spacing: 1px;
-}
-
-header p {
-  margin: 6px 0 16px;
-  font-size: 18px;
-}
-
-#business-status {
-  display: inline-block;
-  padding: 10px 25px;
-  background: white;
-  border-radius: 30px;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.status-open {
-  color: #2e7d32;
-}
-
-.status-soon {
-  color: #d66a00;
-}
-
-.status-closed {
-  color: #777;
-}
-
-.status-holiday {
-  color: #c62828;
-}
-
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #fffaf3;
-  border-bottom: 1px solid #ddd;
-  padding: 15px 5px;
-  text-align: center;
-  white-space: nowrap;
-  overflow-x: auto;
-}
-
-nav a {
-  color: #4b3621;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 19px;
-  font-weight: 700;
-}
-
-.hero {
-  position: relative;
-  height: 450px;
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   display: block;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.22);
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+header {
+  text-align: center;
+  padding: 55px 20px 35px;
+  background: #f8f5ef;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.4rem;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+}
+
+.shop-info {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+
+/* 営業状況 */
+
+#business-status {
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.status-open {
+  background: #e6eee5;
+  color: #486044;
+}
+
+.status-soon {
+  background: #f4ead8;
+  color: #8a6835;
+}
+
+.status-closed,
+.status-holiday {
+  background: #e9e4df;
+  color: #776b62;
+}
+
+
+/* =========================
+   ナビ
+========================= */
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 12px 15px;
+  background: #fff;
+  border-top: 1px solid #e9e2d9;
+  border-bottom: 1px solid #e9e2d9;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: #55483f;
+  text-decoration: none;
+  padding: 8px 13px;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  background: #f1ece5;
+  border-radius: 20px;
+}
+
+
+/* =========================
+   トップ
+========================= */
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero > img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
 }
 
 .hero-text {
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  bottom: 30px;
-  transform: translateX(-50%);
-  width: 92%;
-  max-width: 800px;
-  padding: 28px 20px;
-  background: rgba(45, 28, 15, 0.72);
-  color: white;
   text-align: center;
+  padding: 30px 20px 35px;
+  background: rgba(255, 255, 255, 0.94);
 }
 
 .hero-text h2 {
-  margin: 0 0 12px;
-  font-size: 32px;
-  line-height: 1.5;
+  margin-bottom: 10px;
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
 }
 
-.hero-text p {
-  margin: 0;
-  font-size: 23px;
+.hero-text h2 span {
+  display: block;
+  font-size: 1rem;
+  margin-top: 5px;
+  letter-spacing: 0.08em;
 }
+
+.hero-message {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================
+   共通セクション
+========================= */
+
+section:not(.hero) {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 75px 25px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  margin-bottom: 40px;
+}
+
+
+/* =========================
+   Instagram
+========================= */
 
 .instagram-top {
-  background: white;
-  padding: 45px 20px;
   text-align: center;
-}
-
-.instagram-top h2 {
-  margin: 0 0 18px;
-  font-size: 29px;
+  background: #eee9e1;
 }
 
 .instagram-top p {
-  font-size: 17px;
+  font-size: 0.95rem;
 }
 
 .instagram-button {
   display: inline-block;
-  padding: 13px 30px;
-  background: #4b3621;
-  color: white;
+  margin-top: 10px;
+  padding: 11px 28px;
+  color: #fff;
+  background: #66584e;
   text-decoration: none;
   border-radius: 30px;
-  font-size: 18px;
-  font-weight: 700;
 }
 
-.qr-code {
-  display: block;
-  width: 160px;
-  height: 160px;
-  margin: 22px auto 0;
-  object-fit: cover;
+.instagram-button:hover {
+  opacity: 0.85;
 }
 
-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
 
-section h2 {
-  margin: 0 0 35px;
-  text-align: center;
-  font-size: 30px;
-}
-
-section h2::after {
-  content: "";
-  display: block;
-  width: 55px;
-  height: 3px;
-  margin: 10px auto 0;
-  background: #a66a3f;
-}
-
-/* お知らせ */
+/* =========================
+   お知らせ
+========================= */
 
 .news-section {
-  background: #f8f3eb;
+  background: #fff;
 }
 
 .news-list {
-  max-width: 850px;
-  margin: auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .news-item {
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-bottom: 14px;
-  padding: 18px;
-  background: white;
-  border-left: 5px solid #a66a3f;
-  color: #4b3621;
+  padding: 10px 5px;
+  color: #4a4038;
   text-decoration: none;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+  border-bottom: 1px solid #e8e0d7;
+  line-height: 1.3;
+}
+
+.news-item:hover {
+  background: #f8f5ef;
 }
 
 .news-date {
-  white-space: nowrap;
-  color: #777;
-  font-size: 15px;
+  min-width: 95px;
+  font-size: 0.82rem;
 }
 
 .news-title {
   flex: 1;
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .news-arrow {
-  font-size: 23px;
-  color: #a66a3f;
+  font-size: 1.4rem;
 }
 
-/* カレンダー */
+
+/* =========================
+   カレンダー
+========================= */
 
 .calendar-section {
-  max-width: none;
-  background: #fffaf3;
+  background: #f3eee7;
 }
 
 .calendar-wrap {
-  max-width: 1000px;
-  margin: auto;
-  display: flex;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
 .calendar {
-  flex: 1;
-  padding: 20px;
-  background: white;
+  background: #fff;
+  padding: 22px;
   border-radius: 8px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 .calendar h3 {
-  margin: 0 0 15px;
   text-align: center;
-  font-size: 22px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 18px;
 }
 
 .calendar-grid {
@@ -265,313 +280,264 @@ section h2::after {
 }
 
 .weekday {
-  padding: 5px 0;
   text-align: center;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 5px 0;
+  color: #776b62;
 }
 
 .day {
-  min-height: 65px;
-  padding: 5px 2px;
-  border: 1px solid #eee;
-  background: white;
+  min-height: 62px;
+  padding: 5px;
+  border: 1px solid #eee8df;
   text-align: center;
-  font-size: 14px;
+  position: relative;
+  font-size: 0.8rem;
 }
 
 .day.empty {
-  background: #fafafa;
+  border: none;
+  background: transparent;
 }
 
 .day-number {
-  font-weight: 700;
-}
-
-.holiday {
-  color: #d32f2f;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 0.82rem;
 }
 
 .event-day {
   display: block;
   margin-top: 4px;
-  padding: 3px;
-  background: #a66a3f;
-  color: white;
-  border-radius: 4px;
+  padding: 2px;
+  background: #e7ded3;
+  color: #5a4d43;
   text-decoration: none;
-  font-size: 11px;
+  border-radius: 3px;
+  font-size: 0.65rem;
 }
 
-/* お店について */
+.holiday {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.62rem;
+  color: #8a6f61;
+}
+
+
+/* =========================
+   お店について
+========================= */
 
 .about {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 45px;
-}
-
-.about-image,
-.about-text {
-  width: 50%;
+  align-items: center;
 }
 
 .about-image img {
   width: 100%;
-  border-radius: 8px;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.about-text {
+  text-align: center;
 }
 
 .about-text h3 {
-  margin-top: 0;
-  font-size: 25px;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .about-text p {
-  font-size: 18px;
+  font-size: 0.95rem;
 }
 
-/* メニュー */
+
+/* =========================
+   メニュー
+========================= */
+
+#menu {
+  background: #fff;
+}
 
 .menu-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 40px;
-}
-
-.menu-title h2 {
-  margin: 0;
+  text-align: center;
 }
 
 .menu-title img {
-  width: 170px;
-  height: 115px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 520px;
   object-fit: cover;
-  border-radius: 8px;
+  margin: 0 auto 40px;
+  border-radius: 5px;
 }
 
 .menu-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  gap: 25px;
 }
 
 .menu-card {
-  padding: 22px;
-  background: white;
+  padding: 25px;
+  background: #f8f5ef;
   border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
 }
 
 .menu-card h3 {
-  margin-top: 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-  color: #6b4328;
-  font-size: 22px;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-.menu-card h3 small {
-  font-size: 15px;
-  font-weight: 500;
+.menu-card small {
+  font-size: 0.75rem;
+  font-weight: normal;
 }
 
 .menu-row {
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
-  gap: 10px;
-  padding: 8px 0;
-  font-size: 17px;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px dotted #d8cfc4;
 }
 
 .menu-name {
-  flex: 1;
+  font-size: 0.9rem;
 }
 
 .menu-price {
   white-space: nowrap;
-  color: #a0522d;
-  font-weight: 700;
-  text-align: right;
+  font-weight: 500;
 }
 
 .menu-note {
-  margin-top: 12px;
-  color: #777;
-  font-size: 15px;
-}
-
-/* 飲み物 */
-
-.coffee-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-}
-
-.coffee-menu img {
-  width: 170px;
-  height: 115px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.coffee-menu-content {
+  margin: 15px 0 0;
+  font-size: 0.75rem;
   text-align: center;
 }
 
-.coffee-menu h3 {
-  border: none;
+.coffee-menu {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 20px;
+  align-items: center;
 }
 
-/* オーナー */
+.coffee-menu > img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+/* =========================
+   オーナー
+========================= */
 
 .owner-section {
-  max-width: none;
-  background: #efe5d7;
+  background: #eee9e1;
 }
 
 .owner-box {
-  max-width: 950px;
-  margin: auto;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 300px 1fr;
   gap: 45px;
-}
-
-.owner-image {
-  width: 40%;
-  text-align: center;
+  align-items: center;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .owner-image img {
   width: 100%;
-  max-width: 300px;
-  border-radius: 50%;
+  max-height: 350px;
+  object-fit: cover;
 }
 
 .owner-text {
-  width: 60%;
-  font-size: 17px;
+  text-align: center;
 }
 
 .owner-text h3 {
-  font-size: 25px;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
-/* アクセス */
+.owner-text p {
+  font-size: 0.95rem;
+}
+
+
+/* =========================
+   アクセス
+========================= */
 
 .info-section {
-  max-width: none;
-  background: #efe5d7;
+  background: #fff;
 }
 
 .info-box {
-  max-width: 750px;
-  margin: auto;
-  padding: 32px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .info-item {
-  padding: 16px 0;
-  border-bottom: 1px solid #eee;
+  padding: 15px 5px;
+  border-bottom: 1px solid #e8e0d7;
   text-align: center;
-  font-size: 17px;
 }
 
 .info-label {
-  color: #6b4328;
-  font-weight: 700;
-  font-size: 18px;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+  color: #806f62;
+  letter-spacing: 0.1em;
 }
 
 .phone {
-  margin-top: 5px;
-  font-size: 23px;
-  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
 }
 
-.phone-button {
+.phone-button,
+.map-button {
   display: inline-block;
-  margin-top: 12px;
-  padding: 13px 32px;
-  background: #4b3621;
-  color: white;
+  margin-top: 10px;
+  padding: 8px 20px;
+  background: #66584e;
+  color: #fff;
   text-decoration: none;
-  border-radius: 30px;
-  font-size: 18px;
-  font-weight: 700;
+  border-radius: 25px;
+  font-size: 0.85rem;
 }
 
 .access {
-  margin-top: 28px;
-  padding-top: 28px;
-  border-top: 1px solid #eee;
   text-align: center;
+  padding: 25px 5px;
 }
 
-.map-button {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 13px 28px;
-  background: #4b3621;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 700;
-}
 
-/* SNS */
-
-.sns {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.sns h3 {
-  margin-bottom: 18px;
-}
-
-.sns-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.sns-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 54px;
-  background: #4b3621;
-  color: white;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 700;
-}
+/* =========================
+   フッター
+========================= */
 
 footer {
-  padding: 28px 15px;
-  background: #4b3621;
-  color: white;
   text-align: center;
+  padding: 40px 20px;
+  background: #51473f;
+  color: #fff;
 }
 
 footer p {
-  margin: 4px;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
 }
 
 
@@ -581,163 +547,109 @@ footer p {
 
 @media (max-width: 700px) {
 
-  body {
-    font-size: 16px;
-  }
-
   header {
-    padding: 20px 10px;
+    padding: 40px 15px 25px;
   }
 
   header h1 {
-    font-size: 29px;
-  }
-
-  header p {
-    font-size: 16px;
-  }
-
-  #business-status {
-    font-size: 20px;
+    font-size: 1.9rem;
   }
 
   nav {
-    padding: 13px 4px;
+    gap: 0;
   }
 
   nav a {
-    margin: 0 7px;
-    font-size: 17px;
+    padding: 6px 8px;
+    font-size: 0.75rem;
   }
 
-  .hero {
-    height: 380px;
+  .hero > img {
+    height: 300px;
   }
 
   .hero-text {
-    bottom: 15px;
-    width: 94%;
-    padding: 20px 12px;
+    padding: 22px 15px 25px;
   }
 
   .hero-text h2 {
-    font-size: 25px;
+    font-size: 1.05rem;
   }
 
-  .hero-text p {
-    font-size: 20px;
+  .hero-text h2 span {
+    font-size: 0.85rem;
   }
 
-  section {
-    padding: 50px 15px;
+  .hero-message {
+    font-size: 0.8rem;
+  }
+
+  section:not(.hero) {
+    padding: 55px 15px;
   }
 
   section h2 {
-    font-size: 27px;
-  }
-
-  .instagram-top p {
-    font-size: 16px;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
   }
 
   .news-item {
-    flex-wrap: wrap;
-    padding: 16px;
+    gap: 8px;
+    padding: 8px 2px;
   }
 
   .news-date {
-    width: 100%;
-    font-size: 14px;
+    min-width: 78px;
+    font-size: 0.7rem;
   }
 
   .news-title {
-    font-size: 16px;
+    font-size: 0.78rem;
   }
 
   .calendar-wrap {
-    flex-direction: column;
-  }
-
-  .calendar {
-    padding: 12px;
-  }
-
-  .calendar h3 {
-    font-size: 21px;
+    grid-template-columns: 1fr;
   }
 
   .day {
     min-height: 55px;
-    font-size: 13px;
-  }
-
-  .weekday {
-    font-size: 13px;
   }
 
   .about {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 25px;
-  }
-
-  .about-image,
-  .about-text {
-    width: 100%;
-  }
-
-  .about-text p {
-    font-size: 17px;
-  }
-
-  .menu-title {
-    flex-direction: column;
   }
 
   .menu-box {
     grid-template-columns: 1fr;
   }
 
-  .menu-row {
-    font-size: 16px;
-  }
-
-  .menu-card h3 {
-    font-size: 21px;
+  .menu-title img {
+    max-height: 400px;
   }
 
   .coffee-menu {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
-  .coffee-menu img {
-    width: 180px;
-    height: 120px;
+  .coffee-menu > img {
+    width: 100%;
+    height: 240px;
+    margin: 0 auto;
   }
 
   .owner-box {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 25px;
   }
 
-  .owner-image,
-  .owner-text {
-    width: 100%;
+  .owner-image {
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .owner-text {
-    font-size: 16px;
-  }
-
-  .owner-text h3 {
-    font-size: 23px;
-  }
-
-  .info-box {
-    padding: 25px 15px;
-  }
-
-  .info-item {
-    font-size: 16px;
+    text-align: center;
   }
 
 }
