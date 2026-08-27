@@ -74,22 +74,22 @@ body {
 }
 
 .status-open {
-  color: #ffffff;
+  color: #fff;
   background: #708c65;
 }
 
 .status-soon {
-  color: #ffffff;
+  color: #fff;
   background: #b68a4a;
 }
 
 .status-closed {
-  color: #ffffff;
+  color: #fff;
   background: #8d8178;
 }
 
 .status-holiday {
-  color: #ffffff;
+  color: #fff;
   background: #9b756d;
 }
 
@@ -102,9 +102,9 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px 30px;
+  gap: 8px 28px;
   padding: 15px 20px;
-  background: #ffffff;
+  background: #fff;
   border-bottom: 1px solid #e5ddd2;
   position: sticky;
   top: 0;
@@ -181,7 +181,7 @@ body {
   max-width: 850px;
   padding: 30px 25px;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   background: rgba(50, 42, 36, 0.58);
   border-radius: 5px;
 }
@@ -216,7 +216,7 @@ body {
 .instagram-top {
   text-align: center;
   padding: 55px 20px;
-  background: #ffffff;
+  background: #fff;
 }
 
 .instagram-top h2 {
@@ -233,7 +233,7 @@ body {
 .instagram-button {
   display: inline-block;
   padding: 11px 28px;
-  color: #ffffff;
+  color: #fff;
   background: #6e625a;
   text-decoration: none;
   border-radius: 30px;
@@ -257,7 +257,7 @@ body {
 .news-list {
   max-width: 850px;
   margin: 0 auto;
-  background: #ffffff;
+  background: #fff;
   border-top: 1px solid #e5ddd2;
 }
 
@@ -296,7 +296,7 @@ body {
 ========================= */
 
 .calendar-section {
-  background: #ffffff;
+  background: #fff;
   max-width: none;
   overflow: hidden;
 }
@@ -353,7 +353,7 @@ body {
 .day {
   min-height: 75px;
   padding: 7px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #eee7de;
   position: relative;
 }
@@ -449,7 +449,7 @@ body {
 
 .menu-card {
   padding: 28px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e6ded4;
   border-radius: 7px;
 }
@@ -560,8 +560,17 @@ body {
   font-size: 17px;
 }
 
+.pet-ok {
+  display: inline-block;
+  margin: 22px 0 !important;
+  padding: 5px 20px;
+  border: 1px solid #9d8977;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
 .parking-title {
-  margin-top: 30px !important;
+  margin-top: 25px !important;
   font-weight: bold;
 }
 
@@ -576,7 +585,7 @@ body {
 ========================= */
 
 .info-section {
-  background: #ffffff;
+  background: #fff;
   max-width: none;
   padding-left: max(25px, calc((100% - 850px) / 2));
   padding-right: max(25px, calc((100% - 850px) / 2));
@@ -616,7 +625,7 @@ body {
 .phone-button {
   display: inline-block;
   padding: 8px 17px;
-  color: #ffffff;
+  color: #fff;
   background: #6e625a;
   text-decoration: none;
   border-radius: 25px;
@@ -641,10 +650,10 @@ body {
 ========================= */
 
 footer {
-  padding: 45px 20px;
+  padding: 50px 20px;
   text-align: center;
   background: #403a35;
-  color: #ffffff;
+  color: #fff;
 }
 
 .footer-name {
@@ -652,25 +661,37 @@ footer {
     "Yu Mincho",
     "Hiragino Mincho ProN",
     serif;
-  font-size: 24px;
+  font-size: 25px;
   letter-spacing: 0.12em;
+}
+
+.footer-message {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer-sub {
+  margin-top: 15px;
+  font-size: 13px;
+  opacity: 0.9;
 }
 
 .footer-sns {
   display: flex;
   justify-content: center;
   gap: 18px;
-  margin: 20px 0;
+  margin: 22px 0;
 }
 
 .footer-sns a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   color: #403a35;
-  background: #ffffff;
+  background: #fff;
   border-radius: 50%;
   text-decoration: none;
   font-size: 18px;
@@ -711,7 +732,7 @@ footer p {
   }
 
   .main-nav {
-    gap: 4px 15px;
+    gap: 4px 14px;
     padding: 11px 10px;
   }
 
@@ -834,6 +855,10 @@ footer p {
 
   .seats-text p {
     font-size: 15px;
+  }
+
+  .footer-name {
+    font-size: 22px;
   }
 
 }
