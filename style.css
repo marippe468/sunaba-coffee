@@ -1,5 +1,5 @@
 /* =========================
-   基本設定
+   全体
 ========================= */
 
 * {
@@ -13,15 +13,13 @@ html {
 body {
   margin: 0;
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
     sans-serif;
 
-  color: #3d3028;
-  background: #fffaf5;
-  line-height: 1.7;
+  color: #333;
+  background: #faf9f6;
+  line-height: 1.8;
 }
 
 img {
@@ -29,8 +27,16 @@ img {
   display: block;
 }
 
-a {
-  color: inherit;
+section {
+  width: 92%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 45px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 28px;
 }
 
 
@@ -38,135 +44,161 @@ a {
    ヘッダー
 ========================= */
 
-.header {
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   text-align: center;
-  padding: 20px 15px 10px;
-  background: #fffaf5;
+
+  background: rgba(250, 249, 246, 0.97);
+
+  padding: 8px 10px 10px;
+
+  border-bottom:
+    1px solid #ddd;
 }
 
-.header h1 {
+
+/* SUNABA COFFEE */
+
+header h1 {
   margin: 0;
 
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-size: 32px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
 
   color: #fff;
 
   text-shadow:
-    1px 1px 0 #5b4636,
-    -1px -1px 0 #5b4636,
-    1px -1px 0 #5b4636,
-    -1px 1px 0 #5b4636,
-    0 2px 4px rgba(0, 0, 0, 0.3);
+    1px 1px 0 #555,
+    -1px -1px 0 #555,
+    1px -1px 0 #555,
+    -1px 1px 0 #555,
+    2px 2px 3px rgba(0,0,0,0.35);
 }
+
+
+/* しまなみ海道 */
 
 .shimanami {
-  margin-top: 2px;
-
-  font-size: 1rem;
-  font-weight: 600;
-
-  letter-spacing: 0.08em;
-}
-
-.catch {
   margin-top: 0;
 
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 18px;
 
-  line-height: 1.3;
+  font-weight: 500;
+
+  line-height: 1.2;
 }
 
 
-/* =========================
-   営業状況
-========================= */
+/* ～今治駅前～ */
+
+.subtitle {
+  font-size: 17px;
+
+  line-height: 1.25;
+
+  margin-top: 1px;
+}
+
+
+/* 営業状況 */
 
 #business-status {
-  margin: 7px auto 0;
-
   display: inline-block;
 
-  padding: 4px 14px;
+  margin-top: 5px;
+
+  padding: 2px 16px;
 
   border-radius: 20px;
 
-  font-size: 1.05rem;
+  font-size: 17px;
+
   font-weight: bold;
 }
 
 .status-open {
   color: #fff;
-  background: #6b8e5a;
+  background: #4d8b55;
 }
 
 .status-soon {
   color: #fff;
-  background: #d18b35;
+  background: #d88b35;
 }
 
 .status-closed {
-  color: #fff;
-  background: #777;
+  color: #555;
+  background: #e4e4e4;
 }
 
 .status-holiday {
   color: #fff;
-  background: #b85c5c;
+  background: #c65a5a;
 }
 
 
 /* =========================
-   ナビゲーション
+   ナビ
 ========================= */
 
-.navigation {
+nav {
   display: flex;
 
-  justify-content: space-between;
+  justify-content: center;
+
   align-items: center;
 
-  gap: 4px;
+  width: 100%;
 
-  padding: 8px 8px;
+  margin: 0 auto;
 
-  background: #eee2d4;
+  padding: 8px 3px;
 
-  border-top: 1px solid #dfd0c0;
-  border-bottom: 1px solid #dfd0c0;
+  background: #fff;
 
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  border-bottom:
+    1px solid #eee;
+
+  white-space: nowrap;
 }
 
-.navigation a {
+nav a {
   flex: 1;
 
   text-align: center;
 
   text-decoration: none;
 
-  font-size: 0.72rem;
-  font-weight: 600;
+  color: #333;
 
-  white-space: nowrap;
+  font-size: 12px;
+
+  line-height: 1.2;
+
+  padding: 3px 0;
 }
 
 
 /* =========================
-   トップ写真
+   トップ
 ========================= */
 
 .hero {
-  background: #fffaf5;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .hero > img {
   width: 100%;
-  height: auto;
+
+  max-height: 520px;
 
   object-fit: cover;
 }
@@ -174,13 +206,14 @@ a {
 .hero-text {
   text-align: center;
 
-  padding: 15px 12px 20px;
+  padding: 25px 15px 30px;
 }
 
 .hero-text h2 {
-  margin: 0 0 5px;
+  margin: 0 0 8px;
 
-  font-size: 1.05rem;
+  font-size: 21px;
+
   font-weight: 600;
 
   line-height: 1.5;
@@ -189,7 +222,7 @@ a {
 .hero-text p {
   margin: 0;
 
-  font-size: 0.95rem;
+  font-size: 16px;
 
   line-height: 1.7;
 }
@@ -202,42 +235,23 @@ a {
 .instagram-top {
   text-align: center;
 
-  padding: 8px 10px 15px;
+  padding: 15px 0 25px;
 }
 
 .instagram-button {
   display: inline-block;
 
-  padding: 7px 22px;
+  padding: 8px 22px;
 
-  border-radius: 20px;
+  border-radius: 25px;
 
-  background: #4f4239;
-  color: white;
+  background: #333;
+
+  color: #fff;
 
   text-decoration: none;
 
-  font-size: 0.85rem;
-  font-weight: bold;
-}
-
-
-/* =========================
-   セクション共通
-========================= */
-
-section {
-  padding: 35px 15px;
-}
-
-section > h2 {
-  text-align: center;
-
-  margin: 0 0 20px;
-
-  font-size: 1.45rem;
-
-  letter-spacing: 0.08em;
+  font-size: 14px;
 }
 
 
@@ -246,13 +260,16 @@ section > h2 {
 ========================= */
 
 .news-section {
-  background: #f5eee7;
+  padding-top: 25px;
+}
+
+.news-section h2 {
+  margin-bottom: 12px;
 }
 
 .news-list {
-  max-width: 600px;
-
-  margin: 0 auto;
+  border-top:
+    1px solid #ddd;
 }
 
 .news-item {
@@ -262,27 +279,32 @@ section > h2 {
 
   gap: 8px;
 
-  padding: 8px 0;
+  padding: 8px 3px;
 
-  border-bottom: 1px solid #d8cbbd;
+  border-bottom:
+    1px solid #ddd;
 
   text-decoration: none;
 
-  font-size: 0.78rem;
+  color: #333;
 
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 .news-date {
   flex: 0 0 auto;
 
-  font-size: 0.7rem;
-
-  color: #777;
+  font-size: 12px;
 }
 
 .news-title {
   flex: 1;
+
+  font-size: 13px;
+}
+
+.news-arrow {
+  font-size: 18px;
 }
 
 
@@ -291,21 +313,8 @@ section > h2 {
 ========================= */
 
 .calendar-section {
-  background: #fffaf5;
-  overflow: hidden;
+  padding-top: 25px;
 }
-
-.calendar-note {
-  text-align: center;
-
-  margin: -10px 0 12px;
-
-  font-size: 0.68rem;
-  color: #777;
-}
-
-
-/* ここが横スライド */
 
 .calendar-slider {
   display: flex;
@@ -314,35 +323,24 @@ section > h2 {
 
   scroll-snap-type: x mandatory;
 
-  gap: 15px;
+  gap: 20px;
 
   padding-bottom: 10px;
 
   -webkit-overflow-scrolling: touch;
 }
 
-.calendar-slider::-webkit-scrollbar {
-  display: none;
-}
-
-.calendar {
+.calendar-month {
   flex: 0 0 100%;
 
   scroll-snap-align: start;
-
-  min-width: 0;
 }
 
-.calendar h3 {
+.calendar-month h3 {
   text-align: center;
 
   margin: 0 0 12px;
-
-  font-size: 1.05rem;
 }
-
-
-/* 7列 */
 
 .calendar-grid {
   display: grid;
@@ -350,115 +348,84 @@ section > h2 {
   grid-template-columns:
     repeat(7, 1fr);
 
-  gap: 2px;
+  border-top:
+    1px solid #ddd;
+
+  border-left:
+    1px solid #ddd;
 }
 
-
-/* 曜日 */
-
-.weekday {
-  text-align: center;
-
-  padding: 5px 0;
-
-  font-size: 0.7rem;
-  font-weight: bold;
-
-  background: #eee7df;
-}
-
-.weekday.sunday {
-  color: #c44;
-}
-
-.weekday.saturday {
-  color: white;
-  background: #668db5;
-}
-
-
-/* 日付 */
-
+.weekday,
 .day {
   min-height: 55px;
 
-  padding: 4px 2px;
+  border-right:
+    1px solid #ddd;
+
+  border-bottom:
+    1px solid #ddd;
+
+  padding: 3px;
 
   text-align: center;
-
-  border: 1px solid #e2d8cf;
-
-  background: white;
-
-  font-size: 0.7rem;
 }
 
-.day.empty {
-  background: transparent;
-  border: none;
+.weekday {
+  font-size: 12px;
+
+  font-weight: bold;
+
+  min-height: auto;
+
+  padding: 3px;
+}
+
+.day {
+  font-size: 12px;
+
+  line-height: 1.25;
 }
 
 .day-number {
-  font-weight: bold;
+  font-size: 14px;
 
-  line-height: 1.2;
+  margin-bottom: 2px;
 }
 
-
-/* 日曜日 */
-
-.day.sunday {
-  color: #c44;
+.sunday,
+.sunday .day-number {
+  color: #d44;
 }
 
-
-/* 土曜日 */
-
-.day.saturday {
-  color: #28639b;
-
-  background: #e7f1fb;
+.saturday,
+.saturday .day-number {
+  color: #3575b8;
 }
 
-
-/* 祝日 */
-
-.day.holiday-day {
-  color: #c44;
-  background: #fff0f0;
+.empty {
+  background: #f5f5f5;
 }
-
-
-/* 定休日 */
 
 .holiday {
-  margin-top: 3px;
+  font-size: 9px;
 
-  font-size: 0.55rem;
+  color: #d44;
 
-  line-height: 1.15;
-
-  color: #b44;
   font-weight: bold;
+
+  margin-top: 1px;
 }
 
+.event-day {
+  display: block;
 
-/* イベント */
+  font-size: 9px;
 
-.event {
-  margin-top: 3px;
+  color: #333;
 
-  padding: 1px 2px;
+  font-weight: bold;
 
-  border-radius: 3px;
-
-  background: #ead7b7;
-
-  color: #5a4430;
-
-  font-size: 0.53rem;
-
-  line-height: 1.2;
+  text-decoration: none;
 }
 
 
@@ -467,21 +434,17 @@ section > h2 {
 ========================= */
 
 #about {
-  background: #f7f1ea;
-}
-
-.about {
-  max-width: 700px;
-
-  margin: 0 auto;
+  text-align: center;
 }
 
 .about-image img {
   width: 100%;
 
-  border-radius: 8px;
+  max-width: 600px;
 
-  margin-bottom: 20px;
+  margin: 0 auto 25px;
+
+  border-radius: 8px;
 }
 
 .about-text {
@@ -489,23 +452,21 @@ section > h2 {
 }
 
 .about-text h3 {
-  margin: 0 0 18px;
+  font-size: 20px;
 
-  font-size: 1.15rem;
+  margin-bottom: 20px;
 }
 
 .about-text p {
   margin: 0 0 17px;
 
-  font-size: 0.92rem;
-
-  line-height: 1.9;
+  font-size: 15px;
 }
 
 .strong-text {
   font-weight: bold;
 
-  font-size: 1rem !important;
+  font-size: 17px !important;
 }
 
 
@@ -513,22 +474,18 @@ section > h2 {
    メニュー
 ========================= */
 
-#menu {
-  background: #fffaf5;
-}
-
 .menu-title {
   text-align: center;
 }
 
 .menu-title h2 {
-  margin: 0 0 15px;
+  margin-bottom: 15px;
 }
 
 .menu-title img {
-  width: 85%;
+  width: 90%;
 
-  max-width: 500px;
+  max-width: 650px;
 
   margin: 0 auto 25px;
 
@@ -536,33 +493,38 @@ section > h2 {
 }
 
 .menu-box {
-  max-width: 700px;
+  display: flex;
 
-  margin: 0 auto;
+  flex-direction: column;
+
+  gap: 15px;
 }
 
 .menu-card {
-  margin-bottom: 18px;
+  background: #fff;
 
-  padding: 15px;
-
-  background: #f5eee7;
+  padding: 18px;
 
   border-radius: 8px;
+
+  box-shadow:
+    0 1px 5px rgba(0,0,0,0.06);
 }
 
 .menu-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 
-  font-size: 1rem;
+  font-size: 18px;
 
-  border-bottom: 1px solid #d8c9bb;
+  border-bottom:
+    1px solid #ddd;
 
   padding-bottom: 5px;
 }
 
 .menu-card small {
-  font-size: 0.72rem;
+  font-size: 12px;
+
   font-weight: normal;
 }
 
@@ -573,13 +535,14 @@ section > h2 {
 
   align-items: flex-start;
 
-  gap: 8px;
+  gap: 10px;
 
   padding: 6px 0;
 
-  border-bottom: 1px dotted #d5c6b7;
+  border-bottom:
+    1px dotted #ddd;
 
-  font-size: 0.76rem;
+  font-size: 13px;
 
   line-height: 1.45;
 }
@@ -597,11 +560,11 @@ section > h2 {
 }
 
 .menu-note {
-  margin: 8px 0 0;
+  margin: 10px 0 0;
 
-  font-size: 0.65rem;
+  font-size: 11px;
 
-  color: #777;
+  color: #666;
 }
 
 .coffee-menu {
@@ -609,11 +572,11 @@ section > h2 {
 
   gap: 15px;
 
-  align-items: flex-start;
+  align-items: center;
 }
 
 .coffee-menu img {
-  width: 32%;
+  width: 34%;
 
   border-radius: 6px;
 }
@@ -628,35 +591,35 @@ section > h2 {
 ========================= */
 
 .owner-section {
-  background: #f5eee7;
+  text-align: center;
 }
 
 .owner-box {
-  max-width: 700px;
-
-  margin: 0 auto;
+  text-align: center;
 }
 
 .owner-image img {
-  width: 75%;
+  width: 70%;
 
-  max-width: 350px;
+  max-width: 400px;
 
-  margin: 0 auto 22px;
+  margin: 0 auto 25px;
 
   border-radius: 8px;
 }
 
 .owner-text {
+  max-width: 720px;
+
+  margin: 0 auto;
+
   text-align: center;
 }
 
 .owner-text p {
-  margin: 0 0 20px;
+  margin: 0 0 18px;
 
-  font-size: 0.9rem;
-
-  line-height: 1.9;
+  font-size: 15px;
 }
 
 
@@ -665,68 +628,64 @@ section > h2 {
 ========================= */
 
 .info-section {
-  background: #fffaf5;
+  text-align: center;
 }
 
 .info-box {
-  max-width: 600px;
+  max-width: 650px;
 
   margin: 0 auto;
+
+  background: #fff;
+
+  padding: 20px;
+
+  border-radius: 8px;
 }
 
 .info-item {
-  padding: 13px 0;
+  padding: 14px 0;
 
-  border-bottom: 1px solid #ddd0c3;
+  border-bottom:
+    1px solid #eee;
 
-  text-align: center;
-
-  font-size: 0.88rem;
+  font-size: 14px;
 }
 
 .info-label {
-  margin-bottom: 4px;
-
   font-weight: bold;
 
-  font-size: 0.78rem;
+  margin-bottom: 5px;
 }
 
 .address-link {
-  display: inline-block;
+  color: #333;
 
   text-decoration: none;
-
-  color: #4d6f91;
-
-  line-height: 1.7;
 }
 
 .phone {
-  font-weight: bold;
+  font-size: 18px;
 
-  font-size: 1rem;
+  font-weight: bold;
 
   margin-bottom: 8px;
 }
 
-.phone-button,
-.map-button {
+.phone-button {
   display: inline-block;
 
-  margin-top: 5px;
+  padding: 7px 20px;
 
-  padding: 6px 18px;
+  background: #555;
+
+  color: #fff;
 
   border-radius: 20px;
 
-  background: #5d5047;
-
-  color: white;
-
   text-decoration: none;
 
-  font-size: 0.78rem;
+  font-size: 13px;
 }
 
 
@@ -737,19 +696,19 @@ section > h2 {
 footer {
   text-align: center;
 
-  padding: 25px 15px;
+  padding: 35px 15px;
 
-  background: #4d4138;
+  background: #333;
 
-  color: white;
+  color: #fff;
 }
 
 .footer-name {
-  margin: 0 0 12px;
+  font-size: 18px;
 
   font-weight: bold;
 
-  letter-spacing: 0.12em;
+  letter-spacing: 1px;
 }
 
 .footer-sns {
@@ -759,100 +718,156 @@ footer {
 
   gap: 18px;
 
-  margin-bottom: 12px;
+  margin: 15px 0;
 }
 
 .footer-sns a {
   display: flex;
 
   justify-content: center;
+
   align-items: center;
 
   width: 35px;
+
   height: 35px;
 
-  border: 1px solid rgba(255,255,255,0.7);
+  border: 1px solid #fff;
 
   border-radius: 50%;
 
-  color: white;
+  color: #fff;
 
   text-decoration: none;
 
-  font-size: 1.1rem;
+  font-size: 18px;
+
   font-weight: bold;
 }
 
-footer > p:last-child {
-  margin: 0;
+footer p {
+  margin: 5px 0;
 
-  font-size: 0.65rem;
-
-  opacity: 0.8;
+  font-size: 11px;
 }
 
 
 /* =========================
-   スマホ調整
+   スマホ
 ========================= */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
-  .header {
-    padding-top: 16px;
+  header {
+    padding: 6px 5px 8px;
   }
 
-  .header h1 {
-    font-size: 1.8rem;
+  header h1 {
+    font-size: 28px;
+
     white-space: nowrap;
   }
 
   .shimanami {
-    font-size: 0.9rem;
+    font-size: 15px;
   }
 
-  .catch {
-    font-size: 0.88rem;
+  .subtitle {
+    font-size: 14px;
+
+    white-space: nowrap;
   }
 
   #business-status {
-    font-size: 0.95rem;
+    font-size: 15px;
+
+    padding: 1px 13px;
   }
 
-  .navigation {
-    padding: 7px 5px;
+
+  nav {
+    padding: 6px 1px;
   }
 
-  .navigation a {
-    font-size: 0.65rem;
+  nav a {
+    font-size: 10px;
+
+    padding: 2px 0;
+  }
+
+
+  .hero > img {
+    max-height: 430px;
+  }
+
+  .hero-text {
+    padding: 20px 10px 25px;
   }
 
   .hero-text h2 {
-    font-size: 0.95rem;
+    font-size: 18px;
+
+    line-height: 1.45;
   }
 
   .hero-text p {
-    font-size: 0.88rem;
+    font-size: 14px;
   }
+
 
   section {
-    padding: 30px 12px;
+    width: 94%;
+
+    padding: 35px 0;
   }
 
-  section > h2 {
-    font-size: 1.3rem;
+
+  h2 {
+    font-size: 22px;
+
+    margin-bottom: 20px;
   }
+
+
+  .news-title {
+    font-size: 12px;
+  }
+
+
+  .calendar-month {
+    flex-basis: 100%;
+  }
+
+  .weekday,
+  .day {
+    min-height: 52px;
+  }
+
 
   .menu-card {
-    padding: 12px;
+    padding: 15px;
+  }
+
+  .menu-card h3 {
+    font-size: 17px;
   }
 
   .menu-row {
-    font-size: 0.72rem;
+    font-size: 12px;
   }
 
-  .day {
-    min-height: 52px;
+
+  .coffee-menu {
+    gap: 10px;
+  }
+
+  .coffee-menu img {
+    width: 32%;
+  }
+
+
+  .owner-image img {
+    width: 80%;
   }
 
 }
