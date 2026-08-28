@@ -1,5 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +10,19 @@
 
   <meta
     name="description"
-    content="愛媛県今治市・JR今治駅からすぐ。夫婦で営む小さな駅前カフェ、SUNABA COFFEE。テラス席は愛犬と一緒にご利用いただけます。"
+    content="愛媛県今治市・JR今治駅からすぐ。夫婦で営む小さな駅前カフェ SUNABA COFFEE。"
   >
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 
 <body>
 
-<!-- =========================
+
+<!-- =====================================
      HEADER
-========================= -->
+===================================== -->
 
 <header class="header">
 
@@ -39,40 +42,64 @@
     愛犬とともに・テラス席OK
   </div>
 
-  <div id="businessStatus" class="business-status"></div>
+  <!-- 営業状況 -->
+  <div
+    id="businessStatus"
+    class="business-status"
+  >
+    営業状況を確認中…
+  </div>
 
   <nav class="nav">
+
     <a href="#news">お知らせ</a>
-    <a href="#calendar-section">カレンダー</a>
-    <a href="#about">店の紹介</a>
-    <a href="#menu">メニュー</a>
-    <a href="#access">アクセス</a>
+
+    <a href="#calendar-section">
+      カレンダー
+    </a>
+
+    <a href="#about">
+      店の紹介
+    </a>
+
+    <a href="#menu">
+      メニュー
+    </a>
+
+    <a href="#access">
+      アクセス
+    </a>
+
   </nav>
 
 </header>
 
 
-<main>
 
-<!-- =========================
+<!-- =====================================
      外観
-========================= -->
+===================================== -->
+
+<main>
 
 <section class="hero">
 
   <div class="hero-image">
+
     <img
       src="./image/gaikan.jpg"
       alt="SUNABA COFFEE 外観"
     >
+
   </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      説明
-========================= -->
+===================================== -->
 
 <section class="intro">
 
@@ -81,15 +108,33 @@
   </h1>
 
   <p>
-    電車の音をBGMに、ふっと時間がほどけていく。
+    JR今治駅からすぐ。
+  </p>
+
+  <p>
+    電車の音をBGMに、ゆっくりとした時間を過ごせる
+    小さなカフェです。
+  </p>
+
+  <p>
+    バス、電車の待ち時間も利用してね。
+  </p>
+
+  <p>
+    夫婦で営む、気取らず立ち寄れる場所。
+  </p>
+
+  <p>
+    コーヒーを片手に、ほっとひと息ついてください。
   </p>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      Instagram
-========================= -->
+===================================== -->
 
 <section class="instagram-section">
 
@@ -114,11 +159,15 @@
 </section>
 
 
-<!-- =========================
-     お知らせ
-========================= -->
 
-<section id="news" class="section news-section">
+<!-- =====================================
+     お知らせ
+===================================== -->
+
+<section
+  id="news"
+  class="section news-section"
+>
 
   <h2>
     お知らせ
@@ -137,7 +186,7 @@
       </h3>
 
       <p>
-        SUNABA COFFEEのホームページを開設しました。<br>
+        SUNABA COFFEEのホームページを開設しました。
         お店の情報やイベントなどをお知らせしていきます。
       </p>
 
@@ -155,7 +204,7 @@
       </h3>
 
       <p>
-        9月もコーヒー教室や小さな音楽会などを予定しています。
+        コーヒー教室や小さな音楽会などを予定しています。
       </p>
 
     </article>
@@ -165,9 +214,10 @@
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================
      営業カレンダー
-========================= -->
+===================================== -->
 
 <section
   id="calendar-section"
@@ -178,11 +228,13 @@
     営業カレンダー
   </h2>
 
+
   <div class="calendar-slider">
 
     <button
       id="prevMonth"
       class="calendar-arrow"
+      type="button"
       aria-label="前の月"
     >
       ‹
@@ -194,7 +246,9 @@
       <div
         id="calendarTitle"
         class="calendar-title"
-      ></div>
+      >
+        2026年8月
+      </div>
 
 
       <div class="calendar-wrap">
@@ -225,6 +279,7 @@
     <button
       id="nextMonth"
       class="calendar-arrow"
+      type="button"
       aria-label="次の月"
     >
       ›
@@ -236,11 +291,11 @@
   <div class="calendar-note">
 
     <span class="holiday-note">
-      ■ 定休日
+      ● 定休日
     </span>
 
     <span class="event-note">
-      ■ イベント
+      ● イベント
     </span>
 
   </div>
@@ -248,11 +303,15 @@
 </section>
 
 
-<!-- =========================
-     店の紹介
-========================= -->
 
-<section id="about" class="section about">
+<!-- =====================================
+     店の紹介
+===================================== -->
+
+<section
+  id="about"
+  class="section about"
+>
 
   <h2>
     店の紹介
@@ -276,8 +335,12 @@
     </p>
 
     <p>
-      電車の音をBGMに、ゆっくりとした時間を過ごせる<br>
+      電車の音をBGMに、ゆっくりとした時間を過ごせる
       小さなカフェです。
+    </p>
+
+    <p>
+      バス、電車の待ち時間も利用してね。
     </p>
 
     <p>
@@ -288,17 +351,8 @@
       コーヒーを片手に、ほっとひと息ついてください。
     </p>
 
-    <p>
-      40歳で会社員を辞め、<br>
-      念願だったカフェを始めました。
-    </p>
-
-    <p>
-      創業30年。<br>
-      これからも、この場所で皆さまをお迎えします。
-    </p>
-
   </div>
+
 
 
   <!-- 愛犬 -->
@@ -309,26 +363,67 @@
 
       <img
         src="./image/dog.jpg"
-        alt="SUNABA COFFEEの愛犬"
+        alt="愛犬"
       >
 
     </div>
 
     <p class="dog-message">
-      テラス席では、愛犬と一緒に<br>
+      テラス席では、愛犬と一緒に
       ゆっくりお過ごしいただけます。
     </p>
+
+  </div>
+
+
+
+  <!-- 席 -->
+
+  <div class="seats">
+
+    <div class="seat-card">
+
+      <h3>
+        テラス席
+      </h3>
+
+      <p>
+        4名席 × 2
+      </p>
+
+      <span>
+        ペットOK
+      </span>
+
+    </div>
+
+
+    <div class="seat-card">
+
+      <h3>
+        店内席
+      </h3>
+
+      <p>
+        カウンター 5席
+      </p>
+
+    </div>
 
   </div>
 
 </section>
 
 
-<!-- =========================
-     MENU
-========================= -->
 
-<section id="menu" class="section menu-section">
+<!-- =====================================
+     メニュー
+===================================== -->
+
+<section
+  id="menu"
+  class="section menu-section"
+>
 
   <h2>
     メニュー
@@ -343,6 +438,7 @@
     >
 
   </div>
+
 
 
   <!-- モーニング -->
@@ -370,6 +466,7 @@
     </p>
 
   </div>
+
 
 
   <!-- 飲み物 -->
@@ -408,6 +505,7 @@
   </div>
 
 
+
   <!-- 軽食 -->
 
   <div class="menu-category">
@@ -417,16 +515,31 @@
     </h3>
 
     <div class="menu-item">
-      <span>サンドイッチ</span>
-      <span>店内メニューをご覧ください</span>
+
+      <span>
+        サンドイッチ
+      </span>
+
+      <span>
+        店内メニューをご覧ください
+      </span>
+
     </div>
 
     <div class="menu-item">
-      <span>グラタン</span>
-      <span>店内メニューをご覧ください</span>
+
+      <span>
+        グラタン
+      </span>
+
+      <span>
+        店内メニューをご覧ください
+      </span>
+
     </div>
 
   </div>
+
 
 
   <!-- デザート -->
@@ -438,21 +551,43 @@
     </h3>
 
     <div class="menu-item">
-      <span>日替わりデザート</span>
-      <span>日替わり</span>
+
+      <span>
+        日替わりデザート
+      </span>
+
+      <span>
+        日替わり
+      </span>
+
     </div>
 
     <div class="menu-item">
-      <span>パンケーキ</span>
-      <span>店内メニューをご覧ください</span>
+
+      <span>
+        パンケーキ
+      </span>
+
+      <span>
+        店内メニューをご覧ください
+      </span>
+
     </div>
 
     <div class="menu-item">
-      <span>ケーキセット</span>
-      <strong>800円</strong>
+
+      <span>
+        ケーキセット
+      </span>
+
+      <strong>
+        800円
+      </strong>
+
     </div>
 
   </div>
+
 
 
   <!-- テイクアウト -->
@@ -464,29 +599,43 @@
     </h3>
 
     <div class="menu-item">
-      <span>コーヒー</span>
-      <span>テイクアウトOK</span>
+
+      <span>
+        コーヒー
+      </span>
+
+      <span>
+        テイクアウトOK
+      </span>
+
     </div>
 
     <div class="menu-item">
-      <span>サンドイッチ</span>
-      <span>テイクアウトOK</span>
-    </div>
 
-    <p class="menu-note">
-      ※ 詳しくは店内スタッフまでお尋ねください。
-    </p>
+      <span>
+        サンドイッチ
+      </span>
+
+      <span>
+        テイクアウトOK
+      </span>
+
+    </div>
 
   </div>
 
 </section>
 
 
-<!-- =========================
-     ACCESS
-========================= -->
 
-<section id="access" class="section access">
+<!-- =====================================
+     アクセス
+===================================== -->
+
+<section
+  id="access"
+  class="section access"
+>
 
   <h2>
     アクセス・営業時間
@@ -499,14 +648,16 @@
       SUNABA COFFEE
     </h3>
 
+
     <p>
       〒794-0015<br>
       愛媛県今治市常盤町4丁目8-18<br>
       しまなみイノベーションビル 2階
     </p>
 
+
     <p>
-      JR今治駅から徒歩約5分
+      JR今治駅からすぐ
     </p>
 
 
@@ -545,7 +696,7 @@
   </div>
 
 
-  <!-- PCのみGoogleマップ -->
+  <!-- PC：Googleマップ -->
 
   <div class="map-pc">
 
@@ -574,9 +725,10 @@
 </main>
 
 
-<!-- =========================
+
+<!-- =====================================
      FOOTER
-========================= -->
+===================================== -->
 
 <footer class="footer">
 
@@ -628,7 +780,9 @@
 </footer>
 
 
-<script src="script.js"></script>
+
+<script src="./script.js"></script>
 
 </body>
 </html>
+```
