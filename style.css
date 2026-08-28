@@ -2,13 +2,17 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
 
+
 body {
   margin: 0;
+
   color: #4a4038;
+
   background: #f8f5ef;
 
   font-family:
@@ -17,40 +21,56 @@ body {
     "Meiryo",
     sans-serif;
 
-  line-height: 1.65;
+  line-height: 1.55;
+
   text-align: center;
 }
 
+
 img {
-  max-width: 100%;
-  height: auto;
   display: block;
+
+  width: 100%;
+
+  height: auto;
 }
+
 
 a {
   color: inherit;
+
   text-decoration: none;
 }
 
 
-/* =========================
+
+/* ========================================
    HEADER
-========================= */
+======================================== */
 
 .header {
-  padding: 55px 20px 30px;
+
+  padding:
+    35px 15px 25px;
+
 }
 
+
 .logo {
+
   display: inline-block;
 
-  padding: 10px 28px;
+  padding:
+    8px 22px;
 
   color: white;
+
   background: #765b48;
 
-  border: 5px solid #9a785e;
-  border-radius: 30px;
+  border:
+    4px solid #9a785e;
+
+  border-radius: 28px;
 
   font-family:
     "Arial Rounded MT Bold",
@@ -58,49 +78,56 @@ a {
     "Yu Gothic",
     sans-serif;
 
-  font-size: clamp(38px, 6vw, 72px);
-  font-weight: 700;
+  font-size:
+    clamp(32px,6vw,65px);
+
+  font-weight: bold;
 
   letter-spacing: .04em;
 
   box-shadow:
-    0 7px 0 rgba(79,59,45,.18);
+    0 6px 0
+    rgba(79,59,45,.15);
+
 }
 
 
 .header-sub {
 
-  margin-top: 20px;
+  margin-top: 12px;
 
   color: #765b48;
 
-  font-size: 20px;
+  font-size: 18px;
 
   font-weight: bold;
 
   letter-spacing: .08em;
+
 }
 
 
 .header-catch {
 
-  margin-top: 5px;
+  margin-top: 3px;
 
-  font-size: clamp(15px,2vw,21px);
+  font-size: 15px;
 
-  letter-spacing: .08em;
+  letter-spacing: .05em;
+
 }
 
 
 .pet-catch {
 
-  margin-top: 5px;
+  margin-top: 3px;
 
   color: #765b48;
 
-  font-size: 16px;
+  font-size: 14px;
 
   font-weight: bold;
+
 }
 
 
@@ -112,60 +139,35 @@ a {
 
   flex-wrap: wrap;
 
-  gap: 28px;
+  gap: 20px;
 
-  margin-top: 35px;
+  margin-top: 22px;
+
 }
 
 
 .nav a {
 
-  font-size: 14px;
+  font-size: 13px;
 
   font-weight: bold;
 
-  letter-spacing: .12em;
 }
 
 
 
-/* =========================
-   COMMON
-========================= */
-
-.section {
-
-  width: min(1000px,90%);
-
-  margin: 0 auto;
-
-  padding: 90px 0;
-}
-
-
-h2 {
-
-  margin: 0 0 45px;
-
-  color: #5a4638;
-
-  font-size:
-    clamp(30px,4vw,44px);
-
-  letter-spacing: .08em;
-}
-
-
-
-/* =========================
+/* ========================================
    HERO
-========================= */
+======================================== */
 
 .hero {
 
-  width: min(1100px,94%);
+  width:
+    min(1100px,94%);
 
-  margin: auto;
+  margin:
+    0 auto;
+
 }
 
 
@@ -173,62 +175,71 @@ h2 {
 
   overflow: hidden;
 
-  border-radius: 24px;
+  border-radius: 22px;
 
   box-shadow:
-    0 12px 30px
+    0 10px 28px
     rgba(60,40,20,.15);
+
 }
 
 
 .hero-image img {
 
-  width: 100%;
-
-  max-height: 570px;
+  max-height: 580px;
 
   object-fit: cover;
+
 }
 
 
-.hero-text {
+
+/* ========================================
+   INTRO
+======================================== */
+
+.intro {
 
   padding:
-    55px 20px 30px;
+    45px 20px 20px;
+
 }
 
 
-.hero-text h1 {
+.intro h1 {
 
   margin: 0;
 
   color: #5d493b;
 
   font-size:
-    clamp(25px,4vw,42px);
+    clamp(25px,4vw,40px);
 
-  line-height: 1.7;
+  line-height: 1.55;
+
 }
 
 
-.hero-text p {
+.intro p {
 
-  margin-top: 25px;
+  margin-top: 20px;
 
   font-size:
-    clamp(17px,2.4vw,25px);
+    clamp(16px,2.2vw,22px);
+
 }
 
 
 
-/* =========================
+/* ========================================
    BUSINESS STATUS
-========================= */
+======================================== */
 
 .status-section {
 
   padding:
-    15px 20px 40px;
+    10px 20px 40px;
+
 }
 
 
@@ -240,9 +251,9 @@ h2 {
 
   justify-content: center;
 
-  width: 150px;
+  width: 145px;
 
-  height: 150px;
+  height: 145px;
 
   margin: auto;
 
@@ -254,218 +265,170 @@ h2 {
 
   border-radius: 50%;
 
-  font-size: 17px;
+  font-size: 16px;
 
   font-weight: bold;
 
-  line-height: 1.5;
+  line-height: 1.45;
 
   box-shadow:
-    0 8px 20px
-    rgba(60,40,20,.15);
+    0 7px 20px
+    rgba(60,40,20,.14);
+
 }
 
 
 
-/* =========================
-   PHOTOS
-========================= */
+/* ========================================
+   INSTAGRAM
+======================================== */
 
-.section-photo,
-.about-photo,
-.menu-photo {
+.instagram-section {
 
-  overflow: hidden;
+  padding:
+    45px 20px;
 
-  border-radius: 20px;
+  background: #eee6dc;
 
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
-.section-photo {
+.instagram-section h2 {
 
-  width: min(700px,100%);
+  margin-bottom: 15px;
 
-  margin-bottom: 45px;
 }
 
 
-.about-photo {
+.instagram-section p {
 
-  width: min(500px,100%);
+  margin-bottom: 22px;
 
-  margin-bottom: 35px;
 }
 
 
-.menu-photo {
-
-  width: min(650px,100%);
-
-  margin-bottom: 50px;
-}
-
-
-
-/* =========================
-   CONCEPT
-========================= */
-
-.concept p {
-
-  font-size: 17px;
-}
-
-
-
-/* =========================
-   MENU
-========================= */
-
-.menu-section {
-
-  background: #f2ede5;
-
-  border-radius: 30px;
-}
-
-
-.menu-category {
-
-  width: min(700px,100%);
-
-  margin:
-    0 auto 45px;
-}
-
-
-.menu-category h3 {
-
-  padding-bottom: 10px;
-
-  border-bottom:
-    2px solid #cbbbaa;
-}
-
-
-.menu-item {
-
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 15px;
-
-  padding: 13px 10px;
-
-  border-bottom:
-    1px dotted #c8bbad;
-
-  font-size: 18px;
-}
-
-
-.menu-note {
-
-  margin-top: 8px;
-
-  font-size: 14px;
-
-  color: #806f61;
-}
-
-
-
-/* =========================
-   SEATS
-========================= */
-
-.seat-container {
-
-  display: flex;
-
-  justify-content: center;
-
-  gap: 25px;
-
-  width: min(850px,100%);
-
-  margin: auto;
-}
-
-
-.seat-card {
-
-  flex: 1;
-
-  padding: 30px 20px;
-
-  background: white;
-
-  border-radius: 22px;
-
-  box-shadow:
-    0 8px 25px
-    rgba(60,40,20,.08);
-}
-
-
-.seat-card h3 {
-
-  margin-top: 0;
-
-  color: #5d493b;
-
-  font-size: 22px;
-}
-
-
-.seat-number {
-
-  font-size: 20px;
-
-  font-weight: bold;
-}
-
-
-.seat-pet {
+.instagram-button {
 
   display: inline-block;
 
-  margin-top: 8px;
+  padding:
+    12px 27px;
 
-  padding: 5px 14px;
+  color: white;
 
-  background: #eadfd2;
+  background: #765b48;
 
-  border-radius: 20px;
-
-  color: #6b513f;
-
-  font-size: 13px;
+  border-radius: 30px;
 
   font-weight: bold;
-}
 
-
-.seat-pet.indoor {
-
-  background: #f1eeee;
-
-  color: #777;
 }
 
 
 
-/* =========================
+/* ========================================
+   COMMON SECTION
+======================================== */
+
+.section {
+
+  width:
+    min(900px,92%);
+
+  margin:
+    0 auto;
+
+  padding:
+    65px 0;
+
+}
+
+
+.section h2 {
+
+  margin:
+    0 0 30px;
+
+  color: #5a4638;
+
+  font-size:
+    clamp(28px,4vw,40px);
+
+  letter-spacing: .08em;
+
+}
+
+
+
+/* ========================================
+   NEWS
+======================================== */
+
+.news-list {
+
+  width:
+    min(700px,100%);
+
+  margin: auto;
+
+}
+
+
+.news-card {
+
+  margin-bottom: 15px;
+
+  padding:
+    17px 20px;
+
+  background: white;
+
+  border-left:
+    4px solid #765b48;
+
+  border-radius: 12px;
+
+}
+
+
+.news-card time {
+
+  font-size: 12px;
+
+  color: #806f61;
+
+}
+
+
+.news-card h3 {
+
+  margin:
+    4px 0 7px;
+
+  font-size: 18px;
+
+}
+
+
+.news-card p {
+
+  margin: 0;
+
+  font-size: 14px;
+
+}
+
+
+
+/* ========================================
    CALENDAR
-========================= */
+======================================== */
 
 .calendar-section {
 
-  width: min(900px,94%);
+  width:
+    min(900px,96%);
+
 }
 
 
@@ -477,7 +440,8 @@ h2 {
 
   justify-content: center;
 
-  gap: 25px;
+  gap: 18px;
+
 }
 
 
@@ -485,19 +449,21 @@ h2 {
 
   width: 100%;
 
-  max-width: 800px;
+  max-width: 780px;
+
 }
 
 
 .calendar-title {
 
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   color: #5d493b;
 
-  font-size: 26px;
+  font-size: 25px;
 
   font-weight: bold;
+
 }
 
 
@@ -505,21 +471,24 @@ h2 {
 
   flex: 0 0 auto;
 
-  width: 48px;
+  width: 45px;
 
-  height: 48px;
+  height: 45px;
+
+  padding: 0;
 
   border: none;
 
   border-radius: 50%;
 
-  background: #765b48;
-
   color: white;
 
-  font-size: 32px;
+  background: #765b48;
+
+  font-size: 30px;
 
   cursor: pointer;
+
 }
 
 
@@ -529,11 +498,12 @@ h2 {
 
   background: white;
 
-  border-radius: 20px;
+  border-radius: 18px;
 
   box-shadow:
-    0 8px 25px
+    0 7px 20px
     rgba(60,40,20,.08);
+
 }
 
 
@@ -544,36 +514,43 @@ h2 {
 
   grid-template-columns:
     repeat(7,1fr);
+
 }
 
 
 .week-header > div {
 
-  padding: 12px 0;
+  padding:
+    9px 0;
 
   background: #eadfd2;
 
+  font-size: 14px;
+
   font-weight: bold;
+
 }
 
 
 .week-header .sun {
 
   color: #c33;
+
 }
 
 
 .week-header .sat {
 
   color: #426b91;
+
 }
 
 
 .calendar-day {
 
-  min-height: 100px;
+  min-height: 90px;
 
-  padding: 8px;
+  padding: 7px 3px;
 
   border-top:
     1px solid #eee;
@@ -581,79 +558,84 @@ h2 {
   border-right:
     1px solid #eee;
 
-  text-align: center;
 }
 
 
 .calendar-day.empty {
 
   background: #fafafa;
+
 }
 
 
 .day-number {
 
-  font-size: 16px;
+  font-size: 15px;
 
   font-weight: bold;
 
-  line-height: 1.2;
 }
 
 
 .sunday .day-number {
 
   color: #c33;
+
 }
 
 
 .saturday .day-number {
 
   color: #426b91;
+
 }
 
 
 .holiday {
 
   background: #fff1f1;
+
 }
 
 
 .holiday .day-number {
 
   color: #c33;
+
 }
 
 
-/* 2行目：定休日 */
+/* 定休日・イベントは2行目 */
+
+.holiday-label,
+.event-label {
+
+  display: block;
+
+  margin-top: 4px;
+
+  line-height: 1.15;
+
+  font-weight: bold;
+
+}
+
 
 .holiday-label {
 
-  margin-top: 4px;
-
   color: #c33;
-
-  font-size: 12px;
-
-  font-weight: bold;
-
-  line-height: 1.2;
-}
-
-
-/* 2行目：イベント */
-
-.event-label {
-
-  margin-top: 4px;
-
-  color: #8a5a31;
 
   font-size: 11px;
 
-  font-weight: bold;
+}
 
-  line-height: 1.2;
+
+.event-label {
+
+  color: #8a5a31;
+
+  font-size: 10px;
+
 }
 
 
@@ -663,103 +645,236 @@ h2 {
 
   justify-content: center;
 
-  gap: 30px;
+  gap: 25px;
 
-  margin-top: 20px;
+  margin-top: 15px;
 
-  font-size: 14px;
+  font-size: 13px;
+
 }
 
 
 .holiday-note {
 
   color: #c33;
+
 }
 
 
 .event-note {
 
   color: #8a5a31;
+
 }
 
 
 
-/* =========================
-   NEWS
-========================= */
+/* ========================================
+   ABOUT
+======================================== */
 
-.news-list {
+.about-photo {
 
-  width: min(750px,100%);
+  width:
+    min(500px,100%);
 
-  margin: auto;
+  margin:
+    0 auto 30px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
 }
 
 
-.news-card {
+.about-text p {
 
-  margin-bottom: 18px;
+  margin:
+    0 0 15px;
 
-  padding: 20px 25px;
+  font-size: 16px;
 
-  background: white;
-
-  border-left:
-    5px solid #765b48;
-
-  border-radius: 12px;
-
-  text-align: left;
 }
 
 
-.news-card time {
+
+/* ========================================
+   MENU
+======================================== */
+
+.menu-section {
+
+  width:
+    min(900px,94%);
+
+  background: #f2ede5;
+
+  border-radius: 25px;
+
+}
+
+
+.menu-photo {
+
+  width:
+    min(600px,100%);
+
+  margin:
+    0 auto 40px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+}
+
+
+.menu-category {
+
+  width:
+    min(680px,100%);
+
+  margin:
+    0 auto 35px;
+
+}
+
+
+.menu-category h3 {
+
+  margin-bottom: 8px;
+
+  padding-bottom: 7px;
+
+  border-bottom:
+    2px solid #cbbbaa;
+
+  font-size: 20px;
+
+}
+
+
+.menu-item {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding:
+    9px 7px;
+
+  border-bottom:
+    1px dotted #c8bbad;
+
+  font-size: 16px;
+
+}
+
+
+.menu-item strong {
+
+  white-space: nowrap;
+
+}
+
+
+.menu-note {
+
+  margin:
+    7px 0 0;
 
   color: #806f61;
 
   font-size: 13px;
-}
 
-
-.news-card h3 {
-
-  margin:
-    5px 0 8px;
-
-  color: #5d493b;
-
-  font-size: 20px;
 }
 
 
 
-/* =========================
+/* ========================================
    ACCESS
-========================= */
+======================================== */
 
 .access-info {
 
   line-height: 1.5;
+
 }
 
 
 .phone {
 
+  margin:
+    20px 0;
+
+}
+
+
+.phone a {
+
   font-weight: bold;
+
+}
+
+
+.hours-info {
+
+  margin:
+    25px auto;
+
+  padding:
+    20px;
+
+  background: #eadfd2;
+
+  border-radius: 18px;
+
+  font-size: 17px;
+
+}
+
+
+.hours-info strong {
+
+  font-size: 20px;
+
+}
+
+
+.hours-info span {
+
+  font-size: 14px;
+
+}
+
+
+.parking {
+
+  font-size: 13px;
+
+  color: #806f61;
+
 }
 
 
 .map-pc {
 
-  width: min(800px,100%);
+  width: 100%;
 
-  height: 380px;
+  height: 350px;
 
-  margin: 35px auto;
+  margin:
+    30px auto;
 
   overflow: hidden;
 
-  border-radius: 20px;
+  border-radius: 18px;
+
 }
 
 
@@ -770,58 +885,33 @@ h2 {
   height: 100%;
 
   border: 0;
+
 }
 
 
 .map-link {
 
   display: none;
+
 }
 
 
 
-/* =========================
-   HOURS
-========================= */
-
-.hours-box {
-
-  width: min(600px,100%);
-
-  margin: auto;
-
-  padding: 35px;
-
-  background: #eadfd2;
-
-  border-radius: 25px;
-}
-
-
-.hours-time {
-
-  margin: 0 0 10px;
-
-  font-size: 32px;
-
-  font-weight: bold;
-}
-
-
-
-/* =========================
+/* ========================================
    FOOTER
-========================= */
+======================================== */
 
 .footer {
 
-  margin-top: 50px;
+  margin-top: 40px;
 
-  padding: 55px 20px;
+  padding:
+    45px 20px;
+
+  color: white;
 
   background: #5d493b;
 
-  color: white;
 }
 
 
@@ -832,19 +922,21 @@ h2 {
     "Hiragino Maru Gothic ProN",
     sans-serif;
 
-  font-size: 32px;
+  font-size: 28px;
 
   font-weight: bold;
+
 }
 
 
 .footer-place {
 
-  margin-top: 8px;
+  margin-top: 5px;
 
-  font-size: 13px;
+  font-size: 12px;
 
-  letter-spacing: .15em;
+  letter-spacing: .13em;
+
 }
 
 
@@ -854,13 +946,14 @@ h2 {
 
   justify-content: center;
 
-  gap: 20px;
+  gap: 18px;
 
-  margin-top: 25px;
+  margin-top: 22px;
+
 }
 
 
-.sns-icon {
+.sns a {
 
   display: flex;
 
@@ -868,9 +961,9 @@ h2 {
 
   justify-content: center;
 
-  width: 45px;
+  width: 44px;
 
-  height: 45px;
+  height: 44px;
 
   border:
     1px solid
@@ -878,23 +971,33 @@ h2 {
 
   border-radius: 50%;
 
-  font-size: 23px;
+  font-size: 22px;
 
   font-weight: bold;
+
+}
+
+
+.copyright {
+
+  margin-top: 25px;
+
+  font-size: 11px;
+
 }
 
 
 
-/* ==================================================
+/* ========================================
    SMARTPHONE
-================================================== */
+======================================== */
 
 @media (max-width:700px) {
 
 
   body {
 
-    line-height: 1.5;
+    line-height: 1.45;
 
   }
 
@@ -902,64 +1005,60 @@ h2 {
   .header {
 
     padding:
-      30px 15px 25px;
+      25px 12px 20px;
 
   }
 
 
   .logo {
 
-    font-size: 31px;
+    font-size: 29px;
 
     padding:
-      8px 17px;
+      7px 15px;
 
-    border-width: 4px;
+    border-width: 3px;
 
-    border-radius: 22px;
+    border-radius: 20px;
 
   }
 
 
   .header-sub {
 
-    margin-top: 15px;
+    margin-top: 9px;
 
-    font-size: 17px;
+    font-size: 16px;
 
   }
 
 
   .header-catch {
 
-    font-size: 14px;
-
-    line-height: 1.4;
+    font-size: 13px;
 
   }
 
 
   .pet-catch {
 
-    font-size: 14px;
-
-    line-height: 1.4;
+    font-size: 13px;
 
   }
 
 
   .nav {
 
-    gap: 14px;
+    gap: 12px;
 
-    margin-top: 22px;
+    margin-top: 18px;
 
   }
 
 
   .nav a {
 
-    font-size: 11px;
+    font-size: 10px;
 
   }
 
@@ -976,43 +1075,43 @@ h2 {
 
   .hero-image {
 
-    border-radius: 16px;
+    border-radius: 15px;
 
   }
 
 
   .hero-image img {
 
-    min-height: 280px;
+    min-height: 260px;
 
     object-fit: cover;
 
   }
 
 
-  .hero-text {
 
-    padding-top: 32px;
+  /* INTRO */
 
-  }
+  .intro {
 
-
-  .hero-text h1 {
-
-    font-size: 24px;
-
-    line-height: 1.5;
+    padding:
+      30px 15px 15px;
 
   }
 
 
-  .hero-text p {
+  .intro h1 {
 
-    margin-top: 18px;
+    font-size: 23px;
 
-    font-size: 16px;
+  }
 
-    line-height: 1.5;
+
+  .intro p {
+
+    margin-top: 15px;
+
+    font-size: 15px;
 
   }
 
@@ -1020,13 +1119,55 @@ h2 {
 
   /* STATUS */
 
+  .status-section {
+
+    padding-bottom: 30px;
+
+  }
+
+
   .business-status {
 
-    width: 130px;
+    width: 125px;
 
-    height: 130px;
+    height: 125px;
 
-    font-size: 15px;
+    font-size: 14px;
+
+  }
+
+
+
+  /* INSTAGRAM */
+
+  .instagram-section {
+
+    padding:
+      35px 15px;
+
+  }
+
+
+  .instagram-section h2 {
+
+    font-size: 24px;
+
+  }
+
+
+  .instagram-section p {
+
+    font-size: 13px;
+
+  }
+
+
+  .instagram-button {
+
+    padding:
+      10px 22px;
+
+    font-size: 14px;
 
   }
 
@@ -1036,128 +1177,44 @@ h2 {
 
   .section {
 
-    width: 90%;
-
-    padding: 60px 0;
-
-  }
-
-
-  h2 {
-
-    margin-bottom: 30px;
-
-    font-size: 30px;
-
-  }
-
-
-
-  /* CONCEPT */
-
-  .concept p {
-
-    font-size: 15px;
-
-    line-height: 1.5;
-
-  }
-
-
-
-  /* MENU */
-
-  .menu-section {
-
-    width: 94%;
-
-    border-radius: 20px;
-
-  }
-
-
-  .menu-category {
-
-    margin-bottom: 35px;
-
-  }
-
-
-  .menu-category h3 {
-
-    font-size: 21px;
-
-  }
-
-
-  .menu-item {
+    width: 92%;
 
     padding:
-      10px 5px;
-
-    font-size: 14px;
-
-    line-height: 1.35;
+      50px 0;
 
   }
 
 
-  .menu-note {
+  .section h2 {
 
-    font-size: 12px;
+    margin-bottom: 25px;
 
-  }
-
-
-
-  /* SEATS */
-
-  .seat-container {
-
-    gap: 10px;
+    font-size: 28px;
 
   }
 
 
-  .seat-card {
+
+  /* NEWS */
+
+  .news-card {
 
     padding:
-      20px 8px;
-
-    border-radius: 15px;
+      14px 12px;
 
   }
 
 
-  .seat-card h3 {
+  .news-card h3 {
 
-    font-size: 17px;
-
-  }
-
-
-  .seat-number {
-
-    font-size: 15px;
+    font-size: 16px;
 
   }
 
 
-  .seat-card p {
+  .news-card p {
 
-    font-size: 12px;
-
-    line-height: 1.4;
-
-  }
-
-
-  .seat-pet {
-
-    padding:
-      4px 9px;
-
-    font-size: 10px;
+    font-size: 13px;
 
   }
 
@@ -1169,67 +1226,59 @@ h2 {
 
     width: 96%;
 
-    overflow: hidden;
-
   }
 
 
   .calendar-slider {
 
-    gap: 8px;
+    gap: 6px;
 
     touch-action: pan-y;
 
   }
 
 
-  .calendar-content {
-
-    min-width: 0;
-
-  }
-
-
   .calendar-arrow {
 
-    width: 34px;
+    width: 32px;
 
-    height: 34px;
+    height: 32px;
 
-    font-size: 25px;
+    font-size: 23px;
 
   }
 
 
   .calendar-title {
 
-    font-size: 21px;
+    font-size: 20px;
 
   }
 
 
   .calendar-day {
 
-    min-height: 72px;
+    min-height: 68px;
 
     padding:
-      5px 2px;
+      5px 1px;
 
   }
 
 
   .week-header > div {
 
-    padding: 8px 0;
+    padding:
+      7px 0;
 
-    font-size: 12px;
+    font-size: 11px;
 
   }
 
 
   .day-number {
 
-    font-size: 13px;
+    font-size: 12px;
 
   }
 
@@ -1238,58 +1287,69 @@ h2 {
 
     font-size: 8px;
 
-    margin-top: 3px;
-
   }
 
 
   .event-label {
 
-    font-size: 8px;
-
-    margin-top: 3px;
-
-    line-height: 1.1;
+    font-size: 7px;
 
   }
 
 
   .calendar-note {
 
-    gap: 18px;
+    gap: 15px;
 
-    font-size: 12px;
-
-  }
-
-
-
-  /* NEWS */
-
-  .news-card {
-
-    padding:
-      16px 15px;
-
-    text-align: center;
+    font-size: 11px;
 
   }
 
 
-  .news-card h3 {
 
-    font-size: 18px;
+  /* ABOUT */
 
-    line-height: 1.4;
-
-  }
-
-
-  .news-card p {
+  .about-text p {
 
     font-size: 14px;
 
-    line-height: 1.45;
+    margin-bottom: 12px;
+
+  }
+
+
+
+  /* MENU */
+
+  .menu-section {
+
+    width: 94%;
+
+    border-radius: 18px;
+
+  }
+
+
+  .menu-category h3 {
+
+    font-size: 18px;
+
+  }
+
+
+  .menu-item {
+
+    padding:
+      8px 3px;
+
+    font-size: 13px;
+
+  }
+
+
+  .menu-note {
+
+    font-size: 11px;
 
   }
 
@@ -1297,11 +1357,9 @@ h2 {
 
   /* ACCESS */
 
-  .access-info p {
+  .access-info {
 
-    font-size: 15px;
-
-    line-height: 1.45;
+    font-size: 14px;
 
   }
 
@@ -1315,16 +1373,38 @@ h2 {
 
     background: #eadfd2;
 
-    color: #5d493b;
-
     border-radius: 25px;
 
-    font-size: 17px;
+    font-size: 16px;
 
   }
 
 
-  /* スマホでは地図本体を非表示 */
+  .hours-info {
+
+    padding:
+      17px 10px;
+
+    font-size: 15px;
+
+  }
+
+
+  .hours-info strong {
+
+    font-size: 18px;
+
+  }
+
+
+  .hours-info span {
+
+    font-size: 12px;
+
+  }
+
+
+  /* スマホでは地図非表示 */
 
   .map-pc {
 
@@ -1337,34 +1417,20 @@ h2 {
 
     display: inline-block;
 
-    padding:
-      13px 25px;
+    margin-top: 15px;
 
-    background: #765b48;
+    padding:
+      11px 22px;
 
     color: white;
 
-    border-radius: 30px;
+    background: #765b48;
+
+    border-radius: 25px;
+
+    font-size: 14px;
 
     font-weight: bold;
-
-  }
-
-
-
-  /* HOURS */
-
-  .hours-box {
-
-    padding:
-      25px 15px;
-
-  }
-
-
-  .hours-time {
-
-    font-size: 27px;
 
   }
 
@@ -1375,14 +1441,14 @@ h2 {
   .footer {
 
     padding:
-      45px 20px;
+      38px 15px;
 
   }
 
 
   .footer-logo {
 
-    font-size: 26px;
+    font-size: 24px;
 
   }
 
