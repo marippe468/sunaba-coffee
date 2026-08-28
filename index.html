@@ -1,115 +1,603 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SUNABA COFFEE｜今治駅前の喫茶店</title>
+  <title>SUNABA COFFEE｜今治駅前の小さなカフェ</title>
 
-  <meta
-    name="description"
-    content="愛媛県今治市、JR今治駅前のSUNABA COFFEE。しまなみ海道の旅の途中にも、いつもの一杯にも。"
-  >
+  <style>
+    /* =========================
+       全体
+    ========================= */
+    * {
+      box-sizing: border-box;
+    }
 
-  <link rel="stylesheet" href="style.css">
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+      color: #4a4038;
+      background: #f8f5ef;
+      line-height: 1.8;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       ヘッダー
+    ========================= */
+    header {
+      text-align: center;
+      padding: 28px 20px 24px;
+      background: #f8f5ef;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: #5b4636;
+    }
+
+    .subtitle {
+      margin: 3px 0 0;
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      color: #806b59;
+    }
+
+    /* =========================
+       ナビ
+    ========================= */
+    nav {
+      background: #6b5140;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      flex: 1;
+      text-align: center;
+    }
+
+    nav a {
+      display: block;
+      padding: 13px 8px;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      background: #806552;
+    }
+
+    /* =========================
+       メイン
+    ========================= */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-bottom: 60px;
+    }
+
+    section {
+      padding: 70px 25px;
+    }
+
+    .section-title {
+      margin: 0 0 35px;
+      text-align: center;
+      font-size: 1.9rem;
+      letter-spacing: 0.08em;
+      color: #5b4636;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 45px;
+      height: 2px;
+      margin: 12px auto 0;
+      background: #a58b72;
+    }
+
+    /* =========================
+       メインビジュアル
+    ========================= */
+    .hero {
+      padding: 0;
+      position: relative;
+    }
+
+    .hero img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      text-align: center;
+      padding: 30px 20px 50px;
+    }
+
+    .hero-text h1 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+      color: #5b4636;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-text p {
+      margin: 5px 0;
+    }
+
+    .concept {
+      font-size: 1.15rem;
+      margin-top: 22px !important;
+    }
+
+    .concept strong {
+      font-weight: 600;
+    }
+
+    /* =========================
+       営業状況
+    ========================= */
+    .status-area {
+      text-align: center;
+      padding: 20px;
+    }
+
+    #business-status {
+      display: inline-block;
+      padding: 10px 28px;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      background: #ddd;
+    }
+
+    .open {
+      background: #6c9b72 !important;
+      color: white;
+    }
+
+    .soon {
+      background: #c9974c !important;
+      color: white;
+    }
+
+    .closed {
+      background: #999 !important;
+      color: white;
+    }
+
+    .holiday {
+      background: #a75d5d !important;
+      color: white;
+    }
+
+    /* =========================
+       お知らせ
+    ========================= */
+    .news-box {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 16px;
+      padding: 25px 30px;
+      box-shadow: 0 4px 15px rgba(70, 50, 35, 0.08);
+    }
+
+    .news-item {
+      display: flex;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee5dc;
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-date {
+      white-space: nowrap;
+      color: #92745d;
+      font-weight: bold;
+    }
+
+    /* =========================
+       写真
+    ========================= */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    /* =========================
+       席情報
+    ========================= */
+    .seats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .seat-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(70, 50, 35, 0.07);
+    }
+
+    .seat-card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #654d3b;
+    }
+
+    .seat-number {
+      font-size: 1.15rem;
+      font-weight: bold;
+    }
+
+    .pet-ok {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 12px;
+      border-radius: 30px;
+      background: #eee5dc;
+      color: #6b5140;
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       メニュー
+    ========================= */
+    .menu-photo {
+      max-width: 650px;
+      margin: 0 auto 35px;
+    }
+
+    .menu-photo img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .menu-list {
+      max-width: 750px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+    }
+
+    .menu-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 13px 0;
+      border-bottom: 1px dotted #cfc3b8;
+    }
+
+    .menu-row:last-child {
+      border-bottom: none;
+    }
+
+    /* =========================
+       店舗情報
+    ========================= */
+    .info-box {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 20px;
+      padding: 14px 0;
+      border-bottom: 1px solid #eee5dc;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: #6b5140;
+    }
+
+    /* =========================
+       Googleマップ
+    ========================= */
+    .map {
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+
+    /* =========================
+       Instagram
+    ========================= */
+    .instagram-area {
+      text-align: center;
+    }
+
+    .instagram-button {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #6b5140;
+      color: white;
+      border-radius: 50px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      transition: 0.3s;
+    }
+
+    .instagram-button:hover {
+      opacity: 0.8;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       フッター
+    ========================= */
+    footer {
+      text-align: center;
+      padding: 45px 20px;
+      background: #5a4638;
+      color: white;
+    }
+
+    footer .footer-logo {
+      font-size: 1.5rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 5px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.85rem;
+    }
+
+    /* =========================
+       スマホ
+    ========================= */
+    @media (max-width: 700px) {
+
+      header {
+        padding: 22px 15px;
+      }
+
+      .logo {
+        font-size: 1.9rem;
+      }
+
+      .subtitle {
+        font-size: 0.85rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+      }
+
+      nav li {
+        flex: 0 0 33.333%;
+      }
+
+      nav a {
+        font-size: 0.75rem;
+        padding: 9px 3px;
+      }
+
+      section {
+        padding: 50px 16px;
+      }
+
+      .section-title {
+        font-size: 1.55rem;
+        margin-bottom: 28px;
+      }
+
+      .hero img {
+        height: 300px;
+      }
+
+      .hero-text {
+        padding: 25px 16px 35px;
+      }
+
+      .hero-text h1 {
+        font-size: 1.55rem;
+      }
+
+      .concept {
+        font-size: 1rem;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-grid img {
+        height: 230px;
+      }
+
+      .seats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .seat-card {
+        padding: 22px 15px;
+      }
+
+      .news-box {
+        padding: 18px;
+      }
+
+      .news-item {
+        display: block;
+      }
+
+      .news-date {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .menu-list {
+        padding: 20px;
+      }
+
+      .menu-row {
+        font-size: 0.92rem;
+      }
+
+      .info-box {
+        padding: 20px;
+      }
+
+      .info-row {
+        grid-template-columns: 1fr;
+        gap: 2px;
+        padding: 12px 0;
+      }
+
+      .map iframe {
+        height: 300px;
+      }
+
+      .instagram-button {
+        width: 90%;
+        max-width: 330px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- =========================
-       スマホ固定・営業状況
-  ========================== -->
-  <div class="mobile-status">
-    <span class="status-dot"></span>
-    <span id="mobileStatusText">営業状況を確認中</span>
-  </div>
-
-
-  <!-- =========================
        ヘッダー
   ========================== -->
-  <header class="header">
-
-    <div class="header-inner">
-
-      <div class="logo-area">
-
-        <h1>SUNABA COFFEE</h1>
-
-        <p class="subtitle">しまなみ海道</p>
-
-        <p class="tagline">
-          ～ いつもの一杯に、旅の途中の一杯にも。～
-        </p>
-
-      </div>
-
-      <nav class="nav">
-        <a href="#concept">CONCEPT</a>
-        <a href="#menu">MENU</a>
-        <a href="#shop">SHOP</a>
-        <a href="#access">ACCESS</a>
-      </nav>
-
-    </div>
-
+  <header>
+    <div class="logo">SUNABA COFFEE</div>
+    <div class="subtitle">しまなみ海道</div>
   </header>
 
+  <!-- =========================
+       ナビ
+  ========================== -->
+  <nav>
+    <ul>
+      <li><a href="#about">お店について</a></li>
+      <li><a href="#news">お知らせ</a></li>
+      <li><a href="#seats">お席</a></li>
+      <li><a href="#menu">メニュー</a></li>
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="#instagram">Instagram</a></li>
+    </ul>
+  </nav>
 
   <main>
 
     <!-- =========================
-         ヒーロー
+         メイン写真
     ========================== -->
     <section class="hero">
 
-      <img
-        src="image/gaikan.jpg"
-        alt="SUNABA COFFEE 外観"
-        class="hero-image"
-      >
+      <img src="image/gaikan.jpg" alt="SUNABA COFFEE 外観">
 
-      <div class="hero-overlay">
+      <div class="hero-text">
 
-        <div class="hero-logo">
-          <span>SUNABA COFFEE</span>
-        </div>
+        <h1>SUNABA COFFEE</h1>
 
-        <p>創業30年　駅が見えるカフェ</p>
+        <p>～愛媛県今治市・夫婦で営む小さなカフェ～</p>
 
-        <div class="business-status" id="businessStatus">
-          <span class="status-dot"></span>
-          <span id="statusText">営業状況を確認中</span>
+        <p class="concept">
+          ～ いつもの一杯に、旅の途中の一杯にも。～
+        </p>
+
+        <p>
+          電車の音をBGMに、ふっと時間がほどけていく。
+        </p>
+
+        <div class="status-area">
+          <div id="business-status">
+            営業状況を確認中…
+          </div>
         </div>
 
       </div>
-
     </section>
 
 
     <!-- =========================
-         CONCEPT
+         お店について
     ========================== -->
-    <section id="concept" class="section concept">
+    <section id="about">
 
-      <div class="section-title">
+      <h2 class="section-title">お店について</h2>
 
-        <span>CONCEPT</span>
+      <div class="photo-grid">
 
-        <h2>穏やかに、時間を過ごせる場所</h2>
+        <img src="image/tennai.jpg" alt="SUNABA COFFEE 店内">
+
+        <img src="image/tennai2.jpg" alt="SUNABA COFFEE 店内">
 
       </div>
-
-      <p class="concept-text">
-        電車の音をBGMに、ふっと時間がほどけていく。<br>
-        いつもの一杯をゆっくり楽しむ日も、<br>
-        しまなみ海道を訪れた旅の途中にも。
-      </p>
-
-      <p class="concept-text">
-        30年の時を重ねてきた、<br>
-        今治駅前の小さな喫茶店です。
-      </p>
 
     </section>
 
@@ -117,148 +605,20 @@
     <!-- =========================
          お知らせ
     ========================== -->
-    <section class="section news">
+    <section id="news">
 
-      <div class="section-title">
+      <h2 class="section-title">お知らせ</h2>
 
-        <span>NEWS</span>
+      <div class="news-box">
 
-        <h2>お知らせ</h2>
-
-      </div>
-
-      <div class="news-list">
-
-        <article class="news-item">
-
-          <time>2026.08.25</time>
-
-          <p>ホームページを開設しました。</p>
-
-        </article>
-
-        <article class="news-item">
-
-          <time>2026.08.28</time>
-
-          <p>
-            SUNABA COFFEEへようこそ。
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         MENU
-    ========================== -->
-    <section id="menu" class="section menu-section">
-
-      <div class="section-title">
-
-        <span>MENU</span>
-
-        <h2>お品書き</h2>
-
-      </div>
-
-      <div class="menu-photo">
-
-        <img
-          src="image/menu.jpg"
-          alt="SUNABA COFFEE メニュー"
-        >
-
-      </div>
-
-
-      <div class="menu-grid">
-
-        <div class="menu-card">
-
-          <h3>COFFEE</h3>
-
-          <div class="menu-row">
-            <span>ブラジルコーヒー</span>
-            <strong>500円</strong>
-          </div>
-
-          <div class="menu-row">
-            <span>ブレンドコーヒー</span>
-            <strong>450円</strong>
-          </div>
-
-          <div class="menu-row">
-            <span>アイスコーヒー</span>
-            <strong>500円</strong>
-          </div>
-
-          <div class="menu-row">
-            <span>カフェオレ</span>
-            <strong>500円</strong>
-          </div>
-
-          <div class="menu-row">
-            <span>ウインナーコーヒー</span>
-            <strong>550円</strong>
-          </div>
-
+        <div class="news-item">
+          <div class="news-date">2026.08.25</div>
+          <div>ホームページを開設しました。</div>
         </div>
 
-
-        <div class="menu-card">
-
-          <h3>MORNING</h3>
-
-          <div class="menu-row">
-
-            <span>
-              モーニング<br>
-              <small>パン・ジャム・コーヒー</small>
-            </span>
-
-            <strong>500円</strong>
-
-          </div>
-
-        </div>
-
-
-        <div class="menu-card">
-
-          <h3>LIGHT MEAL</h3>
-
-          <div class="menu-row">
-            <span>サンドイッチ</span>
-          </div>
-
-          <div class="menu-row">
-            <span>グラタン</span>
-          </div>
-
-        </div>
-
-
-        <div class="menu-card">
-
-          <h3>SWEETS</h3>
-
-          <div class="menu-row">
-            <span>日替わりデザート</span>
-          </div>
-
-          <div class="menu-row">
-            <span>パンケーキ</span>
-          </div>
-
-          <div class="menu-row">
-            <span>ケーキセット</span>
-            <strong>800円</strong>
-          </div>
-
+        <div class="news-item">
+          <div class="news-date">2026.08.20</div>
+          <div>SUNABA COFFEEへようこそ。皆さまのお越しをお待ちしています。</div>
         </div>
 
       </div>
@@ -267,83 +627,49 @@
 
 
     <!-- =========================
-         SHOP
+         お席
     ========================== -->
-    <section id="shop" class="section shop">
+    <section id="seats">
 
-      <div class="section-title">
-
-        <span>SHOP</span>
-
-        <h2>店内・お席</h2>
-
-      </div>
-
-
-      <div class="shop-photo">
-
-        <img
-          src="image/tennai.jpg"
-          alt="SUNABA COFFEE 店内"
-        >
-
-      </div>
-
+      <h2 class="section-title">店内・お席</h2>
 
       <div class="seats">
 
-        <div class="seat-item">
+        <div class="seat-card">
 
-          <h3>テラス</h3>
+          <h3>テラス席</h3>
 
-          <p>
+          <div class="seat-number">
             4名席 × 2
-          </p>
+          </div>
 
-          <span class="pet-ok">ペット可</span>
+          <div class="pet-ok">
+            ペットOK
+          </div>
 
         </div>
 
 
-        <div class="seat-item">
+        <div class="seat-card">
 
-          <h3>店内</h3>
+          <h3>店内席</h3>
 
-          <p>
-            4名席 × 2
-          </p>
+          <div class="seat-number">
+            4名席 × 5
+          </div>
 
         </div>
 
 
-        <div class="seat-item">
+        <div class="seat-card">
 
           <h3>カウンター</h3>
 
-          <p>
+          <div class="seat-number">
             5席
-          </p>
+          </div>
 
         </div>
-
-      </div>
-
-
-      <div class="shop-info">
-
-        <dl>
-
-          <div>
-            <dt>営業時間</dt>
-            <dd>10:00～17:00</dd>
-          </div>
-
-          <div>
-            <dt>定休日</dt>
-            <dd>毎週月曜日・第1、第3水曜日</dd>
-          </div>
-
-        </dl>
 
       </div>
 
@@ -351,80 +677,163 @@
 
 
     <!-- =========================
-         ACCESS
+         メニュー
     ========================== -->
-    <section id="access" class="section access">
+    <section id="menu">
 
-      <div class="section-title">
+      <h2 class="section-title">メニュー</h2>
 
-        <span>ACCESS</span>
+      <div class="menu-photo">
+        <img src="image/menu.jpg" alt="SUNABA COFFEE メニュー">
+      </div>
 
-        <h2>アクセス</h2>
+      <div class="menu-list">
+
+        <div class="menu-row">
+          <span>ブラジルコーヒー</span>
+          <span>500円</span>
+        </div>
+
+        <div class="menu-row">
+          <span>ブレンドコーヒー</span>
+          <span>450円</span>
+        </div>
+
+        <div class="menu-row">
+          <span>アイスコーヒー</span>
+          <span>500円</span>
+        </div>
+
+        <div class="menu-row">
+          <span>ケーキセット</span>
+          <span>800円</span>
+        </div>
+
+        <div class="menu-row">
+          <span>モーニング</span>
+          <span>500円</span>
+        </div>
+
+        <div class="menu-row">
+          <span>サンドイッチ</span>
+          <span>---</span>
+        </div>
+
+        <div class="menu-row">
+          <span>グラタン</span>
+          <span>---</span>
+        </div>
+
+        <div class="menu-row">
+          <span>カフェオレ</span>
+          <span>---</span>
+        </div>
+
+        <div class="menu-row">
+          <span>ウインナーコーヒー</span>
+          <span>---</span>
+        </div>
+
+        <div class="menu-row">
+          <span>日替わりデザート</span>
+          <span>---</span>
+        </div>
+
+        <div class="menu-row">
+          <span>パンケーキ</span>
+          <span>---</span>
+        </div>
 
       </div>
 
+    </section>
 
-      <div class="access-content">
 
-        <h3>SUNABA COFFEE</h3>
+    <!-- =========================
+         店舗情報
+    ========================== -->
+    <section>
 
-        <p class="address">
+      <h2 class="section-title">店舗情報</h2>
 
-          〒794-0015<br>
-          愛媛県今治市常盤町4丁目8−18<br>
-          しまなみイノベーションビル 2階
+      <div class="info-box">
 
-        </p>
+        <div class="info-row">
+          <div class="info-label">営業時間</div>
+          <div>10:00〜17:00</div>
+        </div>
 
-        <p class="access-note">
-          JR今治駅から徒歩圏内
-        </p>
+        <div class="info-row">
+          <div class="info-label">定休日</div>
+          <div>
+            水曜日・第1、第3月曜日
+          </div>
+        </div>
 
-        <p class="parking">
-          ※駐車場はございません
-        </p>
+        <div class="info-row">
+          <div class="info-label">住所</div>
+          <div>
+            〒794-0015<br>
+            愛媛県今治市常盤町4丁目8-18<br>
+            しまなみイノベーションビル 2階
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">駐車場</div>
+          <div>なし</div>
+        </div>
 
       </div>
 
+    </section>
+
+
+    <!-- =========================
+         Googleマップ
+    ========================== -->
+    <section id="access">
+
+      <h2 class="section-title">アクセス</h2>
 
       <div class="map">
 
         <iframe
           src="https://www.google.com/maps?q=愛媛県今治市常盤町4丁目8-18&output=embed"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          allowfullscreen>
         </iframe>
 
       </div>
+
+      <p style="text-align:center; margin-top:18px;">
+        JR今治駅から徒歩圏内
+      </p>
 
     </section>
 
 
     <!-- =========================
-         SNS
+         Instagram
     ========================== -->
-    <section class="section sns">
+    <section id="instagram">
 
-      <div class="section-title">
+      <h2 class="section-title">Instagram</h2>
 
-        <span>SNS</span>
+      <div class="instagram-area">
 
-        <h2>最新情報はこちら</h2>
+        <p>
+          お店の日々の様子や最新のお知らせを<br>
+          Instagramで発信しています。
+        </p>
 
-      </div>
-
-      <div class="sns-links">
-
-        <a href="#" class="sns-button x">
-          X
-        </a>
-
-        <a href="#" class="sns-button instagram">
-          Instagram
-        </a>
-
-        <a href="#" class="sns-button facebook">
-          Facebook
+        <!-- InstagramのURLをここに入れてください -->
+        <a
+          class="instagram-button"
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer">
+          Instagramをフォロー
         </a>
 
       </div>
@@ -435,19 +844,19 @@
 
 
   <!-- =========================
-       FOOTER
+       フッター
   ========================== -->
-  <footer class="footer">
+  <footer>
 
     <div class="footer-logo">
       SUNABA COFFEE
     </div>
 
     <p>
-      - IMABARI, EHIME, JAPAN -
+      -IMABARI, EHIME, JAPAN-
     </p>
 
-    <p class="copyright">
+    <p>
       © SUNABA COFFEE
     </p>
 
@@ -461,108 +870,100 @@
 
     function updateBusinessStatus() {
 
+      const status = document.getElementById("business-status");
+
       const now = new Date();
 
       const day = now.getDay();
+
       const hour = now.getHours();
+
       const minute = now.getMinutes();
 
       const currentMinutes = hour * 60 + minute;
 
-      const openingTime = 10 * 60;
-      const closingTime = 17 * 60;
-
-      let isClosed = false;
-
       /*
-        JavaScriptの曜日
-        0 = 日曜日
-        1 = 月曜日
-        2 = 火曜日
-        3 = 水曜日
-        4 = 木曜日
-        5 = 金曜日
-        6 = 土曜日
+        日曜日 = 0
+        月曜日 = 1
+        火曜日 = 2
+        水曜日 = 3
+        木曜日 = 4
+        金曜日 = 5
+        土曜日 = 6
       */
 
-      // 毎週月曜日
-      if (day === 1) {
-        isClosed = true;
-      }
+      const isFirstOrThirdMonday =
+        day === 1 &&
+        (
+          Math.ceil(now.getDate() / 7) === 1 ||
+          Math.ceil(now.getDate() / 7) === 3
+        );
 
-      // 第1・第3水曜日
-      if (day === 3) {
+      const isHoliday =
+        day === 3 || isFirstOrThirdMonday;
 
-        const date = now.getDate();
+      if (isHoliday) {
 
-        const weekNumber = Math.ceil(date / 7);
+        status.textContent = "本日は定休日です";
+        status.className = "holiday";
 
-        if (weekNumber === 1 || weekNumber === 3) {
-          isClosed = true;
-        }
-
-      }
-
-
-      let message = "";
-      let statusClass = "";
-
-
-      if (isClosed) {
-
-        message = "本日は定休日です";
-        statusClass = "closed";
-
-      } else if (currentMinutes < openingTime) {
-
-        message = "10:00より営業します";
-        statusClass = "before";
-
-      } else if (
-        currentMinutes >= openingTime &&
-        currentMinutes < closingTime - 60
-      ) {
-
-        message = "営業中";
-        statusClass = "open";
-
-      } else if (
-        currentMinutes >= closingTime - 60 &&
-        currentMinutes < closingTime
-      ) {
-
-        message = "まもなく終了";
-        statusClass = "soon";
-
-      } else {
-
-        message = "本日の営業は終了しました";
-        statusClass = "closed";
-
+        return;
       }
 
 
-      const statusText =
-        document.getElementById("statusText");
+      /*
+        10:00より前
+      */
 
-      const mobileStatusText =
-        document.getElementById("mobileStatusText");
+      if (currentMinutes < 600) {
 
-      const businessStatus =
-        document.getElementById("businessStatus");
+        status.textContent = "10:00から営業します";
+        status.className = "closed";
+
+        return;
+      }
 
 
-      statusText.textContent = message;
+      /*
+        10:00〜16:00
+      */
 
-      mobileStatusText.textContent = message;
+      if (currentMinutes >= 600 && currentMinutes < 960) {
 
-      businessStatus.className =
-        "business-status " + statusClass;
+        status.textContent = "営業中";
+        status.className = "open";
 
+        return;
+      }
+
+
+      /*
+        16:00〜17:00
+      */
+
+      if (currentMinutes >= 960 && currentMinutes < 1020) {
+
+        status.textContent = "まもなく終了";
+        status.className = "soon";
+
+        return;
+      }
+
+
+      /*
+        17:00以降
+      */
+
+      status.textContent = "本日の営業は終了しました";
+      status.className = "closed";
     }
 
 
     updateBusinessStatus();
+
+    /*
+      1分ごとに営業状況を更新
+    */
 
     setInterval(updateBusinessStatus, 60000);
 
@@ -570,3 +971,4 @@
 
 </body>
 </html>
+```
