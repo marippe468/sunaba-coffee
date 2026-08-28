@@ -24,25 +24,21 @@ function updateBusinessStatus() {
     hour * 60 + minute;
 
 
-  const openingTime =
-    10 * 60;
+  const openingTime = 10 * 60;
 
-  const closingTime =
-    17 * 60;
-
+  const closingTime = 17 * 60;
 
 
   /* 水曜日 */
 
   if (day === 3) {
 
-    status.innerHTML =
+    status.textContent =
       "本日の営業は終了しました";
 
     return;
 
   }
-
 
 
   /* 第1・第3月曜日 */
@@ -58,7 +54,7 @@ function updateBusinessStatus() {
       weekOfMonth === 3
     ) {
 
-      status.innerHTML =
+      status.textContent =
         "本日の営業は終了しました";
 
       return;
@@ -68,20 +64,18 @@ function updateBusinessStatus() {
   }
 
 
-
   /* 10時前 */
 
   if (
     currentMinutes < openingTime
   ) {
 
-    status.innerHTML =
+    status.textContent =
       "10時から営業します";
 
     return;
 
   }
-
 
 
   /* 16時以降 */
@@ -91,13 +85,12 @@ function updateBusinessStatus() {
     currentMinutes < closingTime
   ) {
 
-    status.innerHTML =
+    status.textContent =
       "まもなく終了";
 
     return;
 
   }
-
 
 
   /* 17時以降 */
@@ -106,7 +99,7 @@ function updateBusinessStatus() {
     currentMinutes >= closingTime
   ) {
 
-    status.innerHTML =
+    status.textContent =
       "本日の営業は終了しました";
 
     return;
@@ -114,17 +107,15 @@ function updateBusinessStatus() {
   }
 
 
-
   /* 営業中 */
 
-  status.innerHTML =
+  status.textContent =
     "営業中";
 
 }
 
 
 updateBusinessStatus();
-
 
 setInterval(
   updateBusinessStatus,
@@ -139,7 +130,7 @@ setInterval(
 
 
 /*
-   最初は2026年8月
+   初期表示：2026年8月
 */
 
 let calendarDate =
@@ -215,13 +206,11 @@ function formatDate(
 ) {
 
   return (
-
     year +
     "-" +
     String(month + 1).padStart(2, "0") +
     "-" +
     String(day).padStart(2, "0")
-
   );
 
 }
@@ -229,15 +218,13 @@ function formatDate(
 
 
 /* =========================
-   カレンダー表示
+   カレンダー描画
 ========================= */
 
 function renderCalendar() {
 
-
   const calendar =
     document.getElementById("calendar");
-
 
   const title =
     document.getElementById("calendarTitle");
@@ -251,7 +238,6 @@ function renderCalendar() {
 
   const year =
     calendarDate.getFullYear();
-
 
   const month =
     calendarDate.getMonth();
@@ -295,7 +281,9 @@ function renderCalendar() {
     empty.className =
       "calendar-day empty";
 
-    calendar.appendChild(empty);
+    calendar.appendChild(
+      empty
+    );
 
   }
 
@@ -308,7 +296,6 @@ function renderCalendar() {
     day <= lastDate;
     day++
   ) {
-
 
     const cell =
       document.createElement("div");
@@ -333,9 +320,7 @@ function renderCalendar() {
 
     /* 曜日 */
 
-    if (
-      weekDay === 0
-    ) {
+    if (weekDay === 0) {
 
       cell.classList.add(
         "sunday"
@@ -344,9 +329,7 @@ function renderCalendar() {
     }
 
 
-    if (
-      weekDay === 6
-    ) {
+    if (weekDay === 6) {
 
       cell.classList.add(
         "saturday"
@@ -370,7 +353,9 @@ function renderCalendar() {
       day;
 
 
-    cell.appendChild(number);
+    cell.appendChild(
+      number
+    );
 
 
 
@@ -383,9 +368,7 @@ function renderCalendar() {
 
     /* 水曜日 */
 
-    if (
-      weekDay === 3
-    ) {
+    if (weekDay === 3) {
 
       holiday = true;
 
@@ -394,9 +377,7 @@ function renderCalendar() {
 
     /* 第1・第3月曜日 */
 
-    if (
-      weekDay === 1
-    ) {
+    if (weekDay === 1) {
 
       const week =
         Math.ceil(day / 7);
@@ -414,9 +395,7 @@ function renderCalendar() {
     }
 
 
-
     if (holiday) {
-
 
       cell.classList.add(
         "holiday"
@@ -461,7 +440,6 @@ function renderCalendar() {
       events[dateKey]
     ) {
 
-
       const eventLabel =
         document.createElement(
           "div"
@@ -483,8 +461,9 @@ function renderCalendar() {
     }
 
 
-
-    calendar.appendChild(cell);
+    calendar.appendChild(
+      cell
+    );
 
   }
 
@@ -493,7 +472,7 @@ function renderCalendar() {
 
 
 /* =========================
-   前月ボタン
+   前月
 ========================= */
 
 const prevButton =
@@ -522,7 +501,7 @@ if (prevButton) {
 
 
 /* =========================
-   次月ボタン
+   次月
 ========================= */
 
 const nextButton =
@@ -565,7 +544,6 @@ let touchStartX = 0;
 
 if (calendarArea) {
 
-
   calendarArea.addEventListener(
     "touchstart",
     function (event) {
@@ -581,11 +559,9 @@ if (calendarArea) {
   );
 
 
-
   calendarArea.addEventListener(
     "touchend",
     function (event) {
-
 
       const touchEndX =
         event.changedTouches[0]
@@ -597,8 +573,7 @@ if (calendarArea) {
         touchEndX;
 
 
-
-      /* 左スワイプ → 翌月 */
+      /* 左スワイプ */
 
       if (
         difference > 50
@@ -613,8 +588,7 @@ if (calendarArea) {
       }
 
 
-
-      /* 右スワイプ → 前月 */
+      /* 右スワイプ */
 
       if (
         difference < -50
