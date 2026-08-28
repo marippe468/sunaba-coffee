@@ -1,10 +1,3 @@
-```css
-/* =========================================
-   SUNABA COFFEE
-   style.css
-========================================= */
-
-
 * {
   box-sizing: border-box;
 }
@@ -16,7 +9,6 @@ html {
 
 
 body {
-
   margin: 0;
 
   color: #4a4038;
@@ -29,42 +21,37 @@ body {
     "Meiryo",
     sans-serif;
 
-  line-height: 1.4;
+  line-height: 1.45;
 
   text-align: center;
-
 }
 
 
 img {
-
   display: block;
 
   width: 100%;
 
   height: auto;
-
 }
 
 
 a {
-
   color: inherit;
 
   text-decoration: none;
-
 }
 
 
 
-/* =========================================
+/* =========================
    HEADER
-========================================= */
+========================= */
 
 .header {
 
   padding:
-    28px 15px 20px;
+    32px 15px 22px;
 
 }
 
@@ -74,16 +61,16 @@ a {
   display: inline-block;
 
   padding:
-    5px 18px;
+    8px 22px;
 
-  color: #fff;
+  color: white;
 
   background: #765b48;
 
   border:
-    3px solid #9a785e;
+    4px solid #9a785e;
 
-  border-radius: 24px;
+  border-radius: 28px;
 
   font-family:
     "Arial Rounded MT Bold",
@@ -92,51 +79,47 @@ a {
     sans-serif;
 
   font-size:
-    clamp(26px, 4vw, 38px);
+    clamp(32px, 6vw, 65px);
 
   font-weight: bold;
 
-  letter-spacing: .03em;
+  letter-spacing: .04em;
 
   box-shadow:
-    0 5px 10px
-    rgba(60,40,25,.28);
+    0 6px 0 rgba(79,59,45,.15);
 
 }
 
 
 .header-sub {
 
-  margin-top: 4px;
+  margin-top: 8px;
 
   color: #765b48;
 
-  font-size: 11px;
+  font-size: 16px;
 
   font-weight: bold;
+
+  letter-spacing: .08em;
 
 }
 
 
 .header-catch {
 
-  margin-top: 5px;
+  margin-top: 3px;
 
-  color: #5d493b;
+  font-size: 14px;
 
-  font-size:
-    clamp(18px, 3vw, 30px);
-
-  font-weight: 500;
-
-  white-space: nowrap;
+  letter-spacing: .03em;
 
 }
 
 
 .pet-catch {
 
-  margin-top: 5px;
+  margin-top: 3px;
 
   color: #765b48;
 
@@ -148,58 +131,41 @@ a {
 
 
 
-/* =========================================
-   営業状況
-========================================= */
+/* 営業状況 */
 
 .business-status {
 
-  display: flex;
+  display: inline-flex;
 
   align-items: center;
 
   justify-content: center;
 
-  width: fit-content;
-
-  min-width: 185px;
-
-  margin:
-    9px auto 0;
+  margin-top: 7px;
 
   padding:
-    7px 20px;
+    5px 16px;
 
-  color: #fff;
+  color: white;
 
-  background: #806854;
+  background: #8c735f;
 
-  border-radius: 30px;
+  border-radius: 20px;
 
-  font-size: 14px;
+  font-size: 13px;
 
   font-weight: bold;
 
   line-height: 1.3;
 
   box-shadow:
-    0 4px 10px
-    rgba(60,40,20,.16);
-
-}
-
-
-.business-status.closed {
-
-  background: #806854;
+    0 3px 8px rgba(60,40,20,.10);
 
 }
 
 
 
-/* =========================================
-   NAV
-========================================= */
+/* ナビ */
 
 .nav {
 
@@ -211,7 +177,7 @@ a {
 
   gap: 20px;
 
-  margin-top: 17px;
+  margin-top: 20px;
 
 }
 
@@ -226,9 +192,9 @@ a {
 
 
 
-/* =========================================
+/* =========================
    HERO
-========================================= */
+========================= */
 
 .hero {
 
@@ -248,8 +214,7 @@ a {
   border-radius: 22px;
 
   box-shadow:
-    0 10px 28px
-    rgba(60,40,20,.15);
+    0 10px 28px rgba(60,40,20,.15);
 
 }
 
@@ -264,33 +229,28 @@ a {
 
 
 
-/* =========================================
+/* =========================
    INTRO
-========================================= */
+========================= */
 
 .intro {
 
   padding:
     40px 15px 25px;
 
-  text-align: center;
-
 }
 
 
 .intro h1 {
 
-  margin:
-    0 0 18px;
+  margin: 0;
 
   color: #5d493b;
 
   font-size:
     clamp(18px, 3vw, 40px);
 
-  font-weight: 500;
-
-  line-height: 1.3;
+  line-height: 1.4;
 
   white-space: nowrap;
 
@@ -300,25 +260,23 @@ a {
 .intro p {
 
   margin:
-    0 0 8px;
+    15px 0 0;
 
   font-size:
     clamp(14px, 2vw, 20px);
-
-  line-height: 1.4;
 
 }
 
 
 
-/* =========================================
+/* =========================
    INSTAGRAM
-========================================= */
+========================= */
 
 .instagram-section {
 
   padding:
-    35px 20px;
+    40px 20px;
 
   background: #eee6dc;
 
@@ -328,7 +286,7 @@ a {
 .instagram-section h2 {
 
   margin:
-    0 0 8px;
+    0 0 12px;
 
   font-size: 27px;
 
@@ -338,7 +296,7 @@ a {
 .instagram-section p {
 
   margin:
-    0 0 17px;
+    0 0 20px;
 
 }
 
@@ -348,7 +306,7 @@ a {
   display: inline-block;
 
   padding:
-    10px 24px;
+    11px 25px;
 
   color: white;
 
@@ -362,9 +320,9 @@ a {
 
 
 
-/* =========================================
+/* =========================
    COMMON SECTION
-========================================= */
+========================= */
 
 .section {
 
@@ -375,7 +333,7 @@ a {
     0 auto;
 
   padding:
-    55px 0;
+    58px 0;
 
 }
 
@@ -390,37 +348,36 @@ a {
   font-size:
     clamp(27px, 4vw, 40px);
 
-  letter-spacing: .06em;
+  letter-spacing: .08em;
 
 }
 
 
 
-/* =========================================
+/* =========================
    NEWS
-========================================= */
+========================= */
 
 .news-list {
 
   width:
     min(700px, 100%);
 
-  margin:
-    auto;
+  margin: auto;
 
 }
 
 
 .news-card {
 
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 
   padding:
     15px 18px;
 
   text-align: left;
 
-  background: #fff;
+  background: white;
 
   border-left:
     4px solid #765b48;
@@ -432,9 +389,9 @@ a {
 
 .news-card time {
 
-  color: #806f61;
-
   font-size: 12px;
+
+  color: #806f61;
 
 }
 
@@ -459,9 +416,9 @@ a {
 
 
 
-/* =========================================
+/* =========================
    CALENDAR
-========================================= */
+========================= */
 
 .calendar-section {
 
@@ -479,9 +436,7 @@ a {
 
   justify-content: center;
 
-  gap: 12px;
-
-  touch-action: pan-y;
+  gap: 15px;
 
 }
 
@@ -512,9 +467,11 @@ a {
 
   flex: 0 0 auto;
 
-  width: 42px;
+  width: 43px;
 
-  height: 42px;
+  height: 43px;
+
+  padding: 0;
 
   border: none;
 
@@ -540,8 +497,7 @@ a {
   border-radius: 18px;
 
   box-shadow:
-    0 7px 20px
-    rgba(60,40,20,.08);
+    0 7px 20px rgba(60,40,20,.08);
 
 }
 
@@ -559,7 +515,8 @@ a {
 
 .week-header > div {
 
-  padding: 8px 0;
+  padding:
+    8px 0;
 
   background: #eadfd2;
 
@@ -588,7 +545,8 @@ a {
 
   min-height: 88px;
 
-  padding: 6px 3px;
+  padding:
+    6px 3px;
 
   border-top:
     1px solid #eee;
@@ -643,36 +601,37 @@ a {
 }
 
 
-/* 定休日：2行目 */
 
-.holiday-label {
+/* 2行目 */
+
+.holiday-label,
+.event-label {
+
+  display: block;
 
   margin-top: 4px;
 
-  color: #d33;
-
-  font-size: 10px;
+  line-height: 1.1;
 
   font-weight: bold;
-
-  line-height: 1.1;
 
 }
 
 
-/* イベント：2行目 */
+.holiday-label {
+
+  color: #c33;
+
+  font-size: 11px;
+
+}
+
 
 .event-label {
-
-  margin-top: 4px;
 
   color: #8a5a31;
 
   font-size: 10px;
-
-  font-weight: bold;
-
-  line-height: 1.1;
 
 }
 
@@ -707,9 +666,9 @@ a {
 
 
 
-/* =========================================
+/* =========================
    ABOUT
-========================================= */
+========================= */
 
 .about-photo {
 
@@ -729,7 +688,7 @@ a {
 .about-text p {
 
   margin:
-    0 0 9px;
+    0 0 13px;
 
   font-size: 15px;
 
@@ -737,9 +696,7 @@ a {
 
 
 
-/* =========================================
-   DOG
-========================================= */
+/* 愛犬 */
 
 .dog-section {
 
@@ -761,8 +718,7 @@ a {
   border-radius: 20px;
 
   box-shadow:
-    0 8px 20px
-    rgba(60,40,20,.12);
+    0 8px 20px rgba(60,40,20,.12);
 
 }
 
@@ -778,7 +734,7 @@ a {
 
 .dog-message {
 
-  margin-top: 13px;
+  margin-top: 15px;
 
   color: #765b48;
 
@@ -790,71 +746,9 @@ a {
 
 
 
-/* =========================================
-   SEATS
-========================================= */
-
-.seats {
-
-  display: flex;
-
-  justify-content: center;
-
-  gap: 18px;
-
-  margin-top: 32px;
-
-}
-
-
-.seat-card {
-
-  width: 50%;
-
-  padding: 18px;
-
-  background: #eee6dc;
-
-  border-radius: 17px;
-
-}
-
-
-.seat-card h3 {
-
-  margin:
-    0 0 7px;
-
-  font-size: 19px;
-
-}
-
-
-.seat-card p {
-
-  margin:
-    0 0 6px;
-
-  font-size: 14px;
-
-}
-
-
-.seat-card span {
-
-  color: #765b48;
-
-  font-size: 12px;
-
-  font-weight: bold;
-
-}
-
-
-
-/* =========================================
+/* =========================
    MENU
-========================================= */
+========================= */
 
 .menu-section {
 
@@ -889,7 +783,7 @@ a {
     min(680px, 100%);
 
   margin:
-    0 auto 28px;
+    0 auto 30px;
 
 }
 
@@ -950,9 +844,9 @@ a {
 
 
 
-/* =========================================
+/* =========================
    ACCESS
-========================================= */
+========================= */
 
 .access-info {
 
@@ -1016,15 +910,15 @@ a {
 
 .parking {
 
-  color: #806f61;
-
   font-size: 12px;
+
+  color: #806f61;
 
 }
 
 
 
-/* PC MAP */
+/* PC地図 */
 
 .map-pc {
 
@@ -1053,6 +947,9 @@ a {
 }
 
 
+
+/* スマホ用 */
+
 .map-link {
 
   display: none;
@@ -1061,9 +958,9 @@ a {
 
 
 
-/* =========================================
+/* =========================
    FOOTER
-========================================= */
+========================= */
 
 .footer {
 
@@ -1151,16 +1048,16 @@ a {
 
 
 
-/* =========================================
+/* =========================
    SMARTPHONE
-========================================= */
+========================= */
 
 @media (max-width: 700px) {
 
 
   body {
 
-    line-height: 1.3;
+    line-height: 1.4;
 
   }
 
@@ -1168,17 +1065,19 @@ a {
   .header {
 
     padding:
-      22px 7px 16px;
+      24px 10px 18px;
 
   }
 
 
   .logo {
 
-    font-size: 25px;
+    font-size: 29px;
 
     padding:
-      5px 14px;
+      7px 15px;
+
+    border-width: 3px;
 
     border-radius: 20px;
 
@@ -1187,14 +1086,16 @@ a {
 
   .header-sub {
 
-    font-size: 9px;
+    margin-top: 7px;
+
+    font-size: 14px;
 
   }
 
 
   .header-catch {
 
-    font-size: 15px;
+    font-size: 11px;
 
     white-space: nowrap;
 
@@ -1203,36 +1104,28 @@ a {
 
   .pet-catch {
 
-    margin-top: 4px;
-
     font-size: 12px;
 
   }
 
 
-
-  /* 営業状況 */
-
   .business-status {
 
-    min-width: 175px;
-
-    margin-top: 7px;
+    margin-top: 6px;
 
     padding:
-      6px 13px;
+      5px 13px;
 
     font-size: 11px;
 
   }
 
 
-
   .nav {
 
-    gap: 10px;
+    gap: 11px;
 
-    margin-top: 13px;
+    margin-top: 17px;
 
   }
 
@@ -1276,14 +1169,12 @@ a {
   .intro {
 
     padding:
-      27px 7px 19px;
+      30px 5px 20px;
 
   }
 
 
   .intro h1 {
-
-    margin-bottom: 13px;
 
     font-size: 16px;
 
@@ -1294,11 +1185,9 @@ a {
 
   .intro p {
 
-    margin-bottom: 6px;
+    margin-top: 12px;
 
     font-size: 13px;
-
-    line-height: 1.3;
 
   }
 
@@ -1309,7 +1198,7 @@ a {
   .instagram-section {
 
     padding:
-      31px 15px;
+      32px 15px;
 
   }
 
@@ -1346,16 +1235,16 @@ a {
     width: 92%;
 
     padding:
-      42px 0;
+      45px 0;
 
   }
 
 
   .section h2 {
 
-    margin-bottom: 21px;
+    margin-bottom: 23px;
 
-    font-size: 25px;
+    font-size: 26px;
 
   }
 
@@ -1397,18 +1286,20 @@ a {
 
   .calendar-slider {
 
-    gap: 3px;
+    gap: 5px;
+
+    touch-action: pan-y;
 
   }
 
 
   .calendar-arrow {
 
-    width: 29px;
+    width: 30px;
 
-    height: 29px;
+    height: 30px;
 
-    font-size: 21px;
+    font-size: 22px;
 
   }
 
@@ -1422,7 +1313,7 @@ a {
 
   .calendar-day {
 
-    min-height: 67px;
+    min-height: 66px;
 
     padding:
       4px 1px;
@@ -1475,15 +1366,19 @@ a {
 
   .about-text p {
 
-    margin-bottom: 6px;
-
     font-size: 13px;
+
+    margin-bottom: 11px;
 
   }
 
 
+  .dog-section {
 
-  /* DOG */
+    margin-top: 30px;
+
+  }
+
 
   .dog-photo {
 
@@ -1495,49 +1390,6 @@ a {
   .dog-message {
 
     font-size: 12px;
-
-  }
-
-
-
-  /* SEATS */
-
-  .seats {
-
-    gap: 8px;
-
-    margin-top: 27px;
-
-  }
-
-
-  .seat-card {
-
-    padding:
-      13px 5px;
-
-    border-radius: 14px;
-
-  }
-
-
-  .seat-card h3 {
-
-    font-size: 16px;
-
-  }
-
-
-  .seat-card p {
-
-    font-size: 11px;
-
-  }
-
-
-  .seat-card span {
-
-    font-size: 9px;
 
   }
 
@@ -1629,7 +1481,7 @@ a {
 
 
 
-  /* スマホでは地図を非表示 */
+  /* スマホでは地図非表示 */
 
   .map-pc {
 
@@ -1685,4 +1537,3 @@ a {
   }
 
 }
-```
