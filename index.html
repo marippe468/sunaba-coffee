@@ -4,19 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SUNABA COFFEE｜創業30年 駅が見えるカフェ</title>
+  <title>SUNABA COFFEE｜今治駅前の喫茶店</title>
 
   <meta
     name="description"
-    content="創業30年。愛媛県・JR今治駅前、夫婦で営む小さなカフェ SUNABA COFFEE。"
-  >
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
+    content="愛媛県今治市、JR今治駅前のSUNABA COFFEE。しまなみ海道の旅の途中にも、いつもの一杯にも。"
   >
 
   <link rel="stylesheet" href="style.css">
@@ -25,70 +17,99 @@
 <body>
 
   <!-- =========================
-       固定ヘッダー
+       スマホ固定・営業状況
+  ========================== -->
+  <div class="mobile-status">
+    <span class="status-dot"></span>
+    <span id="mobileStatusText">営業状況を確認中</span>
+  </div>
+
+
+  <!-- =========================
+       ヘッダー
   ========================== -->
   <header class="header">
 
     <div class="header-inner">
 
-      <a href="#top" class="logo">
-        SUNABA COFFEE
-      </a>
+      <div class="logo-area">
 
-      <div class="header-status">
-        <span class="status-dot"></span>
-        <span id="businessStatus">確認中...</span>
+        <h1>SUNABA COFFEE</h1>
+
+        <p class="subtitle">しまなみ海道</p>
+
+        <p class="tagline">
+          ～ いつもの一杯に、旅の途中の一杯にも。～
+        </p>
+
       </div>
+
+      <nav class="nav">
+        <a href="#concept">CONCEPT</a>
+        <a href="#menu">MENU</a>
+        <a href="#shop">SHOP</a>
+        <a href="#access">ACCESS</a>
+      </nav>
 
     </div>
 
   </header>
 
 
-  <!-- =========================
-       MAIN
-  ========================== -->
-  <main id="top">
+  <main>
 
     <!-- =========================
-         HERO
+         ヒーロー
     ========================== -->
     <section class="hero">
 
-      <div class="hero-image">
-        <img
-          src="image/gaikan.jpg"
-          alt="SUNABA COFFEE 外観"
-        >
-      </div>
+      <img
+        src="image/gaikan.jpg"
+        alt="SUNABA COFFEE 外観"
+        class="hero-image"
+      >
 
-      <div class="hero-text">
+      <div class="hero-overlay">
 
-        <h1>SUNABA COFFEE</h1>
+        <div class="hero-logo">
+          <span>SUNABA COFFEE</span>
+        </div>
 
-        <p class="catch-copy">
-          創業30年　駅が見えるカフェ
-        </p>
+        <p>創業30年　駅が見えるカフェ</p>
 
-        <p class="location">
-          ～愛媛県・JR今治駅前～
-        </p>
-
-        <div class="hero-concept">
-
-          <h2>しまなみ海道</h2>
-
-          <p>
-            ～夫婦で営む小さなカフェ～
-          </p>
-
-          <p class="small-copy">
-            ゆっくり時が流れる、そんな場所
-          </p>
-
+        <div class="business-status" id="businessStatus">
+          <span class="status-dot"></span>
+          <span id="statusText">営業状況を確認中</span>
         </div>
 
       </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONCEPT
+    ========================== -->
+    <section id="concept" class="section concept">
+
+      <div class="section-title">
+
+        <span>CONCEPT</span>
+
+        <h2>穏やかに、時間を過ごせる場所</h2>
+
+      </div>
+
+      <p class="concept-text">
+        電車の音をBGMに、ふっと時間がほどけていく。<br>
+        いつもの一杯をゆっくり楽しむ日も、<br>
+        しまなみ海道を訪れた旅の途中にも。
+      </p>
+
+      <p class="concept-text">
+        30年の時を重ねてきた、<br>
+        今治駅前の小さな喫茶店です。
+      </p>
 
     </section>
 
@@ -96,30 +117,35 @@
     <!-- =========================
          お知らせ
     ========================== -->
-    <section class="section notice-section" id="notice">
+    <section class="section news">
 
       <div class="section-title">
+
         <span>NEWS</span>
+
         <h2>お知らせ</h2>
+
       </div>
 
-      <div class="notice-card">
+      <div class="news-list">
 
-        <div class="notice-date">
-          2026.08.25
-        </div>
+        <article class="news-item">
 
-        <div class="notice-content">
+          <time>2026.08.25</time>
 
-          <strong>
-            ホームページを開設しました。
-          </strong>
+          <p>ホームページを開設しました。</p>
+
+        </article>
+
+        <article class="news-item">
+
+          <time>2026.08.28</time>
 
           <p>
-            SUNABA COFFEEの最新情報をお届けします。
+            SUNABA COFFEEへようこそ。
           </p>
 
-        </div>
+        </article>
 
       </div>
 
@@ -127,447 +153,110 @@
 
 
     <!-- =========================
-         Instagram
+         MENU
     ========================== -->
-    <section class="instagram-section">
+    <section id="menu" class="section menu-section">
 
-      <div class="instagram-inner">
+      <div class="section-title">
 
-        <div class="instagram-text">
+        <span>MENU</span>
 
-          <span class="section-label">
-            SNS
-          </span>
+        <h2>お品書き</h2>
 
-          <h2>
-            Instagramフォロー
-          </h2>
+      </div>
 
-          <p>
-            お店の日々の様子や、メニュー、イベント情報などを発信しています。
-          </p>
+      <div class="menu-photo">
 
-        </div>
-
-        <a
-          href="https://www.instagram.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="instagram-button"
+        <img
+          src="image/menu.jpg"
+          alt="SUNABA COFFEE メニュー"
         >
-          Instagramをフォロー
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         カレンダー
-    ========================== -->
-    <section class="section calendar-section" id="calendar">
-
-      <div class="section-title">
-
-        <span>
-          CALENDAR
-        </span>
-
-        <h2>
-          8月・9月イベントカレンダー
-        </h2>
-
-      </div>
-
-      <p class="calendar-guide">
-        毎週月曜日＋第1・第3水曜日が定休日です。
-      </p>
-
-
-      <div class="calendar-slider">
-
-        <!-- 8月 -->
-        <div class="calendar-month">
-
-          <h3>
-            2026年 8月
-          </h3>
-
-          <div class="weekdays">
-            <span>日</span>
-            <span>月</span>
-            <span>火</span>
-            <span>水</span>
-            <span>木</span>
-            <span>金</span>
-            <span>土</span>
-          </div>
-
-          <div class="days">
-
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span>1</span>
-
-            <span>2</span>
-            <span class="closed">3</span>
-            <span>4</span>
-            <span class="closed">5</span>
-            <span>6</span>
-            <span>7</span>
-            <span>8</span>
-
-            <span>9</span>
-            <span class="closed">10</span>
-            <span>11</span>
-            <span>12</span>
-            <span>13</span>
-            <span>14</span>
-            <span>15</span>
-
-            <span>16</span>
-            <span class="closed">17</span>
-            <span>18</span>
-            <span class="closed">19</span>
-            <span>20</span>
-            <span>21</span>
-            <span>22</span>
-
-            <span>23</span>
-            <span class="closed">24</span>
-            <span>25</span>
-            <span>26</span>
-            <span>27</span>
-            <span>28</span>
-            <span>29</span>
-
-            <span>30</span>
-            <span class="closed">31</span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 9月 -->
-        <div class="calendar-month">
-
-          <h3>
-            2026年 9月
-          </h3>
-
-          <div class="weekdays">
-            <span>日</span>
-            <span>月</span>
-            <span>火</span>
-            <span>水</span>
-            <span>木</span>
-            <span>金</span>
-            <span>土</span>
-          </div>
-
-          <div class="days">
-
-            <span></span>
-            <span></span>
-            <span class="closed">1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
-
-            <span>6</span>
-            <span class="closed">7</span>
-            <span>8</span>
-            <span>9</span>
-            <span>10</span>
-            <span>11</span>
-            <span>12</span>
-
-            <span>13</span>
-            <span class="closed">14</span>
-            <span>15</span>
-            <span class="closed">16</span>
-            <span>17</span>
-            <span>18</span>
-            <span>19</span>
-
-            <span>20</span>
-            <span class="closed">21</span>
-            <span>22</span>
-            <span>23</span>
-            <span>24</span>
-            <span>25</span>
-            <span>26</span>
-
-            <span>27</span>
-            <span class="closed">28</span>
-            <span>29</span>
-            <span>30</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <p class="calendar-note">
-        ※ 定休日の日付のみ赤字で表示しています。
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         お店について
-    ========================== -->
-    <section class="section about-section" id="about">
-
-      <div class="section-title">
-
-        <span>
-          ABOUT
-        </span>
-
-        <h2>
-          お店について
-        </h2>
-
-      </div>
-
-
-      <div class="about-grid">
-
-        <div class="about-image">
-
-          <img
-            src="image/tennai.jpg"
-            alt="SUNABA COFFEE 店内"
-          >
-
-        </div>
-
-
-        <div class="about-text">
-
-          <h3>
-            駅が見える、小さなカフェ。
-          </h3>
-
-          <p>
-            SUNABA COFFEEは、JR今治駅前で夫婦で営む小さなカフェです。
-          </p>
-
-          <p>
-            創業から30年。
-            電車の音をBGMに、いつもの一杯を楽しんだり、
-            旅の途中にふっと立ち寄ったり。
-          </p>
-
-          <p>
-            忙しい日常から少し離れて、
-            ゆっくりとした時間を過ごしていただける場所です。
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         メニュー
-    ========================== -->
-    <section class="section menu-section" id="menu">
-
-      <div class="section-title">
-
-        <span>
-          MENU
-        </span>
-
-        <h2>
-          メニュー
-        </h2>
 
       </div>
 
 
       <div class="menu-grid">
 
-        <!-- コーヒー -->
         <div class="menu-card">
 
-          <img
-            src="image/coffee.jpg"
-            alt="コーヒー"
-          >
+          <h3>COFFEE</h3>
 
-          <div class="menu-card-text">
+          <div class="menu-row">
+            <span>ブラジルコーヒー</span>
+            <strong>500円</strong>
+          </div>
 
-            <h3>
-              コーヒー
-            </h3>
+          <div class="menu-row">
+            <span>ブレンドコーヒー</span>
+            <strong>450円</strong>
+          </div>
 
-            <div class="menu-item">
-              <span>ブラジルコーヒー</span>
-              <strong>500円</strong>
-            </div>
+          <div class="menu-row">
+            <span>アイスコーヒー</span>
+            <strong>500円</strong>
+          </div>
 
-            <div class="menu-item">
-              <span>ブレンドコーヒー</span>
-              <strong>450円</strong>
-            </div>
+          <div class="menu-row">
+            <span>カフェオレ</span>
+            <strong>500円</strong>
+          </div>
 
-            <div class="menu-item">
-              <span>アイスコーヒー</span>
-              <strong>500円</strong>
-            </div>
-
-            <div class="menu-item">
-              <span>カフェオレ</span>
-              <strong>---</strong>
-            </div>
-
-            <div class="menu-item">
-              <span>ウインナーコーヒー</span>
-              <strong>---</strong>
-            </div>
-
+          <div class="menu-row">
+            <span>ウインナーコーヒー</span>
+            <strong>550円</strong>
           </div>
 
         </div>
 
 
-        <!-- 軽食 -->
         <div class="menu-card">
 
-          <img
-            src="image/menu.jpg"
-            alt="軽食メニュー"
-          >
+          <h3>MORNING</h3>
 
-          <div class="menu-card-text">
+          <div class="menu-row">
 
-            <h3>
-              軽食・デザート
-            </h3>
+            <span>
+              モーニング<br>
+              <small>パン・ジャム・コーヒー</small>
+            </span>
 
-            <div class="recommended">
-              おすすめ・限定20食
-            </div>
-
-            <div class="menu-item sandwich">
-
-              <span>
-                サンドイッチ
-                <small>
-                  内容は日替わり
-                </small>
-              </span>
-
-              <strong>
-                650円
-              </strong>
-
-            </div>
-
-            <div class="menu-item">
-              <span>グラタン</span>
-              <strong>---</strong>
-            </div>
-
-            <div class="menu-item">
-              <span>日替わりデザート</span>
-              <strong>---</strong>
-            </div>
-
-            <div class="menu-item">
-              <span>パンケーキ</span>
-              <strong>---</strong>
-            </div>
-
-            <div class="menu-item">
-              <span>ケーキセット</span>
-              <strong>800円</strong>
-            </div>
+            <strong>500円</strong>
 
           </div>
 
         </div>
 
-      </div>
 
+        <div class="menu-card">
 
-      <p class="menu-note">
-        ※ メニュー・価格は変更になる場合があります。
-      </p>
+          <h3>LIGHT MEAL</h3>
 
-    </section>
+          <div class="menu-row">
+            <span>サンドイッチ</span>
+          </div>
 
-
-    <!-- =========================
-         店主の想い
-    ========================== -->
-    <section class="owner-section" id="owner">
-
-      <div class="section owner-inner">
-
-        <div class="section-title">
-
-          <span>
-            OWNER
-          </span>
-
-          <h2>
-            店主の想い
-          </h2>
+          <div class="menu-row">
+            <span>グラタン</span>
+          </div>
 
         </div>
 
 
-        <div class="owner-grid">
+        <div class="menu-card">
 
-          <div class="owner-image">
+          <h3>SWEETS</h3>
 
-            <img
-              src="image/owner.jpg"
-              alt="SUNABA COFFEE 店主"
-            >
-
+          <div class="menu-row">
+            <span>日替わりデザート</span>
           </div>
 
+          <div class="menu-row">
+            <span>パンケーキ</span>
+          </div>
 
-          <div class="owner-text">
-
-            <h3>
-              いつもの一杯を、これからも。
-            </h3>
-
-            <p>
-              40歳で会社員を辞め、
-              ずっと夢だったカフェを始めました。
-            </p>
-
-            <p>
-              気がつけば創業30年。
-              多くのお客様に支えていただきながら、
-              今日までお店を続けてくることができました。
-            </p>
-
-            <p>
-              これからも、肩ひじ張らず、
-              「また来たい」と思っていただけるような
-              お店でありたいと思っています。
-            </p>
-
+          <div class="menu-row">
+            <span>ケーキセット</span>
+            <strong>800円</strong>
           </div>
 
         </div>
@@ -578,151 +267,165 @@
 
 
     <!-- =========================
-         店内・お席
+         SHOP
     ========================== -->
-    <section class="section seats-section" id="seats">
+    <section id="shop" class="section shop">
 
       <div class="section-title">
 
-        <span>
-          SEATS
-        </span>
+        <span>SHOP</span>
 
-        <h2>
-          店内・お席
-        </h2>
+        <h2>店内・お席</h2>
 
       </div>
 
 
-      <div class="seat-grid">
+      <div class="shop-photo">
 
-        <div class="seat-image">
-
-          <img
-            src="image/tennai2.jpg"
-            alt="SUNABA COFFEE 店内"
-          >
-
-        </div>
-
-
-        <div class="seat-info">
-
-          <div class="seat-item">
-
-            <h3>
-              店内席
-            </h3>
-
-            <p>
-              4名席 × 5
-            </p>
-
-          </div>
-
-
-          <div class="seat-item">
-
-            <h3>
-              テラス席
-            </h3>
-
-            <p>
-              4名席 × 2
-            </p>
-
-          </div>
-
-
-          <p class="seat-note">
-            ゆっくりお過ごしいただける、
-            落ち着いた空間です。
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         アクセス
-    ========================== -->
-    <section class="section access-section" id="access">
-
-      <div class="section-title">
-
-        <span>
-          ACCESS
-        </span>
-
-        <h2>
-          アクセス
-        </h2>
+        <img
+          src="image/tennai.jpg"
+          alt="SUNABA COFFEE 店内"
+        >
 
       </div>
 
 
-      <div class="access-box">
+      <div class="seats">
 
-        <div class="access-info">
+        <div class="seat-item">
 
-          <h3>
-            SUNABA COFFEE
-          </h3>
+          <h3>テラス</h3>
 
           <p>
-            〒794-0015<br>
-            愛媛県今治市常盤町4丁目8−18<br>
-            しまなみイノベーションビル 2階
+            4名席 × 2
           </p>
 
-
-          <p class="parking">
-
-            <strong>
-              駐車場
-            </strong>
-
-            <br>
-
-            専用駐車場はありません。
-
-          </p>
-
-
-          <a
-            href="tel:0898112222"
-            class="phone-button"
-          >
-            ☎ 0898-11-2222
-          </a>
+          <span class="pet-ok">ペット可</span>
 
         </div>
 
 
-        <div class="map-area">
+        <div class="seat-item">
 
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=愛媛県今治市常盤町4丁目8-18"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="map-link"
-          >
-            Googleマップで見る
-          </a>
+          <h3>店内</h3>
 
-
-          <iframe
-            src="https://www.google.com/maps?q=愛媛県今治市常盤町4丁目8-18&output=embed"
-            loading="lazy"
-            allowfullscreen=""
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <p>
+            4名席 × 2
+          </p>
 
         </div>
+
+
+        <div class="seat-item">
+
+          <h3>カウンター</h3>
+
+          <p>
+            5席
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="shop-info">
+
+        <dl>
+
+          <div>
+            <dt>営業時間</dt>
+            <dd>10:00～17:00</dd>
+          </div>
+
+          <div>
+            <dt>定休日</dt>
+            <dd>毎週月曜日・第1、第3水曜日</dd>
+          </div>
+
+        </dl>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACCESS
+    ========================== -->
+    <section id="access" class="section access">
+
+      <div class="section-title">
+
+        <span>ACCESS</span>
+
+        <h2>アクセス</h2>
+
+      </div>
+
+
+      <div class="access-content">
+
+        <h3>SUNABA COFFEE</h3>
+
+        <p class="address">
+
+          〒794-0015<br>
+          愛媛県今治市常盤町4丁目8−18<br>
+          しまなみイノベーションビル 2階
+
+        </p>
+
+        <p class="access-note">
+          JR今治駅から徒歩圏内
+        </p>
+
+        <p class="parking">
+          ※駐車場はございません
+        </p>
+
+      </div>
+
+
+      <div class="map">
+
+        <iframe
+          src="https://www.google.com/maps?q=愛媛県今治市常盤町4丁目8-18&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SNS
+    ========================== -->
+    <section class="section sns">
+
+      <div class="section-title">
+
+        <span>SNS</span>
+
+        <h2>最新情報はこちら</h2>
+
+      </div>
+
+      <div class="sns-links">
+
+        <a href="#" class="sns-button x">
+          X
+        </a>
+
+        <a href="#" class="sns-button instagram">
+          Instagram
+        </a>
+
+        <a href="#" class="sns-button facebook">
+          Facebook
+        </a>
 
       </div>
 
@@ -736,69 +439,134 @@
   ========================== -->
   <footer class="footer">
 
-    <div class="footer-inner">
-
-      <div class="footer-logo">
-
-        <h2>
-          SUNABA COFFEE
-        </h2>
-
-        <p>
-          -IMABARI, EHIME, JAPAN-
-        </p>
-
-      </div>
-
-
-      <!-- SNS -->
-      <div class="footer-sns">
-
-        <a
-          href="https://x.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="X"
-          class="sns-x"
-        >
-          𝕏
-        </a>
-
-
-        <a
-          href="https://www.instagram.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          class="sns-instagram"
-        >
-          ◎
-        </a>
-
-
-        <a
-          href="https://www.facebook.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-          class="sns-facebook"
-        >
-          f
-        </a>
-
-      </div>
-
-
-      <p class="copyright">
-        © SUNABA COFFEE
-      </p>
-
+    <div class="footer-logo">
+      SUNABA COFFEE
     </div>
+
+    <p>
+      - IMABARI, EHIME, JAPAN -
+    </p>
+
+    <p class="copyright">
+      © SUNABA COFFEE
+    </p>
 
   </footer>
 
 
-  <script src="script.js"></script>
+  <!-- =========================
+       営業状況 JavaScript
+  ========================== -->
+  <script>
+
+    function updateBusinessStatus() {
+
+      const now = new Date();
+
+      const day = now.getDay();
+      const hour = now.getHours();
+      const minute = now.getMinutes();
+
+      const currentMinutes = hour * 60 + minute;
+
+      const openingTime = 10 * 60;
+      const closingTime = 17 * 60;
+
+      let isClosed = false;
+
+      /*
+        JavaScriptの曜日
+        0 = 日曜日
+        1 = 月曜日
+        2 = 火曜日
+        3 = 水曜日
+        4 = 木曜日
+        5 = 金曜日
+        6 = 土曜日
+      */
+
+      // 毎週月曜日
+      if (day === 1) {
+        isClosed = true;
+      }
+
+      // 第1・第3水曜日
+      if (day === 3) {
+
+        const date = now.getDate();
+
+        const weekNumber = Math.ceil(date / 7);
+
+        if (weekNumber === 1 || weekNumber === 3) {
+          isClosed = true;
+        }
+
+      }
+
+
+      let message = "";
+      let statusClass = "";
+
+
+      if (isClosed) {
+
+        message = "本日は定休日です";
+        statusClass = "closed";
+
+      } else if (currentMinutes < openingTime) {
+
+        message = "10:00より営業します";
+        statusClass = "before";
+
+      } else if (
+        currentMinutes >= openingTime &&
+        currentMinutes < closingTime - 60
+      ) {
+
+        message = "営業中";
+        statusClass = "open";
+
+      } else if (
+        currentMinutes >= closingTime - 60 &&
+        currentMinutes < closingTime
+      ) {
+
+        message = "まもなく終了";
+        statusClass = "soon";
+
+      } else {
+
+        message = "本日の営業は終了しました";
+        statusClass = "closed";
+
+      }
+
+
+      const statusText =
+        document.getElementById("statusText");
+
+      const mobileStatusText =
+        document.getElementById("mobileStatusText");
+
+      const businessStatus =
+        document.getElementById("businessStatus");
+
+
+      statusText.textContent = message;
+
+      mobileStatusText.textContent = message;
+
+      businessStatus.className =
+        "business-status " + statusClass;
+
+    }
+
+
+    updateBusinessStatus();
+
+    setInterval(updateBusinessStatus, 60000);
+
+  </script>
 
 </body>
 </html>
