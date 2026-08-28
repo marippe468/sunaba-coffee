@@ -10,11 +10,13 @@ body {
   margin: 0;
   color: #4a4038;
   background: #f8f5ef;
+
   font-family:
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
     "Meiryo",
     sans-serif;
+
   line-height: 1.65;
   text-align: center;
 }
@@ -41,55 +43,90 @@ a {
 
 .logo {
   display: inline-block;
+
   padding: 10px 28px;
+
   color: white;
   background: #765b48;
+
   border: 5px solid #9a785e;
   border-radius: 30px;
+
   font-family:
     "Arial Rounded MT Bold",
     "Hiragino Maru Gothic ProN",
     "Yu Gothic",
     sans-serif;
+
   font-size: clamp(38px, 6vw, 72px);
   font-weight: 700;
+
   letter-spacing: .04em;
-  box-shadow: 0 7px 0 rgba(79,59,45,.18);
+
+  box-shadow:
+    0 7px 0 rgba(79,59,45,.18);
 }
+
 
 .header-sub {
-  margin-top: 28px;
-  color: #765b48;
-  font-size: clamp(25px,4vw,40px);
-  font-weight: bold;
-}
 
-.header-catch {
-  margin-top: 5px;
-  font-size: clamp(15px,2vw,21px);
+  margin-top: 20px;
+
+  color: #765b48;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
   letter-spacing: .08em;
 }
 
-.pet-catch {
+
+.header-catch {
+
   margin-top: 5px;
+
+  font-size: clamp(15px,2vw,21px);
+
+  letter-spacing: .08em;
+}
+
+
+.pet-catch {
+
+  margin-top: 5px;
+
   color: #765b48;
+
   font-size: 16px;
+
   font-weight: bold;
 }
 
+
 .nav {
+
   display: flex;
+
   justify-content: center;
+
   flex-wrap: wrap;
+
   gap: 28px;
+
   margin-top: 35px;
 }
 
+
 .nav a {
+
   font-size: 14px;
+
   font-weight: bold;
+
   letter-spacing: .12em;
 }
+
 
 
 /* =========================
@@ -97,17 +134,27 @@ a {
 ========================= */
 
 .section {
+
   width: min(1000px,90%);
+
   margin: 0 auto;
+
   padding: 90px 0;
 }
 
+
 h2 {
+
   margin: 0 0 45px;
+
   color: #5a4638;
-  font-size: clamp(30px,4vw,44px);
+
+  font-size:
+    clamp(30px,4vw,44px);
+
   letter-spacing: .08em;
 }
+
 
 
 /* =========================
@@ -115,111 +162,162 @@ h2 {
 ========================= */
 
 .hero {
+
   width: min(1100px,94%);
+
   margin: auto;
 }
 
+
 .hero-image {
+
   overflow: hidden;
+
   border-radius: 24px;
+
   box-shadow:
-    0 12px 30px rgba(60,40,20,.15);
+    0 12px 30px
+    rgba(60,40,20,.15);
 }
 
+
 .hero-image img {
+
   width: 100%;
+
   max-height: 570px;
+
   object-fit: cover;
 }
 
+
 .hero-text {
-  padding: 55px 20px 30px;
+
+  padding:
+    55px 20px 30px;
 }
 
+
 .hero-text h1 {
+
   margin: 0;
+
   color: #5d493b;
-  font-size: clamp(25px,4vw,42px);
+
+  font-size:
+    clamp(25px,4vw,42px);
+
   line-height: 1.7;
 }
 
+
 .hero-text p {
+
   margin-top: 25px;
-  font-size: clamp(17px,2.4vw,25px);
+
+  font-size:
+    clamp(17px,2.4vw,25px);
 }
 
 
+
 /* =========================
-   STATUS
+   BUSINESS STATUS
 ========================= */
 
 .status-section {
-  padding: 15px 20px 40px;
+
+  padding:
+    15px 20px 40px;
 }
 
+
 .business-status {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
-  width: 170px;
-  height: 170px;
+
+  width: 150px;
+
+  height: 150px;
+
   margin: auto;
-  padding: 20px;
+
+  padding: 15px;
+
   color: white;
+
   background: #8c735f;
+
   border-radius: 50%;
-  font-size: 20px;
+
+  font-size: 17px;
+
   font-weight: bold;
+
   line-height: 1.5;
+
   box-shadow:
-    0 8px 20px rgba(60,40,20,.18);
+    0 8px 20px
+    rgba(60,40,20,.15);
 }
+
 
 
 /* =========================
-   PHOTO
+   PHOTOS
 ========================= */
 
 .section-photo,
 .about-photo,
-.menu-photo,
-.access-photo {
+.menu-photo {
+
   overflow: hidden;
+
   border-radius: 20px;
+
   margin-left: auto;
   margin-right: auto;
 }
 
+
 .section-photo {
+
   width: min(700px,100%);
+
   margin-bottom: 45px;
 }
 
+
 .about-photo {
+
   width: min(500px,100%);
+
   margin-bottom: 35px;
 }
 
+
 .menu-photo {
+
   width: min(650px,100%);
+
   margin-bottom: 50px;
 }
 
-.access-photo {
-  width: min(600px,100%);
-  margin-bottom: 35px;
-}
 
 
 /* =========================
    CONCEPT
 ========================= */
 
-.concept-main {
-  color: #6b513f;
-  font-size: clamp(23px,3vw,34px);
-  font-weight: bold;
+.concept p {
+
+  font-size: 17px;
 }
+
 
 
 /* =========================
@@ -227,61 +325,138 @@ h2 {
 ========================= */
 
 .menu-section {
+
   background: #f2ede5;
+
   border-radius: 30px;
 }
 
+
 .menu-category {
+
   width: min(700px,100%);
-  margin: 0 auto 45px;
+
+  margin:
+    0 auto 45px;
 }
+
 
 .menu-category h3 {
+
   padding-bottom: 10px;
-  border-bottom: 2px solid #cbbbaa;
+
+  border-bottom:
+    2px solid #cbbbaa;
 }
 
+
 .menu-item {
+
   display: flex;
+
   justify-content: space-between;
+
   gap: 15px;
+
   padding: 13px 10px;
-  border-bottom: 1px dotted #c8bbad;
+
+  border-bottom:
+    1px dotted #c8bbad;
+
   font-size: 18px;
 }
+
+
+.menu-note {
+
+  margin-top: 8px;
+
+  font-size: 14px;
+
+  color: #806f61;
+}
+
 
 
 /* =========================
    SEATS
 ========================= */
 
-.seat-card {
-  width: min(650px,100%);
-  margin: 0 auto 35px;
-  padding: 35px 25px;
-  background: white;
-  border-radius: 22px;
-  box-shadow:
-    0 8px 25px rgba(60,40,20,.08);
+.seat-container {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  width: min(850px,100%);
+
+  margin: auto;
 }
+
+
+.seat-card {
+
+  flex: 1;
+
+  padding: 30px 20px;
+
+  background: white;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(60,40,20,.08);
+}
+
+
+.seat-card h3 {
+
+  margin-top: 0;
+
+  color: #5d493b;
+
+  font-size: 22px;
+}
+
 
 .seat-number {
-  font-size: 22px;
+
+  font-size: 20px;
+
   font-weight: bold;
 }
 
-.indoor-note {
-  color: #8a6b58;
-  font-size: 13px;
-}
 
-.pet-info {
+.seat-pet {
+
   display: inline-block;
-  padding: 13px 25px;
+
+  margin-top: 8px;
+
+  padding: 5px 14px;
+
   background: #eadfd2;
-  border-radius: 30px;
+
+  border-radius: 20px;
+
+  color: #6b513f;
+
+  font-size: 13px;
+
   font-weight: bold;
 }
+
+
+.seat-pet.indoor {
+
+  background: #f1eeee;
+
+  color: #777;
+}
+
 
 
 /* =========================
@@ -289,131 +464,224 @@ h2 {
 ========================= */
 
 .calendar-section {
+
   width: min(900px,94%);
 }
 
+
 .calendar-slider {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 25px;
 }
 
+
 .calendar-content {
+
   width: 100%;
+
   max-width: 800px;
 }
 
+
 .calendar-title {
+
   margin-bottom: 20px;
+
   color: #5d493b;
+
   font-size: 26px;
+
   font-weight: bold;
 }
 
+
 .calendar-arrow {
+
   flex: 0 0 auto;
+
   width: 48px;
+
   height: 48px;
+
   border: none;
+
   border-radius: 50%;
+
   background: #765b48;
+
   color: white;
+
   font-size: 32px;
+
   cursor: pointer;
 }
 
+
 .calendar-wrap {
+
   overflow: hidden;
+
   background: white;
+
   border-radius: 20px;
+
   box-shadow:
-    0 8px 25px rgba(60,40,20,.08);
+    0 8px 25px
+    rgba(60,40,20,.08);
 }
+
 
 .week-header,
 .calendar {
+
   display: grid;
-  grid-template-columns: repeat(7,1fr);
+
+  grid-template-columns:
+    repeat(7,1fr);
 }
 
+
 .week-header > div {
+
   padding: 12px 0;
+
   background: #eadfd2;
+
   font-weight: bold;
 }
 
+
 .week-header .sun {
+
   color: #c33;
 }
 
+
 .week-header .sat {
+
   color: #426b91;
 }
 
+
 .calendar-day {
+
   min-height: 100px;
+
   padding: 8px;
-  border-top: 1px solid #eee;
-  border-right: 1px solid #eee;
-  text-align: left;
+
+  border-top:
+    1px solid #eee;
+
+  border-right:
+    1px solid #eee;
+
+  text-align: center;
 }
 
+
 .calendar-day.empty {
+
   background: #fafafa;
 }
 
+
 .day-number {
+
+  font-size: 16px;
+
   font-weight: bold;
+
+  line-height: 1.2;
 }
 
+
 .sunday .day-number {
+
   color: #c33;
 }
 
+
 .saturday .day-number {
+
   color: #426b91;
 }
 
+
 .holiday {
+
   background: #fff1f1;
 }
 
+
 .holiday .day-number {
+
   color: #c33;
 }
+
+
+/* 2行目：定休日 */
 
 .holiday-label {
+
   margin-top: 4px;
+
   color: #c33;
+
   font-size: 12px;
+
   font-weight: bold;
-  line-height: 1.3;
+
+  line-height: 1.2;
 }
+
+
+/* 2行目：イベント */
 
 .event-label {
+
   margin-top: 4px;
+
   color: #8a5a31;
+
   font-size: 11px;
+
   font-weight: bold;
-  line-height: 1.3;
+
+  line-height: 1.2;
 }
 
+
 .calendar-note {
+
   display: flex;
+
   justify-content: center;
+
   gap: 30px;
+
   margin-top: 20px;
+
   font-size: 14px;
 }
 
+
 .holiday-note {
+
   color: #c33;
 }
 
+
 .event-note {
+
   color: #8a5a31;
 }
+
 
 
 /* =========================
@@ -421,56 +689,95 @@ h2 {
 ========================= */
 
 .news-list {
+
   width: min(750px,100%);
+
   margin: auto;
 }
 
+
 .news-card {
+
   margin-bottom: 18px;
+
   padding: 20px 25px;
+
   background: white;
-  border-left: 5px solid #765b48;
+
+  border-left:
+    5px solid #765b48;
+
   border-radius: 12px;
+
   text-align: left;
 }
 
+
 .news-card time {
+
   color: #806f61;
+
   font-size: 13px;
 }
 
+
 .news-card h3 {
-  margin: 5px 0 8px;
+
+  margin:
+    5px 0 8px;
+
   color: #5d493b;
+
   font-size: 20px;
 }
+
 
 
 /* =========================
    ACCESS
 ========================= */
 
+.access-info {
+
+  line-height: 1.5;
+}
+
+
 .phone {
+
   font-weight: bold;
 }
 
+
 .map-pc {
+
   width: min(800px,100%);
+
   height: 380px;
+
   margin: 35px auto;
+
   overflow: hidden;
+
   border-radius: 20px;
 }
 
+
 .map-pc iframe {
+
   width: 100%;
+
   height: 100%;
+
   border: 0;
 }
 
+
 .map-link {
+
   display: none;
 }
+
 
 
 /* =========================
@@ -478,18 +785,28 @@ h2 {
 ========================= */
 
 .hours-box {
+
   width: min(600px,100%);
+
   margin: auto;
+
   padding: 35px;
+
   background: #eadfd2;
+
   border-radius: 25px;
 }
 
+
 .hours-time {
+
   margin: 0 0 10px;
+
   font-size: 32px;
+
   font-weight: bold;
 }
+
 
 
 /* =========================
@@ -497,319 +814,576 @@ h2 {
 ========================= */
 
 .footer {
+
   margin-top: 50px;
+
   padding: 55px 20px;
+
   background: #5d493b;
+
   color: white;
 }
 
+
 .footer-logo {
+
   font-family:
     "Arial Rounded MT Bold",
     "Hiragino Maru Gothic ProN",
     sans-serif;
+
   font-size: 32px;
+
   font-weight: bold;
 }
 
+
 .footer-place {
+
   margin-top: 8px;
+
   font-size: 13px;
+
   letter-spacing: .15em;
 }
 
+
 .sns {
+
   display: flex;
+
   justify-content: center;
+
   gap: 20px;
+
   margin-top: 25px;
 }
 
+
 .sns-icon {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   width: 45px;
+
   height: 45px;
-  border: 1px solid rgba(255,255,255,.7);
+
+  border:
+    1px solid
+    rgba(255,255,255,.7);
+
   border-radius: 50%;
+
   font-size: 23px;
+
   font-weight: bold;
 }
 
 
+
 /* ==================================================
-   MOBILE
+   SMARTPHONE
 ================================================== */
 
 @media (max-width:700px) {
 
+
   body {
+
     line-height: 1.5;
+
   }
+
 
   .header {
-    padding: 30px 15px 25px;
+
+    padding:
+      30px 15px 25px;
+
   }
+
 
   .logo {
+
     font-size: 31px;
-    padding: 8px 17px;
+
+    padding:
+      8px 17px;
+
     border-width: 4px;
+
     border-radius: 22px;
+
   }
+
 
   .header-sub {
-    margin-top: 20px;
-    font-size: 24px;
+
+    margin-top: 15px;
+
+    font-size: 17px;
+
   }
+
 
   .header-catch {
+
     font-size: 14px;
+
     line-height: 1.4;
+
   }
+
 
   .pet-catch {
+
     font-size: 14px;
+
     line-height: 1.4;
+
   }
+
 
   .nav {
+
     gap: 14px;
+
     margin-top: 22px;
+
   }
+
 
   .nav a {
+
     font-size: 11px;
+
   }
 
+
+
+  /* HERO */
 
   .hero {
+
     width: 94%;
+
   }
+
 
   .hero-image {
+
     border-radius: 16px;
+
   }
+
 
   .hero-image img {
+
     min-height: 280px;
+
     object-fit: cover;
+
   }
+
 
   .hero-text {
+
     padding-top: 32px;
+
   }
+
 
   .hero-text h1 {
+
     font-size: 24px;
+
     line-height: 1.5;
+
   }
+
 
   .hero-text p {
+
     margin-top: 18px;
+
     font-size: 16px;
+
     line-height: 1.5;
+
   }
 
+
+
+  /* STATUS */
 
   .business-status {
-    width: 145px;
-    height: 145px;
-    font-size: 17px;
+
+    width: 130px;
+
+    height: 130px;
+
+    font-size: 15px;
+
   }
 
+
+
+  /* SECTION */
 
   .section {
+
     width: 90%;
+
     padding: 60px 0;
+
   }
+
 
   h2 {
+
     margin-bottom: 30px;
+
     font-size: 30px;
+
   }
 
 
-  .concept-main {
-    font-size: 22px;
+
+  /* CONCEPT */
+
+  .concept p {
+
+    font-size: 15px;
+
     line-height: 1.5;
+
   }
 
+
+
+  /* MENU */
 
   .menu-section {
+
     width: 94%;
+
     border-radius: 20px;
+
   }
+
 
   .menu-category {
+
     margin-bottom: 35px;
+
   }
+
 
   .menu-category h3 {
-    font-size: 22px;
+
+    font-size: 21px;
+
   }
 
+
   .menu-item {
-    padding: 10px 5px;
-    font-size: 15px;
+
+    padding:
+      10px 5px;
+
+    font-size: 14px;
+
     line-height: 1.35;
+
+  }
+
+
+  .menu-note {
+
+    font-size: 12px;
+
+  }
+
+
+
+  /* SEATS */
+
+  .seat-container {
+
+    gap: 10px;
+
   }
 
 
   .seat-card {
-    padding: 25px 18px;
-    margin-bottom: 25px;
+
+    padding:
+      20px 8px;
+
+    border-radius: 15px;
+
   }
+
 
   .seat-card h3 {
-    font-size: 22px;
+
+    font-size: 17px;
+
   }
+
 
   .seat-number {
-    font-size: 20px;
+
+    font-size: 15px;
+
   }
 
 
-  /* =========================
-     MOBILE CALENDAR
-  ========================= */
+  .seat-card p {
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+  }
+
+
+  .seat-pet {
+
+    padding:
+      4px 9px;
+
+    font-size: 10px;
+
+  }
+
+
+
+  /* CALENDAR */
 
   .calendar-section {
+
     width: 96%;
+
     overflow: hidden;
+
   }
+
 
   .calendar-slider {
+
     gap: 8px;
+
     touch-action: pan-y;
+
   }
+
 
   .calendar-content {
+
     min-width: 0;
+
   }
+
 
   .calendar-arrow {
+
     width: 34px;
+
     height: 34px;
+
     font-size: 25px;
+
   }
+
 
   .calendar-title {
+
     font-size: 21px;
+
   }
+
 
   .calendar-day {
-    min-height: 76px;
-    padding: 5px;
+
+    min-height: 72px;
+
+    padding:
+      5px 2px;
+
   }
+
 
   .week-header > div {
+
     padding: 8px 0;
+
     font-size: 12px;
+
   }
+
 
   .day-number {
+
     font-size: 13px;
+
   }
 
-  .holiday-label,
-  .event-label {
+
+  .holiday-label {
+
     font-size: 8px;
-    line-height: 1.15;
-    word-break: break-all;
+
+    margin-top: 3px;
+
   }
+
+
+  .event-label {
+
+    font-size: 8px;
+
+    margin-top: 3px;
+
+    line-height: 1.1;
+
+  }
+
 
   .calendar-note {
+
     gap: 18px;
+
     font-size: 12px;
+
   }
+
 
 
   /* NEWS */
 
   .news-card {
-    padding: 16px 15px;
+
+    padding:
+      16px 15px;
+
     text-align: center;
+
   }
+
 
   .news-card h3 {
+
     font-size: 18px;
+
     line-height: 1.4;
+
   }
 
+
   .news-card p {
+
     font-size: 14px;
+
     line-height: 1.45;
+
   }
+
 
 
   /* ACCESS */
 
-  .access-info {
+  .access-info p {
+
+    font-size: 15px;
+
     line-height: 1.45;
+
   }
 
-  .access-info p {
-    font-size: 15px;
-    line-height: 1.45;
-  }
 
   .phone a {
+
     display: inline-block;
-    padding: 9px 20px;
+
+    padding:
+      9px 20px;
+
     background: #eadfd2;
+
     color: #5d493b;
+
     border-radius: 25px;
+
     font-size: 17px;
+
   }
+
+
+  /* スマホでは地図本体を非表示 */
 
   .map-pc {
+
     display: none;
+
   }
 
+
   .map-link {
+
     display: inline-block;
-    padding: 13px 25px;
+
+    padding:
+      13px 25px;
+
     background: #765b48;
+
     color: white;
+
     border-radius: 30px;
+
     font-weight: bold;
+
   }
+
 
 
   /* HOURS */
 
   .hours-box {
-    padding: 25px 15px;
+
+    padding:
+      25px 15px;
+
   }
 
+
   .hours-time {
+
     font-size: 27px;
+
   }
+
 
 
   /* FOOTER */
 
   .footer {
-    padding: 45px 20px;
+
+    padding:
+      45px 20px;
+
   }
+
 
   .footer-logo {
+
     font-size: 26px;
-  }
 
-}
-
-
-/* =========================
-   PC
-========================= */
-
-@media (min-width:701px) {
-
-  .map-link {
-    display: none;
   }
 
 }
