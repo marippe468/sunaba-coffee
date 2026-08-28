@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>SUNABA COFFEE｜今治駅前の小さなカフェ</title>
-
-  <meta
-    name="description"
-    content="愛媛県今治市、JR今治駅前の小さなカフェ。いつもの一杯に、旅の途中の一杯にも。"
-  >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header class="header">
 
@@ -34,27 +28,29 @@
     ～愛媛県今治市・夫婦で営む小さなカフェ～
   </div>
 
+  <div class="pet-catch">
+    愛犬とともに・テラス席OK
+  </div>
+
   <nav class="nav">
     <a href="#concept">CONCEPT</a>
     <a href="#menu">MENU</a>
     <a href="#seats">SEAT</a>
     <a href="#calendar">CALENDAR</a>
+    <a href="#news">NEWS</a>
     <a href="#access">ACCESS</a>
   </nav>
 
 </header>
 
 
-<!-- =========================
-     MAIN VISUAL
-========================= -->
-
 <main>
 
 <section class="hero">
 
   <div class="hero-image">
-    <img src="image/gaikan.jpg" alt="SUNABA COFFEE 外観">
+    <img src="image/gaikan.jpg"
+         alt="SUNABA COFFEE 外観">
   </div>
 
   <div class="hero-text">
@@ -74,33 +70,30 @@
 </section>
 
 
-<!-- =========================
-     BUSINESS STATUS
-========================= -->
-
 <section class="status-section">
 
-  <div id="businessStatus" class="business-status">
+  <div id="businessStatus"
+       class="business-status">
     営業状況を確認中…
   </div>
 
 </section>
 
 
-<!-- =========================
-     CONCEPT
-========================= -->
-
-<section id="concept" class="section concept">
+<section id="concept"
+         class="section concept">
 
   <h2>CONCEPT</h2>
 
   <div class="section-photo">
-    <img src="image/tennai.jpg" alt="SUNABA COFFEE 店内">
+
+    <img src="image/tennai.jpg"
+         alt="SUNABA COFFEE 店内">
+
   </div>
 
   <p class="concept-main">
-    いつもの一杯に、旅の途中の一杯にも。
+    ～ いつもの一杯に、旅の途中の一杯にも。～
   </p>
 
   <p>
@@ -117,16 +110,15 @@
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
-
 <section class="section about">
 
   <h2>ABOUT</h2>
 
   <div class="about-photo">
-    <img src="image/owner.jpg" alt="SUNABA COFFEE オーナー">
+
+    <img src="image/owner.jpg"
+         alt="SUNABA COFFEE オーナー">
+
   </div>
 
   <h3>創業30年</h3>
@@ -145,18 +137,17 @@
 </section>
 
 
-<!-- =========================
-     MENU
-========================= -->
-
-<section id="menu" class="section menu-section">
+<section id="menu"
+         class="section menu-section">
 
   <h2>MENU</h2>
 
   <div class="menu-photo">
-    <img src="image/menu.jpg" alt="SUNABA COFFEE メニュー">
-  </div>
 
+    <img src="image/menu.jpg"
+         alt="SUNABA COFFEE メニュー">
+
+  </div>
 
   <div class="menu-category">
 
@@ -247,11 +238,8 @@
 </section>
 
 
-<!-- =========================
-     SEAT
-========================= -->
-
-<section id="seats" class="section seats">
+<section id="seats"
+         class="section seats">
 
   <h2>店内・お席</h2>
 
@@ -265,7 +253,7 @@
 
     <p>
       ゆっくり過ごせるテラス席。<br>
-      ペットOKです。
+      愛犬と一緒にお過ごしいただけます。
     </p>
 
   </div>
@@ -284,11 +272,15 @@
       落ち着いた時間をお過ごしください。
     </p>
 
+    <p class="indoor-note">
+      ※ 店内はペット不可です
+    </p>
+
   </div>
 
 
   <div class="pet-info">
-    🐾 テラス席・店内席ともにペットOK
+    🐾 愛犬とともに・テラス席OK
   </div>
 
 </section>
@@ -298,55 +290,69 @@
      CALENDAR
 ========================= -->
 
-<section id="calendar" class="section calendar-section">
+<section id="calendar"
+         class="section calendar-section">
 
   <h2>営業カレンダー</h2>
 
-  <div class="calendar-controls">
+  <div class="calendar-slider">
 
-    <button id="prevMonth" aria-label="前の月">
+    <button id="prevMonth"
+            class="calendar-arrow"
+            aria-label="前の月">
       ‹
     </button>
 
-    <div id="calendarTitle"></div>
 
-    <button id="nextMonth" aria-label="次の月">
+    <div class="calendar-content">
+
+      <div id="calendarTitle"
+           class="calendar-title">
+      </div>
+
+
+      <div class="calendar-wrap">
+
+        <div class="week-header">
+
+          <div class="sun">日</div>
+          <div>月</div>
+          <div>火</div>
+          <div>水</div>
+          <div>木</div>
+          <div>金</div>
+          <div class="sat">土</div>
+
+        </div>
+
+
+        <div id="calendar"
+             class="calendar">
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <button id="nextMonth"
+            class="calendar-arrow"
+            aria-label="次の月">
       ›
     </button>
 
   </div>
 
 
-  <div class="calendar-wrap">
-
-    <div class="week-header">
-
-      <div class="sun">日</div>
-      <div>月</div>
-      <div>火</div>
-      <div>水</div>
-      <div>木</div>
-      <div>金</div>
-      <div class="sat">土</div>
-
-    </div>
-
-    <div id="calendar" class="calendar"></div>
-
-  </div>
-
-
   <div class="calendar-note">
 
-    <p>
-      <span class="holiday-mark">●</span>
-      定休日
-    </p>
+    <span class="holiday-note">
+      ■ 定休日
+    </span>
 
-    <p>
-      <span class="event-mark">●</span>
-      イベント
-    </p>
+    <span class="event-note">
+      ■ イベント
+    </span>
 
   </div>
 
@@ -357,32 +363,66 @@
      NEWS
 ========================= -->
 
-<section class="section news-section">
+<section id="news"
+         class="section news-section">
 
   <h2>お知らせ</h2>
 
-  <div class="news-card">
-
-    <time datetime="2026-08-25">
-      2026年8月25日
-    </time>
-
-    <p>
-      SUNABA COFFEE ホームページを開設しました。
-    </p>
-
-  </div>
+  <div class="news-list">
 
 
-  <div class="news-card">
+    <article class="news-card">
 
-    <time datetime="2026-09-01">
-      2026年9月1日
-    </time>
+      <time datetime="2026-08-25">
+        2026年8月25日
+      </time>
 
-    <p>
-      秋のおすすめメニューを準備中です。
-    </p>
+      <h3>
+        ホームページを開設しました
+      </h3>
+
+      <p>
+        SUNABA COFFEEのホームページを開設しました。<br>
+        お店の情報やイベントなどをお知らせしていきます。
+      </p>
+
+    </article>
+
+
+    <article class="news-card">
+
+      <time datetime="2026-08-28">
+        2026年8月28日
+      </time>
+
+      <h3>
+        9月のイベントのお知らせ
+      </h3>
+
+      <p>
+        9月もコーヒー教室や小さな音楽会など、<br>
+        楽しいイベントを予定しています。
+      </p>
+
+    </article>
+
+
+    <article class="news-card">
+
+      <time datetime="2026-09-01">
+        2026年9月1日
+      </time>
+
+      <h3>
+        秋のおすすめメニュー
+      </h3>
+
+      <p>
+        秋にぴったりのコーヒーやスイーツを<br>
+        ご用意する予定です。
+      </p>
+
+    </article>
 
   </div>
 
@@ -393,18 +433,25 @@
      ACCESS
 ========================= -->
 
-<section id="access" class="section access">
+<section id="access"
+         class="section access">
 
   <h2>ACCESS</h2>
 
+
   <div class="access-photo">
-    <img src="image/kanban.jpg" alt="SUNABA COFFEE 看板">
+
+    <img src="image/kanban.jpg"
+         alt="SUNABA COFFEE 看板">
+
   </div>
 
 
   <div class="access-info">
 
-    <h3>SUNABA COFFEE</h3>
+    <h3>
+      SUNABA COFFEE
+    </h3>
 
     <p>
       〒794-0015<br>
@@ -416,9 +463,15 @@
       JR今治駅から徒歩約5分
     </p>
 
+
     <p class="phone">
-      TEL：0898-11-2222
+
+      <a href="tel:0898-11-2222">
+        TEL：0898-11-2222
+      </a>
+
     </p>
+
 
     <p class="parking">
       ※ 駐車場はありません
@@ -427,36 +480,25 @@
   </div>
 
 
-  <!-- PCのみ表示 -->
-
   <div class="map-pc">
 
     <iframe
       src="https://www.google.com/maps?q=愛媛県今治市常盤町4丁目8-18&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
+      loading="lazy">
     </iframe>
 
   </div>
 
 
-  <!-- スマホでは住所を押してGoogleマップへ -->
-
-  <a
-    class="map-link"
-    href="https://www.google.com/maps/search/?api=1&query=愛媛県今治市常盤町4丁目8-18"
-    target="_blank"
-    rel="noopener"
-  >
+  <a class="map-link"
+     href="https://www.google.com/maps/search/?api=1&query=愛媛県今治市常盤町4丁目8-18"
+     target="_blank"
+     rel="noopener">
     📍 Googleマップで見る
   </a>
 
 </section>
 
-
-<!-- =========================
-     HOURS
-========================= -->
 
 <section class="section hours">
 
@@ -479,10 +521,6 @@
 </main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer class="footer">
 
   <div class="footer-logo">
@@ -496,35 +534,21 @@
 
   <div class="sns">
 
-    <!-- X -->
-
-    <a
-      href="#"
-      aria-label="X"
-      class="sns-icon"
-    >
+    <a href="#"
+       aria-label="X"
+       class="sns-icon">
       𝕏
     </a>
 
-
-    <!-- Instagram -->
-
-    <a
-      href="#"
-      aria-label="Instagram"
-      class="sns-icon"
-    >
+    <a href="#"
+       aria-label="Instagram"
+       class="sns-icon">
       ◎
     </a>
 
-
-    <!-- Facebook -->
-
-    <a
-      href="#"
-      aria-label="Facebook"
-      class="sns-icon"
-    >
+    <a href="#"
+       aria-label="Facebook"
+       class="sns-icon">
       f
     </a>
 
