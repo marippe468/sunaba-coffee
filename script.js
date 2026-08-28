@@ -1,6 +1,6 @@
-/* ========================================
+/* =========================
    営業状況
-======================================== */
+========================= */
 
 function updateBusinessStatus() {
 
@@ -13,6 +13,8 @@ function updateBusinessStatus() {
   const now = new Date();
 
   const day = now.getDay();
+
+  const date = now.getDate();
 
   const hour = now.getHours();
 
@@ -35,7 +37,7 @@ function updateBusinessStatus() {
   if (day === 3) {
 
     status.innerHTML =
-      "本日は<br>定休日です";
+      "本日の営業は終了しました";
 
     return;
 
@@ -47,9 +49,6 @@ function updateBusinessStatus() {
 
   if (day === 1) {
 
-    const date =
-      now.getDate();
-
     const weekOfMonth =
       Math.ceil(date / 7);
 
@@ -60,7 +59,7 @@ function updateBusinessStatus() {
     ) {
 
       status.innerHTML =
-        "本日は<br>定休日です";
+        "本日の営業は終了しました";
 
       return;
 
@@ -73,12 +72,11 @@ function updateBusinessStatus() {
   /* 10時前 */
 
   if (
-    currentMinutes <
-    openingTime
+    currentMinutes < openingTime
   ) {
 
     status.innerHTML =
-      "10時から<br>営業します";
+      "10時から営業します";
 
     return;
 
@@ -86,7 +84,7 @@ function updateBusinessStatus() {
 
 
 
-  /* 16時～17時 */
+  /* 16時以降 */
 
   if (
     currentMinutes >= 16 * 60 &&
@@ -94,7 +92,7 @@ function updateBusinessStatus() {
   ) {
 
     status.innerHTML =
-      "まもなく<br>終了";
+      "まもなく終了";
 
     return;
 
@@ -105,12 +103,11 @@ function updateBusinessStatus() {
   /* 17時以降 */
 
   if (
-    currentMinutes >=
-    closingTime
+    currentMinutes >= closingTime
   ) {
 
     status.innerHTML =
-      "本日の営業は<br>終了しました";
+      "本日の営業は終了しました";
 
     return;
 
@@ -136,13 +133,13 @@ setInterval(
 
 
 
-/* ========================================
+/* =========================
    カレンダー
-======================================== */
+========================= */
 
 
 /*
-   8月を最初に表示
+   最初は2026年8月
 */
 
 let calendarDate =
@@ -150,11 +147,13 @@ let calendarDate =
 
 
 
-/* ========================================
+/* =========================
    イベント
-======================================== */
+========================= */
 
 const events = {
+
+  /* 8月 */
 
   "2026-08-08":
     "コーヒー教室",
@@ -166,6 +165,8 @@ const events = {
     "夏の読書会",
 
 
+  /* 9月 */
+
   "2026-09-05":
     "コーヒー教室",
 
@@ -176,6 +177,8 @@ const events = {
     "秋の読書会",
 
 
+  /* 10月 */
+
   "2026-10-10":
     "秋のコーヒー会",
 
@@ -185,6 +188,8 @@ const events = {
   "2026-10-31":
     "ハロウィンイベント",
 
+
+  /* 11月 */
 
   "2026-11-07":
     "コーヒー教室",
@@ -199,9 +204,9 @@ const events = {
 
 
 
-/* ========================================
+/* =========================
    日付キー
-======================================== */
+========================= */
 
 function formatDate(
   year,
@@ -223,9 +228,9 @@ function formatDate(
 
 
 
-/* ========================================
+/* =========================
    カレンダー表示
-======================================== */
+========================= */
 
 function renderCalendar() {
 
@@ -369,10 +374,11 @@ function renderCalendar() {
 
 
 
-    /* 定休日 */
+    /* =====================
+       定休日
+    ===================== */
 
     let holiday = false;
-
 
 
     /* 水曜日 */
@@ -384,7 +390,6 @@ function renderCalendar() {
       holiday = true;
 
     }
-
 
 
     /* 第1・第3月曜日 */
@@ -440,7 +445,9 @@ function renderCalendar() {
 
 
 
-    /* イベント */
+    /* =====================
+       イベント
+    ===================== */
 
     const dateKey =
       formatDate(
@@ -485,9 +492,9 @@ function renderCalendar() {
 
 
 
-/* ========================================
-   前月
-======================================== */
+/* =========================
+   前月ボタン
+========================= */
 
 const prevButton =
   document.getElementById(
@@ -514,9 +521,9 @@ if (prevButton) {
 
 
 
-/* ========================================
-   次月
-======================================== */
+/* =========================
+   次月ボタン
+========================= */
 
 const nextButton =
   document.getElementById(
@@ -543,9 +550,9 @@ if (nextButton) {
 
 
 
-/* ========================================
-   スマホ横スワイプ
-======================================== */
+/* =========================
+   スマホ横スライド
+========================= */
 
 const calendarArea =
   document.querySelector(
@@ -591,7 +598,7 @@ if (calendarArea) {
 
 
 
-      /* 左へスワイプ */
+      /* 左スワイプ → 翌月 */
 
       if (
         difference > 50
@@ -607,7 +614,7 @@ if (calendarArea) {
 
 
 
-      /* 右へスワイプ */
+      /* 右スワイプ → 前月 */
 
       if (
         difference < -50
@@ -631,8 +638,8 @@ if (calendarArea) {
 
 
 
-/* ========================================
+/* =========================
    初期表示
-======================================== */
+========================= */
 
 renderCalendar();
