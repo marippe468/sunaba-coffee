@@ -1,6 +1,6 @@
-/* ==================================================
+/* ========================================
    営業状況
-================================================== */
+======================================== */
 
 function updateBusinessStatus() {
 
@@ -30,9 +30,7 @@ function updateBusinessStatus() {
 
 
 
-  /* =========================
-     水曜日
-  ========================= */
+  /* 水曜日 */
 
   if (day === 3) {
 
@@ -45,9 +43,7 @@ function updateBusinessStatus() {
 
 
 
-  /* =========================
-     第1・第3月曜日
-  ========================= */
+  /* 第1・第3月曜日 */
 
   if (day === 1) {
 
@@ -74,9 +70,7 @@ function updateBusinessStatus() {
 
 
 
-  /* =========================
-     10時前
-  ========================= */
+  /* 10時前 */
 
   if (
     currentMinutes <
@@ -92,9 +86,7 @@ function updateBusinessStatus() {
 
 
 
-  /* =========================
-     16時～17時
-  ========================= */
+  /* 16時～17時 */
 
   if (
     currentMinutes >= 16 * 60 &&
@@ -110,9 +102,7 @@ function updateBusinessStatus() {
 
 
 
-  /* =========================
-     17時以降
-  ========================= */
+  /* 17時以降 */
 
   if (
     currentMinutes >=
@@ -128,9 +118,7 @@ function updateBusinessStatus() {
 
 
 
-  /* =========================
-     営業中
-  ========================= */
+  /* 営業中 */
 
   status.innerHTML =
     "営業中";
@@ -148,26 +136,25 @@ setInterval(
 
 
 
-/* ==================================================
-   営業カレンダー
-================================================== */
+/* ========================================
+   カレンダー
+======================================== */
 
 
-/* 8月を初期表示 */
+/*
+   8月を最初に表示
+*/
 
 let calendarDate =
   new Date(2026, 7, 1);
 
 
 
-/* =========================
-   イベントサンプル
-========================= */
+/* ========================================
+   イベント
+======================================== */
 
 const events = {
-
-
-  /* 8月 */
 
   "2026-08-08":
     "コーヒー教室",
@@ -179,9 +166,6 @@ const events = {
     "夏の読書会",
 
 
-
-  /* 9月 */
-
   "2026-09-05":
     "コーヒー教室",
 
@@ -192,9 +176,6 @@ const events = {
     "秋の読書会",
 
 
-
-  /* 10月 */
-
   "2026-10-10":
     "秋のコーヒー会",
 
@@ -204,9 +185,6 @@ const events = {
   "2026-10-31":
     "ハロウィンイベント",
 
-
-
-  /* 11月 */
 
   "2026-11-07":
     "コーヒー教室",
@@ -221,9 +199,9 @@ const events = {
 
 
 
-/* =========================
+/* ========================================
    日付キー
-========================= */
+======================================== */
 
 function formatDate(
   year,
@@ -234,16 +212,10 @@ function formatDate(
   return (
 
     year +
-
     "-" +
-
-    String(month + 1)
-      .padStart(2, "0") +
-
+    String(month + 1).padStart(2, "0") +
     "-" +
-
-    String(day)
-      .padStart(2, "0")
+    String(day).padStart(2, "0")
 
   );
 
@@ -251,30 +223,25 @@ function formatDate(
 
 
 
-/* =========================
+/* ========================================
    カレンダー表示
-========================= */
+======================================== */
 
 function renderCalendar() {
 
 
   const calendar =
-    document.getElementById(
-      "calendar"
-    );
+    document.getElementById("calendar");
 
 
   const title =
-    document.getElementById(
-      "calendarTitle"
-    );
+    document.getElementById("calendarTitle");
 
 
   if (
     !calendar ||
     !title
   ) return;
-
 
 
   const year =
@@ -285,18 +252,12 @@ function renderCalendar() {
     calendarDate.getMonth();
 
 
-
-  /* 月タイトル */
-
   title.textContent =
     `${year}年${month + 1}月`;
 
 
   calendar.innerHTML = "";
 
-
-
-  /* 月初の曜日 */
 
   const firstDay =
     new Date(
@@ -305,9 +266,6 @@ function renderCalendar() {
       1
     ).getDay();
 
-
-
-  /* 月末 */
 
   const lastDate =
     new Date(
@@ -318,9 +276,7 @@ function renderCalendar() {
 
 
 
-  /* =========================
-     月初の空白
-  ========================= */
+  /* 月初の空白 */
 
   for (
     let i = 0;
@@ -329,9 +285,7 @@ function renderCalendar() {
   ) {
 
     const empty =
-      document.createElement(
-        "div"
-      );
+      document.createElement("div");
 
     empty.className =
       "calendar-day empty";
@@ -342,9 +296,7 @@ function renderCalendar() {
 
 
 
-  /* =========================
-     日付
-  ========================= */
+  /* 日付 */
 
   for (
     let day = 1;
@@ -354,14 +306,11 @@ function renderCalendar() {
 
 
     const cell =
-      document.createElement(
-        "div"
-      );
+      document.createElement("div");
 
 
     cell.className =
       "calendar-day";
-
 
 
     const date =
@@ -377,7 +326,7 @@ function renderCalendar() {
 
 
 
-    /* 日曜 */
+    /* 曜日 */
 
     if (
       weekDay === 0
@@ -389,9 +338,6 @@ function renderCalendar() {
 
     }
 
-
-
-    /* 土曜 */
 
     if (
       weekDay === 6
@@ -405,14 +351,10 @@ function renderCalendar() {
 
 
 
-    /* =========================
-       1行目：日付
-    ========================= */
+    /* 1行目：日付 */
 
     const number =
-      document.createElement(
-        "div"
-      );
+      document.createElement("div");
 
 
     number.className =
@@ -423,15 +365,11 @@ function renderCalendar() {
       day;
 
 
-    cell.appendChild(
-      number
-    );
+    cell.appendChild(number);
 
 
 
-    /* =========================
-       定休日
-    ========================= */
+    /* 定休日 */
 
     let holiday = false;
 
@@ -456,9 +394,7 @@ function renderCalendar() {
     ) {
 
       const week =
-        Math.ceil(
-          day / 7
-        );
+        Math.ceil(day / 7);
 
 
       if (
@@ -474,8 +410,6 @@ function renderCalendar() {
 
 
 
-    /* 定休日表示 */
-
     if (holiday) {
 
 
@@ -484,31 +418,29 @@ function renderCalendar() {
       );
 
 
-      const label =
+      const holidayLabel =
         document.createElement(
           "div"
         );
 
 
-      label.className =
+      holidayLabel.className =
         "holiday-label";
 
 
-      label.textContent =
+      holidayLabel.textContent =
         "定休日";
 
 
       cell.appendChild(
-        label
+        holidayLabel
       );
 
     }
 
 
 
-    /* =========================
-       イベント
-    ========================= */
+    /* イベント */
 
     const dateKey =
       formatDate(
@@ -523,31 +455,29 @@ function renderCalendar() {
     ) {
 
 
-      const event =
+      const eventLabel =
         document.createElement(
           "div"
         );
 
 
-      event.className =
+      eventLabel.className =
         "event-label";
 
 
-      event.textContent =
+      eventLabel.textContent =
         events[dateKey];
 
 
       cell.appendChild(
-        event
+        eventLabel
       );
 
     }
 
 
 
-    calendar.appendChild(
-      cell
-    );
+    calendar.appendChild(cell);
 
   }
 
@@ -555,15 +485,19 @@ function renderCalendar() {
 
 
 
-/* =========================
+/* ========================================
    前月
-========================= */
+======================================== */
 
-document
-  .getElementById(
+const prevButton =
+  document.getElementById(
     "prevMonth"
-  )
-  ?.addEventListener(
+  );
+
+
+if (prevButton) {
+
+  prevButton.addEventListener(
     "click",
     function () {
 
@@ -576,17 +510,23 @@ document
     }
   );
 
+}
 
 
-/* =========================
+
+/* ========================================
    次月
-========================= */
+======================================== */
 
-document
-  .getElementById(
+const nextButton =
+  document.getElementById(
     "nextMonth"
-  )
-  ?.addEventListener(
+  );
+
+
+if (nextButton) {
+
+  nextButton.addEventListener(
     "click",
     function () {
 
@@ -599,11 +539,13 @@ document
     }
   );
 
+}
 
 
-/* ==================================================
+
+/* ========================================
    スマホ横スワイプ
-================================================== */
+======================================== */
 
 const calendarArea =
   document.querySelector(
@@ -649,7 +591,7 @@ if (calendarArea) {
 
 
 
-      /* 左スワイプ → 次月 */
+      /* 左へスワイプ */
 
       if (
         difference > 50
@@ -665,7 +607,7 @@ if (calendarArea) {
 
 
 
-      /* 右スワイプ → 前月 */
+      /* 右へスワイプ */
 
       if (
         difference < -50
@@ -689,8 +631,8 @@ if (calendarArea) {
 
 
 
-/* =========================
+/* ========================================
    初期表示
-========================= */
+======================================== */
 
 renderCalendar();
