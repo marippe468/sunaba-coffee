@@ -1,9 +1,3 @@
-/* ==================================================
-   SUNABA COFFEE
-   FINAL STYLE
-================================================== */
-
-
 /* =========================
    基本設定
 ========================= */
@@ -20,24 +14,34 @@ body {
   margin: 0;
 
   font-family:
-    "Noto Sans JP",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
     "Yu Gothic",
     "Meiryo",
     sans-serif;
 
-  color: #4a4038;
+  color: #3f3a35;
 
-  background: #f8f5ef;
+  background:
+    #f3f0ea;
 
-  line-height: 1.8;
+  line-height: 1.65;
 
-  font-size: 16px;
+  letter-spacing: 0.04em;
 }
 
+
+/* =========================
+   共通
+========================= */
+
 img {
-  width: 100%;
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 a {
@@ -45,34 +49,68 @@ a {
   text-decoration: none;
 }
 
+.section {
+  width: min(100% - 40px, 1000px);
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-title span {
+  display: block;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  color: #8a8177;
+
+  margin-bottom: 6px;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  font-size: clamp(24px, 4vw, 34px);
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
 
 /* =========================
-   固定ヘッダー
+   スマホ営業状況
+========================= */
+
+.mobile-status {
+  display: none;
+}
+
+
+/* =========================
+   HEADER
 ========================= */
 
 .header {
-  position: fixed;
+  background: #292724;
 
-  top: 0;
-  left: 0;
+  color: #f7f4ee;
 
-  width: 100%;
-
-  z-index: 1000;
-
-  background: rgba(248, 245, 239, 0.97);
-
-  border-bottom: 1px solid #e5ddd2;
-
-  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .header-inner {
-  max-width: 1150px;
+  max-width: 1100px;
 
   margin: auto;
 
-  padding: 10px 25px;
+  padding: 20px 30px;
 
   display: flex;
 
@@ -80,78 +118,71 @@ a {
 
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 30px;
 }
 
-
-/* =========================
-   白抜きロゴ
-========================= */
-
-.logo {
-  display: inline-flex;
-
-  align-items: center;
-
-  padding: 8px 18px;
-
-  background: #594b3e;
-
-  color: #ffffff;
+.logo-area h1 {
+  margin: 0;
 
   font-family:
-    "Noto Sans JP",
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    "Meiryo",
+    "Arial Rounded MT Bold",
+    "Trebuchet MS",
+    "Segoe UI",
     sans-serif;
 
-  font-size: 23px;
+  font-size: clamp(27px, 4vw, 43px);
 
-  font-weight: 700;
+  line-height: 1;
 
-  letter-spacing: 0.08em;
-
-  border-radius: 4px;
-
-  box-shadow:
-    0 3px 10px rgba(0, 0, 0, 0.14);
-
-  transition: 0.3s;
-}
-
-.logo:hover {
-  background: #40362f;
-}
-
-
-/* =========================
-   営業状況
-========================= */
-
-.header-status {
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  font-size: 13px;
-
-  font-weight: 600;
+  letter-spacing: 0.025em;
 
   white-space: nowrap;
+
+  text-shadow:
+    2px 2px 0 rgba(255,255,255,0.85),
+    -1px -1px 0 rgba(255,255,255,0.35);
+
+  color: #292724;
 }
 
-.status-dot {
-  width: 10px;
-  height: 10px;
+.subtitle {
+  margin: 9px 0 0;
 
-  border-radius: 50%;
+  font-size: 14px;
 
-  background: #999;
+  color: #e4dfd6;
 
-  flex-shrink: 0;
+  letter-spacing: 0.16em;
+}
+
+.tagline {
+  margin: 2px 0 0;
+
+  font-size: 11px;
+
+  color: #c8c0b5;
+
+  letter-spacing: 0.08em;
+}
+
+.nav {
+  display: flex;
+
+  gap: 24px;
+
+  font-size: 12px;
+
+  letter-spacing: 0.12em;
+}
+
+.nav a {
+  opacity: 0.8;
+
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  opacity: 1;
 }
 
 
@@ -160,1047 +191,827 @@ a {
 ========================= */
 
 .hero {
-  max-width: 1200px;
+  position: relative;
 
-  min-height: 720px;
+  height: 520px;
 
-  margin: auto;
-
-  padding-top: 78px;
-
-  display: flex;
-
-  align-items: center;
-}
-
-.hero-image {
-  width: 55%;
-
-  padding: 35px;
-}
-
-.hero-image img {
-  height: 550px;
-
-  object-fit: cover;
-
-  border-radius: 4px;
-}
-
-.hero-text {
-  width: 45%;
-
-  padding: 45px;
-}
-
-.hero-text h1 {
-  margin: 0 0 18px;
-
-  font-family:
-    "Noto Sans JP",
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    "Meiryo",
-    sans-serif;
-
-  font-size: clamp(38px, 5vw, 62px);
-
-  font-weight: 700;
-
-  letter-spacing: 0.08em;
-
-  color: #493d34;
-}
-
-.catch-copy {
-  margin: 0;
-
-  font-size: 25px;
-
-  font-weight: 700;
-}
-
-.location {
-  margin: 5px 0 0;
-
-  font-size: 17px;
-}
-
-.hero-concept {
-  margin-top: 55px;
-
-  padding-left: 25px;
-
-  border-left: 3px solid #a68a6c;
-}
-
-.hero-concept h2 {
-  margin: 0;
-
-  font-size: 36px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.08em;
-}
-
-.hero-concept p {
-  margin: 8px 0;
-}
-
-.small-copy {
-  margin-top: 20px !important;
-
-  font-size: 16px;
-}
-
-
-/* =========================
-   共通セクション
-========================= */
-
-.section {
-  max-width: 1050px;
-
-  margin: auto;
-
-  padding: 100px 25px;
-}
-
-.section-title {
-  margin-bottom: 45px;
-
-  text-align: center;
-}
-
-.section-title span,
-.section-label {
-  display: block;
-
-  font-size: 13px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.2em;
-
-  color: #9a8064;
-}
-
-.section-title h2 {
-  margin: 7px 0 0;
-
-  font-size: 31px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.08em;
-}
-
-
-/* =========================
-   お知らせ
-========================= */
-
-.notice-section {
-  background: #fbf9f5;
-}
-
-.notice-card {
-  max-width: 800px;
-
-  margin: auto;
-
-  padding: 25px 30px;
-
-  display: flex;
-
-  gap: 30px;
-
-  background: #ffffff;
-
-  border: 1px solid #e6ded3;
-
-  border-radius: 4px;
-}
-
-.notice-date {
-  color: #91765a;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  white-space: nowrap;
-}
-
-.notice-content strong {
-  font-size: 17px;
-}
-
-.notice-content p {
-  margin: 5px 0 0;
-
-  font-size: 14px;
-}
-
-
-/* =========================
-   Instagram
-========================= */
-
-.instagram-section {
-  background: #eee8df;
-}
-
-.instagram-inner {
-  max-width: 950px;
-
-  margin: auto;
-
-  padding: 65px 25px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 30px;
-}
-
-.instagram-inner h2 {
-  margin: 5px 0 10px;
-
-  font-size: 28px;
-
-  font-weight: 600;
-}
-
-.instagram-inner p {
-  margin: 0;
-
-  font-size: 14px;
-}
-
-.instagram-button {
-  display: inline-block;
-
-  padding: 14px 28px;
-
-  background: #594b3e;
-
-  color: #ffffff;
-
-  border-radius: 30px;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  white-space: nowrap;
-
-  transition: 0.3s;
-}
-
-.instagram-button:hover {
-  background: #40362f;
-}
-
-
-/* =========================
-   カレンダー
-========================= */
-
-.calendar-section {
   overflow: hidden;
 }
 
-.calendar-guide {
-  margin-top: -20px;
+.hero-image {
+  width: 100%;
+  height: 100%;
 
-  margin-bottom: 35px;
+  object-fit: cover;
+
+  filter:
+    brightness(0.68)
+    saturate(0.75);
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(30,28,25,0.25),
+      rgba(30,28,25,0.55)
+    );
+}
+
+.hero-overlay {
+  position: absolute;
+
+  z-index: 2;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
 
   text-align: center;
+
+  color: white;
+}
+
+.hero-logo {
+  margin-bottom: 12px;
+}
+
+.hero-logo span {
+  display: block;
+
+  font-family:
+    "Arial Rounded MT Bold",
+    "Trebuchet MS",
+    "Segoe UI",
+    sans-serif;
+
+  font-size: clamp(34px, 7vw, 72px);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.025em;
+
+  white-space: nowrap;
+
+  color: #3a3632;
+
+  text-shadow:
+    3px 3px 0 white,
+    -1px -1px 0 white,
+    0 0 10px rgba(255,255,255,0.45);
+}
+
+.hero-overlay > p {
+  margin: 0 0 20px;
+
+  font-size: 14px;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================
+   営業状況
+========================= */
+
+.business-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 7px 18px;
+
+  background: rgba(255,255,255,0.9);
+
+  color: #38332f;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background: #777;
+}
+
+.business-status.open .status-dot {
+  background: #477a4d;
+}
+
+.business-status.soon .status-dot {
+  background: #a97932;
+}
+
+.business-status.closed .status-dot {
+  background: #9a5149;
+}
+
+
+/* =========================
+   CONCEPT
+========================= */
+
+.concept {
+  text-align: center;
+}
+
+.concept-text {
+  margin: 0 auto 20px;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.concept-text:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   NEWS
+========================= */
+
+.news {
+  border-top: 1px solid #ddd7ce;
+}
+
+.news-list {
+  max-width: 720px;
+
+  margin: auto;
+}
+
+.news-item {
+  display: flex;
+
+  gap: 22px;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #ddd7ce;
+}
+
+.news-item time {
+  color: #8a8177;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+.news-item p {
+  margin: 0;
 
   font-size: 14px;
 }
 
-.calendar-slider {
-  display: flex;
-
-  gap: 30px;
-
-  overflow-x: auto;
-
-  padding-bottom: 15px;
-
-  scroll-snap-type: x mandatory;
-
-  scrollbar-width: thin;
-
-  -webkit-overflow-scrolling: touch;
-}
-
-.calendar-month {
-  flex: 0 0 min(100%, 470px);
-
-  padding: 25px;
-
-  background: #ffffff;
-
-  border: 1px solid #e5ddd2;
-
-  border-radius: 5px;
-
-  scroll-snap-align: start;
-}
-
-.calendar-month h3 {
-  margin: 0 0 20px;
-
-  text-align: center;
-
-  font-size: 21px;
-
-  font-weight: 600;
-}
-
-.weekdays,
-.days {
-  display: grid;
-
-  grid-template-columns: repeat(7, 1fr);
-
-  text-align: center;
-}
-
-.weekdays {
-  margin-bottom: 10px;
-
-  font-size: 13px;
-
-  color: #8a7a6a;
-}
-
-.days span {
-  min-height: 48px;
-
-  padding-top: 10px;
-
-  font-size: 15px;
-}
-
-/* 定休日だけ赤 */
-.days .closed {
-  color: #c45c5c;
-
-  font-weight: 700;
-}
-
-.calendar-note {
-  margin-top: 18px;
-
-  text-align: center;
-
-  font-size: 12px;
-
-  color: #8a7a6a;
-}
-
 
 /* =========================
-   お店について
-========================= */
-
-.about-grid {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 60px;
-
-  align-items: center;
-}
-
-.about-image img {
-  height: 420px;
-
-  object-fit: cover;
-
-  border-radius: 3px;
-}
-
-.about-text h3 {
-  margin-top: 0;
-
-  font-size: 26px;
-
-  font-weight: 600;
-}
-
-.about-text p {
-  margin-bottom: 22px;
-
-  font-size: 15px;
-}
-
-
-/* =========================
-   メニュー
+   MENU
 ========================= */
 
 .menu-section {
-  max-width: 1100px;
+  border-top: 1px solid #ddd7ce;
+}
+
+.menu-photo {
+  width: min(100%, 600px);
+
+  margin: 0 auto 38px;
+
+  border-radius: 3px;
+
+  overflow: hidden;
 }
 
 .menu-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns:
+    repeat(2, 1fr);
 
-  gap: 35px;
+  gap: 20px;
 }
 
 .menu-card {
-  overflow: hidden;
+  padding: 24px;
 
-  background: #ffffff;
+  background: #faf8f3;
 
-  border: 1px solid #e5ddd2;
-
-  border-radius: 4px;
-}
-
-.menu-card > img {
-  height: 250px;
-
-  object-fit: cover;
-}
-
-.menu-card-text {
-  padding: 25px 30px 30px;
+  border: 1px solid #ded8cf;
 }
 
 .menu-card h3 {
-  margin: 0 0 20px;
+  margin: 0 0 14px;
 
-  font-size: 23px;
+  font-size: 13px;
 
-  font-weight: 600;
+  letter-spacing: 0.18em;
+
+  color: #756b61;
 }
 
-.menu-item {
+.menu-row {
   display: flex;
 
   justify-content: space-between;
 
-  align-items: flex-start;
+  align-items: center;
 
   gap: 20px;
 
-  padding: 13px 0;
+  padding: 8px 0;
 
-  border-bottom: 1px solid #eee8df;
+  border-bottom: 1px dotted #d4cec5;
 
-  font-size: 15px;
+  font-size: 14px;
 }
 
-.menu-item strong {
+.menu-row:last-child {
+  border-bottom: none;
+}
+
+.menu-row strong {
   white-space: nowrap;
-}
-
-.menu-item small {
-  display: block;
-
-  margin-top: 2px;
-
-  color: #8a7a6a;
-
-  font-size: 12px;
-}
-
-.recommended {
-  display: inline-block;
-
-  margin-bottom: 5px;
-
-  padding: 4px 9px;
-
-  border: 1px solid #b99b7a;
-
-  color: #8c6e4d;
-
-  font-size: 12px;
 
   font-weight: 600;
 }
 
-.sandwich {
-  padding-top: 8px;
+.menu-row small {
+  color: #81786e;
+
+  font-size: 11px;
 }
 
-.menu-note {
-  margin-top: 25px;
+
+/* =========================
+   SHOP
+========================= */
+
+.shop {
+  border-top: 1px solid #ddd7ce;
 
   text-align: center;
-
-  font-size: 12px;
-
-  color: #8a7a6a;
 }
 
+.shop-photo {
+  width: min(100%, 720px);
 
-/* =========================
-   店主の想い
-========================= */
-
-.owner-section {
-  background: #eee8df;
+  margin: 0 auto 32px;
 }
 
-.owner-inner {
-  max-width: 1050px;
-}
-
-.owner-grid {
-  display: grid;
-
-  grid-template-columns: 380px 1fr;
-
-  gap: 65px;
-
-  align-items: center;
-}
-
-.owner-image img {
-  height: 450px;
+.shop-photo img {
+  max-height: 420px;
 
   object-fit: cover;
-
-  border-radius: 3px;
 }
 
-.owner-text h3 {
-  margin-top: 0;
-
-  font-size: 27px;
-
-  font-weight: 600;
-}
-
-.owner-text p {
-  margin-bottom: 22px;
-
-  font-size: 15px;
-}
-
-
-/* =========================
-   店内・お席
-========================= */
-
-.seat-grid {
+.seats {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  gap: 55px;
+  border-top: 1px solid #d8d1c8;
 
-  align-items: center;
-}
+  border-bottom: 1px solid #d8d1c8;
 
-.seat-image img {
-  height: 420px;
-
-  object-fit: cover;
-
-  border-radius: 3px;
-}
-
-.seat-info {
-  padding: 10px;
+  margin-bottom: 28px;
 }
 
 .seat-item {
-  padding: 20px 0;
+  padding: 22px 12px;
 
-  border-bottom: 1px solid #ded5ca;
+  border-right: 1px solid #d8d1c8;
+}
+
+.seat-item:last-child {
+  border-right: none;
 }
 
 .seat-item h3 {
-  margin: 0;
+  margin: 0 0 5px;
 
-  font-size: 20px;
-
-  font-weight: 600;
+  font-size: 15px;
 }
 
 .seat-item p {
-  margin: 5px 0 0;
+  margin: 0;
 
-  font-size: 18px;
+  font-size: 14px;
 }
 
-.seat-note {
-  margin-top: 30px;
+.pet-ok {
+  display: inline-block;
+
+  margin-top: 6px;
+
+  padding: 2px 9px;
+
+  border: 1px solid #aaa095;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+}
+
+.shop-info {
+  display: flex;
+
+  justify-content: center;
+}
+
+.shop-info dl {
+  margin: 0;
+
+  width: min(100%, 600px);
+}
+
+.shop-info dl > div {
+  display: grid;
+
+  grid-template-columns: 110px 1fr;
+
+  padding: 9px 0;
+
+  border-bottom: 1px dotted #cfc8bf;
+}
+
+.shop-info dt {
+  font-weight: 700;
+
+  font-size: 13px;
+}
+
+.shop-info dd {
+  margin: 0;
 
   font-size: 14px;
 }
 
 
 /* =========================
-   アクセス
+   ACCESS
 ========================= */
 
-.access-section {
-  max-width: 1100px;
+.access {
+  border-top: 1px solid #ddd7ce;
+
+  text-align: center;
 }
 
-.access-box {
-  display: grid;
+.access-content h3 {
+  margin: 0 0 12px;
 
-  grid-template-columns: 0.9fr 1.1fr;
+  font-size: 21px;
 
-  gap: 35px;
+  letter-spacing: 0.08em;
 }
 
-.access-info {
-  padding: 35px;
+.address {
+  margin: 0;
 
-  background: #ffffff;
-
-  border: 1px solid #e5ddd2;
-
-  border-radius: 4px;
-}
-
-.access-info h3 {
-  margin-top: 0;
-
-  font-size: 24px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.05em;
-}
-
-.access-info p {
   font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.access-note {
+  margin: 16px 0 0;
+
+  font-size: 13px;
 }
 
 .parking {
-  margin-top: 30px;
+  margin: 6px 0 26px;
+
+  font-size: 11px;
+
+  color: #81786e;
 }
 
-.phone-button {
-  display: block;
-
-  margin-top: 30px;
-
-  padding: 14px;
-
-  text-align: center;
-
-  background: #594b3e;
-
-  color: #ffffff;
-
-  border-radius: 4px;
-
-  font-size: 17px;
-
-  font-weight: 600;
-
-  transition: 0.3s;
-}
-
-.phone-button:hover {
-  background: #40362f;
-}
-
-.map-area {
-  position: relative;
-}
-
-.map-area iframe {
+.map {
   width: 100%;
 
-  height: 420px;
+  height: 360px;
 
-  border: 0;
+  overflow: hidden;
 
-  border-radius: 4px;
+  border: 1px solid #d7d0c7;
 }
 
-.map-link {
-  position: absolute;
+.map iframe {
+  width: 100%;
+  height: 100%;
 
-  top: 12px;
-  right: 12px;
-
-  z-index: 2;
-
-  padding: 8px 13px;
-
-  background: #ffffff;
-
-  box-shadow:
-    0 2px 8px rgba(0,0,0,0.15);
-
-  font-size: 12px;
-
-  font-weight: 600;
+  border: 0;
 }
 
 
 /* =========================
-   フッター
+   SNS
+========================= */
+
+.sns {
+  text-align: center;
+
+  border-top: 1px solid #ddd7ce;
+}
+
+.sns-links {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.sns-button {
+  min-width: 125px;
+
+  padding: 10px 18px;
+
+  border: 1px solid #bbb3a9;
+
+  background: #faf8f3;
+
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+.sns-button:hover {
+  background: #e9e4dc;
+}
+
+
+/* =========================
+   FOOTER
 ========================= */
 
 .footer {
-  background: #4d433b;
-
-  color: #f8f5ef;
+  padding: 38px 20px 28px;
 
   text-align: center;
 
-  padding: 55px 20px 30px;
+  background: #292724;
+
+  color: #eee9e1;
 }
 
-.footer-logo h2 {
-  margin: 0;
+.footer-logo {
+  font-family:
+    "Arial Rounded MT Bold",
+    "Trebuchet MS",
+    "Segoe UI",
+    sans-serif;
 
-  font-size: 27px;
+  font-size: 24px;
 
-  font-weight: 700;
+  letter-spacing: 0.04em;
 
-  letter-spacing: 0.1em;
+  text-shadow:
+    1px 1px 0 white;
 }
 
-.footer-logo p {
-  margin: 5px 0 25px;
+.footer > p {
+  margin: 6px 0 0;
 
-  font-size: 11px;
+  font-size: 10px;
 
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
+
+  color: #bcb4a9;
+}
+
+.footer .copyright {
+  margin-top: 20px;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
 }
 
 
 /* =========================
-   SNSアイコン
+   TABLET
 ========================= */
 
-.footer-sns {
-  display: flex;
-
-  justify-content: center;
-
-  gap: 15px;
-
-  margin-bottom: 30px;
-}
-
-.footer-sns a {
-  width: 43px;
-  height: 43px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border: 1px solid rgba(255,255,255,0.7);
-
-  border-radius: 50%;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 19px;
-
-  font-weight: 700;
-
-  transition: 0.3s;
-}
-
-.footer-sns a:hover {
-  background: rgba(255,255,255,0.15);
-
-  transform: translateY(-2px);
-}
-
-.sns-instagram {
-  font-size: 22px !important;
-}
-
-.sns-facebook {
-  font-size: 21px !important;
-}
-
-.copyright {
-  margin: 0;
-
-  font-size: 11px;
-
-  opacity: 0.7;
-}
-
-
-/* ==================================================
-   スマートフォン
-================================================== */
-
-@media (max-width: 768px) {
-
-
-  /* =========================
-     ヘッダー
-  ========================== */
+@media (max-width: 800px) {
 
   .header-inner {
-    padding: 9px 12px;
-
-    gap: 10px;
-  }
-
-  .logo {
-    padding: 6px 12px;
-
-    font-size: 17px;
-
-    letter-spacing: 0.05em;
-
-    border-radius: 3px;
-  }
-
-  .header-status {
-    font-size: 10px;
-
-    gap: 5px;
-  }
-
-  .status-dot {
-    width: 8px;
-    height: 8px;
-  }
-
-
-  /* =========================
-     HERO
-  ========================== */
-
-  .hero {
-    display: block;
-
-    min-height: auto;
-
-    padding-top: 60px;
-  }
-
-  .hero-image {
-    width: 100%;
-
-    padding: 18px 15px 0;
-  }
-
-  .hero-image img {
-    height: 300px;
-  }
-
-  .hero-text {
-    width: 100%;
-
-    padding: 35px 20px 60px;
+    flex-direction: column;
 
     text-align: center;
+
+    gap: 16px;
   }
 
-  .hero-text h1 {
-    font-size: 36px;
-
-    letter-spacing: 0.05em;
+  .nav {
+    gap: 18px;
   }
 
-  .catch-copy {
-    font-size: 19px;
+  .menu-grid {
+    grid-template-columns: 1fr;
   }
 
-  .location {
-    font-size: 14px;
-  }
+}
 
-  .hero-concept {
-    margin-top: 35px;
 
-    padding-left: 0;
+/* =========================
+   SMARTPHONE
+========================= */
 
-    border-left: none;
-  }
+@media (max-width: 600px) {
 
-  .hero-concept h2 {
-    font-size: 29px;
-  }
+  body {
+    padding-top: 39px;
 
-  .small-copy {
     font-size: 14px;
   }
 
 
-  /* =========================
-     セクション
-  ========================== */
+  /* スマホ固定営業状況 */
+
+  .mobile-status {
+    position: fixed;
+
+    z-index: 9999;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 39px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    background: #292724;
+
+    color: #f4f0e8;
+
+    font-size: 12px;
+
+    letter-spacing: 0.08em;
+
+    box-shadow:
+      0 2px 8px rgba(0,0,0,0.18);
+  }
+
 
   .section {
-    padding: 70px 18px;
+    width: min(100% - 28px, 1000px);
+
+    padding: 48px 0;
   }
 
+
+  /* ヘッダー */
+
+  .header-inner {
+    padding: 17px 14px 15px;
+
+    gap: 11px;
+  }
+
+  .logo-area h1 {
+    font-size: 30px;
+
+    white-space: nowrap;
+  }
+
+  .subtitle {
+    font-size: 12px;
+
+    margin-top: 7px;
+  }
+
+  .tagline {
+    font-size: 9px;
+
+    letter-spacing: 0.04em;
+  }
+
+  .nav {
+    gap: 15px;
+
+    font-size: 10px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    height: 390px;
+  }
+
+  .hero-logo span {
+    font-size: 36px;
+
+    white-space: nowrap;
+  }
+
+  .hero-overlay > p {
+    font-size: 11px;
+
+    margin-bottom: 15px;
+  }
+
+  .business-status {
+    font-size: 11px;
+
+    padding: 6px 14px;
+  }
+
+
+  /* 見出し */
+
   .section-title {
-    margin-bottom: 35px;
+    margin-bottom: 24px;
+  }
+
+  .section-title span {
+    font-size: 10px;
+
+    margin-bottom: 3px;
   }
 
   .section-title h2 {
-    font-size: 25px;
-  }
-
-
-  /* =========================
-     お知らせ
-  ========================== */
-
-  .notice-card {
-    display: block;
-
-    padding: 22px;
-  }
-
-  .notice-date {
-    margin-bottom: 8px;
-  }
-
-
-  /* =========================
-     Instagram
-  ========================== */
-
-  .instagram-inner {
-    display: block;
-
-    padding: 50px 20px;
-
-    text-align: center;
-  }
-
-  .instagram-inner h2 {
-    font-size: 24px;
-  }
-
-  .instagram-inner p {
-    margin-bottom: 25px;
-  }
-
-
-  /* =========================
-     カレンダー
-  ========================== */
-
-  .calendar-month {
-    flex-basis: 90vw;
-
-    padding: 18px;
-  }
-
-  .calendar-month h3 {
-    font-size: 19px;
-  }
-
-  .days span {
-    min-height: 42px;
-
-    padding-top: 8px;
-  }
-
-
-  /* =========================
-     1カラム
-  ========================== */
-
-  .about-grid,
-  .menu-grid,
-  .owner-grid,
-  .seat-grid,
-  .access-box {
-    grid-template-columns: 1fr;
-
-    gap: 30px;
-  }
-
-
-  /* =========================
-     ABOUT
-  ========================== */
-
-  .about-image img,
-  .owner-image img,
-  .seat-image img {
-    height: 300px;
-  }
-
-  .about-text h3,
-  .owner-text h3 {
     font-size: 23px;
   }
 
 
-  /* =========================
-     MENU
-  ========================== */
+  /* コンセプト */
 
-  .menu-card > img {
-    height: 220px;
-  }
+  .concept-text {
+    font-size: 13px;
 
-  .menu-card-text {
-    padding: 22px;
-  }
+    line-height: 1.8;
 
-
-  /* =========================
-     OWNER
-  ========================== */
-
-  .owner-section {
-    padding-left: 0;
-    padding-right: 0;
+    margin-bottom: 15px;
   }
 
 
-  /* =========================
-     ACCESS
-  ========================== */
+  /* NEWS */
 
-  .access-info {
-    padding: 25px;
+  .news-item {
+    gap: 10px;
+
+    padding: 9px 0;
+
+    flex-direction: column;
   }
 
-  .map-area iframe {
-    height: 330px;
+  .news-item time {
+    font-size: 11px;
+  }
+
+  .news-item p {
+    font-size: 13px;
   }
 
 
-  /* =========================
-     FOOTER
-  ========================== */
+  /* MENU */
+
+  .menu-photo {
+    margin-bottom: 25px;
+  }
+
+  .menu-grid {
+    gap: 12px;
+  }
+
+  .menu-card {
+    padding: 18px;
+  }
+
+  .menu-row {
+    padding: 7px 0;
+
+    font-size: 13px;
+  }
+
+
+  /* SHOP */
+
+  .shop-photo {
+    margin-bottom: 24px;
+  }
+
+  .shop-photo img {
+    max-height: 300px;
+  }
+
+  .seats {
+    grid-template-columns: 1fr;
+
+    margin-bottom: 20px;
+  }
+
+  .seat-item {
+    padding: 15px 10px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #d8d1c8;
+  }
+
+  .seat-item:last-child {
+    border-bottom: none;
+  }
+
+  .seat-item h3 {
+    font-size: 14px;
+  }
+
+  .seat-item p {
+    font-size: 13px;
+  }
+
+  .shop-info dl > div {
+    grid-template-columns: 92px 1fr;
+
+    padding: 7px 0;
+  }
+
+  .shop-info dt,
+  .shop-info dd {
+    font-size: 12px;
+  }
+
+
+  /* ACCESS */
+
+  .access-content h3 {
+    font-size: 18px;
+  }
+
+  .address {
+    font-size: 13px;
+  }
+
+  .map {
+    height: 280px;
+  }
+
+
+  /* SNS */
+
+  .sns-links {
+    gap: 8px;
+  }
+
+  .sns-button {
+    min-width: 105px;
+
+    padding: 9px 12px;
+
+    font-size: 12px;
+  }
+
+
+  /* FOOTER */
 
   .footer {
-    padding: 45px 15px 25px;
+    padding: 30px 15px 23px;
   }
 
-  .footer-logo h2 {
-    font-size: 22px;
-  }
-
-  .footer-logo p {
-    font-size: 10px;
+  .footer-logo {
+    font-size: 21px;
   }
 
 }
