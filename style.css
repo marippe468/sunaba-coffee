@@ -1,4 +1,10 @@
 ```css
+/* =========================================
+   SUNABA COFFEE
+   style.css
+========================================= */
+
+
 * {
   box-sizing: border-box;
 }
@@ -10,6 +16,7 @@ html {
 
 
 body {
+
   margin: 0;
 
   color: #4a4038;
@@ -22,48 +29,59 @@ body {
     "Meiryo",
     sans-serif;
 
-  line-height: 1.45;
+  line-height: 1.4;
 
   text-align: center;
+
 }
 
 
 img {
+
   display: block;
 
   width: 100%;
 
   height: auto;
+
 }
 
 
 a {
+
   color: inherit;
 
   text-decoration: none;
+
 }
 
 
 
-/* =========================
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 .header {
-  padding: 30px 15px 20px;
+
+  padding:
+    28px 15px 20px;
+
 }
 
 
 .logo {
+
   display: inline-block;
 
-  padding: 6px 20px;
+  padding:
+    5px 18px;
 
-  color: white;
+  color: #fff;
 
   background: #765b48;
 
-  border: 3px solid #9a785e;
+  border:
+    3px solid #9a785e;
 
   border-radius: 24px;
 
@@ -73,46 +91,51 @@ a {
     "Yu Gothic",
     sans-serif;
 
-  font-size: clamp(27px, 5vw, 48px);
+  font-size:
+    clamp(26px, 4vw, 38px);
 
   font-weight: bold;
 
-  letter-spacing: .04em;
+  letter-spacing: .03em;
 
   box-shadow:
-    0 5px 10px rgba(60, 40, 25, .28);
+    0 5px 10px
+    rgba(60,40,25,.28);
+
 }
 
 
 .header-sub {
-  margin-top: 5px;
+
+  margin-top: 4px;
 
   color: #765b48;
 
-  font-size: 13px;
+  font-size: 11px;
 
   font-weight: bold;
 
-  letter-spacing: .08em;
 }
 
 
 .header-catch {
+
   margin-top: 5px;
 
   color: #5d493b;
 
-  font-size: clamp(18px, 3vw, 30px);
+  font-size:
+    clamp(18px, 3vw, 30px);
 
   font-weight: 500;
 
-  letter-spacing: .03em;
-
   white-space: nowrap;
+
 }
 
 
 .pet-catch {
+
   margin-top: 5px;
 
   color: #765b48;
@@ -120,43 +143,66 @@ a {
   font-size: 14px;
 
   font-weight: bold;
+
 }
 
 
+
+/* =========================================
+   営業状況
+========================================= */
+
 .business-status {
-  display: inline-flex;
+
+  display: flex;
 
   align-items: center;
 
   justify-content: center;
 
-  margin-top: 7px;
+  width: fit-content;
 
-  padding: 5px 17px;
+  min-width: 185px;
 
-  color: white;
+  margin:
+    9px auto 0;
 
-  background: #8c735f;
+  padding:
+    7px 20px;
 
-  border-radius: 20px;
+  color: #fff;
 
-  font-size: 13px;
+  background: #806854;
+
+  border-radius: 30px;
+
+  font-size: 14px;
 
   font-weight: bold;
 
   line-height: 1.3;
 
   box-shadow:
-    0 3px 8px rgba(60,40,20,.10);
+    0 4px 10px
+    rgba(60,40,20,.16);
+
+}
+
+
+.business-status.closed {
+
+  background: #806854;
+
 }
 
 
 
-/* =========================
+/* =========================================
    NAV
-========================= */
+========================================= */
 
 .nav {
+
   display: flex;
 
   justify-content: center;
@@ -165,117 +211,144 @@ a {
 
   gap: 20px;
 
-  margin-top: 18px;
+  margin-top: 17px;
+
 }
 
 
 .nav a {
+
   font-size: 13px;
 
   font-weight: bold;
+
 }
 
 
 
-/* =========================
+/* =========================================
    HERO
-========================= */
+========================================= */
 
 .hero {
-  width: min(1100px, 94%);
 
-  margin: 0 auto;
+  width:
+    min(1100px, 94%);
+
+  margin:
+    0 auto;
+
 }
 
 
 .hero-image {
+
   overflow: hidden;
 
   border-radius: 22px;
 
   box-shadow:
-    0 10px 28px rgba(60,40,20,.15);
+    0 10px 28px
+    rgba(60,40,20,.15);
+
 }
 
 
 .hero-image img {
+
   max-height: 580px;
 
   object-fit: cover;
+
 }
 
 
 
-/* =========================
+/* =========================================
    INTRO
-========================= */
+========================================= */
 
 .intro {
-  padding: 40px 15px 25px;
+
+  padding:
+    40px 15px 25px;
 
   text-align: center;
+
 }
 
 
 .intro h1 {
-  margin: 0 0 18px;
+
+  margin:
+    0 0 18px;
 
   color: #5d493b;
 
-  font-size: clamp(18px, 3vw, 40px);
+  font-size:
+    clamp(18px, 3vw, 40px);
 
   font-weight: 500;
 
-  line-height: 1.4;
+  line-height: 1.3;
 
   white-space: nowrap;
+
 }
 
 
 .intro p {
-  margin: 0 0 10px;
 
-  color: #4a4038;
+  margin:
+    0 0 8px;
 
-  font-size: clamp(14px, 2vw, 20px);
+  font-size:
+    clamp(14px, 2vw, 20px);
 
-  line-height: 1.5;
+  line-height: 1.4;
+
 }
 
 
-.intro p:last-child {
-  margin-bottom: 0;
-}
 
-
-
-/* =========================
+/* =========================================
    INSTAGRAM
-========================= */
+========================================= */
 
 .instagram-section {
-  padding: 38px 20px;
+
+  padding:
+    35px 20px;
 
   background: #eee6dc;
+
 }
 
 
 .instagram-section h2 {
-  margin: 0 0 10px;
+
+  margin:
+    0 0 8px;
 
   font-size: 27px;
+
 }
 
 
 .instagram-section p {
-  margin: 0 0 18px;
+
+  margin:
+    0 0 17px;
+
 }
 
 
 .instagram-button {
+
   display: inline-block;
 
-  padding: 11px 25px;
+  padding:
+    10px 24px;
 
   color: white;
 
@@ -284,111 +357,146 @@ a {
   border-radius: 30px;
 
   font-weight: bold;
+
 }
 
 
 
-/* =========================
+/* =========================================
    COMMON SECTION
-========================= */
+========================================= */
 
 .section {
-  width: min(900px, 92%);
 
-  margin: 0 auto;
+  width:
+    min(900px, 92%);
 
-  padding: 55px 0;
+  margin:
+    0 auto;
+
+  padding:
+    55px 0;
+
 }
 
 
 .section h2 {
-  margin: 0 0 27px;
+
+  margin:
+    0 0 27px;
 
   color: #5a4638;
 
-  font-size: clamp(27px, 4vw, 40px);
+  font-size:
+    clamp(27px, 4vw, 40px);
 
-  letter-spacing: .08em;
+  letter-spacing: .06em;
+
 }
 
 
 
-/* =========================
+/* =========================================
    NEWS
-========================= */
+========================================= */
 
 .news-list {
-  width: min(700px, 100%);
 
-  margin: auto;
+  width:
+    min(700px, 100%);
+
+  margin:
+    auto;
+
 }
 
 
 .news-card {
+
   margin-bottom: 12px;
 
-  padding: 15px 18px;
+  padding:
+    15px 18px;
 
   text-align: left;
 
-  background: white;
+  background: #fff;
 
-  border-left: 4px solid #765b48;
+  border-left:
+    4px solid #765b48;
 
   border-radius: 12px;
+
 }
 
 
 .news-card time {
+
   color: #806f61;
 
   font-size: 12px;
+
 }
 
 
 .news-card h3 {
-  margin: 3px 0 6px;
+
+  margin:
+    3px 0 6px;
 
   font-size: 17px;
+
 }
 
 
 .news-card p {
+
   margin: 0;
 
   font-size: 13px;
+
 }
 
 
 
-/* =========================
+/* =========================================
    CALENDAR
-========================= */
+========================================= */
 
 .calendar-section {
-  width: min(900px, 96%);
+
+  width:
+    min(900px, 96%);
+
 }
 
 
 .calendar-slider {
+
   display: flex;
 
   align-items: center;
 
   justify-content: center;
 
-  gap: 15px;
+  gap: 12px;
+
+  touch-action: pan-y;
+
 }
 
 
 .calendar-content {
+
   width: 100%;
 
   max-width: 780px;
+
 }
 
 
 .calendar-title {
+
   margin-bottom: 13px;
 
   color: #5d493b;
@@ -396,17 +504,17 @@ a {
   font-size: 25px;
 
   font-weight: bold;
+
 }
 
 
 .calendar-arrow {
+
   flex: 0 0 auto;
 
-  width: 43px;
+  width: 42px;
 
-  height: 43px;
-
-  padding: 0;
+  height: 42px;
 
   border: none;
 
@@ -419,10 +527,12 @@ a {
   font-size: 28px;
 
   cursor: pointer;
+
 }
 
 
 .calendar-wrap {
+
   overflow: hidden;
 
   background: white;
@@ -430,20 +540,25 @@ a {
   border-radius: 18px;
 
   box-shadow:
-    0 7px 20px rgba(60,40,20,.08);
+    0 7px 20px
+    rgba(60,40,20,.08);
+
 }
 
 
 .week-header,
 .calendar {
+
   display: grid;
 
   grid-template-columns:
     repeat(7, 1fr);
+
 }
 
 
 .week-header > div {
+
   padding: 8px 0;
 
   background: #eadfd2;
@@ -451,85 +566,103 @@ a {
   font-size: 14px;
 
   font-weight: bold;
+
 }
 
 
 .week-header .sun {
+
   color: #c33;
+
 }
 
 
 .week-header .sat {
+
   color: #426b91;
+
 }
 
 
 .calendar-day {
+
   min-height: 88px;
 
   padding: 6px 3px;
 
-  border-top: 1px solid #eee;
+  border-top:
+    1px solid #eee;
 
-  border-right: 1px solid #eee;
+  border-right:
+    1px solid #eee;
+
 }
 
 
 .calendar-day.empty {
+
   background: #fafafa;
+
 }
 
 
 .day-number {
+
   font-size: 15px;
 
   font-weight: bold;
+
 }
 
 
 .sunday .day-number {
+
   color: #c33;
+
 }
 
 
 .saturday .day-number {
+
   color: #426b91;
+
 }
 
 
 .holiday {
+
   background: #fff1f1;
+
 }
 
 
 .holiday .day-number {
+
   color: #c33;
+
 }
 
 
-
-/* 2行目：定休日 */
+/* 定休日：2行目 */
 
 .holiday-label {
-  display: block;
 
   margin-top: 4px;
 
-  color: #c33;
+  color: #d33;
 
-  font-size: 11px;
+  font-size: 10px;
 
   font-weight: bold;
 
   line-height: 1.1;
+
 }
 
 
-
-/* 2行目：イベント */
+/* イベント：2行目 */
 
 .event-label {
-  display: block;
 
   margin-top: 4px;
 
@@ -540,10 +673,12 @@ a {
   font-weight: bold;
 
   line-height: 1.1;
+
 }
 
 
 .calendar-note {
+
   display: flex;
 
   justify-content: center;
@@ -553,101 +688,127 @@ a {
   margin-top: 13px;
 
   font-size: 13px;
+
 }
 
 
 .holiday-note {
+
   color: #c33;
+
 }
 
 
 .event-note {
+
   color: #8a5a31;
+
 }
 
 
 
-/* =========================
+/* =========================================
    ABOUT
-========================= */
+========================================= */
 
 .about-photo {
-  width: min(500px, 100%);
 
-  margin: 0 auto 27px;
+  width:
+    min(500px, 100%);
+
+  margin:
+    0 auto 27px;
 
   overflow: hidden;
 
   border-radius: 20px;
+
 }
 
 
 .about-text p {
-  margin: 0 0 12px;
+
+  margin:
+    0 0 9px;
 
   font-size: 15px;
+
 }
 
 
 
-/* =========================
+/* =========================================
    DOG
-========================= */
+========================================= */
 
 .dog-section {
+
   margin-top: 35px;
+
 }
 
 
 .dog-photo {
-  width: min(430px, 90%);
 
-  margin: 0 auto;
+  width:
+    min(430px, 90%);
+
+  margin:
+    0 auto;
 
   overflow: hidden;
 
   border-radius: 20px;
 
   box-shadow:
-    0 8px 20px rgba(60,40,20,.12);
+    0 8px 20px
+    rgba(60,40,20,.12);
+
 }
 
 
 .dog-photo img {
+
   aspect-ratio: 4 / 3;
 
   object-fit: cover;
+
 }
 
 
 .dog-message {
-  margin-top: 14px;
+
+  margin-top: 13px;
 
   color: #765b48;
 
   font-size: 14px;
 
   font-weight: bold;
+
 }
 
 
 
-/* =========================
+/* =========================================
    SEATS
-========================= */
+========================================= */
 
 .seats {
+
   display: flex;
 
   justify-content: center;
 
   gap: 18px;
 
-  margin-top: 35px;
+  margin-top: 32px;
+
 }
 
 
 .seat-card {
+
   width: 50%;
 
   padding: 18px;
@@ -655,76 +816,101 @@ a {
   background: #eee6dc;
 
   border-radius: 17px;
+
 }
 
 
 .seat-card h3 {
-  margin: 0 0 7px;
+
+  margin:
+    0 0 7px;
 
   font-size: 19px;
+
 }
 
 
 .seat-card p {
-  margin: 0 0 6px;
+
+  margin:
+    0 0 6px;
 
   font-size: 14px;
+
 }
 
 
 .seat-card span {
+
   color: #765b48;
 
   font-size: 12px;
 
   font-weight: bold;
+
 }
 
 
 
-/* =========================
+/* =========================================
    MENU
-========================= */
+========================================= */
 
 .menu-section {
-  width: min(900px, 94%);
+
+  width:
+    min(900px, 94%);
 
   background: #f2ede5;
 
   border-radius: 25px;
+
 }
 
 
 .menu-photo {
-  width: min(600px, 100%);
 
-  margin: 0 auto 35px;
+  width:
+    min(600px, 100%);
+
+  margin:
+    0 auto 35px;
 
   overflow: hidden;
 
   border-radius: 18px;
+
 }
 
 
 .menu-category {
-  width: min(680px, 100%);
 
-  margin: 0 auto 28px;
+  width:
+    min(680px, 100%);
+
+  margin:
+    0 auto 28px;
+
 }
 
 
 .menu-category h3 {
-  margin: 0 0 7px;
+
+  margin:
+    0 0 7px;
 
   padding-bottom: 7px;
 
-  border-bottom: 2px solid #cbbbaa;
+  border-bottom:
+    2px solid #cbbbaa;
 
   font-size: 20px;
+
 }
 
 
 .menu-item {
+
   display: flex;
 
   align-items: center;
@@ -733,133 +919,168 @@ a {
 
   gap: 15px;
 
-  padding: 8px 7px;
+  padding:
+    8px 7px;
 
-  border-bottom: 1px dotted #c8bbad;
+  border-bottom:
+    1px dotted #c8bbad;
 
   font-size: 15px;
+
 }
 
 
 .menu-item strong {
+
   white-space: nowrap;
+
 }
 
 
 .menu-note {
-  margin: 6px 0 0;
+
+  margin:
+    6px 0 0;
 
   color: #806f61;
 
   font-size: 12px;
+
 }
 
 
 
-/* =========================
+/* =========================================
    ACCESS
-========================= */
+========================================= */
 
 .access-info {
+
   line-height: 1.45;
+
 }
 
 
 .access-info h3 {
+
   margin-top: 0;
+
 }
 
 
 .phone {
-  margin: 18px 0;
+
+  margin:
+    18px 0;
+
 }
 
 
 .phone a {
+
   font-weight: bold;
+
 }
 
 
 .hours-info {
-  margin: 22px auto;
 
-  padding: 18px;
+  margin:
+    22px auto;
+
+  padding:
+    18px;
 
   background: #eadfd2;
 
   border-radius: 18px;
 
   font-size: 17px;
+
 }
 
 
 .hours-info strong {
+
   font-size: 20px;
+
 }
 
 
 .hours-info span {
+
   font-size: 13px;
+
 }
 
 
 .parking {
+
   color: #806f61;
 
   font-size: 12px;
+
 }
 
 
 
-/* PC地図 */
+/* PC MAP */
 
 .map-pc {
+
   width: 100%;
 
   height: 350px;
 
-  margin: 28px auto;
+  margin:
+    28px auto;
 
   overflow: hidden;
 
   border-radius: 18px;
+
 }
 
 
 .map-pc iframe {
+
   width: 100%;
 
   height: 100%;
 
   border: 0;
+
 }
 
-
-
-/* スマホ地図 */
 
 .map-link {
+
   display: none;
+
 }
 
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 .footer {
+
   margin-top: 35px;
 
-  padding: 42px 20px;
+  padding:
+    42px 20px;
 
   color: white;
 
   background: #5d493b;
+
 }
 
 
 .footer-logo {
+
   font-family:
     "Arial Rounded MT Bold",
     "Hiragino Maru Gothic ProN",
@@ -868,19 +1089,23 @@ a {
   font-size: 28px;
 
   font-weight: bold;
+
 }
 
 
 .footer-place {
+
   margin-top: 4px;
 
   font-size: 11px;
 
   letter-spacing: .13em;
+
 }
 
 
 .sns {
+
   display: flex;
 
   justify-content: center;
@@ -888,10 +1113,12 @@ a {
   gap: 18px;
 
   margin-top: 20px;
+
 }
 
 
 .sns a {
+
   display: flex;
 
   align-items: center;
@@ -902,94 +1129,118 @@ a {
 
   height: 43px;
 
-  border: 1px solid rgba(255,255,255,.7);
+  border:
+    1px solid rgba(255,255,255,.7);
 
   border-radius: 50%;
 
   font-size: 21px;
 
   font-weight: bold;
+
 }
 
 
 .copyright {
+
   margin-top: 23px;
 
   font-size: 10px;
+
 }
 
 
 
-/* =========================
+/* =========================================
    SMARTPHONE
-========================= */
+========================================= */
 
 @media (max-width: 700px) {
 
 
   body {
-    line-height: 1.4;
+
+    line-height: 1.3;
+
   }
 
 
   .header {
-    padding: 24px 8px 17px;
+
+    padding:
+      22px 7px 16px;
+
   }
 
 
   .logo {
-    font-size: 27px;
 
-    padding: 6px 14px;
+    font-size: 25px;
 
-    border-width: 3px;
+    padding:
+      5px 14px;
 
     border-radius: 20px;
 
-    box-shadow:
-      0 4px 8px rgba(60,40,25,.25);
   }
 
 
   .header-sub {
-    font-size: 11px;
 
-    margin-top: 4px;
+    font-size: 9px;
+
   }
 
 
   .header-catch {
+
     font-size: 15px;
 
     white-space: nowrap;
 
-    letter-spacing: 0;
   }
 
 
   .pet-catch {
+
+    margin-top: 4px;
+
     font-size: 12px;
+
   }
 
+
+
+  /* 営業状況 */
 
   .business-status {
-    margin-top: 6px;
 
-    padding: 5px 13px;
+    min-width: 175px;
+
+    margin-top: 7px;
+
+    padding:
+      6px 13px;
 
     font-size: 11px;
+
   }
+
 
 
   .nav {
+
     gap: 10px;
 
-    margin-top: 15px;
+    margin-top: 13px;
+
   }
 
 
   .nav a {
+
     font-size: 10px;
+
   }
 
 
@@ -997,19 +1248,25 @@ a {
   /* HERO */
 
   .hero {
+
     width: 94%;
+
   }
 
 
   .hero-image {
+
     border-radius: 15px;
+
   }
 
 
   .hero-image img {
+
     min-height: 250px;
 
     object-fit: cover;
+
   }
 
 
@@ -1017,29 +1274,32 @@ a {
   /* INTRO */
 
   .intro {
-    padding: 28px 7px 20px;
+
+    padding:
+      27px 7px 19px;
+
   }
 
 
   .intro h1 {
-    margin-bottom: 14px;
+
+    margin-bottom: 13px;
 
     font-size: 16px;
 
-    line-height: 1.35;
-
     white-space: nowrap;
 
-    letter-spacing: 0;
   }
 
 
   .intro p {
-    margin-bottom: 7px;
+
+    margin-bottom: 6px;
 
     font-size: 13px;
 
-    line-height: 1.4;
+    line-height: 1.3;
+
   }
 
 
@@ -1047,24 +1307,34 @@ a {
   /* INSTAGRAM */
 
   .instagram-section {
-    padding: 32px 15px;
+
+    padding:
+      31px 15px;
+
   }
 
 
   .instagram-section h2 {
+
     font-size: 23px;
+
   }
 
 
   .instagram-section p {
+
     font-size: 12px;
+
   }
 
 
   .instagram-button {
-    padding: 9px 20px;
+
+    padding:
+      9px 20px;
 
     font-size: 13px;
+
   }
 
 
@@ -1072,16 +1342,21 @@ a {
   /* SECTION */
 
   .section {
+
     width: 92%;
 
-    padding: 43px 0;
+    padding:
+      42px 0;
+
   }
 
 
   .section h2 {
-    margin-bottom: 22px;
 
-    font-size: 26px;
+    margin-bottom: 21px;
+
+    font-size: 25px;
+
   }
 
 
@@ -1089,17 +1364,24 @@ a {
   /* NEWS */
 
   .news-card {
-    padding: 13px 12px;
+
+    padding:
+      13px 12px;
+
   }
 
 
   .news-card h3 {
+
     font-size: 15px;
+
   }
 
 
   .news-card p {
+
     font-size: 12px;
+
   }
 
 
@@ -1107,64 +1389,84 @@ a {
   /* CALENDAR */
 
   .calendar-section {
+
     width: 97%;
+
   }
 
 
   .calendar-slider {
-    gap: 4px;
 
-    touch-action: pan-y;
+    gap: 3px;
+
   }
 
 
   .calendar-arrow {
-    width: 30px;
 
-    height: 30px;
+    width: 29px;
 
-    font-size: 22px;
+    height: 29px;
+
+    font-size: 21px;
+
   }
 
 
   .calendar-title {
+
     font-size: 19px;
+
   }
 
 
   .calendar-day {
-    min-height: 66px;
 
-    padding: 4px 1px;
+    min-height: 67px;
+
+    padding:
+      4px 1px;
+
   }
 
 
   .week-header > div {
-    padding: 6px 0;
+
+    padding:
+      6px 0;
 
     font-size: 10px;
+
   }
 
 
   .day-number {
+
     font-size: 11px;
+
   }
 
 
   .holiday-label {
+
     font-size: 7px;
+
   }
 
 
   .event-label {
+
     font-size: 6px;
+
   }
 
 
   .calendar-note {
+
     gap: 15px;
 
     font-size: 10px;
+
   }
 
 
@@ -1172,24 +1474,28 @@ a {
   /* ABOUT */
 
   .about-text p {
-    margin-bottom: 8px;
+
+    margin-bottom: 6px;
 
     font-size: 13px;
+
   }
 
 
-  .dog-section {
-    margin-top: 30px;
-  }
 
+  /* DOG */
 
   .dog-photo {
+
     width: 88%;
+
   }
 
 
   .dog-message {
+
     font-size: 12px;
+
   }
 
 
@@ -1197,31 +1503,42 @@ a {
   /* SEATS */
 
   .seats {
+
     gap: 8px;
 
-    margin-top: 28px;
+    margin-top: 27px;
+
   }
 
 
   .seat-card {
-    padding: 13px 5px;
+
+    padding:
+      13px 5px;
 
     border-radius: 14px;
+
   }
 
 
   .seat-card h3 {
+
     font-size: 16px;
+
   }
 
 
   .seat-card p {
+
     font-size: 11px;
+
   }
 
 
   .seat-card span {
+
     font-size: 9px;
+
   }
 
 
@@ -1229,26 +1546,35 @@ a {
   /* MENU */
 
   .menu-section {
+
     width: 94%;
 
     border-radius: 18px;
+
   }
 
 
   .menu-category h3 {
+
     font-size: 17px;
+
   }
 
 
   .menu-item {
-    padding: 7px 3px;
+
+    padding:
+      7px 3px;
 
     font-size: 12px;
+
   }
 
 
   .menu-note {
+
     font-size: 10px;
+
   }
 
 
@@ -1256,37 +1582,49 @@ a {
   /* ACCESS */
 
   .access-info {
+
     font-size: 13px;
+
   }
 
 
   .phone a {
+
     display: inline-block;
 
-    padding: 8px 18px;
+    padding:
+      8px 18px;
 
     background: #eadfd2;
 
     border-radius: 25px;
 
     font-size: 15px;
+
   }
 
 
   .hours-info {
-    padding: 15px 9px;
+
+    padding:
+      15px 9px;
 
     font-size: 14px;
+
   }
 
 
   .hours-info strong {
+
     font-size: 17px;
+
   }
 
 
   .hours-info span {
+
     font-size: 11px;
+
   }
 
 
@@ -1294,16 +1632,20 @@ a {
   /* スマホでは地図を非表示 */
 
   .map-pc {
+
     display: none;
+
   }
 
 
   .map-link {
+
     display: inline-block;
 
     margin-top: 12px;
 
-    padding: 10px 20px;
+    padding:
+      10px 20px;
 
     color: white;
 
@@ -1314,6 +1656,7 @@ a {
     font-size: 13px;
 
     font-weight: bold;
+
   }
 
 
@@ -1321,17 +1664,24 @@ a {
   /* FOOTER */
 
   .footer {
-    padding: 35px 15px;
+
+    padding:
+      35px 15px;
+
   }
 
 
   .footer-logo {
+
     font-size: 23px;
+
   }
 
 
   .footer-place {
+
     font-size: 10px;
+
   }
 
 }
