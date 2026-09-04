@@ -1,12 +1,12 @@
-```css
 /* ==================================================
    SUNABA COFFEE
    style.css
+   Futuraベース・レスポンシブ対応
 ================================================== */
 
 
 /* ==================================================
-   基本
+   基本設定
 ================================================== */
 
 * {
@@ -20,132 +20,145 @@ html {
 
 
 body {
-
   margin: 0;
 
-  color: #4a4038;
+  background: #fbf8f2;
 
-  background: #f8f5ef;
+  color: #4b4038;
 
   font-family:
+    Futura,
+    "Futura PT",
+    "Century Gothic",
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
-    "Meiryo",
+    Meiryo,
     sans-serif;
 
-  line-height: 1.4;
+  line-height: 1.7;
 
   text-align: center;
+
+  font-size: clamp(14px, 1.4vw, 17px);
 }
 
 
 img {
-
-  display: block;
-
-  width: 100%;
-
+  max-width: 100%;
   height: auto;
+  display: block;
 }
 
 
 a {
-
   color: inherit;
-
   text-decoration: none;
 }
 
 
+button {
+  font-family: inherit;
+}
+
 
 /* ==================================================
-   HEADER
+   共通
+================================================== */
+
+.section {
+  width: min(92%, 1000px);
+  margin: 0 auto;
+  padding: clamp(55px, 8vw, 100px) 0;
+}
+
+
+.section h2 {
+  margin: 0 0 clamp(30px, 5vw, 55px);
+
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+
+  letter-spacing: 0.08em;
+
+  font-weight: 500;
+}
+
+
+.section p {
+  margin: 0 0 0.8em;
+}
+
+
+/* ==================================================
+   ヘッダー
 ================================================== */
 
 .header {
+  background: #fbf8f2;
+}
+
+
+.header-inner {
+  width: min(94%, 1100px);
+
+  margin: 0 auto;
 
   padding:
-    28px 15px 20px;
+    clamp(25px, 5vw, 55px)
+    0
+    clamp(20px, 4vw, 40px);
+}
 
+
+.logo-area {
+  text-align: center;
 }
 
 
 .logo {
-
-  display: inline-block;
-
-  padding:
-    5px 18px;
-
-  color: #ffffff;
-
-  background: #765b48;
-
-  border:
-    3px solid #9a785e;
-
-  border-radius: 24px;
-
   font-family:
-    "Arial Rounded MT Bold",
-    "Hiragino Maru Gothic ProN",
+    Futura,
+    "Futura PT",
+    "Century Gothic",
+    "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
+    Meiryo,
     sans-serif;
 
-  font-size:
-    clamp(26px, 4vw, 38px);
+  font-size: clamp(2rem, 6vw, 4.5rem);
 
-  font-weight: bold;
+  font-weight: 500;
 
-  letter-spacing: .03em;
+  letter-spacing: 0.1em;
 
-  box-shadow:
-    0 5px 10px rgba(60,40,25,.28);
-
+  line-height: 1.1;
 }
 
 
-.header-sub {
+.subtitle {
+  margin-top: 0.45em;
 
-  margin-top: 4px;
+  font-size: clamp(1rem, 2.2vw, 1.45rem);
 
-  color: #765b48;
-
-  font-size: 11px;
-
-  font-weight: bold;
-
+  letter-spacing: 0.2em;
 }
 
 
 .header-catch {
+  margin: 0.7em 0 0;
 
-  margin-top: 6px;
+  font-size: clamp(0.85rem, 1.8vw, 1.15rem);
 
-  color: #5d493b;
-
-  font-size:
-    clamp(18px, 3vw, 30px);
-
-  font-weight: 500;
-
-  white-space: nowrap;
-
+  letter-spacing: 0.08em;
 }
 
 
 .pet-catch {
+  margin: 0.4em 0 0;
 
-  margin-top: 5px;
+  font-size: clamp(0.78rem, 1.6vw, 1rem);
 
-  color: #765b48;
-
-  font-size: 14px;
-
-  font-weight: bold;
-
+  letter-spacing: 0.06em;
 }
-
 
 
 /* ==================================================
@@ -153,80 +166,64 @@ a {
 ================================================== */
 
 .business-status {
+  display: inline-block;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: fit-content;
-
-  min-width: 190px;
-
-  min-height: 34px;
-
-  margin:
-    9px auto 0;
+  margin-top: clamp(20px, 4vw, 35px);
 
   padding:
-    7px 20px;
+    0.55em
+    1.5em;
 
-  color: #ffffff;
+  border-radius: 999px;
 
-  background: #806854;
+  background: #6d6259;
 
-  border-radius: 30px;
+  color: #fff;
 
-  font-size: 14px;
+  font-size: clamp(0.8rem, 1.7vw, 1rem);
 
-  font-weight: bold;
-
-  line-height: 1.2;
-
-  box-shadow:
-    0 4px 10px rgba(60,40,20,.16);
-
+  letter-spacing: 0.04em;
 }
 
 
 .business-status.closed {
-
-  background: #806854;
-
+  background: #9a8d83;
 }
 
 
-
 /* ==================================================
-   NAV
+   ナビ
 ================================================== */
 
 .nav {
-
   display: flex;
 
   justify-content: center;
 
-  align-items: center;
-
   flex-wrap: wrap;
 
-  gap: 20px;
+  gap: clamp(8px, 2vw, 24px);
 
-  margin-top: 17px;
-
+  margin-top: clamp(25px, 4vw, 40px);
 }
 
 
 .nav a {
+  padding: 0.35em 0.8em;
 
-  font-size: 13px;
+  font-size: clamp(0.78rem, 1.7vw, 1rem);
 
-  font-weight: bold;
+  letter-spacing: 0.05em;
 
+  border-bottom: 1px solid transparent;
+
+  transition: 0.3s;
 }
 
+
+.nav a:hover {
+  border-bottom-color: #7b6a5e;
+}
 
 
 /* ==================================================
@@ -234,36 +231,19 @@ a {
 ================================================== */
 
 .hero {
-
-  width:
-    min(1100px, 94%);
-
-  margin:
-    0 auto;
-
-}
-
-
-.hero-image {
+  width: 100%;
 
   overflow: hidden;
-
-  border-radius: 22px;
-
-  box-shadow:
-    0 10px 28px rgba(60,40,20,.15);
-
 }
 
 
-.hero-image img {
+.hero img {
+  width: 100%;
 
-  max-height: 580px;
+  max-height: 680px;
 
   object-fit: cover;
-
 }
-
 
 
 /* ==================================================
@@ -271,1467 +251,894 @@ a {
 ================================================== */
 
 .intro {
-
-  padding:
-    40px 15px 25px;
-
+  padding-top: clamp(60px, 9vw, 110px);
 }
 
 
 .intro h1 {
+  margin: 0 0 1.5em;
 
-  margin:
-    0 0 18px;
+  font-size: clamp(1.25rem, 3.3vw, 2.2rem);
 
-  color: #5d493b;
-
-  font-size:
-    clamp(18px, 3vw, 40px);
+  line-height: 1.5;
 
   font-weight: 500;
 
-  line-height: 1.3;
-
-  white-space: nowrap;
-
+  letter-spacing: 0.08em;
 }
 
 
 .intro p {
-
-  margin:
-    0 0 8px;
-
-  font-size:
-    clamp(14px, 2vw, 20px);
-
-  line-height: 1.4;
-
+  font-size: clamp(0.9rem, 1.8vw, 1.15rem);
 }
-
 
 
 /* ==================================================
-   INSTAGRAM
+   Instagram
 ================================================== */
 
-.instagram-section {
-
-  padding:
-    35px 20px;
-
-  background: #eee6dc;
-
+.instagram {
+  border-top: 1px solid rgba(100, 80, 60, 0.15);
 }
 
 
-.instagram-section h2 {
-
-  margin:
-    0 0 8px;
-
-  font-size: 27px;
-
+.instagram h2 {
+  margin-bottom: 0.7em;
 }
 
 
-.instagram-section p {
-
-  margin:
-    0 0 17px;
-
+.instagram p {
+  margin-bottom: 1.8em;
 }
 
 
-.instagram-button {
-
+.sns-button,
+.map-button {
   display: inline-block;
 
-  padding:
-    10px 24px;
+  padding: 0.8em 1.8em;
 
-  color: #ffffff;
+  border: 1px solid #786b61;
 
-  background: #765b48;
+  border-radius: 999px;
 
-  border-radius: 30px;
+  background: #fff;
 
-  font-weight: bold;
+  font-size: clamp(0.8rem, 1.7vw, 1rem);
 
+  transition: 0.3s;
 }
 
 
+.sns-button:hover,
+.map-button:hover {
+  background: #786b61;
 
-/* ==================================================
-   SECTION
-================================================== */
-
-.section {
-
-  width:
-    min(900px, 92%);
-
-  margin:
-    0 auto;
-
-  padding:
-    55px 0;
-
+  color: #fff;
 }
-
-
-.section h2 {
-
-  margin:
-    0 0 27px;
-
-  color: #5a4638;
-
-  font-size:
-    clamp(27px, 4vw, 40px);
-
-  letter-spacing: .06em;
-
-}
-
 
 
 /* ==================================================
    お知らせ
 ================================================== */
 
-.news-list {
-
-  width:
-    min(700px, 100%);
-
-  margin:
-    0 auto;
-
+.news {
+  border-top: 1px solid rgba(100, 80, 60, 0.15);
 }
 
 
-.news-card {
+.news-item {
+  width: min(90%, 750px);
 
-  margin-bottom: 12px;
+  margin: 0 auto 2em;
 
   padding:
-    15px 18px;
+    clamp(18px, 3vw, 28px);
+
+  background: #fff;
+
+  border-radius: 14px;
 
   text-align: left;
-
-  background: #ffffff;
-
-  border-left:
-    4px solid #765b48;
-
-  border-radius: 12px;
-
 }
 
 
-.news-card time {
+.news-item time {
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
 
-  color: #806f61;
-
-  font-size: 12px;
-
+  color: #8a7d73;
 }
 
 
-.news-card h3 {
+.news-item h3 {
+  margin: 0.4em 0;
 
-  margin:
-    3px 0 6px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
 
-  font-size: 17px;
-
+  font-weight: 500;
 }
 
 
-.news-card p {
-
+.news-item p {
   margin: 0;
 
-  font-size: 13px;
-
+  font-size: clamp(0.82rem, 1.6vw, 1rem);
 }
-
 
 
 /* ==================================================
-   CALENDAR
+   カレンダー
 ================================================== */
 
 .calendar-section {
-
-  width:
-    min(900px, 96%);
-
+  border-top: 1px solid rgba(100, 80, 60, 0.15);
 }
 
 
 .calendar-slider {
-
   display: flex;
 
   align-items: center;
 
   justify-content: center;
 
-  gap: 10px;
+  gap: clamp(5px, 2vw, 20px);
 
   touch-action: pan-y;
-
 }
 
 
-.calendar-content {
-
-  width: 100%;
-
-  max-width: 780px;
-
+.calendar-container {
+  width: min(90vw, 800px);
 }
 
 
-.calendar-title {
+#calendarTitle {
+  margin: 0 0 clamp(15px, 3vw, 25px);
 
-  margin-bottom: 13px;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
 
-  color: #5d493b;
+  font-weight: 500;
 
-  font-size: 25px;
-
-  font-weight: bold;
-
+  letter-spacing: 0.08em;
 }
 
 
-.calendar-wrap {
+.calendar-button {
+  flex: 0 0 auto;
 
-  overflow: hidden;
+  width: clamp(38px, 6vw, 52px);
 
-  background: #ffffff;
+  height: clamp(38px, 6vw, 52px);
 
-  border-radius: 18px;
+  border: 1px solid #887a70;
 
-  box-shadow:
-    0 7px 20px rgba(60,40,20,.08);
+  border-radius: 50%;
 
+  background: #fff;
+
+  color: #5c5048;
+
+  font-size: clamp(1.4rem, 3vw, 2rem);
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: 0.3s;
 }
 
+
+.calendar-button:hover {
+  background: #887a70;
+
+  color: #fff;
+}
+
+
+/* 曜日 */
 
 .week-header {
-
   display: grid;
 
-  grid-template-columns:
-    repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 
-}
+  border-bottom: 1px solid #d7cec5;
 
-
-.calendar {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(7, 1fr);
-
+  background: #f2ede6;
 }
 
 
 .week-header > div {
+  padding: 0.55em 0;
 
-  padding:
-    8px 0;
-
-  background: #eadfd2;
-
-  font-size: 14px;
-
-  font-weight: bold;
-
+  font-size: clamp(0.72rem, 1.6vw, 0.95rem);
 }
 
 
 .week-header .sun {
-
-  color: #d33;
-
+  color: #b14e4e;
 }
 
 
 .week-header .sat {
+  color: #536f92;
+}
 
-  color: #426b91;
 
+/* 日付 */
+
+.calendar {
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  border-top: 1px solid #ddd4cb;
+
+  border-left: 1px solid #ddd4cb;
 }
 
 
 .calendar-day {
-
-  min-height: 88px;
+  min-height: clamp(60px, 8vw, 88px);
 
   padding:
-    6px 3px;
+    clamp(5px, 0.8vw, 9px)
+    clamp(2px, 0.5vw, 6px);
 
-  border-top:
-    1px solid #eeeeee;
+  border-right: 1px solid #ddd4cb;
 
-  border-right:
-    1px solid #eeeeee;
+  border-bottom: 1px solid #ddd4cb;
 
+  background: #fff;
+
+  overflow: hidden;
 }
 
 
 .calendar-day.empty {
-
-  background: #fafafa;
-
+  background: #f8f4ee;
 }
 
 
 .day-number {
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
 
-  font-size: 15px;
-
-  font-weight: bold;
-
+  line-height: 1.2;
 }
 
 
 .sunday .day-number {
-
-  color: #d33;
-
+  color: #b14e4e;
 }
 
 
 .saturday .day-number {
-
-  color: #426b91;
-
+  color: #536f92;
 }
 
 
+/* 今日 */
 
-/* ==================================================
-   定休日
-================================================== */
+.calendar-day.today {
+  background: #f5eee4;
 
-.holiday {
+  box-shadow:
+    inset 0 0 0 2px #a69484;
+}
 
-  background: #fff1f1;
 
+/* 定休日 */
+
+.calendar-day.holiday {
+  background: #f8eeee;
 }
 
 
 .holiday-label {
+  margin-top: 0.25em;
 
-  margin-top: 5px;
+  color: #b14e4e;
 
-  color: #d33;
+  font-size: clamp(0.52rem, 1.2vw, 0.72rem);
 
-  font-size: 10px;
+  line-height: 1.2;
 
-  font-weight: bold;
-
-  line-height: 1.1;
-
+  font-weight: 600;
 }
 
 
-
-/* ==================================================
-   イベント
-================================================== */
+/* イベント */
 
 .event-label {
+  margin-top: 0.25em;
 
-  margin-top: 5px;
+  color: #6e5c4e;
 
-  color: #8a5a31;
+  font-size: clamp(0.5rem, 1.2vw, 0.72rem);
 
-  font-size: 10px;
+  line-height: 1.2;
 
-  font-weight: bold;
-
-  line-height: 1.1;
-
+  word-break: break-word;
 }
 
-
-
-/* ==================================================
-   カレンダー矢印
-================================================== */
-
-.calendar-arrow {
-
-  flex:
-    0 0 auto;
-
-  width: 42px;
-
-  height: 42px;
-
-  padding: 0;
-
-  border: 0;
-
-  border-radius: 50%;
-
-  color: #ffffff;
-
-  background: #765b48;
-
-  font-size: 28px;
-
-  line-height: 42px;
-
-  cursor: pointer;
-
-}
-
-
-.calendar-arrow:active {
-
-  transform: scale(.94);
-
-}
-
-
-
-/* ==================================================
-   カレンダー説明
-================================================== */
 
 .calendar-note {
-
   display: flex;
 
   justify-content: center;
 
-  gap: 25px;
+  flex-wrap: wrap;
 
-  margin-top: 13px;
+  gap: 1.5em;
 
-  font-size: 13px;
+  margin-top: 1.5em;
 
+  font-size: clamp(0.72rem, 1.5vw, 0.9rem);
 }
 
 
-.holiday-note {
-
-  color: #d33;
-
+.calendar-note span:first-child {
+  color: #b14e4e;
 }
 
 
-.event-note {
-
-  color: #8a5a31;
-
+.calendar-note span:last-child {
+  color: #6e5c4e;
 }
-
 
 
 /* ==================================================
-   店の紹介
+   オーナー紹介
 ================================================== */
 
-.about-photo {
-
-  width:
-    min(500px, 100%);
-
-  margin:
-    0 auto 27px;
-
-  overflow: hidden;
-
-  border-radius: 20px;
-
+.about {
+  border-top: 1px solid rgba(100, 80, 60, 0.15);
 }
 
 
-.about-text p {
+.owner-content {
+  display: grid;
 
-  margin:
-    0 0 9px;
+  grid-template-columns:
+    minmax(220px, 0.8fr)
+    minmax(280px, 1.2fr);
 
-  font-size: 15px;
+  gap: clamp(30px, 6vw, 70px);
 
+  align-items: center;
+
+  width: min(95%, 900px);
+
+  margin: 0 auto;
 }
 
+
+.owner-image img {
+  width: 100%;
+
+  border-radius: 18px;
+}
+
+
+.owner-text {
+  text-align: left;
+}
+
+
+.owner-text p {
+  font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+
+  margin-bottom: 1em;
+}
 
 
 /* ==================================================
-   DOG
+   コーヒーへのこだわり
 ================================================== */
 
-.dog-section {
+.coffee-commitment {
+  width: min(90%, 800px);
 
-  margin-top: 35px;
+  margin: clamp(50px, 7vw, 80px) auto 0;
 
+  padding:
+    clamp(25px, 5vw, 45px);
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  text-align: center;
 }
 
 
-.dog-photo {
+.coffee-commitment h3 {
+  margin: 0 0 1em;
 
-  width:
-    min(430px, 90%);
+  font-size: clamp(1.2rem, 2.8vw, 1.7rem);
 
-  margin:
-    0 auto;
-
-  overflow: hidden;
-
-  border-radius: 20px;
-
-  box-shadow:
-    0 8px 20px rgba(60,40,20,.12);
-
+  font-weight: 500;
 }
 
 
-.dog-photo img {
-
-  aspect-ratio: 4 / 3;
-
-  object-fit: cover;
-
+.coffee-commitment p {
+  font-size: clamp(0.85rem, 1.7vw, 1.05rem);
 }
-
-
-.dog-message {
-
-  margin-top: 13px;
-
-  color: #765b48;
-
-  font-size: 14px;
-
-  font-weight: bold;
-
-}
-
 
 
 /* ==================================================
-   SEATS
+   愛犬
+================================================== */
+
+.dog-area {
+  display: grid;
+
+  grid-template-columns:
+    minmax(200px, 0.8fr)
+    minmax(280px, 1.2fr);
+
+  gap: clamp(30px, 6vw, 70px);
+
+  align-items: center;
+
+  width: min(95%, 900px);
+
+  margin: clamp(55px, 8vw, 90px) auto 0;
+}
+
+
+.dog-image img {
+  width: 100%;
+
+  border-radius: 18px;
+}
+
+
+.dog-text {
+  text-align: left;
+}
+
+
+.dog-text h3 {
+  margin-top: 0;
+
+  font-size: clamp(1.2rem, 2.7vw, 1.7rem);
+
+  font-weight: 500;
+}
+
+
+.dog-text p {
+  font-size: clamp(0.85rem, 1.7vw, 1.05rem);
+}
+
+
+.pet-ok {
+  font-weight: 600;
+
+  color: #687957;
+}
+
+
+/* ==================================================
+   お席
 ================================================== */
 
 .seats {
+  width: min(95%, 900px);
 
-  display: flex;
+  margin: clamp(55px, 8vw, 90px) auto 0;
+}
 
-  justify-content: center;
 
-  gap: 18px;
+.seats > h3 {
+  margin-bottom: 1.5em;
 
-  margin-top: 32px;
+  font-size: clamp(1.25rem, 2.8vw, 1.8rem);
 
+  font-weight: 500;
+}
+
+
+.seat-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: clamp(15px, 3vw, 30px);
 }
 
 
 .seat-card {
+  padding:
+    clamp(20px, 4vw, 35px);
 
-  width: 50%;
+  background: #fff;
 
-  padding: 18px;
-
-  background: #eee6dc;
-
-  border-radius: 17px;
-
+  border-radius: 16px;
 }
 
 
-.seat-card h3 {
+.seat-card h4 {
+  margin: 0 0 0.8em;
 
-  margin:
-    0 0 7px;
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
 
-  font-size: 19px;
-
+  font-weight: 500;
 }
 
 
 .seat-card p {
-
-  margin:
-    0 0 6px;
-
-  font-size: 14px;
-
+  font-size: clamp(0.8rem, 1.6vw, 1rem);
 }
-
-
-.seat-card span {
-
-  color: #765b48;
-
-  font-size: 12px;
-
-  font-weight: bold;
-
-}
-
 
 
 /* ==================================================
-   MENU
+   メニュー
 ================================================== */
 
-.menu-section {
-
-  width:
-    min(900px, 94%);
-
-  background: #f2ede5;
-
-  border-radius: 25px;
-
-}
-
-
-.menu-photo {
-
-  width:
-    min(600px, 100%);
-
-  margin:
-    0 auto 35px;
-
-  overflow: hidden;
-
-  border-radius: 18px;
-
+.menu {
+  border-top: 1px solid rgba(100, 80, 60, 0.15);
 }
 
 
 .menu-category {
+  width: min(92%, 700px);
 
-  width:
-    min(680px, 100%);
-
-  margin:
-    0 auto 28px;
-
+  margin: 0 auto clamp(35px, 5vw, 55px);
 }
 
 
-.menu-category h3 {
+.menu-category h3,
+.takeout h3 {
+  margin: 0 0 1em;
 
-  margin:
-    0 0 7px;
+  font-size: clamp(1.2rem, 2.8vw, 1.7rem);
 
-  padding-bottom: 7px;
+  font-weight: 500;
 
-  border-bottom:
-    2px solid #cbbbaa;
-
-  font-size: 20px;
-
+  letter-spacing: 0.08em;
 }
 
 
 .menu-item {
-
   display: flex;
-
-  align-items: center;
 
   justify-content: space-between;
 
-  gap: 15px;
+  align-items: center;
+
+  gap: 20px;
 
   padding:
-    8px 7px;
+    0.7em 0;
 
-  border-bottom:
-    1px dotted #c8bbad;
+  border-bottom: 1px dotted #cfc3b9;
 
-  font-size: 15px;
+  text-align: left;
+}
 
+
+.menu-item span {
+  font-size: clamp(0.85rem, 1.7vw, 1.05rem);
 }
 
 
 .menu-item strong {
+  flex: 0 0 auto;
 
-  white-space: nowrap;
+  font-size: clamp(0.82rem, 1.6vw, 1rem);
 
+  font-weight: 500;
 }
 
 
-.menu-note {
+.menu-description {
+  margin-top: 0.7em;
 
-  margin:
-    6px 0 0;
+  color: #81746a;
 
-  color: #806f61;
-
-  font-size: 12px;
-
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
 }
 
 
+.takeout {
+  width: min(90%, 700px);
 
-/* ==================================================
-   ACCESS
-================================================== */
-
-.access-info {
-
-  line-height: 1.45;
-
-}
-
-
-.access-info h3 {
-
-  margin-top: 0;
-
-}
-
-
-.phone {
-
-  margin:
-    18px 0;
-
-}
-
-
-.phone a {
-
-  font-weight: bold;
-
-}
-
-
-.hours-info {
-
-  margin:
-    22px auto;
+  margin: 0 auto;
 
   padding:
-    18px;
+    clamp(25px, 4vw, 40px);
 
-  background: #eadfd2;
+  background: #fff;
 
-  border-radius: 18px;
-
-  font-size: 17px;
-
+  border-radius: 16px;
 }
 
 
-.hours-info strong {
-
-  font-size: 20px;
-
+.takeout p {
+  font-size: clamp(0.8rem, 1.6vw, 1rem);
 }
-
-
-.hours-info span {
-
-  font-size: 13px;
-
-}
-
-
-.parking {
-
-  color: #806f61;
-
-  font-size: 12px;
-
-}
-
 
 
 /* ==================================================
-   GOOGLE MAP
+   アクセス
 ================================================== */
 
+.access {
+  border-top: 1px solid rgba(100, 80, 60, 0.15);
+}
+
+
+.access-info {
+  margin-bottom: 2.5em;
+}
+
+
+.access-info p {
+  margin: 0.3em 0;
+
+  font-size: clamp(0.8rem, 1.7vw, 1.05rem);
+}
+
+
 .map-pc {
-
   width: 100%;
 
-  height: 350px;
-
-  margin:
-    28px auto;
-
-  overflow: hidden;
-
-  border-radius: 18px;
-
+  margin-top: 30px;
 }
 
 
-.map-pc iframe {
-
-  width: 100%;
-
-  height: 100%;
-
-  border: 0;
-
-}
-
-
-.map-link {
-
+.map-mobile {
   display: none;
 
+  margin-top: 30px;
 }
-
 
 
 /* ==================================================
-   FOOTER
+   フッター
 ================================================== */
 
 .footer {
-
-  margin-top: 35px;
-
   padding:
-    42px 20px;
+    clamp(45px, 7vw, 75px)
+    20px;
 
-  color: #ffffff;
+  background: #e9e1d8;
 
-  background: #5d493b;
-
+  text-align: center;
 }
 
 
 .footer-logo {
-
   font-family:
-    "Arial Rounded MT Bold",
-    "Hiragino Maru Gothic ProN",
+    Futura,
+    "Futura PT",
+    "Century Gothic",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    Meiryo,
     sans-serif;
 
-  font-size: 28px;
+  font-size: clamp(1.5rem, 4vw, 2.6rem);
 
-  font-weight: bold;
+  letter-spacing: 0.1em;
 
+  font-weight: 500;
 }
 
 
-.footer-place {
+.footer-country {
+  margin-top: 0.5em;
 
-  margin-top: 4px;
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
 
-  font-size: 11px;
-
-  letter-spacing: .13em;
-
+  letter-spacing: 0.12em;
 }
 
 
-.sns {
-
+.footer-sns {
   display: flex;
 
   justify-content: center;
 
-  gap: 18px;
+  flex-wrap: wrap;
 
-  margin-top: 20px;
+  gap: clamp(12px, 3vw, 25px);
 
+  margin-top: 2em;
 }
 
 
-.sns a {
+.footer-sns a {
+  padding: 0.4em 0.8em;
 
-  display: flex;
+  font-size: clamp(0.75rem, 1.5vw, 0.95rem);
 
-  align-items: center;
+  border-bottom: 1px solid transparent;
 
-  justify-content: center;
+  transition: 0.3s;
+}
 
-  width: 43px;
 
-  height: 43px;
-
-  border:
-    1px solid rgba(255,255,255,.7);
-
-  border-radius: 50%;
-
-  font-size: 21px;
-
-  font-weight: bold;
-
+.footer-sns a:hover {
+  border-bottom-color: #6f6258;
 }
 
 
 .copyright {
+  margin: 2em 0 0;
 
-  margin-top: 23px;
+  font-size: clamp(0.65rem, 1.3vw, 0.8rem);
 
-  font-size: 10px;
+  color: #81746a;
+}
+
+
+/* ==================================================
+   タブレット
+================================================== */
+
+@media (max-width: 800px) {
+
+  .owner-content,
+  .dog-area {
+    grid-template-columns: 1fr;
+  }
+
+
+  .owner-text,
+  .dog-text {
+    text-align: center;
+  }
+
+
+  .owner-image,
+  .dog-image {
+    width: min(80%, 450px);
+
+    margin: 0 auto;
+  }
 
 }
 
 
-
 /* ==================================================
-   SMARTPHONE
+   スマートフォン
 ================================================== */
 
-@media (max-width: 700px) {
-
+@media (max-width: 600px) {
 
   body {
-
-    line-height: 1.3;
-
+    font-size: 14px;
   }
 
 
-  .header {
-
-    padding:
-      22px 7px 16px;
-
-  }
-
-
-  .logo {
-
-    font-size: 25px;
-
-    padding:
-      5px 14px;
-
-    border-radius: 20px;
-
-  }
-
-
-  .header-sub {
-
-    font-size: 9px;
-
+  .header-inner {
+    width: 92%;
   }
 
 
   .header-catch {
+    white-space: normal;
 
-    font-size: 15px;
-
-    white-space: nowrap;
-
+    line-height: 1.5;
   }
 
-
-  .pet-catch {
-
-    margin-top: 4px;
-
-    font-size: 12px;
-
-  }
-
-
-
-  /* 営業状況 */
-
-  .business-status {
-
-    min-width: 175px;
-
-    min-height: 30px;
-
-    margin-top: 6px;
-
-    padding:
-      6px 14px;
-
-    font-size: 11px;
-
-  }
-
-
-
-  /* NAV */
 
   .nav {
-
-    gap: 10px;
-
-    margin-top: 13px;
-
+    gap: 4px 8px;
   }
 
 
   .nav a {
-
-    font-size: 10px;
-
+    padding: 0.3em 0.5em;
   }
 
 
-
-  /* HERO */
-
-  .hero {
-
-    width: 94%;
-
-  }
-
-
-  .hero-image {
-
-    border-radius: 15px;
-
-  }
-
-
-  .hero-image img {
-
-    min-height: 250px;
+  .hero img {
+    min-height: 260px;
 
     object-fit: cover;
-
   }
 
-
-
-  /* INTRO */
-
-  .intro {
-
-    padding:
-      27px 7px 19px;
-
-  }
-
-
-  .intro h1 {
-
-    margin-bottom: 13px;
-
-    font-size: 16px;
-
-    white-space: nowrap;
-
-  }
-
-
-  .intro p {
-
-    margin-bottom: 6px;
-
-    font-size: 13px;
-
-    line-height: 1.3;
-
-  }
-
-
-
-  /* INSTAGRAM */
-
-  .instagram-section {
-
-    padding:
-      31px 15px;
-
-  }
-
-
-  .instagram-section h2 {
-
-    font-size: 23px;
-
-  }
-
-
-  .instagram-section p {
-
-    font-size: 12px;
-
-  }
-
-
-  .instagram-button {
-
-    padding:
-      9px 20px;
-
-    font-size: 13px;
-
-  }
-
-
-
-  /* SECTION */
 
   .section {
-
-    width: 92%;
-
-    padding:
-      42px 0;
-
-  }
-
-
-  .section h2 {
-
-    margin-bottom: 21px;
-
-    font-size: 25px;
-
-  }
-
-
-
-  /* NEWS */
-
-  .news-card {
-
-    padding:
-      13px 12px;
-
-  }
-
-
-  .news-card h3 {
-
-    font-size: 15px;
-
-  }
-
-
-  .news-card p {
-
-    font-size: 12px;
-
-  }
-
-
-
-  /* CALENDAR */
-
-  .calendar-section {
-
-    width: 98%;
-
+    width: 90%;
   }
 
 
   .calendar-slider {
-
-    width: 100%;
-
-    gap: 2px;
-
+    gap: 4px;
   }
 
 
-  .calendar-content {
-
-    min-width: 0;
-
+  .calendar-container {
+    width: calc(100vw - 85px);
   }
 
 
-  .calendar-arrow {
+  .calendar-button {
+    width: 34px;
 
-    width: 28px;
+    height: 34px;
 
-    height: 28px;
-
-    font-size: 20px;
-
-    line-height: 28px;
-
-  }
-
-
-  .calendar-title {
-
-    font-size: 19px;
-
+    font-size: 1.4rem;
   }
 
 
   .calendar-day {
+    min-height: clamp(54px, 14vw, 68px);
 
-    min-height: 67px;
-
-    padding:
-      4px 1px;
-
-  }
-
-
-  .week-header > div {
-
-    padding:
-      6px 0;
-
-    font-size: 10px;
-
+    padding: 4px 2px;
   }
 
 
   .day-number {
-
-    font-size: 11px;
-
+    font-size: clamp(0.72rem, 3vw, 0.9rem);
   }
 
 
-  .holiday-label {
-
-    margin-top: 4px;
-
-    font-size: 7px;
-
-  }
-
-
+  .holiday-label,
   .event-label {
+    font-size: clamp(0.43rem, 2vw, 0.62rem);
 
-    margin-top: 4px;
-
-    font-size: 6px;
-
+    line-height: 1.15;
   }
 
 
-  .calendar-note {
-
-    gap: 15px;
-
-    font-size: 10px;
-
+  .seat-grid {
+    grid-template-columns: 1fr;
   }
 
 
-
-  /* ABOUT */
-
-  .about-text p {
-
-    font-size: 13px;
-
+  .menu-category,
+  .takeout {
+    width: 95%;
   }
 
-
-
-  /* DOG */
-
-  .dog-photo {
-
-    width: 88%;
-
-  }
-
-
-  .dog-message {
-
-    font-size: 12px;
-
-  }
-
-
-
-  /* SEATS */
-
-  .seats {
-
-    gap: 8px;
-
-    margin-top: 27px;
-
-  }
-
-
-  .seat-card {
-
-    padding:
-      13px 5px;
-
-    border-radius: 14px;
-
-  }
-
-
-  .seat-card h3 {
-
-    font-size: 16px;
-
-  }
-
-
-  .seat-card p {
-
-    font-size: 11px;
-
-  }
-
-
-  .seat-card span {
-
-    font-size: 9px;
-
-  }
-
-
-
-  /* MENU */
-
-  .menu-section {
-
-    width: 94%;
-
-    border-radius: 18px;
-
-  }
-
-
-  .menu-category h3 {
-
-    font-size: 17px;
-
-  }
-
-
-  .menu-item {
-
-    padding:
-      7px 3px;
-
-    font-size: 12px;
-
-  }
-
-
-  .menu-note {
-
-    font-size: 10px;
-
-  }
-
-
-
-  /* ACCESS */
-
-  .access-info {
-
-    font-size: 13px;
-
-  }
-
-
-  .phone a {
-
-    display: inline-block;
-
-    padding:
-      8px 18px;
-
-    background: #eadfd2;
-
-    border-radius: 25px;
-
-    font-size: 15px;
-
-  }
-
-
-  .hours-info {
-
-    padding:
-      15px 9px;
-
-    font-size: 14px;
-
-  }
-
-
-  .hours-info strong {
-
-    font-size: 17px;
-
-  }
-
-
-  .hours-info span {
-
-    font-size: 11px;
-
-  }
-
-
-
-  /* スマホは地図をボタン */
 
   .map-pc {
-
     display: none;
-
   }
 
 
-  .map-link {
-
-    display: inline-block;
-
-    margin-top: 12px;
-
-    padding:
-      10px 20px;
-
-    color: #ffffff;
-
-    background: #765b48;
-
-    border-radius: 25px;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-  }
-
-
-
-  /* FOOTER */
-
-  .footer {
-
-    padding:
-      35px 15px;
-
-  }
-
-
-  .footer-logo {
-
-    font-size: 23px;
-
-  }
-
-
-  .footer-place {
-
-    font-size: 10px;
-
+  .map-mobile {
+    display: block;
   }
 
 }
-```
+
+
+/* ==================================================
+   小さいスマートフォン
+================================================== */
+
+@media (max-width: 380px) {
+
+  .logo {
+    letter-spacing: 0.05em;
+  }
+
+
+  .calendar-container {
+    width: calc(100vw - 75px);
+  }
+
+
+  .calendar-button {
+    width: 30px;
+
+    height: 30px;
+
+    font-size: 1.2rem;
+  }
+
+
+  .calendar-day {
+    min-height: 52px;
+  }
+
+}
