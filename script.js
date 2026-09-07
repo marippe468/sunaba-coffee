@@ -1,3 +1,4 @@
+```javascript
 /* ==================================================
    SUNABA COFFEE
    script.js
@@ -6,6 +7,7 @@
    ・現在月のカレンダー
    ・前月 / 次月
    ・スマホ横スワイプ
+   ・定休日表示
    ・イベント表示
 ================================================== */
 
@@ -89,10 +91,6 @@ const events = {
 
 /* ==================================================
    カレンダー
-==================================================
-
-   ★ 現在の月を自動表示
-
 ================================================== */
 
 let calendarDate = new Date();
@@ -123,37 +121,49 @@ function makeDateKey(year, month, day) {
    定休日判定
 ==================================================
 
-   水曜日
-   第1月曜日
-   第3月曜日
+   毎週月曜日
+   第1・第3水曜日
 
 ================================================== */
 
 function isHoliday(year, month, day) {
 
   const date =
-    new Date(year, month, day);
+    new Date(
+      year,
+      month,
+      day
+    );
+
 
   const weekDay =
     date.getDay();
 
 
-  /* 水曜日 */
+  /* ------------------------------------------
+     毎週月曜日
+  ------------------------------------------ */
 
-  if (weekDay === 3) {
+  if (weekDay === 1) {
 
     return true;
 
   }
 
 
-  /* 第1・第3月曜日 */
+  /* ------------------------------------------
+     第1・第3水曜日
+  ------------------------------------------ */
 
-  if (weekDay === 1) {
+  if (weekDay === 3) {
+
+    const weekNumber =
+      Math.ceil(day / 7);
+
 
     if (
-      (day >= 1 && day <= 7) ||
-      (day >= 15 && day <= 21)
+      weekNumber === 1 ||
+      weekNumber === 3
     ) {
 
       return true;
@@ -176,7 +186,9 @@ function isHoliday(year, month, day) {
 function updateBusinessStatus() {
 
   const status =
-    document.getElementById("businessStatus");
+    document.getElementById(
+      "businessStatus"
+    );
 
 
   if (!status) {
@@ -204,6 +216,18 @@ function updateBusinessStatus() {
 
 
   /* ------------------------------------------
+     状態クラスをリセット
+  ------------------------------------------ */
+
+  status.classList.remove(
+    "open",
+    "soon",
+    "closed",
+    "before-open"
+  );
+
+
+  /* ------------------------------------------
      定休日
   ------------------------------------------ */
 
@@ -212,7 +236,9 @@ function updateBusinessStatus() {
     status.textContent =
       "本日は定休日です";
 
-    status.classList.add("closed");
+    status.classList.add(
+      "closed"
+    );
 
     return;
 
@@ -223,12 +249,16 @@ function updateBusinessStatus() {
      開店前
   ------------------------------------------ */
 
-  if (currentMinutes < OPEN_TIME) {
+  if (
+    currentMinutes < OPEN_TIME
+  ) {
 
     status.textContent =
       "10時から営業します";
 
-    status.classList.remove("closed");
+    status.classList.add(
+      "before-open"
+    );
 
     return;
 
@@ -237,14 +267,19 @@ function updateBusinessStatus() {
 
   /* ------------------------------------------
      営業中
+     10:00 ～ 15:59
   ------------------------------------------ */
 
-  if (currentMinutes < 16 * 60) {
+  if (
+    currentMinutes < 16 * 60
+  ) {
 
     status.textContent =
       "営業中　10:00～17:00";
 
-    status.classList.remove("closed");
+    status.classList.add(
+      "open"
+    );
 
     return;
 
@@ -252,15 +287,19 @@ function updateBusinessStatus() {
 
 
   /* ------------------------------------------
-     16:00～17:00
+     16:00 ～ 16:59
   ------------------------------------------ */
 
-  if (currentMinutes < CLOSE_TIME) {
+  if (
+    currentMinutes < CLOSE_TIME
+  ) {
 
     status.textContent =
       "まもなく終了　17:00まで";
 
-    status.classList.remove("closed");
+    status.classList.add(
+      "soon"
+    );
 
     return;
 
@@ -268,13 +307,15 @@ function updateBusinessStatus() {
 
 
   /* ------------------------------------------
-     閉店後
+     17:00以降
   ------------------------------------------ */
 
   status.textContent =
     "本日の営業は終了しました";
 
-  status.classList.add("closed");
+  status.classList.add(
+    "closed"
+  );
 
 }
 
@@ -287,13 +328,21 @@ function updateBusinessStatus() {
 function renderCalendar() {
 
   const calendar =
-    document.getElementById("calendar");
+    document.getElementById(
+      "calendar"
+    );
+
 
   const title =
-    document.getElementById("calendarTitle");
+    document.getElementById(
+      "calendarTitle"
+    );
 
 
-  if (!calendar || !title) {
+  if (
+    !calendar ||
+    !title
+  ) {
 
     return;
 
@@ -303,8 +352,10 @@ function renderCalendar() {
   const year =
     calendarDate.getFullYear();
 
+
   const month =
     calendarDate.getMonth();
+
 
 
   /* ------------------------------------------
@@ -315,11 +366,13 @@ function renderCalendar() {
     `${year}年${month + 1}月`;
 
 
+
   /* ------------------------------------------
      カレンダーをリセット
   ------------------------------------------ */
 
   calendar.innerHTML = "";
+
 
 
   /* ------------------------------------------
@@ -334,6 +387,7 @@ function renderCalendar() {
     ).getDay();
 
 
+
   /* ------------------------------------------
      月末
   ------------------------------------------ */
@@ -344,6 +398,7 @@ function renderCalendar() {
       month + 1,
       0
     ).getDate();
+
 
 
   /* ------------------------------------------
@@ -357,14 +412,21 @@ function renderCalendar() {
   ) {
 
     const empty =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
+
 
     empty.className =
       "calendar-day empty";
 
-    calendar.appendChild(empty);
+
+    calendar.appendChild(
+      empty
+    );
 
   }
+
 
 
   /* ------------------------------------------
@@ -378,7 +440,9 @@ function renderCalendar() {
   ) {
 
     const cell =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
 
     cell.className =
@@ -397,22 +461,37 @@ function renderCalendar() {
       date.getDay();
 
 
+
     /* ----------------------------------------
-       曜日
+       日曜日
     ---------------------------------------- */
 
-    if (weekDay === 0) {
+    if (
+      weekDay === 0
+    ) {
 
-      cell.classList.add("sunday");
+      cell.classList.add(
+        "sunday"
+      );
+
+    }
+
+
+
+    /* ----------------------------------------
+       土曜日
+    ---------------------------------------- */
+
+    if (
+      weekDay === 6
+    ) {
+
+      cell.classList.add(
+        "saturday"
+      );
 
     }
 
-
-    if (weekDay === 6) {
-
-      cell.classList.add("saturday");
-
-    }
 
 
     /* ----------------------------------------
@@ -429,17 +508,22 @@ function renderCalendar() {
       day === today.getDate()
     ) {
 
-      cell.classList.add("today");
+      cell.classList.add(
+        "today"
+      );
 
     }
 
 
+
     /* ----------------------------------------
-       日付
+       日付番号
     ---------------------------------------- */
 
     const number =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
 
     number.className =
@@ -450,7 +534,9 @@ function renderCalendar() {
       day;
 
 
-    cell.appendChild(number);
+    cell.appendChild(
+      number
+    );
 
 
 
@@ -468,11 +554,15 @@ function renderCalendar() {
 
     if (holiday) {
 
-      cell.classList.add("holiday");
+      cell.classList.add(
+        "holiday"
+      );
 
 
       const holidayLabel =
-        document.createElement("div");
+        document.createElement(
+          "div"
+        );
 
 
       holidayLabel.className =
@@ -503,10 +593,14 @@ function renderCalendar() {
       );
 
 
-    if (events[dateKey]) {
+    if (
+      events[dateKey]
+    ) {
 
       const eventLabel =
-        document.createElement("div");
+        document.createElement(
+          "div"
+        );
 
 
       eventLabel.className =
@@ -529,7 +623,9 @@ function renderCalendar() {
        カレンダーへ追加
     ---------------------------------------- */
 
-    calendar.appendChild(cell);
+    calendar.appendChild(
+      cell
+    );
 
   }
 
@@ -544,11 +640,15 @@ function renderCalendar() {
 function setupCalendarButtons() {
 
   const prev =
-    document.getElementById("prevMonth");
+    document.getElementById(
+      "prevMonth"
+    );
 
 
   const next =
-    document.getElementById("nextMonth");
+    document.getElementById(
+      "nextMonth"
+    );
 
 
 
@@ -565,6 +665,7 @@ function setupCalendarButtons() {
         calendarDate.setMonth(
           calendarDate.getMonth() - 1
         );
+
 
         renderCalendar();
 
@@ -588,6 +689,7 @@ function setupCalendarButtons() {
         calendarDate.setMonth(
           calendarDate.getMonth() + 1
         );
+
 
         renderCalendar();
 
@@ -681,7 +783,9 @@ function setupSwipe() {
 
 
 
-      /* 縦スクロール */
+      /* ----------------------------------------
+         縦スクロールの場合
+      ---------------------------------------- */
 
       if (
         Math.abs(diffY) >
@@ -698,11 +802,14 @@ function setupSwipe() {
          左スワイプ → 次月
       ---------------------------------------- */
 
-      if (diffX > 50) {
+      if (
+        diffX > 50
+      ) {
 
         calendarDate.setMonth(
           calendarDate.getMonth() + 1
         );
+
 
         renderCalendar();
 
@@ -714,11 +821,14 @@ function setupSwipe() {
          右スワイプ → 前月
       ---------------------------------------- */
 
-      if (diffX < -50) {
+      if (
+        diffX < -50
+      ) {
 
         calendarDate.setMonth(
           calendarDate.getMonth() - 1
         );
+
 
         renderCalendar();
 
@@ -742,3 +852,4 @@ setInterval(
   updateBusinessStatus,
   60000
 );
+```
