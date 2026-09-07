@@ -1,7 +1,10 @@
 /* ==================================================
    SUNABA COFFEE
    style.css
-   Futuraベース・レスポンシブ対応
+
+   9月4日版をベースにした復元版
+   ＋スライドショー
+   ＋肉球マウスポインター
 ================================================== */
 
 
@@ -39,19 +42,23 @@ body {
 
   text-align: center;
 
-  font-size: clamp(14px, 1.4vw, 17px);
+  font-size:
+    clamp(14px, 1.4vw, 17px);
 }
 
 
 img {
   max-width: 100%;
+
   height: auto;
+
   display: block;
 }
 
 
 a {
   color: inherit;
+
   text-decoration: none;
 }
 
@@ -86,7 +93,8 @@ button {
 ================================================== */
 
 .header {
-  padding: 48px 20px 35px;
+  padding:
+    45px 20px 30px;
 
   background: #fbf8f2;
 }
@@ -102,29 +110,34 @@ button {
 .header h1 {
   margin: 0;
 
-  font-size: clamp(34px, 6vw, 64px);
+  color: #4b4038;
 
-  font-weight: 600;
+  font-size:
+    clamp(36px, 6vw, 64px);
+
+  font-weight: 500;
 
   letter-spacing: 0.08em;
-
-  color: #4b4038;
 }
 
 
 .subtitle {
-  margin: 4px 0 5px;
+  margin:
+    3px 0 5px;
 
-  font-size: clamp(17px, 2vw, 25px);
+  font-size:
+    clamp(17px, 2vw, 25px);
 
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
 }
 
 
 .concept {
-  margin: 0 0 22px;
+  margin:
+    0 0 20px;
 
-  font-size: clamp(13px, 1.5vw, 17px);
+  font-size:
+    clamp(13px, 1.5vw, 17px);
 }
 
 
@@ -135,48 +148,51 @@ button {
 .business-status {
   display: inline-block;
 
-  padding: 8px 22px;
+  padding:
+    8px 24px;
 
   border-radius: 999px;
+
+  background: #e9e1d8;
+
+  color: #5c5048;
 
   font-size: 14px;
 
   font-weight: 600;
-
-  background: #e8e0d5;
-
-  color: #5a4a3e;
-
-  transition: 0.3s;
 }
 
 
 .business-status.open {
-  background: #d9ead3;
-  color: #3d6338;
+  background: #dcebd8;
+
+  color: #42623c;
 }
 
 
 .business-status.soon {
-  background: #f4dfad;
-  color: #76591c;
+  background: #f2dfb4;
+
+  color: #765a20;
 }
 
 
 .business-status.before-open {
-  background: #e4ddd5;
-  color: #65574d;
+  background: #e7e0d9;
+
+  color: #625750;
 }
 
 
 .business-status.closed {
-  background: #ddd7d2;
-  color: #665d57;
+  background: #ddd8d3;
+
+  color: #665e58;
 }
 
 
 /* ==================================================
-   NAVIGATION
+   NAV
 ================================================== */
 
 .nav {
@@ -188,15 +204,18 @@ button {
 
   flex-wrap: wrap;
 
-  gap: 8px;
+  gap: 5px;
 
-  padding: 12px 15px;
+  padding:
+    10px 15px;
 
   background: #fff;
 
-  border-top: 1px solid #eee5da;
+  border-top:
+    1px solid #eee5db;
 
-  border-bottom: 1px solid #eee5da;
+  border-bottom:
+    1px solid #eee5db;
 
   position: sticky;
 
@@ -207,27 +226,26 @@ button {
 
 
 .nav a {
-  padding: 7px 15px;
+  padding:
+    7px 15px;
 
   border-radius: 999px;
 
   font-size: 14px;
 
   transition:
-    background 0.3s,
-    transform 0.2s;
+    0.25s;
 }
 
 
 .nav a:hover {
   background: #f0e8df;
-
-  transform: translateY(-1px);
 }
 
 
 /* ==================================================
    HERO
+   ★ スライドショー追加部分
 ================================================== */
 
 .hero {
@@ -242,7 +260,8 @@ button {
 
   width: 100%;
 
-  height: min(62vw, 680px);
+  height:
+    min(62vw, 680px);
 
   min-height: 260px;
 
@@ -258,8 +277,6 @@ button {
   width: 100%;
 
   height: 100%;
-
-  max-height: none;
 
   object-fit: cover;
 
@@ -286,23 +303,27 @@ button {
 
   margin: 0 auto;
 
-  padding: 75px 20px;
+  padding:
+    70px 20px;
 }
 
 
 .section h2 {
-  margin: 0 0 30px;
+  margin:
+    0 0 28px;
 
-  font-size: clamp(24px, 3vw, 34px);
+  font-size:
+    clamp(24px, 3vw, 34px);
 
   font-weight: 500;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 
 .section p {
-  margin: 10px 0;
+  margin:
+    9px 0;
 }
 
 
@@ -311,32 +332,36 @@ button {
 ================================================== */
 
 .intro {
-  padding-top: 80px;
+  padding-top: 75px;
 
-  padding-bottom: 70px;
+  padding-bottom: 65px;
 }
 
 
 .intro h2 {
-  font-size: clamp(20px, 3vw, 32px);
+  font-size:
+    clamp(20px, 3vw, 31px);
 
   line-height: 1.5;
 }
 
 
 .intro p {
-  margin: 8px 0;
+  margin:
+    7px 0;
 }
 
 
 .pet-catch {
   display: inline-block;
 
-  margin-top: 25px;
+  margin-top: 22px;
 
-  padding: 9px 22px;
+  padding:
+    8px 22px;
 
-  border: 1px solid #d8cbbd;
+  border:
+    1px solid #d8cbbd;
 
   border-radius: 999px;
 
@@ -362,6 +387,8 @@ button {
 
   justify-content: center;
 
+  align-items: center;
+
   flex-wrap: wrap;
 
   gap: 12px;
@@ -371,17 +398,20 @@ button {
 .sns-button {
   display: inline-block;
 
-  min-width: 130px;
+  min-width: 125px;
 
-  padding: 10px 20px;
+  padding:
+    9px 20px;
 
-  border: 1px solid #cfc2b5;
+  border:
+    1px solid #cfc3b7;
 
   border-radius: 999px;
 
   background: #fff;
 
-  transition: 0.3s;
+  transition:
+    0.25s;
 }
 
 
@@ -404,30 +434,33 @@ button {
 
 
 .news-card {
-  padding: 18px 20px;
-
-  margin: 14px auto;
-
   max-width: 720px;
+
+  margin:
+    14px auto;
+
+  padding:
+    16px 20px;
 
   background: #fff;
 
-  border-radius: 14px;
+  border-radius: 15px;
 
   box-shadow:
-    0 4px 15px rgba(75, 64, 56, 0.06);
+    0 4px 15px rgba(75, 64, 56, 0.05);
 }
 
 
 .news-card p {
-  margin: 5px 0;
+  margin:
+    5px 0;
 }
 
 
 .news-date {
-  font-weight: 600;
-
   font-size: 14px;
+
+  font-weight: 600;
 }
 
 
@@ -436,7 +469,9 @@ button {
 ================================================== */
 
 .calendar-section {
-  padding-top: 80px;
+  padding-top: 75px;
+
+  padding-bottom: 75px;
 }
 
 
@@ -454,9 +489,10 @@ button {
 .calendar-container {
   width: min(100%, 650px);
 
-  background: #fff;
+  padding:
+    20px;
 
-  padding: 22px;
+  background: #fff;
 
   border-radius: 22px;
 
@@ -466,7 +502,8 @@ button {
 
 
 #calendarTitle {
-  margin: 0 0 18px;
+  margin:
+    0 0 18px;
 
   font-size: 22px;
 
@@ -475,45 +512,45 @@ button {
 
 
 .calendar-button {
-  flex: 0 0 auto;
+  flex:
+    0 0 auto;
 
-  width: 48px;
+  width: 46px;
 
-  height: 48px;
+  height: 46px;
 
   border: none;
 
   border-radius: 50%;
 
-  background: #e9dfd5;
+  background: #e8ded4;
 
   color: #4b4038;
 
-  font-size: 32px;
+  font-size: 31px;
 
   line-height: 1;
-
-  transition: 0.2s;
 }
 
 
 .calendar-button:hover {
-  background: #d9cbbb;
+  background: #d8cabc;
 }
 
 
 .week-header {
   display: grid;
 
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns:
+    repeat(7, 1fr);
 
   gap: 4px;
 
   margin-bottom: 5px;
 
-  font-weight: 600;
-
   font-size: 13px;
+
+  font-weight: 600;
 }
 
 
@@ -530,7 +567,8 @@ button {
 .calendar {
   display: grid;
 
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns:
+    repeat(7, 1fr);
 
   gap: 5px;
 }
@@ -538,8 +576,6 @@ button {
 
 .calendar-day {
   min-height: 58px;
-
-  padding: 5px;
 
   display: flex;
 
@@ -549,11 +585,11 @@ button {
 
   align-items: center;
 
-  border-radius: 10px;
-
-  position: relative;
+  padding: 5px;
 
   background: #faf8f5;
+
+  border-radius: 10px;
 }
 
 
@@ -578,9 +614,11 @@ button {
 
 
 .calendar-day.today {
-  outline: 2px solid #b79c83;
+  outline:
+    2px solid #b79c83;
 
-  outline-offset: -2px;
+  outline-offset:
+    -2px;
 }
 
 
@@ -631,10 +669,9 @@ button {
   display: grid;
 
   grid-template-columns:
-    minmax(220px, 350px)
-    1fr;
+    minmax(220px, 350px) 1fr;
 
-  gap: 45px;
+  gap: 40px;
 
   align-items: center;
 
@@ -650,7 +687,8 @@ button {
 
 
 .owner-content p {
-  margin: 0 0 18px;
+  margin:
+    0 0 18px;
 }
 
 
@@ -659,9 +697,9 @@ button {
 ================================================== */
 
 .coffee-section {
-  padding-top: 80px;
+  padding-top: 75px;
 
-  padding-bottom: 80px;
+  padding-bottom: 75px;
 }
 
 
@@ -689,8 +727,7 @@ button {
   display: grid;
 
   grid-template-columns:
-    minmax(220px, 400px)
-    1fr;
+    minmax(220px, 400px) 1fr;
 
   gap: 40px;
 
@@ -707,24 +744,22 @@ button {
 }
 
 
-.dog-content p {
-  margin: 10px 0;
-}
-
-
 /* ==================================================
    SEATS
 ================================================== */
 
 .seats-section {
-  padding-top: 80px;
+  padding-top: 75px;
+
+  padding-bottom: 75px;
 }
 
 
 .seat-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns:
+    repeat(2, 1fr);
 
   gap: 20px;
 
@@ -735,11 +770,13 @@ button {
 
 
 .seat-card {
-  padding: 28px 20px;
+  padding:
+    25px 20px;
 
   background: #fff;
 
-  border: 1px solid #e5dbd0;
+  border:
+    1px solid #e5dbd0;
 
   border-radius: 20px;
 
@@ -756,14 +793,16 @@ button {
 
 
 .seat-card p {
-  margin: 7px 0;
+  margin:
+    7px 0;
 }
 
 
 .pet-ok {
   display: inline-block;
 
-  padding: 4px 14px;
+  padding:
+    4px 14px;
 
   border-radius: 999px;
 
@@ -789,9 +828,11 @@ button {
 .menu-category {
   max-width: 760px;
 
-  margin: 0 auto 35px;
+  margin:
+    0 auto 30px;
 
-  padding: 20px 25px;
+  padding:
+    18px 24px;
 
   background: #fff;
 
@@ -800,7 +841,8 @@ button {
 
 
 .menu-category h3 {
-  margin: 5px 0 18px;
+  margin:
+    5px 0 15px;
 
   font-size: 22px;
 
@@ -817,9 +859,11 @@ button {
 
   gap: 20px;
 
-  padding: 12px 4px;
+  padding:
+    11px 4px;
 
-  border-bottom: 1px solid #eee6dd;
+  border-bottom:
+    1px solid #eee6dd;
 
   text-align: left;
 }
@@ -842,7 +886,7 @@ button {
 ================================================== */
 
 .access-section {
-  padding-bottom: 90px;
+  padding-bottom: 85px;
 }
 
 
@@ -868,13 +912,12 @@ button {
 .map-button {
   display: inline-block;
 
-  padding: 12px 24px;
+  padding:
+    11px 24px;
 
   border-radius: 999px;
 
   background: #e5dbd1;
-
-  transition: 0.3s;
 }
 
 
@@ -888,7 +931,8 @@ button {
 ================================================== */
 
 .footer {
-  padding: 50px 20px;
+  padding:
+    45px 20px;
 
   background: #4b4038;
 
@@ -899,12 +943,13 @@ button {
 
 
 .footer p {
-  margin: 8px 0;
+  margin:
+    7px 0;
 }
 
 
 .footer .copyright {
-  margin-top: 25px;
+  margin-top: 22px;
 
   font-size: 12px;
 
@@ -939,12 +984,8 @@ button {
   .dog-content img {
     max-width: 500px;
 
-    margin: 0 auto;
-  }
-
-
-  .calendar-container {
-    padding: 15px;
+    margin:
+      0 auto;
   }
 
 }
@@ -956,19 +997,12 @@ button {
 
 @media (max-width: 600px) {
 
-
-  /* ------------------------------------------
-     基本
-  ------------------------------------------ */
-
   body {
     font-size: 14px;
   }
 
 
-  /* ------------------------------------------
-     肉球カーソル
-  ------------------------------------------ */
+  /* スマホではマウスポインター不要 */
 
   html,
   body,
@@ -984,15 +1018,15 @@ button {
 
   .header {
     padding:
-      32px 12px
-      25px;
+      30px 12px 24px;
   }
 
 
   .header h1 {
-    font-size: 36px;
+    font-size: 35px;
 
-    letter-spacing: 0.06em;
+    letter-spacing:
+      0.05em;
   }
 
 
@@ -1011,14 +1045,16 @@ button {
   ------------------------------------------ */
 
   .nav {
-    gap: 3px;
+    gap: 2px;
 
-    padding: 8px 5px;
+    padding:
+      7px 4px;
   }
 
 
   .nav a {
-    padding: 6px 8px;
+    padding:
+      6px 8px;
 
     font-size: 11px;
   }
@@ -1050,7 +1086,7 @@ button {
   .section h2 {
     font-size: 23px;
 
-    margin-bottom: 24px;
+    margin-bottom: 23px;
   }
 
 
@@ -1076,7 +1112,7 @@ button {
   ------------------------------------------ */
 
   .sns-buttons {
-    gap: 8px;
+    gap: 7px;
   }
 
 
@@ -1096,15 +1132,6 @@ button {
 
   .calendar-slider {
     gap: 5px;
-  }
-
-
-  .calendar-button {
-    width: 38px;
-
-    height: 38px;
-
-    font-size: 26px;
   }
 
 
@@ -1140,6 +1167,15 @@ button {
   .holiday-label,
   .event-label {
     font-size: 8px;
+  }
+
+
+  .calendar-button {
+    width: 38px;
+
+    height: 38px;
+
+    font-size: 26px;
   }
 
 
