@@ -1,4 +1,232 @@
 /* ==================================================
+   SUNABA COFFEE
+   style.css
+   Futuraベース・レスポンシブ対応
+================================================== */
+
+
+/* ==================================================
+   基本設定
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  background: #fbf8f2;
+
+  color: #4b4038;
+
+  font-family:
+    Futura,
+    "Futura PT",
+    "Century Gothic",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
+
+  line-height: 1.7;
+
+  text-align: center;
+
+  font-size: clamp(14px, 1.4vw, 17px);
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+button {
+  font-family: inherit;
+}
+
+
+/* ==================================================
+   肉球マウスポインター
+================================================== */
+
+html,
+body {
+  cursor:
+    url("./image/point_210211.png") 16 16,
+    auto;
+}
+
+
+a,
+button {
+  cursor:
+    url("./image/point_210211.png") 16 16,
+    pointer;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+  padding: 48px 20px 35px;
+
+  background: #fbf8f2;
+}
+
+
+.header-inner {
+  width: min(92%, 1000px);
+
+  margin: 0 auto;
+}
+
+
+.header h1 {
+  margin: 0;
+
+  font-size: clamp(34px, 6vw, 64px);
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  color: #4b4038;
+}
+
+
+.subtitle {
+  margin: 4px 0 5px;
+
+  font-size: clamp(17px, 2vw, 25px);
+
+  letter-spacing: 0.12em;
+}
+
+
+.concept {
+  margin: 0 0 22px;
+
+  font-size: clamp(13px, 1.5vw, 17px);
+}
+
+
+/* ==================================================
+   営業状況
+================================================== */
+
+.business-status {
+  display: inline-block;
+
+  padding: 8px 22px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  background: #e8e0d5;
+
+  color: #5a4a3e;
+
+  transition: 0.3s;
+}
+
+
+.business-status.open {
+  background: #d9ead3;
+  color: #3d6338;
+}
+
+
+.business-status.soon {
+  background: #f4dfad;
+  color: #76591c;
+}
+
+
+.business-status.before-open {
+  background: #e4ddd5;
+  color: #65574d;
+}
+
+
+.business-status.closed {
+  background: #ddd7d2;
+  color: #665d57;
+}
+
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+.nav {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  padding: 12px 15px;
+
+  background: #fff;
+
+  border-top: 1px solid #eee5da;
+
+  border-bottom: 1px solid #eee5da;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+}
+
+
+.nav a {
+  padding: 7px 15px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+
+
+.nav a:hover {
+  background: #f0e8df;
+
+  transform: translateY(-1px);
+}
+
+
+/* ==================================================
    HERO
 ================================================== */
 
@@ -9,10 +237,1037 @@
 }
 
 
-.hero img {
+.hero-slideshow {
+  position: relative;
+
   width: 100%;
 
-  max-height: 680px;
+  height: min(62vw, 680px);
+
+  min-height: 260px;
+
+  overflow: hidden;
+}
+
+
+.hero-slideshow .slide {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  max-height: none;
 
   object-fit: cover;
+
+  opacity: 0;
+
+  transition:
+    opacity 1.2s ease-in-out;
+
+  pointer-events: none;
+}
+
+
+.hero-slideshow .slide.active {
+  opacity: 1;
+}
+
+
+/* ==================================================
+   SECTION
+================================================== */
+
+.section {
+  width: min(92%, 1000px);
+
+  margin: 0 auto;
+
+  padding: 75px 20px;
+}
+
+
+.section h2 {
+  margin: 0 0 30px;
+
+  font-size: clamp(24px, 3vw, 34px);
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+}
+
+
+.section p {
+  margin: 10px 0;
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.intro {
+  padding-top: 80px;
+
+  padding-bottom: 70px;
+}
+
+
+.intro h2 {
+  font-size: clamp(20px, 3vw, 32px);
+
+  line-height: 1.5;
+}
+
+
+.intro p {
+  margin: 8px 0;
+}
+
+
+.pet-catch {
+  display: inline-block;
+
+  margin-top: 25px;
+
+  padding: 9px 22px;
+
+  border: 1px solid #d8cbbd;
+
+  border-radius: 999px;
+
+  background: #fff;
+
+  font-size: 14px;
+}
+
+
+/* ==================================================
+   SNS
+================================================== */
+
+.sns-section {
+  padding-top: 45px;
+
+  padding-bottom: 60px;
+}
+
+
+.sns-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+
+.sns-button {
+  display: inline-block;
+
+  min-width: 130px;
+
+  padding: 10px 20px;
+
+  border: 1px solid #cfc2b5;
+
+  border-radius: 999px;
+
+  background: #fff;
+
+  transition: 0.3s;
+}
+
+
+.sns-button:hover {
+  background: #eee7df;
+
+  transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   NEWS
+================================================== */
+
+.news-section {
+  background: #f6f1ea;
+
+  border-radius: 28px;
+}
+
+
+.news-card {
+  padding: 18px 20px;
+
+  margin: 14px auto;
+
+  max-width: 720px;
+
+  background: #fff;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 15px rgba(75, 64, 56, 0.06);
+}
+
+
+.news-card p {
+  margin: 5px 0;
+}
+
+
+.news-date {
+  font-weight: 600;
+
+  font-size: 14px;
+}
+
+
+/* ==================================================
+   CALENDAR
+================================================== */
+
+.calendar-section {
+  padding-top: 80px;
+}
+
+
+.calendar-slider {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+
+.calendar-container {
+  width: min(100%, 650px);
+
+  background: #fff;
+
+  padding: 22px;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 5px 20px rgba(75, 64, 56, 0.07);
+}
+
+
+#calendarTitle {
+  margin: 0 0 18px;
+
+  font-size: 22px;
+
+  font-weight: 600;
+}
+
+
+.calendar-button {
+  flex: 0 0 auto;
+
+  width: 48px;
+
+  height: 48px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #e9dfd5;
+
+  color: #4b4038;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  transition: 0.2s;
+}
+
+
+.calendar-button:hover {
+  background: #d9cbbb;
+}
+
+
+.week-header {
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 4px;
+
+  margin-bottom: 5px;
+
+  font-weight: 600;
+
+  font-size: 13px;
+}
+
+
+.week-header .sun {
+  color: #a86c60;
+}
+
+
+.week-header .sat {
+  color: #617d91;
+}
+
+
+.calendar {
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 5px;
+}
+
+
+.calendar-day {
+  min-height: 58px;
+
+  padding: 5px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 10px;
+
+  position: relative;
+
+  background: #faf8f5;
+}
+
+
+.calendar-day.empty {
+  background: transparent;
+}
+
+
+.day-number {
+  font-size: 15px;
+}
+
+
+.calendar-day.sunday .day-number {
+  color: #a86c60;
+}
+
+
+.calendar-day.saturday .day-number {
+  color: #617d91;
+}
+
+
+.calendar-day.today {
+  outline: 2px solid #b79c83;
+
+  outline-offset: -2px;
+}
+
+
+.calendar-day.holiday {
+  background: #eee5dc;
+}
+
+
+.holiday-label {
+  font-size: 10px;
+
+  line-height: 1.2;
+
+  color: #78675c;
+}
+
+
+.event-label {
+  font-size: 10px;
+
+  line-height: 1.2;
+
+  margin-top: 2px;
+
+  color: #76591c;
+}
+
+
+.calendar-note {
+  font-size: 13px;
+
+  color: #71665e;
+}
+
+
+/* ==================================================
+   OWNER
+================================================== */
+
+.owner-section {
+  background: #f6f1ea;
+
+  border-radius: 28px;
+}
+
+
+.owner-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 350px)
+    1fr;
+
+  gap: 45px;
+
+  align-items: center;
+
+  text-align: left;
+}
+
+
+.owner-content img {
+  width: 100%;
+
+  border-radius: 20px;
+}
+
+
+.owner-content p {
+  margin: 0 0 18px;
+}
+
+
+/* ==================================================
+   COFFEE
+================================================== */
+
+.coffee-section {
+  padding-top: 80px;
+
+  padding-bottom: 80px;
+}
+
+
+.coffee-section p {
+  max-width: 720px;
+
+  margin-left: auto;
+
+  margin-right: auto;
+}
+
+
+/* ==================================================
+   DOG
+================================================== */
+
+.dog-section {
+  background: #fff;
+
+  border-radius: 28px;
+}
+
+
+.dog-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 400px)
+    1fr;
+
+  gap: 40px;
+
+  align-items: center;
+
+  text-align: left;
+}
+
+
+.dog-content img {
+  width: 100%;
+
+  border-radius: 20px;
+}
+
+
+.dog-content p {
+  margin: 10px 0;
+}
+
+
+/* ==================================================
+   SEATS
+================================================== */
+
+.seats-section {
+  padding-top: 80px;
+}
+
+
+.seat-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  max-width: 760px;
+
+  margin: 0 auto;
+}
+
+
+.seat-card {
+  padding: 28px 20px;
+
+  background: #fff;
+
+  border: 1px solid #e5dbd0;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 4px 14px rgba(75, 64, 56, 0.05);
+}
+
+
+.seat-card h3 {
+  margin-top: 0;
+
+  font-size: 21px;
+}
+
+
+.seat-card p {
+  margin: 7px 0;
+}
+
+
+.pet-ok {
+  display: inline-block;
+
+  padding: 4px 14px;
+
+  border-radius: 999px;
+
+  background: #eee4d9;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* ==================================================
+   MENU
+================================================== */
+
+.menu-section {
+  background: #f6f1ea;
+
+  border-radius: 28px;
+}
+
+
+.menu-category {
+  max-width: 760px;
+
+  margin: 0 auto 35px;
+
+  padding: 20px 25px;
+
+  background: #fff;
+
+  border-radius: 18px;
+}
+
+
+.menu-category h3 {
+  margin: 5px 0 18px;
+
+  font-size: 22px;
+
+  font-weight: 500;
+}
+
+
+.menu-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 12px 4px;
+
+  border-bottom: 1px solid #eee6dd;
+
+  text-align: left;
+}
+
+
+.menu-row:last-child {
+  border-bottom: none;
+}
+
+
+.menu-row small {
+  font-size: 12px;
+
+  color: #776b62;
+}
+
+
+/* ==================================================
+   ACCESS
+================================================== */
+
+.access-section {
+  padding-bottom: 90px;
+}
+
+
+.address {
+  line-height: 2;
+}
+
+
+.map-pc {
+  margin-top: 30px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+}
+
+
+.map-mobile {
+  display: none;
+}
+
+
+.map-button {
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  border-radius: 999px;
+
+  background: #e5dbd1;
+
+  transition: 0.3s;
+}
+
+
+.map-button:hover {
+  background: #d8cabc;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+  padding: 50px 20px;
+
+  background: #4b4038;
+
+  color: #fff;
+
+  text-align: center;
+}
+
+
+.footer p {
+  margin: 8px 0;
+}
+
+
+.footer .copyright {
+  margin-top: 25px;
+
+  font-size: 12px;
+
+  opacity: 0.7;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 800px) {
+
+  .section {
+    padding-top: 60px;
+
+    padding-bottom: 60px;
+  }
+
+
+  .owner-content,
+  .dog-content {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    text-align: center;
+  }
+
+
+  .owner-content img,
+  .dog-content img {
+    max-width: 500px;
+
+    margin: 0 auto;
+  }
+
+
+  .calendar-container {
+    padding: 15px;
+  }
+
+}
+
+
+/* ==================================================
+   SMARTPHONE
+================================================== */
+
+@media (max-width: 600px) {
+
+
+  /* ------------------------------------------
+     基本
+  ------------------------------------------ */
+
+  body {
+    font-size: 14px;
+  }
+
+
+  /* ------------------------------------------
+     肉球カーソル
+  ------------------------------------------ */
+
+  html,
+  body,
+  a,
+  button {
+    cursor: auto;
+  }
+
+
+  /* ------------------------------------------
+     HEADER
+  ------------------------------------------ */
+
+  .header {
+    padding:
+      32px 12px
+      25px;
+  }
+
+
+  .header h1 {
+    font-size: 36px;
+
+    letter-spacing: 0.06em;
+  }
+
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+
+  .concept {
+    font-size: 12px;
+  }
+
+
+  /* ------------------------------------------
+     NAV
+  ------------------------------------------ */
+
+  .nav {
+    gap: 3px;
+
+    padding: 8px 5px;
+  }
+
+
+  .nav a {
+    padding: 6px 8px;
+
+    font-size: 11px;
+  }
+
+
+  /* ------------------------------------------
+     HERO
+  ------------------------------------------ */
+
+  .hero-slideshow {
+    height: 68vw;
+
+    min-height: 230px;
+  }
+
+
+  /* ------------------------------------------
+     SECTION
+  ------------------------------------------ */
+
+  .section {
+    width: 92%;
+
+    padding:
+      55px 10px;
+  }
+
+
+  .section h2 {
+    font-size: 23px;
+
+    margin-bottom: 24px;
+  }
+
+
+  /* ------------------------------------------
+     INTRO
+  ------------------------------------------ */
+
+  .intro h2 {
+    font-size: 19px;
+  }
+
+
+  .pet-catch {
+    font-size: 12px;
+
+    padding:
+      7px 16px;
+  }
+
+
+  /* ------------------------------------------
+     SNS
+  ------------------------------------------ */
+
+  .sns-buttons {
+    gap: 8px;
+  }
+
+
+  .sns-button {
+    min-width: 95px;
+
+    padding:
+      8px 12px;
+
+    font-size: 12px;
+  }
+
+
+  /* ------------------------------------------
+     CALENDAR
+  ------------------------------------------ */
+
+  .calendar-slider {
+    gap: 5px;
+  }
+
+
+  .calendar-button {
+    width: 38px;
+
+    height: 38px;
+
+    font-size: 26px;
+  }
+
+
+  .calendar-container {
+    padding: 10px;
+
+    border-radius: 15px;
+  }
+
+
+  #calendarTitle {
+    font-size: 18px;
+  }
+
+
+  .calendar {
+    gap: 3px;
+  }
+
+
+  .calendar-day {
+    min-height: 46px;
+
+    border-radius: 7px;
+  }
+
+
+  .day-number {
+    font-size: 13px;
+  }
+
+
+  .holiday-label,
+  .event-label {
+    font-size: 8px;
+  }
+
+
+  /* ------------------------------------------
+     OWNER
+  ------------------------------------------ */
+
+  .owner-content {
+    text-align: center;
+  }
+
+
+  .owner-content img {
+    max-width: 330px;
+  }
+
+
+  /* ------------------------------------------
+     DOG
+  ------------------------------------------ */
+
+  .dog-content {
+    text-align: center;
+  }
+
+
+  .dog-content img {
+    max-width: 330px;
+  }
+
+
+  /* ------------------------------------------
+     SEATS
+  ------------------------------------------ */
+
+  .seat-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  .seat-card {
+    padding:
+      20px 15px;
+  }
+
+
+  /* ------------------------------------------
+     MENU
+  ------------------------------------------ */
+
+  .menu-category {
+    padding:
+      15px;
+  }
+
+
+  .menu-row {
+    font-size: 13px;
+
+    gap: 10px;
+  }
+
+
+  .menu-row small {
+    font-size: 10px;
+  }
+
+
+  /* ------------------------------------------
+     ACCESS
+  ------------------------------------------ */
+
+  .map-pc {
+    display: none;
+  }
+
+
+  .map-mobile {
+    display: block;
+
+    margin-top: 25px;
+  }
+
+
+  /* ------------------------------------------
+     FOOTER
+  ------------------------------------------ */
+
+  .footer {
+    padding:
+      40px 15px;
+  }
+
+}
+
+
+/* ==================================================
+   VERY SMALL SMARTPHONE
+================================================== */
+
+@media (max-width: 380px) {
+
+  .header h1 {
+    font-size: 31px;
+  }
+
+
+  .nav a {
+    font-size: 10px;
+
+    padding:
+      5px 6px;
+  }
+
+
+  .calendar-button {
+    width: 34px;
+
+    height: 34px;
+
+    font-size: 23px;
+  }
+
+
+  .calendar-day {
+    min-height: 42px;
+  }
+
 }
