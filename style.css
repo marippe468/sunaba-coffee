@@ -1,7 +1,10 @@
 /* ==================================================
    SUNABA COFFEE
    style.css
-   Futuraベース・レスポンシブ対応
+
+   Futuraベース
+   レスポンシブ対応
+   肉球マウスポインター
 ================================================== */
 
 
@@ -13,11 +16,9 @@
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   margin: 0;
@@ -28,36 +29,37 @@ body {
 
   font-family:
     Futura,
-    "Futura PT",
     "Century Gothic",
-    "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
+    "Hiragino Kaku Gothic ProN",
     Meiryo,
     sans-serif;
 
-  line-height: 1.7;
+  line-height: 1.8;
 
   text-align: center;
 
-  font-size: clamp(14px, 1.4vw, 17px);
+  overflow-x: hidden;
 }
 
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* ==================================================
+   肉球マウスポインター
+================================================== */
+
+/*
+  point_210211.png を
+  imageフォルダに入れてください。
+*/
+
+html,
+body {
+  cursor: url("./image/point_210211.png") 16 16, auto;
 }
 
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-
+a,
 button {
-  font-family: inherit;
+  cursor: url("./image/point_210211.png") 16 16, pointer;
 }
 
 
@@ -65,99 +67,110 @@ button {
    共通
 ================================================== */
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .section {
-  width: min(92%, 1000px);
+  width: min(100% - 40px, 900px);
   margin: 0 auto;
-  padding: clamp(55px, 8vw, 100px) 0;
+  padding: 80px 20px;
 }
 
-
-.section h2 {
-  margin: 0 0 clamp(30px, 5vw, 55px);
-
-  font-size: clamp(1.7rem, 4vw, 2.6rem);
-
-  letter-spacing: 0.08em;
-
-  font-weight: 500;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
 }
 
+h2 {
+  display: inline-block;
 
-.section p {
-  margin: 0 0 0.8em;
+  margin-bottom: 45px;
+
+  font-size: 2rem;
+
+  letter-spacing: 0.12em;
+
+  position: relative;
+}
+
+h2::after {
+  content: "";
+
+  display: block;
+
+  width: 45px;
+
+  height: 2px;
+
+  margin: 12px auto 0;
+
+  background: #9b806d;
 }
 
 
 /* ==================================================
-   ヘッダー
+   HEADER
 ================================================== */
 
 .header {
-  background: #fbf8f2;
+  background: #f3ede4;
+
+  border-bottom: 1px solid #ded2c5;
 }
 
-
 .header-inner {
-  width: min(94%, 1100px);
+  width: min(100% - 40px, 1100px);
 
   margin: 0 auto;
 
-  padding:
-    clamp(25px, 5vw, 55px)
-    0
-    clamp(20px, 4vw, 40px);
+  padding: 35px 20px 25px;
 }
-
-
-.logo-area {
-  text-align: center;
-}
-
 
 .logo {
-  font-family:
-    Futura,
-    "Futura PT",
-    "Century Gothic",
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    Meiryo,
-    sans-serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
 
-  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: bold;
 
-  font-weight: 500;
+  letter-spacing: 0.12em;
 
-  letter-spacing: 0.1em;
-
-  line-height: 1.1;
+  color: #4b4038;
 }
-
 
 .subtitle {
-  margin-top: 0.45em;
+  margin-top: 3px;
 
-  font-size: clamp(1rem, 2.2vw, 1.45rem);
+  font-size: 1.05rem;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.3em;
+
+  color: #8a7060;
 }
-
 
 .header-catch {
-  margin: 0.7em 0 0;
+  margin: 14px 0 3px;
 
-  font-size: clamp(0.85rem, 1.8vw, 1.15rem);
-
-  letter-spacing: 0.08em;
+  font-size: 0.95rem;
 }
 
-
 .pet-catch {
-  margin: 0.4em 0 0;
+  margin-bottom: 25px;
 
-  font-size: clamp(0.78rem, 1.6vw, 1rem);
+  font-size: 0.85rem;
 
-  letter-spacing: 0.06em;
+  color: #8a6653;
+
+  letter-spacing: 0.08em;
 }
 
 
@@ -166,33 +179,54 @@ button {
 ================================================== */
 
 .business-status {
-  display: inline-block;
+  display: flex;
 
-  margin-top: clamp(20px, 4vw, 35px);
+  justify-content: center;
 
-  padding:
-    0.55em
-    1.5em;
+  align-items: center;
 
-  border-radius: 999px;
+  width: 150px;
+  height: 150px;
 
-  background: #6d6259;
+  margin: 20px auto 30px;
 
-  color: #fff;
+  border-radius: 50%;
 
-  font-size: clamp(0.8rem, 1.7vw, 1rem);
+  background: #8a7060;
 
-  letter-spacing: 0.04em;
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: bold;
+
+  line-height: 1.5;
+
+  padding: 20px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
+.business-status.open {
+  background: #7d9674;
+}
+
+.business-status.soon {
+  background: #b08c5d;
+}
 
 .business-status.closed {
-  background: #9a8d83;
+  background: #85756c;
+}
+
+.business-status.before-open {
+  background: #9b806d;
 }
 
 
 /* ==================================================
-   ナビ
+   NAV
 ================================================== */
 
 .nav {
@@ -202,27 +236,38 @@ button {
 
   flex-wrap: wrap;
 
-  gap: clamp(8px, 2vw, 24px);
-
-  margin-top: clamp(25px, 4vw, 40px);
+  gap: 10px 28px;
 }
-
 
 .nav a {
-  padding: 0.35em 0.8em;
+  padding: 5px 4px;
 
-  font-size: clamp(0.78rem, 1.7vw, 1rem);
+  font-size: 0.9rem;
 
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 
-  border-bottom: 1px solid transparent;
-
-  transition: 0.3s;
+  position: relative;
 }
 
+.nav a::after {
+  content: "";
 
-.nav a:hover {
-  border-bottom-color: #7b6a5e;
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+
+  height: 1px;
+
+  background: #8a7060;
+
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
 }
 
 
@@ -232,15 +277,12 @@ button {
 
 .hero {
   width: 100%;
-
-  overflow: hidden;
 }
-
 
 .hero img {
   width: 100%;
 
-  max-height: 680px;
+  max-height: 620px;
 
   object-fit: cover;
 }
@@ -251,129 +293,119 @@ button {
 ================================================== */
 
 .intro {
-  padding-top: clamp(60px, 9vw, 110px);
+  padding-top: 90px;
+  padding-bottom: 70px;
 }
-
 
 .intro h1 {
-  margin: 0 0 1.5em;
-
-  font-size: clamp(1.25rem, 3.3vw, 2.2rem);
-
-  line-height: 1.5;
-
-  font-weight: 500;
+  font-size: clamp(1.15rem, 3vw, 1.8rem);
 
   letter-spacing: 0.08em;
+
+  margin-bottom: 35px;
 }
 
-
 .intro p {
-  font-size: clamp(0.9rem, 1.8vw, 1.15rem);
+  margin-bottom: 8px;
+
+  font-size: 1rem;
 }
 
 
 /* ==================================================
-   Instagram
+   INSTAGRAM
 ================================================== */
 
 .instagram {
-  border-top: 1px solid rgba(100, 80, 60, 0.15);
+  background: #f5efe7;
+
+  border-radius: 20px;
+
+  margin-bottom: 20px;
 }
-
-
-.instagram h2 {
-  margin-bottom: 0.7em;
-}
-
 
 .instagram p {
-  margin-bottom: 1.8em;
+  margin-bottom: 30px;
 }
-
 
 .sns-button,
 .map-button {
   display: inline-block;
 
-  padding: 0.8em 1.8em;
+  padding: 12px 28px;
 
-  border: 1px solid #786b61;
+  border-radius: 30px;
 
-  border-radius: 999px;
+  background: #6f5b4e;
 
-  background: #fff;
+  color: white;
 
-  font-size: clamp(0.8rem, 1.7vw, 1rem);
+  font-size: 0.9rem;
 
-  transition: 0.3s;
+  letter-spacing: 0.08em;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
-
 
 .sns-button:hover,
 .map-button:hover {
-  background: #786b61;
+  transform: translateY(-2px);
 
-  color: #fff;
+  opacity: 0.85;
 }
 
 
 /* ==================================================
-   お知らせ
+   NEWS
 ================================================== */
 
-.news {
-  border-top: 1px solid rgba(100, 80, 60, 0.15);
-}
-
-
 .news-item {
-  width: min(90%, 750px);
+  max-width: 700px;
 
-  margin: 0 auto 2em;
+  margin: 0 auto 30px;
 
-  padding:
-    clamp(18px, 3vw, 28px);
-
-  background: #fff;
-
-  border-radius: 14px;
+  padding: 25px 30px;
 
   text-align: left;
-}
 
+  background: #fffdf9;
+
+  border-left: 4px solid #9b806d;
+
+  border-radius: 5px;
+
+  box-shadow:
+    0 5px 20px rgba(75, 64, 56, 0.05);
+}
 
 .news-item time {
-  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  font-size: 0.8rem;
 
-  color: #8a7d73;
+  color: #927b6d;
 }
-
 
 .news-item h3 {
-  margin: 0.4em 0;
+  margin: 5px 0 8px;
 
-  font-size: clamp(1rem, 2vw, 1.3rem);
-
-  font-weight: 500;
+  font-size: 1.1rem;
 }
-
 
 .news-item p {
   margin: 0;
 
-  font-size: clamp(0.82rem, 1.6vw, 1rem);
+  font-size: 0.9rem;
 }
 
 
 /* ==================================================
-   カレンダー
+   CALENDAR
 ================================================== */
 
 .calendar-section {
-  border-top: 1px solid rgba(100, 80, 60, 0.15);
+  max-width: 1000px;
 }
-
 
 .calendar-slider {
   display: flex;
@@ -382,425 +414,327 @@ button {
 
   justify-content: center;
 
-  gap: clamp(5px, 2vw, 20px);
-
-  touch-action: pan-y;
+  gap: 15px;
 }
-
 
 .calendar-container {
-  width: min(90vw, 800px);
+  width: min(100%, 700px);
+
+  background: #fffdf9;
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 8px 25px rgba(75, 64, 56, 0.07);
 }
 
-
 #calendarTitle {
-  margin: 0 0 clamp(15px, 3vw, 25px);
+  margin-bottom: 25px;
 
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-
-  font-weight: 500;
+  font-size: 1.3rem;
 
   letter-spacing: 0.08em;
 }
 
-
 .calendar-button {
-  flex: 0 0 auto;
+  width: 45px;
+  height: 45px;
 
-  width: clamp(38px, 6vw, 52px);
+  flex-shrink: 0;
 
-  height: clamp(38px, 6vw, 52px);
-
-  border: 1px solid #887a70;
+  border: none;
 
   border-radius: 50%;
 
-  background: #fff;
+  background: #8a7060;
 
-  color: #5c5048;
+  color: white;
 
-  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-size: 2rem;
 
   line-height: 1;
 
-  cursor: pointer;
-
-  transition: 0.3s;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
-
 
 .calendar-button:hover {
-  background: #887a70;
+  transform: scale(1.08);
 
-  color: #fff;
+  opacity: 0.85;
 }
 
-
-/* 曜日 */
-
-.week-header {
-  display: grid;
-
-  grid-template-columns: repeat(7, 1fr);
-
-  border-bottom: 1px solid #d7cec5;
-
-  background: #f2ede6;
-}
-
-
-.week-header > div {
-  padding: 0.55em 0;
-
-  font-size: clamp(0.72rem, 1.6vw, 0.95rem);
-}
-
-
-.week-header .sun {
-  color: #b14e4e;
-}
-
-
-.week-header .sat {
-  color: #536f92;
-}
-
-
-/* 日付 */
-
+.week-header,
 .calendar {
   display: grid;
 
-  grid-template-columns: repeat(7, 1fr);
-
-  border-top: 1px solid #ddd4cb;
-
-  border-left: 1px solid #ddd4cb;
+  grid-template-columns:
+    repeat(7, 1fr);
 }
 
+.week-header {
+  margin-bottom: 6px;
+
+  font-size: 0.85rem;
+
+  font-weight: bold;
+}
+
+.week-header .sun {
+  color: #c66c6c;
+}
+
+.week-header .sat {
+  color: #6686a3;
+}
+
+.calendar {
+  gap: 5px;
+}
 
 .calendar-day {
-  min-height: clamp(60px, 8vw, 88px);
+  min-height: 80px;
 
-  padding:
-    clamp(5px, 0.8vw, 9px)
-    clamp(2px, 0.5vw, 6px);
+  padding: 6px 3px;
 
-  border-right: 1px solid #ddd4cb;
+  border-radius: 8px;
 
-  border-bottom: 1px solid #ddd4cb;
+  background: #f8f4ee;
 
-  background: #fff;
+  font-size: 0.85rem;
 
-  overflow: hidden;
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
 }
-
 
 .calendar-day.empty {
-  background: #f8f4ee;
+  background: transparent;
 }
 
-
-.day-number {
-  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
-
-  line-height: 1.2;
+.calendar-day .date {
+  font-weight: bold;
 }
-
-
-.sunday .day-number {
-  color: #b14e4e;
-}
-
-
-.saturday .day-number {
-  color: #536f92;
-}
-
-
-/* 今日 */
-
-.calendar-day.today {
-  background: #f5eee4;
-
-  box-shadow:
-    inset 0 0 0 2px #a69484;
-}
-
-
-/* 定休日 */
 
 .calendar-day.holiday {
-  background: #f8eeee;
+  background: #f3dddd;
+
+  color: #b64d4d;
 }
 
-
-.holiday-label {
-  margin-top: 0.25em;
-
-  color: #b14e4e;
-
-  font-size: clamp(0.52rem, 1.2vw, 0.72rem);
-
-  line-height: 1.2;
-
-  font-weight: 600;
+.calendar-day.event {
+  background: #eee3d7;
 }
 
-
-/* イベント */
-
-.event-label {
-  margin-top: 0.25em;
-
-  color: #6e5c4e;
-
-  font-size: clamp(0.5rem, 1.2vw, 0.72rem);
-
-  line-height: 1.2;
-
-  word-break: break-word;
+.calendar-day.today {
+  outline: 2px solid #9b806d;
 }
 
+.calendar-day .holiday-label {
+  margin-top: 2px;
+
+  color: #c04e4e;
+
+  font-size: 0.7rem;
+
+  font-weight: bold;
+}
+
+.calendar-day .event-label {
+  margin-top: 2px;
+
+  color: #8b6c54;
+
+  font-size: 0.68rem;
+
+  line-height: 1.25;
+}
 
 .calendar-note {
   display: flex;
 
   justify-content: center;
 
-  flex-wrap: wrap;
+  gap: 25px;
 
-  gap: 1.5em;
+  margin-top: 20px;
 
-  margin-top: 1.5em;
-
-  font-size: clamp(0.72rem, 1.5vw, 0.9rem);
+  font-size: 0.8rem;
 }
 
-
-.calendar-note span:first-child {
-  color: #b14e4e;
+.holiday-note {
+  color: #c04e4e;
 }
 
-
-.calendar-note span:last-child {
-  color: #6e5c4e;
+.event-note {
+  color: #8b6c54;
 }
 
 
 /* ==================================================
-   オーナー紹介
+   ABOUT
 ================================================== */
 
 .about {
-  border-top: 1px solid rgba(100, 80, 60, 0.15);
-}
+  background: #f5efe7;
 
+  border-radius: 20px;
+}
 
 .owner-content {
   display: grid;
 
   grid-template-columns:
-    minmax(220px, 0.8fr)
-    minmax(280px, 1.2fr);
+    minmax(250px, 0.9fr)
+    minmax(300px, 1.1fr);
 
-  gap: clamp(30px, 6vw, 70px);
+  gap: 45px;
 
   align-items: center;
 
-  width: min(95%, 900px);
-
-  margin: 0 auto;
+  text-align: left;
 }
-
 
 .owner-image img {
   width: 100%;
 
-  border-radius: 18px;
+  border-radius: 15px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
+.owner-text p {
+  margin-bottom: 15px;
+}
 
-.owner-text {
+.coffee-commitment {
+  margin-top: 60px;
+
+  padding: 35px;
+
+  background: #fffdf9;
+
+  border-radius: 15px;
+
   text-align: left;
 }
 
+.coffee-commitment h3,
+.dog-text h3,
+.seats > h3 {
+  margin-bottom: 20px;
 
-.owner-text p {
-  font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+  font-size: 1.25rem;
 
-  margin-bottom: 1em;
+  letter-spacing: 0.08em;
 }
 
 
 /* ==================================================
-   コーヒーへのこだわり
-================================================== */
-
-.coffee-commitment {
-  width: min(90%, 800px);
-
-  margin: clamp(50px, 7vw, 80px) auto 0;
-
-  padding:
-    clamp(25px, 5vw, 45px);
-
-  background: #fff;
-
-  border-radius: 18px;
-
-  text-align: center;
-}
-
-
-.coffee-commitment h3 {
-  margin: 0 0 1em;
-
-  font-size: clamp(1.2rem, 2.8vw, 1.7rem);
-
-  font-weight: 500;
-}
-
-
-.coffee-commitment p {
-  font-size: clamp(0.85rem, 1.7vw, 1.05rem);
-}
-
-
-/* ==================================================
-   愛犬
+   DOG
 ================================================== */
 
 .dog-area {
   display: grid;
 
   grid-template-columns:
-    minmax(200px, 0.8fr)
-    minmax(280px, 1.2fr);
+    minmax(250px, 0.9fr)
+    minmax(300px, 1.1fr);
 
-  gap: clamp(30px, 6vw, 70px);
+  gap: 45px;
 
   align-items: center;
 
-  width: min(95%, 900px);
+  margin-top: 60px;
 
-  margin: clamp(55px, 8vw, 90px) auto 0;
+  text-align: left;
 }
-
 
 .dog-image img {
   width: 100%;
 
-  border-radius: 18px;
-}
+  border-radius: 15px;
 
-
-.dog-text {
-  text-align: left;
-}
-
-
-.dog-text h3 {
-  margin-top: 0;
-
-  font-size: clamp(1.2rem, 2.7vw, 1.7rem);
-
-  font-weight: 500;
-}
-
-
-.dog-text p {
-  font-size: clamp(0.85rem, 1.7vw, 1.05rem);
-}
-
-
-.pet-ok {
-  font-weight: 600;
-
-  color: #687957;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 
 /* ==================================================
-   お席
+   SEATS
 ================================================== */
 
 .seats {
-  width: min(95%, 900px);
-
-  margin: clamp(55px, 8vw, 90px) auto 0;
+  margin-top: 60px;
 }
-
-
-.seats > h3 {
-  margin-bottom: 1.5em;
-
-  font-size: clamp(1.25rem, 2.8vw, 1.8rem);
-
-  font-weight: 500;
-}
-
 
 .seat-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns:
+    repeat(2, 1fr);
 
-  gap: clamp(15px, 3vw, 30px);
+  gap: 25px;
 }
-
 
 .seat-card {
-  padding:
-    clamp(20px, 4vw, 35px);
+  padding: 30px 20px;
 
-  background: #fff;
+  background: #fffdf9;
 
-  border-radius: 16px;
+  border-radius: 15px;
 }
-
 
 .seat-card h4 {
-  margin: 0 0 0.8em;
+  margin-bottom: 15px;
 
-  font-size: clamp(1rem, 2.2vw, 1.3rem);
-
-  font-weight: 500;
+  font-size: 1.15rem;
 }
 
-
 .seat-card p {
-  font-size: clamp(0.8rem, 1.6vw, 1rem);
+  margin: 5px 0;
+
+  font-size: 0.9rem;
+}
+
+.pet-ok {
+  color: #7c966f;
+
+  font-weight: bold;
 }
 
 
 /* ==================================================
-   メニュー
+   MENU
 ================================================== */
 
-.menu {
-  border-top: 1px solid rgba(100, 80, 60, 0.15);
-}
-
-
 .menu-category {
-  width: min(92%, 700px);
+  max-width: 700px;
 
-  margin: 0 auto clamp(35px, 5vw, 55px);
+  margin: 0 auto 45px;
+
+  text-align: left;
 }
 
+.menu-category h3 {
+  margin-bottom: 15px;
 
-.menu-category h3,
-.takeout h3 {
-  margin: 0 0 1em;
+  padding-bottom: 8px;
 
-  font-size: clamp(1.2rem, 2.8vw, 1.7rem);
+  border-bottom: 1px solid #d9cabc;
 
-  font-weight: 500;
+  font-size: 1.25rem;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
-
 
 .menu-item {
   display: flex;
@@ -811,174 +745,150 @@ button {
 
   gap: 20px;
 
-  padding:
-    0.7em 0;
+  padding: 10px 0;
 
-  border-bottom: 1px dotted #cfc3b9;
-
-  text-align: left;
+  border-bottom: 1px dotted #d9cabc;
 }
-
 
 .menu-item span {
-  font-size: clamp(0.85rem, 1.7vw, 1.05rem);
+  font-size: 0.95rem;
 }
-
 
 .menu-item strong {
-  flex: 0 0 auto;
+  white-space: nowrap;
 
-  font-size: clamp(0.82rem, 1.6vw, 1rem);
-
-  font-weight: 500;
+  font-size: 0.95rem;
 }
-
 
 .menu-description {
-  margin-top: 0.7em;
+  margin: 4px 0 10px;
 
-  color: #81746a;
+  font-size: 0.78rem;
 
-  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  color: #8c786b;
 }
-
 
 .takeout {
-  width: min(90%, 700px);
+  max-width: 700px;
 
-  margin: 0 auto;
+  margin: 60px auto 0;
 
-  padding:
-    clamp(25px, 4vw, 40px);
+  padding: 30px;
 
-  background: #fff;
+  border-radius: 15px;
 
-  border-radius: 16px;
+  background: #f5efe7;
 }
 
+.takeout h3 {
+  margin-bottom: 8px;
+
+  letter-spacing: 0.1em;
+}
 
 .takeout p {
-  font-size: clamp(0.8rem, 1.6vw, 1rem);
+  margin: 0;
+
+  font-size: 0.9rem;
 }
 
 
 /* ==================================================
-   アクセス
+   ACCESS
 ================================================== */
 
 .access {
-  border-top: 1px solid rgba(100, 80, 60, 0.15);
-}
+  background: #f5efe7;
 
+  border-radius: 20px;
+}
 
 .access-info {
-  margin-bottom: 2.5em;
+  margin-bottom: 35px;
 }
-
 
 .access-info p {
-  margin: 0.3em 0;
+  margin: 5px 0;
 
-  font-size: clamp(0.8rem, 1.7vw, 1.05rem);
+  font-size: 0.9rem;
 }
-
 
 .map-pc {
   width: 100%;
 
-  margin-top: 30px;
-}
+  overflow: hidden;
 
+  border-radius: 15px;
+}
 
 .map-mobile {
   display: none;
-
-  margin-top: 30px;
 }
 
 
 /* ==================================================
-   フッター
+   FOOTER
 ================================================== */
 
 .footer {
-  padding:
-    clamp(45px, 7vw, 75px)
-    20px;
+  margin-top: 80px;
 
-  background: #e9e1d8;
+  padding: 50px 20px;
 
-  text-align: center;
+  background: #4b4038;
+
+  color: #f8f2eb;
 }
-
 
 .footer-logo {
-  font-family:
-    Futura,
-    "Futura PT",
-    "Century Gothic",
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    Meiryo,
-    sans-serif;
+  font-size: 1.8rem;
 
-  font-size: clamp(1.5rem, 4vw, 2.6rem);
-
-  letter-spacing: 0.1em;
-
-  font-weight: 500;
-}
-
-
-.footer-country {
-  margin-top: 0.5em;
-
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  font-weight: bold;
 
   letter-spacing: 0.12em;
 }
 
+.footer-country {
+  margin-top: 5px;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.18em;
+
+  opacity: 0.8;
+}
 
 .footer-sns {
   display: flex;
 
   justify-content: center;
 
-  flex-wrap: wrap;
+  gap: 25px;
 
-  gap: clamp(12px, 3vw, 25px);
-
-  margin-top: 2em;
+  margin: 30px 0;
 }
-
 
 .footer-sns a {
-  padding: 0.4em 0.8em;
+  font-size: 0.8rem;
 
-  font-size: clamp(0.75rem, 1.5vw, 0.95rem);
-
-  border-bottom: 1px solid transparent;
-
-  transition: 0.3s;
+  opacity: 0.9;
 }
-
 
 .footer-sns a:hover {
-  border-bottom-color: #6f6258;
+  opacity: 0.6;
 }
 
-
 .copyright {
-  margin: 2em 0 0;
+  margin: 0;
 
-  font-size: clamp(0.65rem, 1.3vw, 0.8rem);
+  font-size: 0.7rem;
 
-  color: #81746a;
+  opacity: 0.7;
 }
 
 
 /* ==================================================
-   タブレット
+   TABLET
 ================================================== */
 
 @media (max-width: 800px) {
@@ -986,18 +896,20 @@ button {
   .owner-content,
   .dog-area {
     grid-template-columns: 1fr;
-  }
 
+    gap: 25px;
+
+    text-align: center;
+  }
 
   .owner-text,
   .dog-text {
     text-align: center;
   }
 
-
   .owner-image,
   .dog-image {
-    width: min(80%, 450px);
+    max-width: 500px;
 
     margin: 0 auto;
   }
@@ -1006,7 +918,7 @@ button {
 
 
 /* ==================================================
-   スマートフォン
+   SMARTPHONE
 ================================================== */
 
 @media (max-width: 600px) {
@@ -1016,129 +928,228 @@ button {
   }
 
 
-  .header-inner {
-    width: 92%;
+  /* 肉球カーソルはスマホでは不要 */
+
+  html,
+  body,
+  a,
+  button {
+    cursor: auto;
   }
 
+
+  .section {
+    width: calc(100% - 24px);
+
+    padding: 55px 12px;
+  }
+
+
+  h2 {
+    font-size: 1.55rem;
+
+    margin-bottom: 35px;
+  }
+
+
+  /* HEADER */
+
+  .header-inner {
+    width: calc(100% - 20px);
+
+    padding: 25px 10px 20px;
+  }
+
+  .logo {
+    font-size: 2rem;
+
+    letter-spacing: 0.08em;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+
+    letter-spacing: 0.2em;
+  }
 
   .header-catch {
-    white-space: normal;
-
-    line-height: 1.5;
+    font-size: 0.78rem;
   }
 
+  .pet-catch {
+    font-size: 0.75rem;
+  }
+
+
+  /* 営業状況 */
+
+  .business-status {
+    width: 125px;
+    height: 125px;
+
+    margin: 15px auto 25px;
+
+    font-size: 0.85rem;
+  }
+
+
+  /* NAV */
 
   .nav {
-    gap: 4px 8px;
+    gap: 5px 15px;
   }
-
 
   .nav a {
-    padding: 0.3em 0.5em;
+    font-size: 0.75rem;
   }
 
 
+  /* HERO */
+
   .hero img {
-    min-height: 260px;
+    min-height: 250px;
 
     object-fit: cover;
   }
 
 
-  .section {
-    width: 90%;
+  /* INTRO */
+
+  .intro h1 {
+    font-size: 1.05rem;
+
+    line-height: 1.8;
   }
 
+  .intro p {
+    font-size: 0.85rem;
+  }
+
+
+  /* INSTAGRAM */
+
+  .instagram {
+    border-radius: 15px;
+  }
+
+
+  /* NEWS */
+
+  .news-item {
+    padding: 20px;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* CALENDAR */
 
   .calendar-slider {
-    gap: 4px;
+    gap: 5px;
   }
-
 
   .calendar-container {
-    width: calc(100vw - 85px);
+    padding: 15px 7px;
   }
-
 
   .calendar-button {
-    width: 34px;
+    width: 35px;
+    height: 35px;
 
-    height: 34px;
-
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
+  #calendarTitle {
+    font-size: 1.05rem;
+  }
+
+  .week-header {
+    font-size: 0.7rem;
+  }
+
+  .calendar {
+    gap: 3px;
+  }
 
   .calendar-day {
-    min-height: clamp(54px, 14vw, 68px);
+    min-height: 58px;
 
-    padding: 4px 2px;
+    padding: 4px 1px;
+
+    font-size: 0.7rem;
+  }
+
+  .calendar-day .holiday-label,
+  .calendar-day .event-label {
+    font-size: 0.55rem;
+  }
+
+  .calendar-note {
+    gap: 15px;
+
+    font-size: 0.7rem;
   }
 
 
-  .day-number {
-    font-size: clamp(0.72rem, 3vw, 0.9rem);
+  /* OWNER */
+
+  .coffee-commitment {
+    padding: 25px 20px;
+
+    text-align: center;
   }
 
 
-  .holiday-label,
-  .event-label {
-    font-size: clamp(0.43rem, 2vw, 0.62rem);
-
-    line-height: 1.15;
-  }
-
+  /* SEATS */
 
   .seat-grid {
     grid-template-columns: 1fr;
+
+    gap: 15px;
   }
 
 
-  .menu-category,
-  .takeout {
-    width: 95%;
+  /* MENU */
+
+  .menu-category {
+    margin-bottom: 35px;
   }
 
+  .menu-item {
+    padding: 9px 0;
+  }
+
+  .menu-item span,
+  .menu-item strong {
+    font-size: 0.85rem;
+  }
+
+
+  /* ACCESS */
+
+  .access-info p {
+    font-size: 0.8rem;
+  }
 
   .map-pc {
     display: none;
   }
 
-
   .map-mobile {
     display: block;
   }
 
-}
 
+  /* FOOTER */
 
-/* ==================================================
-   小さいスマートフォン
-================================================== */
+  .footer {
+    margin-top: 50px;
 
-@media (max-width: 380px) {
-
-  .logo {
-    letter-spacing: 0.05em;
+    padding: 40px 15px;
   }
 
-
-  .calendar-container {
-    width: calc(100vw - 75px);
-  }
-
-
-  .calendar-button {
-    width: 30px;
-
-    height: 30px;
-
-    font-size: 1.2rem;
-  }
-
-
-  .calendar-day {
-    min-height: 52px;
+  .footer-logo {
+    font-size: 1.4rem;
   }
 
 }
