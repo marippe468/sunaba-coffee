@@ -1,23 +1,6 @@
 /* ==================================================
    SUNABA COFFEE
    script.js
-
-   ・営業状況
-   ・トップスライドショー
-   ・メニュー写真スライドショー
-   ・お知らせ
-   ・イベント詳細開閉
-   ・カレンダー
-   ・カレンダーからお知らせへリンク
-   ・スマホメニュー
-   ・スクロール表示
-   ・トップへ戻る
-   ・QRコード
-================================================== */
-
-
-/* ==================================================
-   初期処理
 ================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -36,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setupMobileMenu();
 
+  setupTicketToggle();
+
   setupScrollReveal();
 
   setupTopButton();
@@ -43,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setupQRCode();
 
 });
-
 
 
 /* ==================================================
@@ -64,26 +48,29 @@ function isRegularHoliday(date) {
 
   const day = date.getDay();
 
-  /* 水曜日 */
   if (day === 3) {
     return true;
   }
 
-  /* 月曜日 */
   if (day === 1) {
 
     const dateNumber = date.getDate();
 
-    const weekNumber = Math.ceil(dateNumber / 7);
+    const weekNumber =
+      Math.ceil(dateNumber / 7);
 
-    if (weekNumber === 1 || weekNumber === 3) {
+    if (
+      weekNumber === 1 ||
+      weekNumber === 3
+    ) {
       return true;
     }
+
   }
 
   return false;
-}
 
+}
 
 
 /* ==================================================
@@ -92,19 +79,20 @@ function isRegularHoliday(date) {
 
 function updateBusinessStatus() {
 
-  const statusElement =
+  const element =
     document.getElementById("businessStatus");
 
-  if (!statusElement) return;
+  if (!element) return;
 
   const now = new Date();
 
   if (isRegularHoliday(now)) {
 
-    statusElement.textContent =
+    element.textContent =
       "🔵 本日は定休日";
 
     return;
+
   }
 
 
@@ -115,22 +103,34 @@ function updateBusinessStatus() {
 
   if (minutes < OPEN_TIME) {
 
-    statusElement.textContent =
+    element.textContent =
       "⚪ 本日の営業前";
 
-  } else if (minutes >= OPEN_TIME && minutes < CLOSE_TIME - 60) {
+  }
 
-    statusElement.textContent =
+  else if (
+    minutes >= OPEN_TIME &&
+    minutes < CLOSE_TIME - 60
+  ) {
+
+    element.textContent =
       "🟢 営業中";
 
-  } else if (minutes >= CLOSE_TIME - 60 && minutes < CLOSE_TIME) {
+  }
 
-    statusElement.textContent =
+  else if (
+    minutes >= CLOSE_TIME - 60 &&
+    minutes < CLOSE_TIME
+  ) {
+
+    element.textContent =
       "🟡 まもなく終了";
 
-  } else {
+  }
 
-    statusElement.textContent =
+  else {
+
+    element.textContent =
       "⚪ 本日の営業終了";
 
   }
@@ -138,9 +138,8 @@ function updateBusinessStatus() {
 }
 
 
-
 /* ==================================================
-   トップ スライドショー
+   TOP SLIDESHOW
 ================================================== */
 
 function setupHeroSlideshow() {
@@ -149,7 +148,6 @@ function setupHeroSlideshow() {
     document.querySelectorAll(".hero-slide");
 
   if (!slides.length) return;
-
 
   let current = 0;
 
@@ -168,19 +166,6 @@ function setupHeroSlideshow() {
   }
 
 
-  showSlide(0);
-
-
-  /*
-
-    gaikan.jpg
-    → 5秒
-
-    それ以外
-    → 3秒
-
-  */
-
   function nextSlide() {
 
     current =
@@ -190,21 +175,30 @@ function setupHeroSlideshow() {
 
 
     const nextTime =
-      current === 0 ? 5000 : 3000;
+      current === 0
+        ? 5000
+        : 3000;
 
-    setTimeout(nextSlide, nextTime);
+    setTimeout(
+      nextSlide,
+      nextTime
+    );
 
   }
 
 
-  setTimeout(nextSlide, 5000);
+  showSlide(0);
+
+  setTimeout(
+    nextSlide,
+    5000
+  );
 
 }
 
 
-
 /* ==================================================
-   メニュー写真スライドショー
+   MENU PHOTO SLIDESHOW
 ================================================== */
 
 function setupMenuSlideshow() {
@@ -214,108 +208,96 @@ function setupMenuSlideshow() {
 
   if (!photos.length) return;
 
-
   let current = 0;
 
 
   setInterval(() => {
 
-    photos[current].classList.remove("active");
+    photos[current]
+      .classList
+      .remove("active");
+
 
     current =
       (current + 1) % photos.length;
 
-    photos[current].classList.add("active");
+
+    photos[current]
+      .classList
+      .add("active");
 
   }, 3000);
 
 }
 
 
-
 /* ==================================================
-   イベント
+   EVENTS
 ================================================== */
 
 const events = [
 
   {
     id: "event-1",
-
     date: "2026-09-12",
-
     title: "秋のコーヒーを楽しむ小さな会",
-
     detail:
       "秋の午後に、ゆっくりコーヒーを楽しむ小さなイベントです。",
-
     isNew: true
   },
-
 
   {
     id: "event-2",
-
     date: "2026-09-19",
-
     title: "サンドイッチの日",
-
     detail:
       "おすすめの日替わりサンドイッチを数量限定でご用意します。",
-
     isNew: true
   },
 
-
   {
     id: "event-3",
-
     date: "2026-09-27",
-
     title: "しまなみ海道・旅の途中に",
-
     detail:
       "旅の途中に、コーヒーと軽食でひと休みしませんか。",
-
     isNew: false
   },
 
-
   {
     id: "event-4",
-
     date: "2026-10-04",
-
     title: "秋のおすすめコーヒー週間",
-
     detail:
-      "店主おすすめのブラジルコーヒーをお楽しみください。",
-
+      "秋の季節に合わせたコーヒーをお楽しみください。",
     isNew: false
   }
 
 ];
 
 
-
 /* ==================================================
-   日付
+   DATE
 ================================================== */
 
 function formatDate(dateString) {
 
   const date =
-    new Date(dateString + "T00:00:00");
+    new Date(
+      dateString + "T00:00:00"
+    );
 
-  return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+  return (
+    `${date.getFullYear()}年` +
+    `${date.getMonth() + 1}月` +
+    `${date.getDate()}日`
+  );
 
 }
 
 
-
 /* ==================================================
-   お知らせ
-   最新3～4件の未来イベントだけ表示
+   NEWS
 ================================================== */
 
 function renderNews() {
@@ -328,7 +310,9 @@ function renderNews() {
 
   const today = new Date();
 
-  today.setHours(0, 0, 0, 0);
+  today.setHours(
+    0, 0, 0, 0
+  );
 
 
   const upcoming =
@@ -336,13 +320,18 @@ function renderNews() {
       .filter(event => {
 
         const date =
-          new Date(event.date + "T00:00:00");
+          new Date(
+            event.date +
+            "T00:00:00"
+          );
 
         return date >= today;
 
       })
       .sort((a, b) =>
-        a.date.localeCompare(b.date)
+        a.date.localeCompare(
+          b.date
+        )
       )
       .slice(0, 4);
 
@@ -353,36 +342,51 @@ function renderNews() {
   upcoming.forEach(event => {
 
     const card =
-      document.createElement("article");
+      document.createElement(
+        "article"
+      );
 
-    card.className = "news-card";
+    card.className =
+      "news-card";
 
-    card.id = event.id;
+    card.id =
+      event.id;
 
 
     const header =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
-    header.className = "news-header";
+    header.className =
+      "news-header";
 
 
     const left =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
 
     const date =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
-    date.className = "news-date";
+    date.className =
+      "news-date";
 
     date.textContent =
       formatDate(event.date);
 
 
     const title =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
-    title.className = "news-title";
+    title.className =
+      "news-title";
 
     title.textContent =
       event.title;
@@ -390,14 +394,18 @@ function renderNews() {
 
     if (event.isNew) {
 
-      const newLabel =
-        document.createElement("span");
+      const label =
+        document.createElement(
+          "span"
+        );
 
-      newLabel.className = "new-label";
+      label.className =
+        "new-label";
 
-      newLabel.textContent = "NEW";
+      label.textContent =
+        "NEW";
 
-      title.appendChild(newLabel);
+      title.appendChild(label);
 
     }
 
@@ -408,54 +416,64 @@ function renderNews() {
 
 
     const toggle =
-      document.createElement("button");
+      document.createElement(
+        "button"
+      );
 
-    toggle.className = "event-toggle";
+    toggle.className =
+      "event-toggle";
 
-    toggle.type = "button";
+    toggle.type =
+      "button";
 
-    toggle.textContent = "▽";
-
-    toggle.setAttribute(
-      "aria-label",
-      "イベント詳細を開く"
-    );
+    toggle.textContent =
+      "▽";
 
 
     const detail =
-      document.createElement("div");
-
-    detail.className = "news-detail";
-
-    detail.innerHTML = `
-      <p>${event.detail}</p>
-    `;
-
-
-    toggle.addEventListener("click", () => {
-
-      const isOpen =
-        detail.classList.contains("open");
-
-
-      detail.classList.toggle(
-        "open",
-        !isOpen
+      document.createElement(
+        "div"
       );
 
+    detail.className =
+      "news-detail";
 
-      toggle.textContent =
-        isOpen ? "▽" : "△";
 
-
-      toggle.setAttribute(
-        "aria-label",
-        isOpen
-          ? "イベント詳細を開く"
-          : "イベント詳細を閉じる"
+    const detailText =
+      document.createElement(
+        "p"
       );
 
-    });
+    detailText.textContent =
+      event.detail;
+
+    detail.appendChild(
+      detailText
+    );
+
+
+    toggle.addEventListener(
+      "click",
+      () => {
+
+        const open =
+          detail.classList
+            .contains("open");
+
+
+        detail.classList.toggle(
+          "open",
+          !open
+        );
+
+
+        toggle.textContent =
+          open
+            ? "▽"
+            : "△";
+
+      }
+    );
 
 
     header.appendChild(left);
@@ -473,26 +491,84 @@ function renderNews() {
 }
 
 
-
 /* ==================================================
-   カレンダー
+   COFFEE TICKET TOGGLE
 ================================================== */
 
-let calendarDate = new Date();
+function setupTicketToggle() {
+
+  const toggle =
+    document.getElementById(
+      "ticketToggle"
+    );
+
+  const detail =
+    document.getElementById(
+      "ticketDetail"
+    );
+
+  if (!toggle || !detail) {
+    return;
+  }
+
+
+  toggle.addEventListener(
+    "click",
+    () => {
+
+      const open =
+        detail.classList
+          .contains("open");
+
+
+      detail.classList.toggle(
+        "open",
+        !open
+      );
+
+
+      toggle.textContent =
+        open
+          ? "▽"
+          : "△";
+
+
+      toggle.setAttribute(
+        "aria-expanded",
+        String(!open)
+      );
+
+    }
+  );
+
+}
+
+
+/* ==================================================
+   CALENDAR
+================================================== */
+
+let calendarDate =
+  new Date();
 
 calendarDate.setDate(1);
-
 
 
 function renderCalendar() {
 
   const calendar =
-    document.getElementById("calendar");
+    document.getElementById(
+      "calendar"
+    );
 
   const title =
-    document.getElementById("calendarTitle");
+    document.getElementById(
+      "calendarTitle"
+    );
 
-  if (!calendar || !title) return;
+  if (!calendar || !title) {
+    return;
+  }
 
 
   const year =
@@ -509,14 +585,23 @@ function renderCalendar() {
   calendar.innerHTML = "";
 
 
-  const dayNames =
-    ["日", "月", "火", "水", "木", "金", "土"];
+  const dayNames = [
+    "日",
+    "月",
+    "火",
+    "水",
+    "木",
+    "金",
+    "土"
+  ];
 
 
   dayNames.forEach(day => {
 
     const cell =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
     cell.className =
       "calendar-day-name";
@@ -530,32 +615,59 @@ function renderCalendar() {
 
 
   const firstDay =
-    new Date(year, month, 1).getDay();
+    new Date(
+      year,
+      month,
+      1
+    ).getDay();
 
 
   const lastDate =
-    new Date(year, month + 1, 0).getDate();
+    new Date(
+      year,
+      month + 1,
+      0
+    ).getDate();
 
 
   const previousLastDate =
-    new Date(year, month, 0).getDate();
+    new Date(
+      year,
+      month,
+      0
+    ).getDate();
 
 
   /* 前月 */
 
-  for (let i = firstDay - 1; i >= 0; i--) {
+  for (
+    let i = firstDay - 1;
+    i >= 0;
+    i--
+  ) {
 
     const cell =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
     cell.className =
       "calendar-day calendar-other";
 
-    cell.innerHTML = `
-      <span class="calendar-date">
-        ${previousLastDate - i}
-      </span>
-    `;
+
+    const number =
+      document.createElement(
+        "span"
+      );
+
+    number.className =
+      "calendar-date";
+
+    number.textContent =
+      previousLastDate - i;
+
+
+    cell.appendChild(number);
 
     calendar.appendChild(cell);
 
@@ -564,25 +676,39 @@ function renderCalendar() {
 
   /* 今月 */
 
-  for (let day = 1; day <= lastDate; day++) {
+  for (
+    let day = 1;
+    day <= lastDate;
+    day++
+  ) {
 
     const cell =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
     cell.className =
       "calendar-day";
 
 
     const date =
-      new Date(year, month, day);
+      new Date(
+        year,
+        month,
+        day
+      );
 
 
     const dateString =
-      `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+      `${year}-` +
+      `${String(month + 1).padStart(2, "0")}-` +
+      `${String(day).padStart(2, "0")}`;
 
 
     const dateNumber =
-      document.createElement("span");
+      document.createElement(
+        "span"
+      );
 
     dateNumber.className =
       "calendar-date";
@@ -591,7 +717,9 @@ function renderCalendar() {
       day;
 
 
-    cell.appendChild(dateNumber);
+    cell.appendChild(
+      dateNumber
+    );
 
 
     const holiday =
@@ -599,26 +727,34 @@ function renderCalendar() {
 
 
     const event =
-      events.find(item =>
-        item.date === dateString
+      events.find(
+        item =>
+          item.date === dateString
       );
 
 
     if (holiday || event) {
 
       const info =
-        document.createElement("span");
+        document.createElement(
+          "span"
+        );
 
       info.className =
         "calendar-info";
 
 
-      if (holiday && event) {
+      if (
+        holiday &&
+        event
+      ) {
 
         info.textContent =
           `定休日・${event.title}`;
 
-      } else if (holiday) {
+      }
+
+      else if (holiday) {
 
         info.textContent =
           "定休日";
@@ -627,7 +763,9 @@ function renderCalendar() {
           "calendar-holiday"
         );
 
-      } else if (event) {
+      }
+
+      else if (event) {
 
         info.textContent =
           event.title;
@@ -651,33 +789,47 @@ function renderCalendar() {
       }
 
 
-      cell.appendChild(info);
+      cell.appendChild(
+        info
+      );
 
     }
 
 
-    calendar.appendChild(cell);
+    calendar.appendChild(
+      cell
+    );
 
   }
 
 }
 
 
-
 /* ==================================================
-   カレンダー → お知らせ
+   CALENDAR → NEWS
 ================================================== */
 
-function openEventFromCalendar(eventId) {
+function openEventFromCalendar(
+  eventId
+) {
 
   const news =
-    document.getElementById("news");
+    document.getElementById(
+      "news"
+    );
 
   const eventCard =
-    document.getElementById(eventId);
+    document.getElementById(
+      eventId
+    );
 
 
-  if (!news || !eventCard) return;
+  if (
+    !news ||
+    !eventCard
+  ) {
+    return;
+  }
 
 
   news.scrollIntoView({
@@ -688,22 +840,29 @@ function openEventFromCalendar(eventId) {
   setTimeout(() => {
 
     const detail =
-      eventCard.querySelector(".news-detail");
+      eventCard.querySelector(
+        ".news-detail"
+      );
 
     const toggle =
-      eventCard.querySelector(".event-toggle");
+      eventCard.querySelector(
+        ".event-toggle"
+      );
 
 
     if (detail) {
 
-      detail.classList.add("open");
+      detail.classList.add(
+        "open"
+      );
 
     }
 
 
     if (toggle) {
 
-      toggle.textContent = "△";
+      toggle.textContent =
+        "△";
 
     }
 
@@ -712,18 +871,21 @@ function openEventFromCalendar(eventId) {
 }
 
 
-
 /* ==================================================
-   カレンダーボタン
+   CALENDAR BUTTONS
 ================================================== */
 
 function setupCalendarButtons() {
 
   const prev =
-    document.getElementById("prevMonth");
+    document.getElementById(
+      "prevMonth"
+    );
 
   const next =
-    document.getElementById("nextMonth");
+    document.getElementById(
+      "nextMonth"
+    );
 
 
   if (prev) {
@@ -764,76 +926,100 @@ function setupCalendarButtons() {
 }
 
 
-
 /* ==================================================
-   スマホメニュー
+   MOBILE MENU
 ================================================== */
 
 function setupMobileMenu() {
 
   const toggle =
-    document.getElementById("menuToggle");
+    document.getElementById(
+      "menuToggle"
+    );
 
   const nav =
-    document.getElementById("mobileNav");
+    document.getElementById(
+      "mobileNav"
+    );
 
 
-  if (!toggle || !nav) return;
+  if (!toggle || !nav) {
+    return;
+  }
 
 
-  toggle.addEventListener("click", () => {
+  toggle.addEventListener(
+    "click",
+    () => {
 
-    nav.classList.toggle("open");
+      nav.classList.toggle(
+        "open"
+      );
 
-  });
+    }
+  );
 
 
-  nav.querySelectorAll("a").forEach(link => {
+  nav
+    .querySelectorAll("a")
+    .forEach(link => {
 
-    link.addEventListener("click", () => {
+      link.addEventListener(
+        "click",
+        () => {
 
-      nav.classList.remove("open");
+          nav.classList.remove(
+            "open"
+          );
+
+        }
+      );
 
     });
-
-  });
 
 }
 
 
-
 /* ==================================================
-   スクロール表示
+   SCROLL REVEAL
 ================================================== */
 
 function setupScrollReveal() {
 
   const elements =
-    document.querySelectorAll(".reveal");
+    document.querySelectorAll(
+      ".reveal"
+    );
 
 
-  if (!elements.length) return;
+  if (!elements.length) {
+    return;
+  }
 
 
   const observer =
     new IntersectionObserver(
       entries => {
 
-        entries.forEach(entry => {
+        entries.forEach(
+          entry => {
 
-          if (entry.isIntersecting) {
+            if (
+              entry.isIntersecting
+            ) {
 
-            entry.target.classList.add(
-              "visible"
-            );
+              entry.target.classList.add(
+                "visible"
+              );
 
-            observer.unobserve(
-              entry.target
-            );
+              observer.unobserve(
+                entry.target
+              );
+
+            }
 
           }
-
-        });
+        );
 
       },
       {
@@ -842,40 +1028,52 @@ function setupScrollReveal() {
     );
 
 
-  elements.forEach(element => {
-
-    observer.observe(element);
-
-  });
+  elements.forEach(
+    element =>
+      observer.observe(
+        element
+      )
+  );
 
 }
 
 
-
 /* ==================================================
-   トップへ戻る
+   TOP BUTTON
 ================================================== */
 
 function setupTopButton() {
 
   const button =
-    document.getElementById("topButton");
+    document.getElementById(
+      "topButton"
+    );
 
 
-  if (!button) return;
+  if (!button) {
+    return;
+  }
 
 
   window.addEventListener(
     "scroll",
     () => {
 
-      if (window.scrollY > 400) {
+      if (
+        window.scrollY > 400
+      ) {
 
-        button.classList.add("show");
+        button.classList.add(
+          "show"
+        );
 
-      } else {
+      }
 
-        button.classList.remove("show");
+      else {
+
+        button.classList.remove(
+          "show"
+        );
 
       }
 
@@ -898,15 +1096,16 @@ function setupTopButton() {
 }
 
 
-
 /* ==================================================
-   QRコード
+   QR CODE
 ================================================== */
 
 function setupQRCode() {
 
   const qr =
-    document.getElementById("qrCode");
+    document.getElementById(
+      "qrCode"
+    );
 
 
   if (!qr) return;
@@ -919,6 +1118,7 @@ function setupQRCode() {
 
 
   qr.src =
-    `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${pageUrl}`;
+    "https://api.qrserver.com/v1/create-qr-code/" +
+    `?size=120x120&data=${pageUrl}`;
 
 }
