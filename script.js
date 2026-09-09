@@ -8,6 +8,14 @@ const CLOSE_TIME = 17 * 60;
 
 
 /* ==================================================
+   LANGUAGE
+================================================== */
+
+let currentLanguage =
+  localStorage.getItem("sunabaLanguage") || "ja";
+
+
+/* ==================================================
    EVENTS
 ================================================== */
 
@@ -16,36 +24,76 @@ const events = [
   {
     id: "event-1",
     date: "2026-09-12",
-    title: "秋のコーヒーを楽しむ小さな会",
-    detail:
-      "秋の午後に、ゆっくりコーヒーを楽しむ小さなイベントです。",
+
+    ja: {
+      title: "秋のコーヒーを楽しむ小さな会",
+      detail:
+        "秋の午後に、ゆっくりコーヒーを楽しむ小さなイベントです。"
+    },
+
+    en: {
+      title: "A Small Autumn Coffee Gathering",
+      detail:
+        "Enjoy a relaxing cup of coffee on a peaceful autumn afternoon."
+    },
+
     isNew: true
   },
 
   {
     id: "event-2",
     date: "2026-09-19",
-    title: "サンドイッチの日",
-    detail:
-      "おすすめの日替わりサンドイッチを数量限定でご用意します。",
+
+    ja: {
+      title: "サンドイッチの日",
+      detail:
+        "おすすめの日替わりサンドイッチを数量限定でご用意します。"
+    },
+
+    en: {
+      title: "Sandwich Day",
+      detail:
+        "Our recommended daily sandwich will be available in limited quantities."
+    },
+
     isNew: true
   },
 
   {
     id: "event-3",
     date: "2026-09-27",
-    title: "しまなみ海道・旅の途中に",
-    detail:
-      "旅の途中に、コーヒーと軽食でひと休みしませんか。",
+
+    ja: {
+      title: "しまなみ海道・旅の途中に",
+      detail:
+        "旅の途中に、コーヒーと軽食でひと休みしませんか。"
+    },
+
+    en: {
+      title: "A Break Along the Shimanami Kaido",
+      detail:
+        "Take a relaxing break with coffee and a light meal during your journey."
+    },
+
     isNew: false
   },
 
   {
     id: "event-4",
     date: "2026-10-04",
-    title: "秋のおすすめコーヒー週間",
-    detail:
-      "秋の季節に合わせたコーヒーをお楽しみください。",
+
+    ja: {
+      title: "秋のおすすめコーヒー週間",
+      detail:
+        "秋の季節に合わせたコーヒーをお楽しみください。"
+    },
+
+    en: {
+      title: "Autumn Coffee Week",
+      detail:
+        "Enjoy coffee selections specially suited to the autumn season."
+    },
+
     isNew: false
   }
 
@@ -58,12 +106,283 @@ calendarDate.setDate(1);
 
 
 /* ==================================================
+   STATIC TRANSLATIONS
+================================================== */
+
+const translations = {
+
+  "しまなみ海道":
+    "Shimanami Kaido",
+
+  "～愛媛県今治市・夫婦で営む小さな駅前カフェ～":
+    "A small husband-and-wife café near Imabari Station, Ehime",
+
+  "JR今治駅、バス停から徒歩3分":
+    "3-minute walk from JR Imabari Station and the bus stop",
+
+  "🐾 Wi-Fi・電源利用可":
+    "🐾 Wi-Fi & power outlets available",
+
+  "電車の音をBGMに、ゆっくりとした時間を過ごせる小さなカフェです。":
+    "A cozy little café where you can relax to the sound of passing trains.",
+
+  "🐾 愛犬とともに・テラス席OK":
+    "🐾 Dogs welcome on the terrace",
+
+  "営業時間 10:00～17:00":
+    "Open 10:00 AM–5:00 PM",
+
+  "お知らせ":
+    "NEWS",
+
+  "カレンダー":
+    "CALENDAR",
+
+  "OWNER'S NOTE｜店主のひとこと":
+    "OWNER'S NOTE",
+
+  "メニュー":
+    "MENU",
+
+  "アクセス":
+    "ACCESS",
+
+  "～ いつもの一杯に、旅の途中の一杯にも。～":
+    "For your everyday cup, or a cup along your journey.",
+
+  "夫婦で営む、気取らず立ち寄れる場所。":
+    "A relaxed little place run by a husband-and-wife team.",
+
+  "コーヒーを片手に、ほっとひと息ついてください。":
+    "Take a break and enjoy a comforting cup of coffee.",
+
+  "お知らせ・イベント情報です。":
+    "News and event information from SUNABA COFFEE.",
+
+  "SUNABA COFFEEからのお知らせ・イベント情報です。":
+    "News and event information from SUNABA COFFEE.",
+
+  "☕ コーヒーチケット販売中":
+    "☕ Coffee Tickets Available",
+
+  "5杯分　2,200円":
+    "5 cups  ¥2,200",
+
+  "お好きな飲み物にご利用いただけます。":
+    "Use them for any drink of your choice.",
+
+  "有効期間：購入から6か月未満":
+    "Valid for less than 6 months from purchase.",
+
+  "店頭のみで販売しています。":
+    "Available for purchase at the café only.",
+
+  "スマートフォンで残り回数を管理できます。":
+    "You can manage your remaining visits on your smartphone.",
+
+  "定休日：水曜日・第1・第3月曜日":
+    "Closed: Wednesdays and the 1st & 3rd Mondays",
+
+  "〈 前月":
+    "〈 Previous",
+
+  "次月 〉":
+    "Next 〉",
+
+  "店主のひとこと":
+    "OWNER'S NOTE",
+
+  "気軽に立ち寄れる、駅前の喫茶店":
+    "A Relaxed Café Near the Station",
+
+  "駅前で、気軽に立ち寄っていただける喫茶店を夫婦で営んでいます。":
+    "We run a relaxed café near the station as a husband-and-wife team.",
+
+  "電車を待つ時間や旅の途中にも、ふらっとお立ち寄りください。":
+    "Please drop in while waiting for your train or during your journey.",
+
+  "コーヒーのこだわり":
+    "Our Coffee",
+
+  "私はブラジルコーヒーが好きで、香りと飲みやすさを楽しんでいただける一杯を大切にしています。":
+    "I love Brazilian coffee and value a cup that is both aromatic and easy to enjoy.",
+
+  "愛犬家、テラス席":
+    "A Dog Lover's Terrace",
+
+  "私は大の愛犬家です。愛犬と一緒に過ごせる場所があればという思いから、テラス席はペットOKにしています。":
+    "I am a devoted dog lover. Our terrace is pet-friendly because I wanted a place where guests could relax with their dogs.",
+
+  "愛犬と一緒に、ゆっくりどうぞ。":
+    "Relax and enjoy your time with your dog.",
+
+  "テラス席はペットOK。お散歩の途中や旅の途中にも、愛犬と一緒に気軽にお立ち寄りください。":
+    "Our terrace is pet-friendly. Please feel free to stop by with your dog while out for a walk or traveling.",
+
+  "電車の音が聞こえたら、もうすぐ駅です。":
+    "When you hear the train, the station is just around the corner.",
+
+  "いつもの一杯と、軽いお食事をご用意しています。":
+    "We offer your favorite cup of coffee and light meals.",
+
+  "写真":
+    "PHOTO",
+
+  "モーニング":
+    "MORNING",
+
+  "提供 10:00～12:00":
+    "Served 10:00 AM–12:00 PM",
+
+  "トースト、サラダ、コーヒー":
+    "Toast, salad & coffee",
+
+  "ホットサンド、サラダ、コーヒー":
+    "Hot sandwich, salad & coffee",
+
+  "和食セット（おにぎり2個、卵、サラダ）、コーヒー":
+    "Japanese breakfast set (2 rice balls, egg, salad) & coffee",
+
+  "軽食":
+    "LIGHT MEAL",
+
+  "おすすめ":
+    "Recommended",
+
+  "日替わりサンドイッチ":
+    "Daily Sandwich",
+
+  "（地産野菜、たまご）":
+    "(local vegetables & egg)",
+
+  "限定20食":
+    "Limited to 20",
+
+  "サンドイッチ（たまご）":
+    "Egg sandwich",
+
+  "サンドイッチ（ハム・レタス）":
+    "Ham & lettuce sandwich",
+
+  "カレー（ミニサラダ付き）":
+    "Curry with mini salad",
+
+  "エビフライカレー（ミニサラダ付き）":
+    "Fried shrimp curry with mini salad",
+
+  "ピラフ（ミニサラダ付き）":
+    "Pilaf with mini salad",
+
+  "飲み物":
+    "DRINK",
+
+  "ブラジルコーヒー":
+    "Brazilian coffee",
+
+  "ブレンドコーヒー":
+    "Blend coffee",
+
+  "アイスコーヒー":
+    "Iced coffee",
+
+  "カフェオレ":
+    "Café au lait",
+
+  "ウインナーコーヒー":
+    "Vienna coffee",
+
+  "☕ コーヒーチケット":
+    "☕ Coffee Ticket",
+
+  "5杯分・お好きな飲み物にご利用いただけます。":
+    "5 cups · Use for any drink of your choice.",
+
+  "デザート":
+    "DESSERT",
+
+  "日替わりデザート":
+    "Daily dessert",
+
+  "パンケーキ":
+    "Pancakes",
+
+  "ケーキセット":
+    "Cake set",
+
+  "店内メニューをご覧ください":
+    "Please see our in-store menu.",
+
+  "テイクアウト":
+    "TAKE OUT",
+
+  "コーヒー":
+    "Coffee",
+
+  "サンドイッチ":
+    "Sandwich",
+
+  "店舗情報":
+    "Information",
+
+  "愛媛県今治市常盤町4丁目8-18":
+    "4-8-18 Tokiwa-cho, Imabari, Ehime",
+
+  "しまなみイノベーションビル 2階":
+    "Shimanami Innovation Building, 2F",
+
+  "TEL：0898-11-2222":
+    "TEL: 0898-11-2222",
+
+  "営業時間：10:00～17:00":
+    "Hours: 10:00 AM–5:00 PM",
+
+  "駐車場":
+    "Parking",
+
+  "お車でお越しの際は、近隣のコインパーキングをご利用ください。":
+    "If you arrive by car, please use a nearby coin-operated parking lot.",
+
+  "お支払い方法":
+    "Payment",
+
+  "現金":
+    "Cash",
+
+  "各種クレジット":
+    "Credit cards",
+
+  "スマートフォンでご覧になる場合":
+    "For smartphone access",
+
+  "スマホでアクセス":
+    "Open on your smartphone",
+
+  "～愛媛県今治市・夫婦で営む小さな駅前カフェ～":
+    "A small husband-and-wife café near Imabari Station, Ehime",
+
+  "© 2026 SUNABA COFFEE":
+    "© 2026 SUNABA COFFEE",
+
+  "トップへ戻る":
+    "Back to top",
+
+  "TOPへ":
+    "TOP"
+
+};
+
+
+/* ==================================================
    START
 ================================================== */
 
 document.addEventListener(
   "DOMContentLoaded",
   () => {
+
+    setupFixedHeader();
+
+    setupLanguageSwitch();
 
     updateBusinessStatus();
 
@@ -79,6 +398,8 @@ document.addEventListener(
 
     setupCalendarButtons();
 
+    setupCalendarSwipe();
+
     setupMobileMenu();
 
     setupScrollReveal();
@@ -87,16 +408,75 @@ document.addEventListener(
 
     setupQRCode();
 
-    setupLanguageSwitch();
+    applyLanguage(currentLanguage);
 
   }
 );
 
 
 /* ==================================================
+   FIXED HEADER
+================================================== */
+
+function setupFixedHeader() {
+
+  const header =
+    document.querySelector(
+      ".site-header"
+    );
+
+  if (!header) {
+    return;
+  }
+
+
+  function updateHeight() {
+
+    const height =
+      header.offsetHeight;
+
+    document.documentElement.style
+      .setProperty(
+        "--header-height",
+        `${height}px`
+      );
+
+  }
+
+
+  updateHeight();
+
+
+  if (
+    typeof ResizeObserver !==
+    "undefined"
+  ) {
+
+    const observer =
+      new ResizeObserver(
+        updateHeight
+      );
+
+    observer.observe(
+      header
+    );
+
+  }
+
+  else {
+
+    window.addEventListener(
+      "resize",
+      updateHeight
+    );
+
+  }
+
+}
+
+
+/* ==================================================
    HOLIDAY
-   毎週水曜日
-   第1・第3月曜日
 ================================================== */
 
 function isRegularHoliday(date) {
@@ -157,7 +537,9 @@ function updateBusinessStatus() {
   ) {
 
     element.textContent =
-      "🔵 本日は定休日";
+      currentLanguage === "en"
+        ? "🔵 Closed today"
+        : "🔵 本日は定休日";
 
     return;
 
@@ -174,7 +556,9 @@ function updateBusinessStatus() {
   ) {
 
     element.textContent =
-      "⚪ 本日の営業前";
+      currentLanguage === "en"
+        ? "⚪ Not open yet"
+        : "⚪ 本日の営業前";
 
   }
 
@@ -184,7 +568,9 @@ function updateBusinessStatus() {
   ) {
 
     element.textContent =
-      "🟢 営業中";
+      currentLanguage === "en"
+        ? "🟢 Open"
+        : "🟢 営業中";
 
   }
 
@@ -193,14 +579,18 @@ function updateBusinessStatus() {
   ) {
 
     element.textContent =
-      "🟡 まもなく終了";
+      currentLanguage === "en"
+        ? "🟡 Closing soon"
+        : "🟡 まもなく終了";
 
   }
 
   else {
 
     element.textContent =
-      "⚪ 本日の営業終了";
+      currentLanguage === "en"
+        ? "⚪ Closed for today"
+        : "⚪ 本日の営業終了";
 
   }
 
@@ -209,8 +599,6 @@ function updateBusinessStatus() {
 
 /* ==================================================
    HERO SLIDESHOW
-   gaikan 5秒
-   その他 3秒
 ================================================== */
 
 function setupHeroSlideshow() {
@@ -334,6 +722,22 @@ function formatDate(dateString) {
     );
 
 
+  if (
+    currentLanguage === "en"
+  ) {
+
+    return date.toLocaleDateString(
+      "en-US",
+      {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      }
+    );
+
+  }
+
+
   return (
     `${date.getFullYear()}年` +
     `${date.getMonth() + 1}月` +
@@ -403,7 +807,6 @@ function renderNews() {
       card.className =
         "news-card";
 
-
       card.id =
         event.id;
 
@@ -446,7 +849,7 @@ function renderNews() {
         "news-title";
 
       title.textContent =
-        event.title;
+        event[currentLanguage].title;
 
 
       if (event.isNew) {
@@ -513,7 +916,7 @@ function renderNews() {
         );
 
       detailText.textContent =
-        event.detail;
+        event[currentLanguage].detail;
 
 
       detail.appendChild(
@@ -671,21 +1074,40 @@ function renderCalendar() {
 
 
   title.textContent =
-    `${year}年${month + 1}月`;
+    currentLanguage === "en"
+      ? calendarDate.toLocaleDateString(
+          "en-US",
+          {
+            year: "numeric",
+            month: "long"
+          }
+        )
+      : `${year}年${month + 1}月`;
 
 
   calendar.innerHTML = "";
 
 
-  const dayNames = [
-    "日",
-    "月",
-    "火",
-    "水",
-    "木",
-    "金",
-    "土"
-  ];
+  const dayNames =
+    currentLanguage === "en"
+      ? [
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ]
+      : [
+          "日",
+          "月",
+          "火",
+          "水",
+          "木",
+          "金",
+          "土"
+        ];
 
 
   dayNames.forEach(
@@ -834,7 +1256,9 @@ function renderCalendar() {
       ) {
 
         info.textContent =
-          `定休日・${event.title}`;
+          currentLanguage === "en"
+            ? `Closed · ${event.en.title}`
+            : `定休日・${event.ja.title}`;
 
         info.classList.add(
           "calendar-holiday"
@@ -845,7 +1269,9 @@ function renderCalendar() {
       else if (holiday) {
 
         info.textContent =
-          "定休日";
+          currentLanguage === "en"
+            ? "Closed"
+            : "定休日";
 
         info.classList.add(
           "calendar-holiday"
@@ -856,12 +1282,16 @@ function renderCalendar() {
       else {
 
         info.textContent =
-          event.title;
+          event[currentLanguage].title;
 
         info.classList.add(
           "calendar-event"
         );
 
+      }
+
+
+      if (event) {
 
         info.addEventListener(
           "click",
@@ -1036,6 +1466,85 @@ function setupCalendarButtons() {
     );
 
   }
+
+}
+
+
+/* ==================================================
+   CALENDAR SWIPE
+================================================== */
+
+function setupCalendarSwipe() {
+
+  const calendar =
+    document.getElementById(
+      "calendar"
+    );
+
+  if (!calendar) {
+    return;
+  }
+
+
+  let startX = 0;
+
+
+  calendar.addEventListener(
+    "touchstart",
+    event => {
+
+      startX =
+        event.changedTouches[0].clientX;
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  calendar.addEventListener(
+    "touchend",
+    event => {
+
+      const endX =
+        event.changedTouches[0].clientX;
+
+      const diff =
+        endX - startX;
+
+
+      if (
+        Math.abs(diff) < 50
+      ) {
+        return;
+      }
+
+
+      if (diff < 0) {
+
+        calendarDate.setMonth(
+          calendarDate.getMonth() + 1
+        );
+
+      }
+
+      else {
+
+        calendarDate.setMonth(
+          calendarDate.getMonth() - 1
+        );
+
+      }
+
+
+      renderCalendar();
+
+    },
+    {
+      passive: true
+    }
+  );
 
 }
 
@@ -1231,6 +1740,112 @@ function setupQRCode() {
 
 
 /* ==================================================
+   STATIC TRANSLATION
+================================================== */
+
+function translateStaticText() {
+
+  const walker =
+    document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT
+    );
+
+
+  const nodes = [];
+
+
+  while (
+    walker.nextNode()
+  ) {
+
+    nodes.push(
+      walker.currentNode
+    );
+
+  }
+
+
+  nodes.forEach(
+    node => {
+
+      if (
+        !node.parentElement
+      ) {
+        return;
+      }
+
+
+      if (
+        node.parentElement.closest(
+          "script, style"
+        )
+      ) {
+        return;
+      }
+
+
+      const original =
+        node.textContent.trim();
+
+
+      if (
+        !original
+      ) {
+        return;
+      }
+
+
+      const translated =
+        translations[original];
+
+
+      if (
+        currentLanguage === "en" &&
+        translated
+      ) {
+
+        node.textContent =
+          node.textContent.replace(
+            original,
+            translated
+          );
+
+      }
+
+      else if (
+        currentLanguage === "ja"
+      ) {
+
+        const japanese =
+          Object.keys(
+            translations
+          ).find(
+            key =>
+              translations[key] ===
+              original
+          );
+
+
+        if (japanese) {
+
+          node.textContent =
+            node.textContent.replace(
+              original,
+              japanese
+            );
+
+        }
+
+      }
+
+    }
+  );
+
+}
+
+
+/* ==================================================
    LANGUAGE SWITCH
 ================================================== */
 
@@ -1253,19 +1868,15 @@ function setupLanguageSwitch() {
       "click",
       () => {
 
-        document.documentElement.lang =
-          "ja";
+        currentLanguage = "ja";
 
-        document.body.classList.remove(
-          "english"
+        localStorage.setItem(
+          "sunabaLanguage",
+          "ja"
         );
 
-        ja.classList.add(
-          "active"
-        );
-
-        en?.classList.remove(
-          "active"
+        applyLanguage(
+          "ja"
         );
 
       }
@@ -1280,28 +1891,104 @@ function setupLanguageSwitch() {
       "click",
       () => {
 
-        document.documentElement.lang =
-          "en";
+        currentLanguage = "en";
 
-        document.body.classList.add(
-          "english"
+        localStorage.setItem(
+          "sunabaLanguage",
+          "en"
         );
 
-        en.classList.add(
-          "active"
-        );
-
-        ja?.classList.remove(
-          "active"
-        );
-
-        alert(
-          "English version is being prepared."
+        applyLanguage(
+          "en"
         );
 
       }
     );
 
   }
+
+}
+
+
+/* ==================================================
+   APPLY LANGUAGE
+================================================== */
+
+function applyLanguage(
+  language
+) {
+
+  currentLanguage =
+    language;
+
+
+  document.documentElement.lang =
+    language;
+
+
+  document.body.classList.toggle(
+    "english",
+    language === "en"
+  );
+
+
+  const ja =
+    document.getElementById(
+      "jaButton"
+    );
+
+  const en =
+    document.getElementById(
+      "enButton"
+    );
+
+
+  if (ja) {
+
+    ja.classList.toggle(
+      "active",
+      language === "ja"
+    );
+
+  }
+
+
+  if (en) {
+
+    en.classList.toggle(
+      "active",
+      language === "en"
+    );
+
+  }
+
+
+  translateStaticText();
+
+  updateBusinessStatus();
+
+  renderNews();
+
+  renderCalendar();
+
+
+  document.title =
+    language === "en"
+      ? "SUNABA COFFEE | Shimanami Kaido · Imabari Station"
+      : "SUNABA COFFEE｜しまなみ海道・今治駅前";
+
+}
+
+
+/* ==================================================
+   INITIAL LANGUAGE SAFETY
+================================================== */
+
+if (
+  currentLanguage !== "ja" &&
+  currentLanguage !== "en"
+) {
+
+  currentLanguage = "ja";
 
 }
