@@ -17,7 +17,11 @@
 
 <body>
 
-<header class="header">
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="header" id="top">
 
   <div class="logo">SUNABA COFFEE</div>
 
@@ -25,6 +29,11 @@
 
   <div class="header-catch">
     ～愛媛県今治市・夫婦で営む小さな駅前カフェ～
+  </div>
+
+  <div class="header-description">
+    <p>JR今治駅からすぐ。</p>
+    <p>電車の音をBGMに、ゆっくりとした時間を過ごせる小さなカフェです。</p>
   </div>
 
   <div class="pet-catch">
@@ -35,10 +44,31 @@
     営業状況を確認中…
   </div>
 
-  <nav class="nav">
+  <!-- PCナビ -->
+  <nav class="nav desktop-nav">
+    <a href="#news" class="nav-special">お知らせ</a>
+    <a href="#calendar-section" class="nav-special">カレンダー</a>
+    <a href="#about">オーナー紹介</a>
+    <a href="#menu">メニュー</a>
+    <a href="#access">アクセス</a>
+  </nav>
+
+  <!-- スマホナビボタン -->
+  <button
+    id="menuButton"
+    class="menu-button"
+    type="button"
+    aria-label="メニューを開く"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
+
+  <!-- スマホナビ -->
+  <nav id="mobileNav" class="mobile-nav">
     <a href="#news">お知らせ</a>
     <a href="#calendar-section">カレンダー</a>
-    <a href="#about">店の紹介</a>
+    <a href="#about">オーナー紹介</a>
     <a href="#menu">メニュー</a>
     <a href="#access">アクセス</a>
   </nav>
@@ -49,8 +79,7 @@
 <main>
 
 <!-- ==================================================
-     HERO
-     スライドショー
+     HERO / SLIDESHOW
 ================================================== -->
 
 <section class="hero">
@@ -65,6 +94,8 @@
 
   </div>
 
+  <div class="slide-dots" id="slideDots"></div>
+
 </section>
 
 
@@ -74,27 +105,11 @@
 
 <section class="intro">
 
-  <h1>
-    ～ いつもの一杯に、旅の途中の一杯にも。～
-  </h1>
+  <h1>～ いつもの一杯に、旅の途中の一杯にも。～</h1>
 
-  <p>JR今治駅からすぐ。</p>
+  <p>夫婦で営む、気取らず立ち寄れる場所。</p>
 
-  <p>
-    電車の音をBGMに、ゆっくりとした時間を過ごせる小さなカフェです。
-  </p>
-
-  <p>
-    バス、電車の待ち時間もお気軽にご利用ください。
-  </p>
-
-  <p>
-    夫婦で営む、気取らず立ち寄れる場所。
-  </p>
-
-  <p>
-    コーヒーを片手に、ほっとひと息ついてください。
-  </p>
+  <p>コーヒーを片手に、ほっとひと息ついてください。</p>
 
 </section>
 
@@ -103,7 +118,7 @@
      INSTAGRAM
 ================================================== -->
 
-<section class="instagram-section">
+<section class="instagram-section reveal">
 
   <h2>Instagram</h2>
 
@@ -128,47 +143,15 @@
      NEWS
 ================================================== -->
 
-<section id="news" class="section news-section">
+<section id="news" class="section news-section reveal">
 
   <h2>お知らせ</h2>
 
-  <div class="news-list">
+  <p class="section-lead">
+    最新のイベント情報をお知らせします。
+  </p>
 
-    <article class="news-card">
-
-      <time datetime="2026-08-25">
-        2026年8月25日
-      </time>
-
-      <h3>
-        ホームページを開設しました
-      </h3>
-
-      <p>
-        SUNABA COFFEEのホームページを開設しました。
-        お店の情報やイベントなどをお知らせしていきます。
-      </p>
-
-    </article>
-
-
-    <article class="news-card">
-
-      <time datetime="2026-08-28">
-        2026年8月28日
-      </time>
-
-      <h3>
-        9月のイベントのお知らせ
-      </h3>
-
-      <p>
-        コーヒー教室や小さな音楽会などを予定しています。
-      </p>
-
-    </article>
-
-  </div>
+  <div id="newsList" class="news-list"></div>
 
 </section>
 
@@ -179,15 +162,12 @@
 
 <section
   id="calendar-section"
-  class="section calendar-section"
+  class="section calendar-section reveal"
 >
 
   <h2>営業カレンダー</h2>
 
-  <div
-    class="calendar-slider"
-    id="calendarSlider"
-  >
+  <div class="calendar-slider" id="calendarSlider">
 
     <button
       id="prevMonth"
@@ -198,21 +178,18 @@
       ‹
     </button>
 
-
     <div class="calendar-content">
 
       <div
         id="calendarTitle"
         class="calendar-title"
       >
-        2026年8月
+        2026年9月
       </div>
-
 
       <div class="calendar-wrap">
 
         <div class="week-header">
-
           <div class="sun">日</div>
           <div>月</div>
           <div>火</div>
@@ -220,18 +197,13 @@
           <div>木</div>
           <div>金</div>
           <div class="sat">土</div>
-
         </div>
 
-        <div
-          id="calendar"
-          class="calendar"
-        ></div>
+        <div id="calendar" class="calendar"></div>
 
       </div>
 
     </div>
-
 
     <button
       id="nextMonth"
@@ -244,62 +216,70 @@
 
   </div>
 
-
   <div class="calendar-note">
-
-    <span class="holiday-note">
-      ● 定休日
-    </span>
-
-    <span class="event-note">
-      ● イベント
-    </span>
-
+    <span class="holiday-note">● 休み</span>
+    <span class="event-note">● イベント</span>
   </div>
 
 </section>
 
 
 <!-- ==================================================
-     ABOUT
+     OWNER
 ================================================== -->
 
 <section
   id="about"
-  class="section about"
+  class="section about reveal"
 >
 
-  <h2>店の紹介</h2>
-
+  <h2>オーナー紹介</h2>
 
   <div class="about-photo">
-
     <img
       src="./image/owner.jpg"
-      alt="SUNABA COFFEE"
+      alt="SUNABA COFFEE オーナー"
     >
-
   </div>
 
-
-  <div class="about-text">
-
-    <p>JR今治駅からすぐ。</p>
+  <div class="owner-message">
 
     <p>
-      電車の音をBGMに、ゆっくりとした時間を過ごせる小さなカフェです。
+      私は、気軽に立ち寄っていただける、
+      小さなカフェを夫婦で営んでいます。
     </p>
 
     <p>
-      バス、電車の待ち時間も利用してね。
+      「ちょっとコーヒーを飲んでいこう」
+      そんな気持ちで立ち寄ってもらえるお店でありたいと思っています。
     </p>
 
     <p>
-      夫婦で営む、気取らず立ち寄れる場所。
+      私は大の愛犬家でもあります。
+      愛犬と一緒に過ごせる場所がもっとあればいいな、
+      という思いから、テラス席はペットOKにしています。
     </p>
 
     <p>
-      コーヒーを片手に、ほっとひと息ついてください。
+      駅前という場所だからこそ、
+      電車を待つ時間や旅の途中にも、
+      ゆっくりとした時間を過ごしていただけたらうれしいです。
+    </p>
+
+    <p>
+      そして、私が大切にしているのがコーヒーです。
+    </p>
+
+    <p>
+      特にブラジルコーヒーが好きで、
+      香りと飲みやすさを楽しんでいただける一杯を
+      大切にしています。
+    </p>
+
+    <p>
+      コーヒーを飲みながら、
+      「ちょっと落ち着いたな」と思ってもらえる。
+      そんな時間をお届けすることが、私のこだわりです。
     </p>
 
   </div>
@@ -308,12 +288,10 @@
   <div class="dog-section">
 
     <div class="dog-photo">
-
       <img
         src="./image/dog.jpg"
         alt="SUNABA COFFEEの愛犬"
       >
-
     </div>
 
     <p class="dog-message">
@@ -326,24 +304,15 @@
   <div class="seats">
 
     <div class="seat-card">
-
       <h3>テラス席</h3>
-
       <p>4名席 × 2</p>
-
       <span>ペットOK</span>
-
     </div>
 
-
     <div class="seat-card">
-
       <h3>店内席</h3>
-
       <p>4人掛け × 5席</p>
-
       <p>カウンター 5席</p>
-
     </div>
 
   </div>
@@ -357,121 +326,132 @@
 
 <section
   id="menu"
-  class="section menu-section"
+  class="section menu-section reveal"
 >
 
   <h2>メニュー</h2>
 
-
   <div class="menu-photo">
-
     <img
       src="./image/menu.jpg"
       alt="SUNABA COFFEE メニュー"
     >
-
   </div>
 
 
-  <div class="menu-category">
+  <div class="menu-grid">
 
-    <h3>モーニング</h3>
+    <!-- モーニング -->
 
-    <div class="menu-item">
-      <span>モーニング</span>
-      <strong>500円</strong>
+    <div class="menu-category">
+
+      <h3>モーニング</h3>
+
+      <div class="menu-item">
+        <span>モーニング</span>
+        <strong>500円</strong>
+      </div>
+
     </div>
 
-    <p class="menu-note">
-      パン・ジャム・コーヒー
-    </p>
 
-  </div>
+    <!-- 飲み物 -->
 
+    <div class="menu-category">
 
-  <div class="menu-category">
+      <h3>飲み物</h3>
 
-    <h3>飲み物</h3>
+      <div class="menu-item">
+        <span>ブラジルコーヒー</span>
+        <strong>500円</strong>
+      </div>
 
-    <div class="menu-item">
-      <span>ブラジルコーヒー</span>
-      <strong>500円</strong>
+      <div class="menu-item">
+        <span>ブレンドコーヒー</span>
+        <strong>450円</strong>
+      </div>
+
+      <div class="menu-item">
+        <span>アイスコーヒー</span>
+        <strong>500円</strong>
+      </div>
+
+      <div class="menu-item">
+        <span>カフェオレ</span>
+        <strong>500円</strong>
+      </div>
+
+      <div class="menu-item">
+        <span>ウインナーコーヒー</span>
+        <strong>550円</strong>
+      </div>
+
     </div>
 
-    <div class="menu-item">
-      <span>ブレンドコーヒー</span>
-      <strong>450円</strong>
+
+    <!-- サンドイッチ -->
+
+    <div class="menu-category">
+
+      <h3>サンドイッチ</h3>
+
+      <div class="recommended">
+        <span class="recommend-label">おすすめ</span>
+        <strong>日替わり（地産野菜、卵）</strong>
+        <span class="limited">限定20食</span>
+      </div>
+
+      <div class="menu-item">
+        <span>たまごサンド</span>
+      </div>
+
+      <div class="menu-item">
+        <span>ハム・レタスサンド</span>
+      </div>
+
     </div>
 
-    <div class="menu-item">
-      <span>アイスコーヒー</span>
-      <strong>500円</strong>
+
+    <!-- デザート -->
+
+    <div class="menu-category">
+
+      <h3>デザート</h3>
+
+      <div class="menu-item">
+        <span>日替わりデザート</span>
+        <span>店内メニューをご覧ください</span>
+      </div>
+
+      <div class="menu-item">
+        <span>パンケーキ</span>
+        <span>店内メニューをご覧ください</span>
+      </div>
+
+      <div class="menu-item">
+        <span>ケーキセット</span>
+        <strong>800円</strong>
+      </div>
+
     </div>
 
-    <div class="menu-item">
-      <span>カフェオレ</span>
-      <strong>500円</strong>
-    </div>
 
-    <div class="menu-item">
-      <span>ウインナーコーヒー</span>
-      <strong>550円</strong>
-    </div>
+    <!-- テイクアウト -->
 
-  </div>
+    <div class="menu-category">
 
+      <h3>テイクアウト</h3>
 
-  <div class="menu-category">
+      <div class="menu-item">
+        <span>コーヒー</span>
+        <span>店内メニューをご覧ください</span>
+      </div>
 
-    <h3>軽食</h3>
+      <div class="menu-item">
+        <span>サンドイッチ</span>
+        <span>店内メニューをご覧ください</span>
+      </div>
 
-    <div class="menu-item">
-      <span>サンドイッチ</span>
-      <span>店内メニューをご覧ください</span>
-    </div>
-
-    <div class="menu-item">
-      <span>グラタン</span>
-      <span>店内メニューをご覧ください</span>
-    </div>
-
-  </div>
-
-
-  <div class="menu-category">
-
-    <h3>デザート</h3>
-
-    <div class="menu-item">
-      <span>日替わりデザート</span>
-      <span>日替わり</span>
-    </div>
-
-    <div class="menu-item">
-      <span>パンケーキ</span>
-      <span>店内メニューをご覧ください</span>
-    </div>
-
-    <div class="menu-item">
-      <span>ケーキセット</span>
-      <strong>800円</strong>
-    </div>
-
-  </div>
-
-
-  <div class="menu-category">
-
-    <h3>テイクアウト</h3>
-
-    <div class="menu-item">
-      <span>コーヒー</span>
-      <span>テイクアウトOK</span>
-    </div>
-
-    <div class="menu-item">
-      <span>サンドイッチ</span>
-      <span>テイクアウトOK</span>
     </div>
 
   </div>
@@ -485,11 +465,10 @@
 
 <section
   id="access"
-  class="section access"
+  class="section access reveal"
 >
 
   <h2>アクセス・営業時間</h2>
-
 
   <div class="access-info">
 
@@ -501,9 +480,7 @@
       しまなみイノベーションビル 2階
     </p>
 
-    <p>
-      JR今治駅からすぐ
-    </p>
+    <p>JR今治駅からすぐ</p>
 
     <p class="phone">
       <a href="tel:0898-11-2222">
@@ -511,12 +488,13 @@
       </a>
     </p>
 
-
     <div class="hours-info">
 
       <strong>営業時間</strong><br>
 
-      10:00～17:00<br>
+      10:00～17:00
+
+      <br>
 
       <span>
         定休日：水曜日・第1・第3月曜日
@@ -524,10 +502,12 @@
 
     </div>
 
-
-    <p class="parking">
-      ※ 駐車場はありません
-    </p>
+    <div class="parking-info">
+      <strong>駐車場について</strong>
+      <p>
+        専用駐車場はありません。
+      </p>
+    </div>
 
   </div>
 
@@ -558,6 +538,20 @@
 
 
 <!-- ==================================================
+     TOP BUTTON
+================================================== -->
+
+<a
+  href="#top"
+  id="topButton"
+  class="top-button"
+  aria-label="トップへ戻る"
+>
+  ↑<span>トップへ戻る</span>
+</a>
+
+
+<!-- ==================================================
      FOOTER
 ================================================== -->
 
@@ -570,7 +564,6 @@
   <div class="footer-place">
     -IMABARI, EHIME, JAPAN-
   </div>
-
 
   <div class="sns">
 
@@ -602,7 +595,6 @@
     </a>
 
   </div>
-
 
   <p class="copyright">
     © SUNABA COFFEE
