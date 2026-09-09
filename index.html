@@ -20,7 +20,9 @@
 
       <h1>SUNABA COFFEE</h1>
 
-      <p class="brand-route">しまなみ海道</p>
+      <p class="brand-route">
+        しまなみ海道
+      </p>
 
       <p class="brand-sub">
         ～愛媛県今治市・夫婦で営む小さな駅前カフェ～
@@ -28,7 +30,9 @@
 
       <p class="station-info">
         JR今治駅、バス停から徒歩3分
-        <span class="wifi-info">🐾 Wi-Fi・電源利用可</span>
+        <span class="wifi-info">
+          🐾 Wi-Fi・電源利用可
+        </span>
       </p>
 
       <p class="brand-message">
@@ -42,14 +46,42 @@
     </div>
 
 
-    <div class="business-info">
+    <div class="header-tools">
 
-      <div id="businessStatus" class="business-status">
-        営業状況を確認中…
+      <!-- 言語切替 -->
+      <div class="language-switch">
+
+        <button
+          id="jaButton"
+          class="lang-button active"
+          type="button">
+          日本語
+        </button>
+
+        <span>|</span>
+
+        <button
+          id="enButton"
+          class="lang-button"
+          type="button">
+          English
+        </button>
+
       </div>
 
-      <div class="business-hours">
-        営業時間 10:00～17:00
+
+      <div class="business-info">
+
+        <div
+          id="businessStatus"
+          class="business-status">
+          営業状況を確認中…
+        </div>
+
+        <div class="business-hours">
+          営業時間 10:00～17:00
+        </div>
+
       </div>
 
     </div>
@@ -61,11 +93,25 @@
 
   <nav class="main-nav desktop-nav">
 
-    <a href="#news">お知らせ</a>
-    <a href="#calendar-section">カレンダー</a>
-    <a href="#about">店主のつぶやき</a>
-    <a href="#menu">メニュー</a>
-    <a href="#access">アクセス</a>
+    <a href="#news">
+      お知らせ
+    </a>
+
+    <a href="#calendar-section">
+      カレンダー
+    </a>
+
+    <a href="#about">
+      OWNER'S NOTE｜店主のひとこと
+    </a>
+
+    <a href="#menu">
+      メニュー
+    </a>
+
+    <a href="#access">
+      アクセス
+    </a>
 
   </nav>
 
@@ -82,13 +128,29 @@
       ☰
     </button>
 
-    <nav id="mobileNav" class="mobile-nav">
+    <nav
+      id="mobileNav"
+      class="mobile-nav">
 
-      <a href="#news">お知らせ</a>
-      <a href="#calendar-section">カレンダー</a>
-      <a href="#about">店主のつぶやき</a>
-      <a href="#menu">メニュー</a>
-      <a href="#access">アクセス</a>
+      <a href="#news">
+        お知らせ
+      </a>
+
+      <a href="#calendar-section">
+        カレンダー
+      </a>
+
+      <a href="#about">
+        OWNER'S NOTE｜店主のひとこと
+      </a>
+
+      <a href="#menu">
+        メニュー
+      </a>
+
+      <a href="#access">
+        アクセス
+      </a>
 
     </nav>
 
@@ -97,9 +159,7 @@
 </header>
 
 
-
 <main>
-
 
 <!-- ==================================================
      HERO
@@ -144,7 +204,6 @@
 </section>
 
 
-
 <!-- ==================================================
      ABOUT
 ================================================== -->
@@ -172,27 +231,31 @@
 </section>
 
 
-
 <!-- ==================================================
      NEWS
 ================================================== -->
 
-<section id="news" class="section reveal">
+<section
+  id="news"
+  class="section reveal">
 
   <div class="section-heading">
 
     <span>NEWS & EVENT</span>
 
-    <h2>お知らせ</h2>
+    <h2>
+      お知らせ
+    </h2>
 
   </div>
+
 
   <p class="section-lead">
     SUNABA COFFEEからのお知らせ・イベント情報です。
   </p>
 
 
-  <!-- コーヒーチケット固定 -->
+  <!-- コーヒーチケット -->
 
   <article class="ticket-news-card">
 
@@ -200,19 +263,15 @@
 
       <div>
 
-        <div class="ticket-news-label">
-          ☕ 販売中
-        </div>
-
         <div class="ticket-news-title">
-          コーヒーチケット販売中
+          ☕ コーヒーチケット販売中
         </div>
 
       </div>
 
       <button
         id="ticketToggle"
-        class="ticket-toggle"
+        class="event-toggle"
         type="button"
         aria-expanded="false">
         ▽
@@ -221,10 +280,14 @@
     </div>
 
 
-    <div id="ticketDetail" class="ticket-news-detail">
+    <div
+      id="ticketDetail"
+      class="ticket-news-detail">
 
       <p>
-        <strong>5杯分　2,200円</strong>
+        <strong>
+          5杯分　2,200円
+        </strong>
       </p>
 
       <p>
@@ -240,15 +303,7 @@
       </p>
 
       <p>
-        スマートフォンで残り回数を管理できるようにしています。
-      </p>
-
-      <p>
-        ご家族へのプレゼントにもおすすめです。
-      </p>
-
-      <p>
-        詳しくは店頭でお気軽にお尋ねください。
+        スマートフォンで残り回数を管理できます。
       </p>
 
     </div>
@@ -256,10 +311,11 @@
   </article>
 
 
-  <div id="newsList" class="news-list"></div>
+  <!-- イベント -->
+
+  <div id="newsList"></div>
 
 </section>
-
 
 
 <!-- ==================================================
@@ -274,9 +330,12 @@
 
     <span>CALENDAR</span>
 
-    <h2>カレンダー</h2>
+    <h2>
+      カレンダー
+    </h2>
 
   </div>
+
 
   <p class="calendar-note">
     定休日：水曜日・第1・第3月曜日
@@ -301,10 +360,13 @@
 
   </div>
 
-  <div id="calendar" class="calendar"></div>
+
+  <div
+    id="calendar"
+    class="calendar">
+  </div>
 
 </section>
-
 
 
 <!-- ==================================================
@@ -319,7 +381,9 @@
 
     <span>OWNER'S NOTE</span>
 
-    <h2>店主のつぶやき</h2>
+    <h2>
+      店主のひとこと
+    </h2>
 
   </div>
 
@@ -375,7 +439,7 @@
   </div>
 
 
-  <!-- Dog Friendly Terrace -->
+  <!-- DOG FRIENDLY -->
 
   <div class="dog-terrace-card">
 
@@ -395,12 +459,8 @@
       </span>
 
       <h3>
-        Dog Friendly Terrace
-      </h3>
-
-      <p>
         愛犬と一緒に、ゆっくりどうぞ。
-      </p>
+      </h3>
 
       <p>
         テラス席はペットOK。
@@ -420,7 +480,6 @@
 </section>
 
 
-
 <!-- ==================================================
      MENU
 ================================================== -->
@@ -433,9 +492,12 @@
 
     <span>MENU</span>
 
-    <h2>メニュー</h2>
+    <h2>
+      メニュー
+    </h2>
 
   </div>
+
 
   <p class="section-lead">
     いつもの一杯と、軽いお食事をご用意しています。
@@ -445,7 +507,7 @@
   <div class="menu-grid">
 
 
-    <!-- 写真 -->
+    <!-- PHOTO -->
 
     <div class="menu-box menu-photo-box">
 
@@ -453,7 +515,9 @@
 
         <span>PHOTO</span>
 
-        <h3>写真</h3>
+        <h3>
+          写真
+        </h3>
 
       </div>
 
@@ -475,8 +539,7 @@
     </div>
 
 
-
-    <!-- モーニング -->
+    <!-- MORNING -->
 
     <div class="menu-box">
 
@@ -484,9 +547,12 @@
 
         <span>MORNING</span>
 
-        <h3>モーニング</h3>
+        <h3>
+          モーニング
+        </h3>
 
       </div>
+
 
       <p class="menu-time">
         提供 10:00～12:00
@@ -494,27 +560,38 @@
 
 
       <div class="menu-item">
-        <span>トースト、サラダ、コーヒー</span>
-        <strong>500円</strong>
+        <span>
+          トースト、サラダ、コーヒー
+        </span>
+        <strong>
+          500円
+        </strong>
       </div>
 
+
       <div class="menu-item">
-        <span>ホットサンド、サラダ、コーヒー</span>
-        <strong>550円</strong>
+        <span>
+          ホットサンド、サラダ、コーヒー
+        </span>
+        <strong>
+          550円
+        </strong>
       </div>
+
 
       <div class="menu-item">
         <span>
           和食セット（おにぎり2個、卵、サラダ）、コーヒー
         </span>
-        <strong>600円</strong>
+        <strong>
+          600円
+        </strong>
       </div>
 
     </div>
 
 
-
-    <!-- 軽食 -->
+    <!-- LIGHT MEAL -->
 
     <div class="menu-box">
 
@@ -522,7 +599,9 @@
 
         <span>LIGHT MEAL</span>
 
-        <h3>軽食</h3>
+        <h3>
+          軽食
+        </h3>
 
       </div>
 
@@ -535,7 +614,9 @@
 
         <div class="recommend-name">
           日替わりサンドイッチ
-          <span>（地産野菜、たまご）</span>
+          <span>
+            （地産野菜、たまご）
+          </span>
         </div>
 
         <div class="recommend-limit">
@@ -550,35 +631,58 @@
 
 
       <div class="menu-item">
-        <span>サンドイッチ（たまご）</span>
-        <strong>650円</strong>
+        <span>
+          サンドイッチ（たまご）
+        </span>
+        <strong>
+          650円
+        </strong>
       </div>
 
-      <div class="menu-item">
-        <span>サンドイッチ（ハム・レタス）</span>
-        <strong>650円</strong>
-      </div>
 
       <div class="menu-item">
-        <span>カレー（ミニサラダ付き）</span>
-        <strong>750円</strong>
+        <span>
+          サンドイッチ（ハム・レタス）
+        </span>
+        <strong>
+          650円
+        </strong>
       </div>
 
-      <div class="menu-item">
-        <span>エビフライカレー（ミニサラダ付き）</span>
-        <strong>850円</strong>
-      </div>
 
       <div class="menu-item">
-        <span>ピラフ（ミニサラダ付き）</span>
-        <strong>800円</strong>
+        <span>
+          カレー（ミニサラダ付き）
+        </span>
+        <strong>
+          750円
+        </strong>
+      </div>
+
+
+      <div class="menu-item">
+        <span>
+          エビフライカレー（ミニサラダ付き）
+        </span>
+        <strong>
+          850円
+        </strong>
+      </div>
+
+
+      <div class="menu-item">
+        <span>
+          ピラフ（ミニサラダ付き）
+        </span>
+        <strong>
+          800円
+        </strong>
       </div>
 
     </div>
 
 
-
-    <!-- 飲み物 -->
+    <!-- DRINK -->
 
     <div class="menu-box">
 
@@ -586,38 +690,64 @@
 
         <span>DRINK</span>
 
-        <h3>飲み物</h3>
+        <h3>
+          飲み物
+        </h3>
 
       </div>
 
 
       <div class="menu-item">
-        <span>ブラジルコーヒー</span>
-        <strong>500円</strong>
+        <span>
+          ブラジルコーヒー
+        </span>
+        <strong>
+          500円
+        </strong>
       </div>
+
 
       <div class="menu-item">
-        <span>ブレンドコーヒー</span>
-        <strong>450円</strong>
+        <span>
+          ブレンドコーヒー
+        </span>
+        <strong>
+          450円
+        </strong>
       </div>
+
 
       <div class="menu-item">
-        <span>アイスコーヒー</span>
-        <strong>500円</strong>
+        <span>
+          アイスコーヒー
+        </span>
+        <strong>
+          500円
+        </strong>
       </div>
+
 
       <div class="menu-item">
-        <span>カフェオレ</span>
-        <strong>500円</strong>
+        <span>
+          カフェオレ
+        </span>
+        <strong>
+          500円
+        </strong>
       </div>
+
 
       <div class="menu-item">
-        <span>ウインナーコーヒー</span>
-        <strong>550円</strong>
+        <span>
+          ウインナーコーヒー
+        </span>
+        <strong>
+          550円
+        </strong>
       </div>
 
 
-      <!-- コーヒーチケット -->
+      <!-- チケット -->
 
       <div class="drink-ticket">
 
@@ -650,8 +780,7 @@
     </div>
 
 
-
-    <!-- デザート -->
+    <!-- DESSERT -->
 
     <div class="menu-box">
 
@@ -659,46 +788,46 @@
 
         <span>DESSERT</span>
 
-        <h3>デザート</h3>
+        <h3>
+          デザート
+        </h3>
 
       </div>
 
 
       <div class="menu-item">
-
-        <span>日替わりデザート</span>
-
+        <span>
+          日替わりデザート
+        </span>
         <strong>
           店内メニューをご覧ください
         </strong>
-
       </div>
 
 
       <div class="menu-item">
-
-        <span>パンケーキ</span>
-
+        <span>
+          パンケーキ
+        </span>
         <strong>
           店内メニューをご覧ください
         </strong>
-
       </div>
 
 
       <div class="menu-item">
-
-        <span>ケーキセット</span>
-
-        <strong>800円</strong>
-
+        <span>
+          ケーキセット
+        </span>
+        <strong>
+          800円
+        </strong>
       </div>
 
     </div>
 
 
-
-    <!-- テイクアウト -->
+    <!-- TAKE OUT -->
 
     <div class="menu-box">
 
@@ -706,39 +835,37 @@
 
         <span>TAKE OUT</span>
 
-        <h3>テイクアウト</h3>
+        <h3>
+          テイクアウト
+        </h3>
 
       </div>
 
 
       <div class="menu-item">
-
-        <span>コーヒー</span>
-
+        <span>
+          コーヒー
+        </span>
         <strong>
           店内メニューをご覧ください
         </strong>
-
       </div>
 
 
       <div class="menu-item">
-
-        <span>サンドイッチ</span>
-
+        <span>
+          サンドイッチ
+        </span>
         <strong>
           店内メニューをご覧ください
         </strong>
-
       </div>
 
     </div>
 
-
   </div>
 
 </section>
-
 
 
 <!-- ==================================================
@@ -753,7 +880,9 @@
 
     <span>ACCESS</span>
 
-    <h2>アクセス</h2>
+    <h2>
+      アクセス
+    </h2>
 
   </div>
 
@@ -763,7 +892,9 @@
 
     <div class="access-card">
 
-      <h3>店舗情報</h3>
+      <h3>
+        店舗情報
+      </h3>
 
       <p>
         〒794-0015<br>
@@ -789,7 +920,9 @@
 
     <div class="access-card">
 
-      <h3>駐車場</h3>
+      <h3>
+        駐車場
+      </h3>
 
       <p>
         お車でお越しの際は、
@@ -801,7 +934,9 @@
 
     <div class="access-card">
 
-      <h3>お支払い方法</h3>
+      <h3>
+        お支払い方法
+      </h3>
 
       <ul class="payment-list">
 
@@ -835,9 +970,17 @@
 
   <div class="sns-links">
 
-    <a href="#" target="_blank">Instagram</a>
-    <a href="#" target="_blank">X</a>
-    <a href="#" target="_blank">Facebook</a>
+    <a href="#" target="_blank">
+      Instagram
+    </a>
+
+    <a href="#" target="_blank">
+      X
+    </a>
+
+    <a href="#" target="_blank">
+      Facebook
+    </a>
 
   </div>
 
@@ -863,7 +1006,6 @@
 </main>
 
 
-
 <!-- ==================================================
      FOOTER
 ================================================== -->
@@ -878,14 +1020,19 @@
     ～愛媛県今治市・夫婦で営む小さな駅前カフェ～
   </div>
 
-  <div class="footer-line"></div>
+  <div class="footer-rail">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
   <div class="footer-copy">
     © 2026 SUNABA COFFEE
   </div>
 
 </footer>
-
 
 
 <!-- ==================================================
@@ -897,7 +1044,15 @@
   class="top-button"
   aria-label="トップへ戻る"
   type="button">
-  🐾
+
+  <span class="paw-icon">
+    🐾
+  </span>
+
+  <span class="top-label">
+    TOPへ
+  </span>
+
 </button>
 
 
