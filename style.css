@@ -1,43 +1,333 @@
 /* ==================================================
-   LANGUAGE SWITCH / FIXED TOP
-   追加修正
+   SUNABA COFFEE
+   style.css
+   完全版
 ================================================== */
 
-/* 固定ヘッダー */
-.site-header {
 
+/* ==================================================
+   基本設定
+================================================== */
+
+:root {
+  --base: #fcfaf6;
+  --base-dark: #f3ede4;
+
+  --brown: #55463b;
+  --brown-dark: #3e322a;
+  --brown-light: #806f61;
+
+  --line: #d8cec2;
+
+  --accent: #5c7f96;
+  --accent-light: #e7eef2;
+
+  --white: #ffffff;
+
+  --header-height: 320px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  padding-top: var(--header-height);
+
+  background: var(--base);
+
+  color: var(--brown);
+
+  font-family:
+    Futura,
+    "Trebuchet MS",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
+
+  line-height: 1.8;
+
+  cursor:
+    url("./image/point_210211.png") 8 8,
+    auto;
+}
+
+
+a,
+button,
+.calendar-event {
+  cursor:
+    url("./image/point_210211.png") 8 8,
+    pointer;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+button {
+  font-family: inherit;
+}
+
+
+/* ==================================================
+   固定ヘッダー
+================================================== */
+
+.site-header {
   position: fixed;
 
   top: 0;
   left: 0;
+
   width: 100%;
 
   z-index: 900;
 
-  background:
-    #f3eee6;
+  background: #f3eee6;
 
   box-shadow:
-    0 3px 12px
-    rgba(70, 50, 35, 0.08);
+    0 3px 12px rgba(70, 50, 35, 0.08);
 
-  padding-bottom: 25px;
-
+  padding:
+    28px 20px 25px;
 }
 
 
-/* 本文を固定ヘッダー分だけ下げる */
-body {
+.header-inner {
+  width: 100%;
+  max-width: 1100px;
 
-  padding-top:
-    var(--header-height, 320px);
+  margin: 0 auto;
 
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 30px;
 }
 
 
-/* ヘッダーの下にさりげない線路 */
+/* ==================================================
+   ブランド
+================================================== */
+
+.brand-area {
+  min-width: 0;
+}
+
+
+.brand-area h1 {
+  margin: 0;
+
+  color: var(--brown-dark);
+
+  font-size:
+    clamp(2rem, 5vw, 3.5rem);
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.05;
+}
+
+
+.brand-route {
+  margin:
+    8px 0 0;
+
+  color: var(--accent);
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+.brand-sub {
+  margin:
+    3px 0 0;
+
+  color: var(--brown-light);
+
+  font-size: 0.9rem;
+}
+
+
+.station-info {
+  margin:
+    8px 0 0;
+
+  font-size: 0.85rem;
+
+  color: var(--brown);
+}
+
+
+.wifi-info {
+  margin-left: 12px;
+}
+
+
+.brand-message {
+  margin:
+    4px 0 0;
+
+  font-size: 0.82rem;
+
+  color: var(--brown-light);
+}
+
+
+.dog-friendly {
+  margin:
+    4px 0 0;
+
+  font-size: 0.84rem;
+
+  color: var(--accent);
+
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   ヘッダー右側
+================================================== */
+
+.header-tools {
+  flex-shrink: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 15px;
+}
+
+
+/* ==================================================
+   言語切替
+================================================== */
+
+.language-switch {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+.lang-button {
+  border:
+    1px solid #b9aa99;
+
+  border-radius: 8px;
+
+  background: #fffdf9;
+
+  color: var(--brown);
+
+  padding:
+    7px 12px;
+
+  font-size: 0.92rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+
+  transition:
+    0.2s ease;
+}
+
+
+.lang-button:hover {
+  border-color: var(--accent);
+
+  color: var(--accent);
+
+  background: var(--accent-light);
+
+  transform:
+    translateY(-1px);
+}
+
+
+.lang-button.active {
+  background: var(--brown);
+
+  border-color: var(--brown);
+
+  color: white;
+
+  font-weight: 900;
+}
+
+
+.lang-button.active:hover {
+  background: var(--accent);
+
+  border-color: var(--accent);
+}
+
+
+.language-switch > span {
+  display: none;
+}
+
+
+/* ==================================================
+   営業状況
+================================================== */
+
+.business-info {
+  text-align: right;
+}
+
+
+.business-status {
+  font-size: 0.95rem;
+
+  font-weight: 800;
+
+  margin-bottom: 3px;
+}
+
+
+.business-hours {
+  font-size: 0.78rem;
+
+  color: var(--brown-light);
+}
+
+
+/* ==================================================
+   ヘッダー下の線路モチーフ
+================================================== */
+
 .site-header::after {
-
   content: "";
 
   position: absolute;
@@ -69,215 +359,1858 @@ body {
       var(--accent) 17px 20px,
       transparent 20px 37px
     );
-
 }
 
 
-/* 言語切替 */
-.language-switch {
+/* ==================================================
+   PC NAV
+================================================== */
+
+.main-nav {
+  width: 100%;
+  max-width: 1100px;
+
+  margin:
+    25px auto 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.main-nav a {
+  display: block;
+
+  padding:
+    7px 15px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  color: var(--brown);
+
+  text-decoration: none;
+
+  font-size: 0.84rem;
+
+  font-weight: 700;
+
+  transition:
+    0.2s ease;
+}
+
+
+.main-nav a:hover {
+  color: var(--accent);
+
+  border-color: var(--accent);
+
+  background: var(--accent-light);
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* ==================================================
+   スマホNAV
+================================================== */
+
+.mobile-nav-wrapper {
+  display: none;
+}
+
+
+.mobile-nav {
+  display: none;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: var(--base-dark);
+}
+
+
+.hero-slideshow {
+  position: relative;
+
+  width: 100%;
+
+  height:
+    clamp(280px, 52vw, 600px);
+
+  overflow: hidden;
+}
+
+
+.hero-slide {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transform:
+    translateX(60px);
+
+  transition:
+    opacity 1.1s ease,
+    transform 1.1s ease;
+}
+
+
+.hero-slide.active {
+  opacity: 1;
+
+  transform:
+    translateX(0);
+}
+
+
+/* ==================================================
+   共通 SECTION
+================================================== */
+
+section[id],
+.intro {
+  scroll-margin-top:
+    var(--header-height);
+}
+
+
+.section,
+.intro {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding:
+    80px 20px;
+}
+
+
+.intro {
+  text-align: center;
+
+  padding-top: 75px;
+
+  padding-bottom: 75px;
+}
+
+
+/* ==================================================
+   見出し
+================================================== */
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+
+.section-heading > span {
+  display: block;
+
+  color: var(--accent);
+
+  font-size: 1.15rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  margin-bottom: 5px;
+}
+
+
+.section-heading h2 {
+  position: relative;
+
+  margin: 0;
+
+  padding-bottom: 14px;
+
+  color: var(--brown-dark);
+
+  font-size:
+    clamp(1.45rem, 3vw, 2rem);
+
+  line-height: 1.4;
+}
+
+
+.section-heading h2::after {
+  content: "";
+
+  display: block;
+
+  width: 180px;
+
+  height: 8px;
+
+  margin-top: 12px;
+
+  border-top:
+    1px solid var(--accent);
+
+  border-bottom:
+    1px solid var(--accent);
+
+  opacity: 0.45;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 14px,
+      var(--accent) 14px 17px,
+      transparent 17px 31px
+    );
+}
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.intro .section-heading h2 {
+  white-space: nowrap;
+}
+
+
+.intro p {
+  margin:
+    8px 0;
+
+  font-size: 1rem;
+}
+
+
+/* ==================================================
+   NEWS
+================================================== */
+
+.section-lead {
+  margin:
+    -10px 0 28px;
+
+  color: var(--brown-light);
+
+  font-size: 0.92rem;
+}
+
+
+#newsList {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* ==================================================
+   チケット
+================================================== */
+
+.ticket-news-card {
+  margin-bottom: 18px;
+
+  border:
+    1px solid var(--line);
+
+  background: #fffdf9;
+}
+
+
+.ticket-news-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding:
+    15px 18px;
+}
+
+
+.ticket-news-title {
+  font-weight: 800;
+
+  color: var(--brown-dark);
+}
+
+
+.event-toggle {
+  flex-shrink: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--accent);
+
+  font-size: 1.1rem;
+
+  font-weight: 800;
+
+  padding: 4px 8px;
+}
+
+
+.ticket-news-detail {
+  display: none;
+
+  padding:
+    0 18px 15px;
+
+  border-top:
+    1px solid var(--line);
+
+  font-size: 0.88rem;
+}
+
+
+.ticket-news-detail.open {
+  display: block;
+}
+
+
+.ticket-news-detail p {
+  margin:
+    7px 0;
+}
+
+
+/* ==================================================
+   NEWS EVENT CARD
+================================================== */
+
+.news-card {
+  border:
+    1px solid var(--line);
+
+  background: #fffdf9;
+}
+
+
+.news-card-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding:
+    15px 18px;
+}
+
+
+.news-date {
+  margin-bottom: 3px;
+
+  color: var(--accent);
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+}
+
+
+.news-title {
+  color: var(--brown-dark);
+
+  font-weight: 800;
+}
+
+
+.news-new {
+  display: inline-block;
+
+  margin-left: 7px;
+
+  color: var(--accent);
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+}
+
+
+.news-detail {
+  display: none;
+
+  padding:
+    0 18px 15px;
+
+  border-top:
+    1px solid var(--line);
+
+  font-size: 0.88rem;
+}
+
+
+.news-detail.open {
+  display: block;
+}
+
+
+.news-detail p {
+  margin:
+    8px 0 0;
+}
+
+
+/* ==================================================
+   CALENDAR
+================================================== */
+
+.calendar-note {
+  margin:
+    -10px 0 25px;
+
+  color: var(--brown-light);
+
+  font-size: 0.88rem;
+}
+
+
+.calendar-controls {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin-bottom: 20px;
+}
+
+
+.calendar-controls button {
+  border:
+    1px solid var(--line);
+
+  border-radius: 6px;
+
+  background: #fffdf9;
+
+  color: var(--brown);
+
+  padding:
+    7px 12px;
+
+  font-weight: 700;
+}
+
+
+.calendar-controls button:hover {
+  border-color: var(--accent);
+
+  color: var(--accent);
+
+  background: var(--accent-light);
+}
+
+
+.calendar-controls h3 {
+  min-width: 140px;
+
+  margin: 0;
+
+  text-align: center;
+
+  color: var(--brown-dark);
+}
+
+
+.calendar {
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  border-top:
+    1px solid var(--line);
+
+  border-left:
+    1px solid var(--line);
+}
+
+
+.calendar-weekday,
+.calendar-day {
+  min-height: 72px;
+
+  padding: 7px;
+
+  border-right:
+    1px solid var(--line);
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+
+.calendar-weekday {
+  min-height: auto;
+
+  text-align: center;
+
+  background: var(--base-dark);
+
+  color: var(--brown-light);
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
+}
+
+
+.calendar-day {
+  background: #fffdf9;
+
+  font-size: 0.8rem;
+
+  transition:
+    0.15s ease;
+}
+
+
+.calendar-day.empty {
+  background: #f7f3ed;
+}
+
+
+.calendar-day.holiday {
+  background: #f2ece5;
+}
+
+
+.calendar-day.event {
+  position: relative;
+
+  cursor:
+    url("./image/point_210211.png") 8 8,
+    pointer;
+
+  background: var(--accent-light);
+}
+
+
+.calendar-day.event:hover {
+  background: #dce8ee;
+}
+
+
+.calendar-date {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--brown-dark);
+
+  font-weight: 800;
+}
+
+
+.calendar-label {
+  display: block;
+
+  color: var(--brown-light);
+
+  font-size: 0.72rem;
+
+  line-height: 1.35;
+}
+
+
+.calendar-event {
+  display: block;
+
+  color: var(--accent);
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+
+/* ==================================================
+   OWNER
+================================================== */
+
+.owner-card {
+  display: grid;
+
+  grid-template-columns:
+    300px 1fr;
+
+  gap: 40px;
+
+  align-items: start;
+
+  padding:
+    30px;
+
+  border:
+    1px solid var(--line);
+
+  background: #fffdf9;
+}
+
+
+.owner-photo {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+}
+
+
+.owner-text h3 {
+  margin:
+    0 0 8px;
+
+  color: var(--brown-dark);
+
+  font-size: 1.2rem;
+}
+
+
+.owner-text h3:not(:first-child) {
+  margin-top: 28px;
+}
+
+
+.owner-text p {
+  margin:
+    8px 0;
+
+  font-size: 0.92rem;
+}
+
+
+/* ==================================================
+   DOG FRIENDLY TERRACE
+================================================== */
+
+.dog-terrace-card {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 30px;
+
+  align-items: center;
+
+  margin-top: 35px;
+
+  padding:
+    25px;
+
+  border:
+    1px solid var(--line);
+
+  background: #fffdf9;
+}
+
+
+.dog-terrace-photo img {
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+}
+
+
+.dog-terrace-en {
+  color: var(--accent);
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.dog-terrace-text h3 {
+  margin:
+    8px 0 12px;
+
+  color: var(--brown-dark);
+
+  font-size: 1.3rem;
+}
+
+
+.dog-terrace-text p {
+  margin: 0;
+
+  font-size: 0.92rem;
+}
+
+
+.station-message {
+  margin:
+    30px 0 0;
+
+  text-align: center;
+
+  color: var(--accent);
+
+  font-size: 0.92rem;
+
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   MENU
+================================================== */
+
+.menu-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+.menu-box {
+  padding:
+    25px;
+
+  border:
+    1px solid var(--line);
+
+  background: #fffdf9;
+}
+
+
+.menu-box-title {
+  margin-bottom: 20px;
+}
+
+
+.menu-box-title > span {
+  display: block;
+
+  color: var(--accent);
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+
+.menu-box-title h3 {
+  margin:
+    3px 0 0;
+
+  color: var(--brown-dark);
+
+  font-size: 1.25rem;
+}
+
+
+.menu-time {
+  margin:
+    -8px 0 15px;
+
+  color: var(--brown-light);
+
+  font-size: 0.8rem;
+}
+
+
+/* ==================================================
+   MENU ITEMS
+================================================== */
+
+.menu-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: baseline;
+
+  gap: 15px;
+
+  padding:
+    9px 0;
+
+  border-bottom:
+    1px dotted var(--line);
+}
+
+
+.menu-item:last-child {
+  border-bottom: 0;
+}
+
+
+.menu-item span {
+  flex: 1;
+
+  font-size: 0.88rem;
+}
+
+
+.menu-item strong {
+  flex-shrink: 0;
+
+  color: var(--brown-dark);
+
+  font-size: 0.88rem;
+
+  text-align: right;
+}
+
+
+/* ==================================================
+   MENU PHOTO
+================================================== */
+
+.menu-photo-slideshow {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+}
+
+
+.menu-photo {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.8s ease;
+}
+
+
+.menu-photo.active {
+  opacity: 1;
+}
+
+
+/* ==================================================
+   おすすめメニュー
+================================================== */
+
+.recommended-menu {
+  margin-bottom: 18px;
+
+  padding:
+    18px;
+
+  border:
+    1px solid var(--accent);
+
+  background: var(--accent-light);
+}
+
+
+.recommend-label {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  color: var(--accent);
+
+  font-size: 0.75rem;
+
+  font-weight: 900;
+}
+
+
+.recommend-name {
+  color: var(--brown-dark);
+
+  font-size: 1rem;
+
+  font-weight: 800;
+}
+
+
+.recommend-name span {
+  font-weight: 500;
+}
+
+
+.recommend-limit {
+  margin-top: 5px;
+
+  color: var(--brown-light);
+
+  font-size: 0.78rem;
+}
+
+
+.recommend-price {
+  margin-top: 4px;
+
+  color: var(--brown-dark);
+
+  font-size: 1rem;
+
+  font-weight: 900;
+}
+
+
+/* ==================================================
+   コーヒーチケット
+================================================== */
+
+.drink-ticket {
+  margin-top: 20px;
+
+  padding:
+    18px;
+
+  border:
+    1px solid var(--accent);
+
+  background: var(--accent-light);
+}
+
+
+.drink-ticket-title {
+  color: var(--brown-dark);
+
+  font-weight: 900;
+}
+
+
+.drink-ticket-price {
+  margin-top: 3px;
+
+  color: var(--accent);
+
+  font-size: 1.15rem;
+
+  font-weight: 900;
+}
+
+
+.drink-ticket p {
+  margin:
+    5px 0;
+
+  font-size: 0.78rem;
+}
+
+
+/* ==================================================
+   ACCESS
+================================================== */
+
+.access-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+.access-card {
+  padding:
+    25px;
+
+  border:
+    1px solid var(--line);
+
+  background: #fffdf9;
+}
+
+
+.access-card h3 {
+  margin:
+    0 0 15px;
+
+  color: var(--brown-dark);
+
+  font-size: 1.15rem;
+}
+
+
+.access-card p {
+  margin:
+    8px 0;
+
+  font-size: 0.88rem;
+}
+
+
+.payment-list {
+  margin: 0;
+
+  padding-left: 20px;
+
+  font-size: 0.88rem;
+}
+
+
+.payment-list li {
+  margin: 4px 0;
+}
+
+
+.access-message {
+  margin-bottom: 30px;
+}
+
+
+/* ==================================================
+   GOOGLE MAP
+================================================== */
+
+.map-wrapper {
+  width: 100%;
+
+  margin-top: 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid var(--line);
+
+  background: var(--base-dark);
+}
+
+
+.map-wrapper iframe {
+  display: block;
+
+  width: 100%;
+
+  height: 350px;
+
+  border: 0;
+}
+
+
+/* ==================================================
+   SNS
+================================================== */
+
+.sns-links {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+
+.sns-links a {
+  display: inline-block;
+
+  min-width: 100px;
+
+  padding:
+    7px 14px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 20px;
+
+  background: #fffdf9;
+
+  color: var(--brown);
+
+  text-align: center;
+
+  text-decoration: none;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  transition:
+    0.2s ease;
+}
+
+
+.sns-links a:hover {
+  color: var(--accent);
+
+  border-color: var(--accent);
+
+  background: var(--accent-light);
+}
+
+
+/* ==================================================
+   QR
+================================================== */
+
+.qr-area {
+  margin-top: 35px;
+
+  text-align: center;
+}
+
+
+.qr-area p {
+  margin:
+    0 0 10px;
+
+  color: var(--brown-light);
+
+  font-size: 0.82rem;
+}
+
+
+.qr-area img {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 6px;
+}
+
+
+.qr-area small {
+  display: block;
+
+  color: var(--brown-light);
+
+  font-size: 0.72rem;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+  margin-top: 30px;
+
+  padding:
+    55px 20px 35px;
+
+  text-align: center;
+
+  background: var(--base-dark);
+
+  border-top:
+    1px solid var(--line);
+}
+
+
+.footer-name {
+  color: var(--brown-dark);
+
+  font-size: 1.5rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+}
+
+
+.footer-sub {
+  margin-top: 5px;
+
+  color: var(--brown-light);
+
+  font-size: 0.78rem;
+}
+
+
+.footer-rail {
+  width: min(420px, 80%);
+
+  height: 12px;
+
+  margin:
+    22px auto;
+
+  border-top:
+    2px solid var(--accent);
+
+  border-bottom:
+    2px solid var(--accent);
+
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: center;
+
+  opacity: 0.45;
+}
+
+
+.footer-rail span {
+  width: 4px;
+  height: 10px;
+
+  background: var(--accent);
+}
+
+
+.footer-copy {
+  color: var(--brown-light);
+
+  font-size: 0.72rem;
+}
+
+
+/* ==================================================
+   TOPボタン
+================================================== */
+
+.top-button {
+  position: fixed;
+
+  right: 22px;
+  bottom: 22px;
+
+  z-index: 950;
+
+  width: 52px;
+  height: 52px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: var(--brown);
+
+  color: white;
 
   display: flex;
 
   align-items: center;
 
-  gap: 6px;
+  justify-content: center;
 
-}
-
-
-.lang-button {
-
-  border:
-    1px solid #b9aa99;
-
-  border-radius: 8px;
-
-  background:
-    #fffdf9;
-
-  color:
-    var(--brown);
-
-  padding:
-    7px 12px;
-
-  font-size:
-    0.92rem;
-
-  font-weight:
-    700;
-
-  letter-spacing:
-    0.02em;
+  box-shadow:
+    0 4px 12px rgba(50, 40, 30, 0.18);
 
   transition:
     0.2s ease;
-
 }
 
 
-.lang-button:hover {
-
-  border-color:
-    var(--accent);
-
-  color:
-    var(--accent);
-
-  background:
-    var(--accent-light);
+.top-button:hover {
+  background: var(--accent);
 
   transform:
-    translateY(-1px);
-
+    translateY(-2px);
 }
 
 
-.lang-button.active {
+.paw-icon {
+  font-size: 1.4rem;
 
-  background:
-    var(--brown);
-
-  border-color:
-    var(--brown);
-
-  color:
-    white;
-
-  font-weight:
-    900;
-
+  line-height: 1;
 }
 
 
-.lang-button.active:hover {
+.top-label {
+  position: absolute;
 
-  background:
-    var(--accent);
+  right: 60px;
 
-  border-color:
-    var(--accent);
+  white-space: nowrap;
 
+  padding:
+    4px 9px;
+
+  border-radius: 5px;
+
+  background: var(--brown);
+
+  color: white;
+
+  font-size: 0.7rem;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    0.2s ease;
 }
 
 
-/* 区切り線は使わない */
-.language-switch > span {
-
-  display: none;
-
-}
-
-
-/* 固定ヘッダーでアンカー先が隠れないようにする */
-section[id],
-.intro {
-
-  scroll-margin-top:
-    var(--header-height, 320px);
-
-}
-
-
-/* 英語ページの文字調整 */
-body.english {
-
-  letter-spacing:
-    0.01em;
-
-}
-
-
-body.english .brand-sub {
-
-  line-height:
-    1.5;
-
-}
-
-
-body.english .section-heading h2 {
-
-  letter-spacing:
-    0.02em;
-
+.top-button:hover .top-label {
+  opacity: 1;
 }
 
 
 /* ==================================================
-   MOBILE FIXED TOP
+   SCROLL REVEAL
+================================================== */
+
+.reveal {
+  opacity: 0;
+
+  transform:
+    translateY(20px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+
+.reveal.visible {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+
+/* ==================================================
+   英語ページ
+================================================== */
+
+body.english {
+  letter-spacing: 0.01em;
+}
+
+
+body.english .brand-sub {
+  line-height: 1.5;
+}
+
+
+body.english .section-heading h2 {
+  letter-spacing: 0.02em;
+}
+
+
+/* ==================================================
+   MOBILE
 ================================================== */
 
 @media (max-width: 800px) {
 
-  .site-header {
-
-    padding:
-      18px 16px 23px;
-
+  :root {
+    --header-height: 430px;
   }
 
 
   body {
-
     padding-top:
-      var(--header-height, 430px);
+      var(--header-height);
+  }
 
+
+  .site-header {
+    padding:
+      18px 16px 23px;
+  }
+
+
+  .header-inner {
+    display: block;
+  }
+
+
+  .brand-area h1 {
+    font-size:
+      clamp(2rem, 10vw, 2.8rem);
+  }
+
+
+  .brand-route {
+    margin-top: 6px;
+  }
+
+
+  .brand-sub {
+    font-size: 0.78rem;
+  }
+
+
+  .station-info {
+    font-size: 0.76rem;
+  }
+
+
+  .wifi-info {
+    display: inline-block;
+
+    margin-left: 5px;
+  }
+
+
+  .brand-message {
+    font-size: 0.72rem;
+  }
+
+
+  .dog-friendly {
+    font-size: 0.76rem;
+  }
+
+
+  .header-tools {
+    margin-top: 12px;
+
+    align-items: stretch;
+
+    gap: 10px;
   }
 
 
   .language-switch {
-
-    justify-content:
-      flex-end;
-
+    justify-content: flex-end;
   }
 
 
   .lang-button {
-
     padding:
       7px 10px;
 
-    font-size:
-      0.84rem;
+    font-size: 0.84rem;
+  }
 
+
+  .business-info {
+    text-align: right;
+  }
+
+
+  .desktop-nav {
+    display: none;
+  }
+
+
+  .mobile-nav-wrapper {
+    display: block;
+
+    margin-top: 15px;
+  }
+
+
+  .menu-toggle {
+    display: block;
+
+    margin-left: auto;
+
+    border:
+      1px solid var(--line);
+
+    border-radius: 6px;
+
+    background: #fffdf9;
+
+    color: var(--brown);
+
+    padding:
+      5px 10px;
+
+    font-size: 1.1rem;
+  }
+
+
+  .mobile-nav {
+    display: none;
+
+    margin-top: 8px;
+
+    padding:
+      8px;
+
+    border:
+      1px solid var(--line);
+
+    background: #fffdf9;
+  }
+
+
+  .mobile-nav.open {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+  }
+
+
+  .mobile-nav a {
+    display: block;
+
+    padding:
+      8px 10px;
+
+    border-bottom:
+      1px solid #eee6dc;
+
+    color: var(--brown);
+
+    text-decoration: none;
+
+    font-size: 0.82rem;
+  }
+
+
+  .mobile-nav a:last-child {
+    border-bottom: 0;
+  }
+
+
+  .mobile-nav a:hover {
+    color: var(--accent);
+
+    background: var(--accent-light);
   }
 
 
   .site-header::after {
+    width: 65%;
 
-    width:
-      65%;
-
-    bottom:
-      6px;
-
+    bottom: 6px;
   }
 
 
   section[id],
   .intro {
-
     scroll-margin-top:
-      var(--header-height, 430px);
-
+      var(--header-height);
   }
 
-}
+
+  .hero-slideshow {
+    height: 300px;
+  }
 
 
-/* 小さいスマホ */
-@media (max-width: 480px) {
+  .section,
+  .intro {
+    padding:
+      60px 16px;
+  }
 
-  .lang-button {
 
+  .intro {
+    padding-top: 55px;
+
+    padding-bottom: 55px;
+  }
+
+
+  .intro .section-heading h2 {
+    white-space: normal;
+  }
+
+
+  .section-heading {
+    margin-bottom: 24px;
+  }
+
+
+  .section-heading > span {
+    font-size: 1rem;
+  }
+
+
+  .section-heading h2 {
+    font-size: 1.4rem;
+  }
+
+
+  .section-heading h2::after {
+    width: 130px;
+  }
+
+
+  .owner-card {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding: 20px;
+  }
+
+
+  .owner-photo {
+    max-width: 360px;
+
+    margin: 0 auto;
+  }
+
+
+  .dog-terrace-card {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding: 20px;
+  }
+
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  .menu-box {
+    padding: 20px;
+  }
+
+
+  .access-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  .calendar-controls {
+    gap: 10px;
+  }
+
+
+  .calendar-controls h3 {
+    min-width: 110px;
+
+    font-size: 1rem;
+  }
+
+
+  .calendar-controls button {
     padding:
       6px 8px;
 
-    font-size:
-      0.78rem;
-
+    font-size: 0.75rem;
   }
 
+
+  .calendar-weekday,
+  .calendar-day {
+    min-height: 58px;
+
+    padding: 4px;
+
+    font-size: 0.7rem;
+  }
+
+
+  .calendar-label,
+  .calendar-event {
+    font-size: 0.62rem;
+  }
+
+
+  .map-wrapper iframe {
+    height: 300px;
+  }
+
+
+  .top-button {
+    right: 16px;
+
+    bottom: 16px;
+
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .top-label {
+    display: none;
+  }
+}
+
+
+/* ==================================================
+   小さいスマホ
+================================================== */
+
+@media (max-width: 480px) {
+
+  :root {
+    --header-height: 455px;
+  }
+
+
+  body {
+    padding-top:
+      var(--header-height);
+  }
+
+
+  .site-header {
+    padding:
+      15px 12px 22px;
+  }
+
+
+  .brand-area h1 {
+    font-size: 2rem;
+  }
+
+
+  .brand-route {
+    font-size: 0.85rem;
+  }
+
+
+  .brand-sub {
+    font-size: 0.7rem;
+  }
+
+
+  .station-info,
+  .brand-message,
+  .dog-friendly {
+    font-size: 0.68rem;
+  }
+
+
+  .lang-button {
+    padding:
+      6px 8px;
+
+    font-size: 0.78rem;
+  }
+
+
+  .business-status {
+    font-size: 0.82rem;
+  }
+
+
+  .business-hours {
+    font-size: 0.7rem;
+  }
+
+
+  .hero-slideshow {
+    height: 250px;
+  }
+
+
+  .section,
+  .intro {
+    padding:
+      50px 12px;
+  }
+
+
+  .menu-item {
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+
+  .menu-item span {
+    font-size: 0.8rem;
+  }
+
+
+  .menu-item strong {
+    font-size: 0.78rem;
+  }
+
+
+  .calendar-weekday,
+  .calendar-day {
+    min-height: 52px;
+
+    padding: 3px;
+
+    font-size: 0.62rem;
+  }
+
+
+  .calendar-event,
+  .calendar-label {
+    font-size: 0.56rem;
+  }
+
+
+  .calendar-controls {
+    gap: 5px;
+  }
+
+
+  .calendar-controls h3 {
+    min-width: 95px;
+
+    font-size: 0.9rem;
+  }
+
+
+  .calendar-controls button {
+    font-size: 0.68rem;
+  }
+
+
+  .sns-links a {
+    min-width: 85px;
+
+    padding:
+      6px 10px;
+  }
+
+
+  .map-wrapper iframe {
+    height: 260px;
+  }
 }
