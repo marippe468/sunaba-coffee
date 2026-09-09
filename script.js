@@ -3,232 +3,8 @@
    script.js
 ================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
-
-  updateBusinessStatus();
-
-  setupHeroSlideshow();
-
-  setupMenuSlideshow();
-
-  renderNews();
-
-  renderCalendar();
-
-  setupCalendarButtons();
-
-  setupMobileMenu();
-
-  setupTicketToggle();
-
-  setupScrollReveal();
-
-  setupTopButton();
-
-  setupQRCode();
-
-});
-
-
-/* ==================================================
-   営業時間
-================================================== */
-
 const OPEN_TIME = 10 * 60;
 const CLOSE_TIME = 17 * 60;
-
-
-/* ==================================================
-   定休日
-   毎週水曜日
-   第1・第3月曜日
-================================================== */
-
-function isRegularHoliday(date) {
-
-  const day = date.getDay();
-
-  if (day === 3) {
-    return true;
-  }
-
-  if (day === 1) {
-
-    const dateNumber = date.getDate();
-
-    const weekNumber =
-      Math.ceil(dateNumber / 7);
-
-    if (
-      weekNumber === 1 ||
-      weekNumber === 3
-    ) {
-      return true;
-    }
-
-  }
-
-  return false;
-
-}
-
-
-/* ==================================================
-   営業状況
-================================================== */
-
-function updateBusinessStatus() {
-
-  const element =
-    document.getElementById("businessStatus");
-
-  if (!element) return;
-
-  const now = new Date();
-
-  if (isRegularHoliday(now)) {
-
-    element.textContent =
-      "🔵 本日は定休日";
-
-    return;
-
-  }
-
-
-  const minutes =
-    now.getHours() * 60 +
-    now.getMinutes();
-
-
-  if (minutes < OPEN_TIME) {
-
-    element.textContent =
-      "⚪ 本日の営業前";
-
-  }
-
-  else if (
-    minutes >= OPEN_TIME &&
-    minutes < CLOSE_TIME - 60
-  ) {
-
-    element.textContent =
-      "🟢 営業中";
-
-  }
-
-  else if (
-    minutes >= CLOSE_TIME - 60 &&
-    minutes < CLOSE_TIME
-  ) {
-
-    element.textContent =
-      "🟡 まもなく終了";
-
-  }
-
-  else {
-
-    element.textContent =
-      "⚪ 本日の営業終了";
-
-  }
-
-}
-
-
-/* ==================================================
-   TOP SLIDESHOW
-================================================== */
-
-function setupHeroSlideshow() {
-
-  const slides =
-    document.querySelectorAll(".hero-slide");
-
-  if (!slides.length) return;
-
-  let current = 0;
-
-
-  function showSlide(index) {
-
-    slides.forEach((slide, i) => {
-
-      slide.classList.toggle(
-        "active",
-        i === index
-      );
-
-    });
-
-  }
-
-
-  function nextSlide() {
-
-    current =
-      (current + 1) % slides.length;
-
-    showSlide(current);
-
-
-    const nextTime =
-      current === 0
-        ? 5000
-        : 3000;
-
-    setTimeout(
-      nextSlide,
-      nextTime
-    );
-
-  }
-
-
-  showSlide(0);
-
-  setTimeout(
-    nextSlide,
-    5000
-  );
-
-}
-
-
-/* ==================================================
-   MENU PHOTO SLIDESHOW
-================================================== */
-
-function setupMenuSlideshow() {
-
-  const photos =
-    document.querySelectorAll(".menu-photo");
-
-  if (!photos.length) return;
-
-  let current = 0;
-
-
-  setInterval(() => {
-
-    photos[current]
-      .classList
-      .remove("active");
-
-
-    current =
-      (current + 1) % photos.length;
-
-
-    photos[current]
-      .classList
-      .add("active");
-
-  }, 3000);
-
-}
 
 
 /* ==================================================
@@ -276,6 +52,275 @@ const events = [
 ];
 
 
+let calendarDate = new Date();
+
+calendarDate.setDate(1);
+
+
+/* ==================================================
+   START
+================================================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    updateBusinessStatus();
+
+    setupHeroSlideshow();
+
+    setupMenuSlideshow();
+
+    renderNews();
+
+    setupTicketToggle();
+
+    renderCalendar();
+
+    setupCalendarButtons();
+
+    setupMobileMenu();
+
+    setupScrollReveal();
+
+    setupTopButton();
+
+    setupQRCode();
+
+    setupLanguageSwitch();
+
+  }
+);
+
+
+/* ==================================================
+   HOLIDAY
+   毎週水曜日
+   第1・第3月曜日
+================================================== */
+
+function isRegularHoliday(date) {
+
+  const day =
+    date.getDay();
+
+
+  if (day === 3) {
+    return true;
+  }
+
+
+  if (day === 1) {
+
+    const week =
+      Math.ceil(
+        date.getDate() / 7
+      );
+
+    if (
+      week === 1 ||
+      week === 3
+    ) {
+      return true;
+    }
+
+  }
+
+
+  return false;
+
+}
+
+
+/* ==================================================
+   BUSINESS STATUS
+================================================== */
+
+function updateBusinessStatus() {
+
+  const element =
+    document.getElementById(
+      "businessStatus"
+    );
+
+  if (!element) {
+    return;
+  }
+
+
+  const now =
+    new Date();
+
+
+  if (
+    isRegularHoliday(now)
+  ) {
+
+    element.textContent =
+      "🔵 本日は定休日";
+
+    return;
+
+  }
+
+
+  const minutes =
+    now.getHours() * 60 +
+    now.getMinutes();
+
+
+  if (
+    minutes < OPEN_TIME
+  ) {
+
+    element.textContent =
+      "⚪ 本日の営業前";
+
+  }
+
+  else if (
+    minutes <
+    CLOSE_TIME - 60
+  ) {
+
+    element.textContent =
+      "🟢 営業中";
+
+  }
+
+  else if (
+    minutes < CLOSE_TIME
+  ) {
+
+    element.textContent =
+      "🟡 まもなく終了";
+
+  }
+
+  else {
+
+    element.textContent =
+      "⚪ 本日の営業終了";
+
+  }
+
+}
+
+
+/* ==================================================
+   HERO SLIDESHOW
+   gaikan 5秒
+   その他 3秒
+================================================== */
+
+function setupHeroSlideshow() {
+
+  const slides =
+    document.querySelectorAll(
+      ".hero-slide"
+    );
+
+  if (!slides.length) {
+    return;
+  }
+
+
+  let current = 0;
+
+
+  function showSlide(index) {
+
+    slides.forEach(
+      (slide, i) => {
+
+        slide.classList.toggle(
+          "active",
+          i === index
+        );
+
+      }
+    );
+
+  }
+
+
+  function nextSlide() {
+
+    current =
+      (current + 1) %
+      slides.length;
+
+
+    showSlide(current);
+
+
+    const nextTime =
+      current === 0
+        ? 5000
+        : 3000;
+
+
+    setTimeout(
+      nextSlide,
+      nextTime
+    );
+
+  }
+
+
+  showSlide(0);
+
+  setTimeout(
+    nextSlide,
+    5000
+  );
+
+}
+
+
+/* ==================================================
+   MENU PHOTO
+================================================== */
+
+function setupMenuSlideshow() {
+
+  const photos =
+    document.querySelectorAll(
+      ".menu-photo"
+    );
+
+  if (!photos.length) {
+    return;
+  }
+
+
+  let current = 0;
+
+
+  setInterval(
+    () => {
+
+      photos[current]
+        .classList
+        .remove("active");
+
+
+      current =
+        (current + 1) %
+        photos.length;
+
+
+      photos[current]
+        .classList
+        .add("active");
+
+    },
+    3000
+  );
+
+}
+
+
 /* ==================================================
    DATE
 ================================================== */
@@ -284,8 +329,10 @@ function formatDate(dateString) {
 
   const date =
     new Date(
-      dateString + "T00:00:00"
+      dateString +
+      "T00:00:00"
     );
+
 
   return (
     `${date.getFullYear()}年` +
@@ -303,35 +350,40 @@ function formatDate(dateString) {
 function renderNews() {
 
   const container =
-    document.getElementById("newsList");
+    document.getElementById(
+      "newsList"
+    );
 
-  if (!container) return;
+  if (!container) {
+    return;
+  }
 
 
-  const today = new Date();
+  const today =
+    new Date();
 
   today.setHours(
-    0, 0, 0, 0
+    0,
+    0,
+    0,
+    0
   );
 
 
   const upcoming =
     events
-      .filter(event => {
-
-        const date =
+      .filter(
+        event =>
           new Date(
             event.date +
             "T00:00:00"
-          );
-
-        return date >= today;
-
-      })
-      .sort((a, b) =>
-        a.date.localeCompare(
-          b.date
-        )
+          ) >= today
+      )
+      .sort(
+        (a, b) =>
+          a.date.localeCompare(
+            b.date
+          )
       )
       .slice(0, 4);
 
@@ -339,160 +391,197 @@ function renderNews() {
   container.innerHTML = "";
 
 
-  upcoming.forEach(event => {
+  upcoming.forEach(
+    event => {
 
-    const card =
-      document.createElement(
-        "article"
-      );
-
-    card.className =
-      "news-card";
-
-    card.id =
-      event.id;
-
-
-    const header =
-      document.createElement(
-        "div"
-      );
-
-    header.className =
-      "news-header";
-
-
-    const left =
-      document.createElement(
-        "div"
-      );
-
-
-    const date =
-      document.createElement(
-        "div"
-      );
-
-    date.className =
-      "news-date";
-
-    date.textContent =
-      formatDate(event.date);
-
-
-    const title =
-      document.createElement(
-        "div"
-      );
-
-    title.className =
-      "news-title";
-
-    title.textContent =
-      event.title;
-
-
-    if (event.isNew) {
-
-      const label =
+      const card =
         document.createElement(
-          "span"
-        );
-
-      label.className =
-        "new-label";
-
-      label.textContent =
-        "NEW";
-
-      title.appendChild(label);
-
-    }
-
-
-    left.appendChild(date);
-
-    left.appendChild(title);
-
-
-    const toggle =
-      document.createElement(
-        "button"
-      );
-
-    toggle.className =
-      "event-toggle";
-
-    toggle.type =
-      "button";
-
-    toggle.textContent =
-      "▽";
-
-
-    const detail =
-      document.createElement(
-        "div"
-      );
-
-    detail.className =
-      "news-detail";
-
-
-    const detailText =
-      document.createElement(
-        "p"
-      );
-
-    detailText.textContent =
-      event.detail;
-
-    detail.appendChild(
-      detailText
-    );
-
-
-    toggle.addEventListener(
-      "click",
-      () => {
-
-        const open =
-          detail.classList
-            .contains("open");
-
-
-        detail.classList.toggle(
-          "open",
-          !open
+          "article"
         );
 
 
-        toggle.textContent =
-          open
-            ? "▽"
-            : "△";
+      card.className =
+        "news-card";
+
+
+      card.id =
+        event.id;
+
+
+      const header =
+        document.createElement(
+          "div"
+        );
+
+      header.className =
+        "news-header";
+
+
+      const left =
+        document.createElement(
+          "div"
+        );
+
+
+      const date =
+        document.createElement(
+          "div"
+        );
+
+      date.className =
+        "news-date";
+
+      date.textContent =
+        formatDate(
+          event.date
+        );
+
+
+      const title =
+        document.createElement(
+          "div"
+        );
+
+      title.className =
+        "news-title";
+
+      title.textContent =
+        event.title;
+
+
+      if (event.isNew) {
+
+        const label =
+          document.createElement(
+            "span"
+          );
+
+        label.className =
+          "new-label";
+
+        label.textContent =
+          "NEW";
+
+        title.appendChild(
+          label
+        );
 
       }
-    );
 
 
-    header.appendChild(left);
+      left.appendChild(
+        date
+      );
 
-    header.appendChild(toggle);
+      left.appendChild(
+        title
+      );
 
-    card.appendChild(header);
 
-    card.appendChild(detail);
+      const toggle =
+        document.createElement(
+          "button"
+        );
 
-    container.appendChild(card);
+      toggle.className =
+        "event-toggle";
 
-  });
+      toggle.type =
+        "button";
+
+      toggle.textContent =
+        "▽";
+
+      toggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+
+      const detail =
+        document.createElement(
+          "div"
+        );
+
+      detail.className =
+        "news-detail";
+
+
+      const detailText =
+        document.createElement(
+          "p"
+        );
+
+      detailText.textContent =
+        event.detail;
+
+
+      detail.appendChild(
+        detailText
+      );
+
+
+      toggle.addEventListener(
+        "click",
+        () => {
+
+          const open =
+            detail.classList.contains(
+              "open"
+            );
+
+
+          detail.classList.toggle(
+            "open",
+            !open
+          );
+
+
+          toggle.textContent =
+            open
+              ? "▽"
+              : "△";
+
+
+          toggle.setAttribute(
+            "aria-expanded",
+            String(!open)
+          );
+
+        }
+      );
+
+
+      header.appendChild(
+        left
+      );
+
+      header.appendChild(
+        toggle
+      );
+
+
+      card.appendChild(
+        header
+      );
+
+      card.appendChild(
+        detail
+      );
+
+
+      container.appendChild(
+        card
+      );
+
+    }
+  );
 
 }
 
 
 /* ==================================================
-   COFFEE TICKET TOGGLE
+   COFFEE TICKET
 ================================================== */
 
 function setupTicketToggle() {
@@ -507,7 +596,11 @@ function setupTicketToggle() {
       "ticketDetail"
     );
 
-  if (!toggle || !detail) {
+
+  if (
+    !toggle ||
+    !detail
+  ) {
     return;
   }
 
@@ -517,8 +610,9 @@ function setupTicketToggle() {
     () => {
 
       const open =
-        detail.classList
-          .contains("open");
+        detail.classList.contains(
+          "open"
+        );
 
 
       detail.classList.toggle(
@@ -548,12 +642,6 @@ function setupTicketToggle() {
    CALENDAR
 ================================================== */
 
-let calendarDate =
-  new Date();
-
-calendarDate.setDate(1);
-
-
 function renderCalendar() {
 
   const calendar =
@@ -566,7 +654,11 @@ function renderCalendar() {
       "calendarTitle"
     );
 
-  if (!calendar || !title) {
+
+  if (
+    !calendar ||
+    !title
+  ) {
     return;
   }
 
@@ -596,22 +688,26 @@ function renderCalendar() {
   ];
 
 
-  dayNames.forEach(day => {
+  dayNames.forEach(
+    day => {
 
-    const cell =
-      document.createElement(
-        "div"
+      const cell =
+        document.createElement(
+          "div"
+        );
+
+      cell.className =
+        "calendar-day-name";
+
+      cell.textContent =
+        day;
+
+      calendar.appendChild(
+        cell
       );
 
-    cell.className =
-      "calendar-day-name";
-
-    cell.textContent =
-      day;
-
-    calendar.appendChild(cell);
-
-  });
+    }
+  );
 
 
   const firstDay =
@@ -622,7 +718,7 @@ function renderCalendar() {
     ).getDay();
 
 
-  const lastDate =
+  const daysInMonth =
     new Date(
       year,
       month + 1,
@@ -630,15 +726,13 @@ function renderCalendar() {
     ).getDate();
 
 
-  const previousLastDate =
+  const prevDays =
     new Date(
       year,
       month,
       0
     ).getDate();
 
-
-  /* 前月 */
 
   for (
     let i = firstDay - 1;
@@ -654,33 +748,31 @@ function renderCalendar() {
     cell.className =
       "calendar-day calendar-other";
 
+    cell.innerHTML =
+      `<span class="calendar-date">
+        ${prevDays - i}
+      </span>`;
 
-    const number =
-      document.createElement(
-        "span"
-      );
-
-    number.className =
-      "calendar-date";
-
-    number.textContent =
-      previousLastDate - i;
-
-
-    cell.appendChild(number);
-
-    calendar.appendChild(cell);
+    calendar.appendChild(
+      cell
+    );
 
   }
 
 
-  /* 今月 */
-
   for (
     let day = 1;
-    day <= lastDate;
+    day <= daysInMonth;
     day++
   ) {
+
+    const date =
+      new Date(
+        year,
+        month,
+        day
+      );
+
 
     const cell =
       document.createElement(
@@ -691,49 +783,41 @@ function renderCalendar() {
       "calendar-day";
 
 
-    const date =
-      new Date(
-        year,
-        month,
-        day
-      );
-
-
-    const dateString =
-      `${year}-` +
-      `${String(month + 1).padStart(2, "0")}-` +
-      `${String(day).padStart(2, "0")}`;
-
-
-    const dateNumber =
+    const dateEl =
       document.createElement(
         "span"
       );
 
-    dateNumber.className =
+    dateEl.className =
       "calendar-date";
 
-    dateNumber.textContent =
+    dateEl.textContent =
       day;
 
 
     cell.appendChild(
-      dateNumber
+      dateEl
     );
 
 
     const holiday =
-      isRegularHoliday(date);
+      isRegularHoliday(
+        date
+      );
 
 
     const event =
       events.find(
         item =>
-          item.date === dateString
+          item.date ===
+          formatISODate(date)
       );
 
 
-    if (holiday || event) {
+    if (
+      holiday ||
+      event
+    ) {
 
       const info =
         document.createElement(
@@ -752,6 +836,10 @@ function renderCalendar() {
         info.textContent =
           `定休日・${event.title}`;
 
+        info.classList.add(
+          "calendar-holiday"
+        );
+
       }
 
       else if (holiday) {
@@ -765,7 +853,7 @@ function renderCalendar() {
 
       }
 
-      else if (event) {
+      else {
 
         info.textContent =
           event.title;
@@ -777,13 +865,10 @@ function renderCalendar() {
 
         info.addEventListener(
           "click",
-          () => {
-
+          () =>
             openEventFromCalendar(
               event.id
-            );
-
-          }
+            )
         );
 
       }
@@ -805,6 +890,24 @@ function renderCalendar() {
 }
 
 
+function formatISODate(date) {
+
+  return [
+    date.getFullYear(),
+
+    String(
+      date.getMonth() + 1
+    ).padStart(2, "0"),
+
+    String(
+      date.getDate()
+    ).padStart(2, "0")
+
+  ].join("-");
+
+}
+
+
 /* ==================================================
    CALENDAR → NEWS
 ================================================== */
@@ -818,7 +921,8 @@ function openEventFromCalendar(
       "news"
     );
 
-  const eventCard =
+
+  const card =
     document.getElementById(
       eventId
     );
@@ -826,7 +930,7 @@ function openEventFromCalendar(
 
   if (
     !news ||
-    !eventCard
+    !card
   ) {
     return;
   }
@@ -837,36 +941,45 @@ function openEventFromCalendar(
   });
 
 
-  setTimeout(() => {
+  setTimeout(
+    () => {
 
-    const detail =
-      eventCard.querySelector(
-        ".news-detail"
-      );
-
-    const toggle =
-      eventCard.querySelector(
-        ".event-toggle"
-      );
+      const detail =
+        card.querySelector(
+          ".news-detail"
+        );
 
 
-    if (detail) {
-
-      detail.classList.add(
-        "open"
-      );
-
-    }
+      const toggle =
+        card.querySelector(
+          ".event-toggle"
+        );
 
 
-    if (toggle) {
+      if (detail) {
 
-      toggle.textContent =
-        "△";
+        detail.classList.add(
+          "open"
+        );
 
-    }
+      }
 
-  }, 600);
+
+      if (toggle) {
+
+        toggle.textContent =
+          "△";
+
+        toggle.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+      }
+
+    },
+    600
+  );
 
 }
 
@@ -881,6 +994,7 @@ function setupCalendarButtons() {
     document.getElementById(
       "prevMonth"
     );
+
 
   const next =
     document.getElementById(
@@ -943,7 +1057,10 @@ function setupMobileMenu() {
     );
 
 
-  if (!toggle || !nav) {
+  if (
+    !toggle ||
+    !nav
+  ) {
     return;
   }
 
@@ -962,20 +1079,22 @@ function setupMobileMenu() {
 
   nav
     .querySelectorAll("a")
-    .forEach(link => {
+    .forEach(
+      link => {
 
-      link.addEventListener(
-        "click",
-        () => {
+        link.addEventListener(
+          "click",
+          () => {
 
-          nav.classList.remove(
-            "open"
-          );
+            nav.classList.remove(
+              "open"
+            );
 
-        }
-      );
+          }
+        );
 
-    });
+      }
+    );
 
 }
 
@@ -1059,23 +1178,10 @@ function setupTopButton() {
     "scroll",
     () => {
 
-      if (
+      button.classList.toggle(
+        "show",
         window.scrollY > 400
-      ) {
-
-        button.classList.add(
-          "show"
-        );
-
-      }
-
-      else {
-
-        button.classList.remove(
-          "show"
-        );
-
-      }
+      );
 
     }
   );
@@ -1097,7 +1203,7 @@ function setupTopButton() {
 
 
 /* ==================================================
-   QR CODE
+   QR
 ================================================== */
 
 function setupQRCode() {
@@ -1108,17 +1214,94 @@ function setupQRCode() {
     );
 
 
-  if (!qr) return;
+  if (!qr) {
+    return;
+  }
 
 
-  const pageUrl =
-    encodeURIComponent(
-      "https://marippe468.github.io/sunaba-coffee/"
-    );
+  const url =
+    "https://marippe468.github.io/sunaba-coffee/";
 
 
   qr.src =
-    "https://api.qrserver.com/v1/create-qr-code/" +
-    `?size=120x120&data=${pageUrl}`;
+    "https://api.qrserver.com/v1/create-qr-code/?size=72x72&data=" +
+    encodeURIComponent(url);
+
+}
+
+
+/* ==================================================
+   LANGUAGE SWITCH
+================================================== */
+
+function setupLanguageSwitch() {
+
+  const ja =
+    document.getElementById(
+      "jaButton"
+    );
+
+  const en =
+    document.getElementById(
+      "enButton"
+    );
+
+
+  if (ja) {
+
+    ja.addEventListener(
+      "click",
+      () => {
+
+        document.documentElement.lang =
+          "ja";
+
+        document.body.classList.remove(
+          "english"
+        );
+
+        ja.classList.add(
+          "active"
+        );
+
+        en?.classList.remove(
+          "active"
+        );
+
+      }
+    );
+
+  }
+
+
+  if (en) {
+
+    en.addEventListener(
+      "click",
+      () => {
+
+        document.documentElement.lang =
+          "en";
+
+        document.body.classList.add(
+          "english"
+        );
+
+        en.classList.add(
+          "active"
+        );
+
+        ja?.classList.remove(
+          "active"
+        );
+
+        alert(
+          "English version is being prepared."
+        );
+
+      }
+    );
+
+  }
 
 }
