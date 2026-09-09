@@ -2,69 +2,22 @@
    SUNABA COFFEE
    style.css
 
-   9月4日版をベースにした復元版
-   ＋スライドショー
-   ＋肉球マウスポインター
+   ・Futuraフォント対応
+   ・肉球マウスポインター
+   ・スライドショー対応
 ================================================== */
 
 
 /* ==================================================
-   基本設定
+   基本
 ================================================== */
 
 * {
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
-}
-
-
-body {
-  margin: 0;
-
-  background: #fbf8f2;
-
-  color: #4b4038;
-
-  font-family:
-    Futura,
-    "Futura PT",
-    "Century Gothic",
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    Meiryo,
-    sans-serif;
-
-  line-height: 1.7;
-
-  text-align: center;
-
-  font-size:
-    clamp(14px, 1.4vw, 17px);
-}
-
-
-img {
-  max-width: 100%;
-
-  height: auto;
-
-  display: block;
-}
-
-
-a {
-  color: inherit;
-
-  text-decoration: none;
-}
-
-
-button {
-  font-family: inherit;
 }
 
 
@@ -73,18 +26,57 @@ button {
 ================================================== */
 
 html,
-body {
-  cursor:
-    url("./image/point_210211.png") 16 16,
-    auto;
+body,
+body * {
+  cursor: url("./image/point_210211.png"), auto;
 }
 
 
-a,
-button {
-  cursor:
-    url("./image/point_210211.png") 16 16,
-    pointer;
+/* ==================================================
+   BODY
+================================================== */
+
+body {
+  margin: 0;
+
+  color: #4a4038;
+
+  background: #f8f5ef;
+
+  font-family:
+    Futura,
+    "Futura PT",
+    "Century Gothic",
+    "Trebuchet MS",
+    "Yu Gothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* ==================================================
+   LINK
+================================================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 
@@ -93,101 +85,117 @@ button {
 ================================================== */
 
 .header {
-  padding:
-    45px 20px 30px;
-
-  background: #fbf8f2;
+  padding: 28px 15px 20px;
 }
 
 
-.header-inner {
-  width: min(92%, 1000px);
+.logo {
+  display: inline-block;
 
-  margin: 0 auto;
+  padding: 5px 18px;
+
+  color: #ffffff;
+
+  background: #765b48;
+
+  border: 3px solid #9a785e;
+
+  border-radius: 24px;
+
+  font-family:
+    Futura,
+    "Futura PT",
+    "Century Gothic",
+    "Trebuchet MS",
+    "Yu Gothic",
+    sans-serif;
+
+  font-size: clamp(26px, 4vw, 38px);
+
+  font-weight: bold;
+
+  letter-spacing: .03em;
+
+  box-shadow:
+    0 5px 10px rgba(60,40,25,.28);
 }
 
 
-.header h1 {
-  margin: 0;
+.header-sub {
+  margin-top: 4px;
 
-  color: #4b4038;
+  color: #765b48;
 
-  font-size:
-    clamp(36px, 6vw, 64px);
+  font-size: 11px;
+
+  font-weight: bold;
+}
+
+
+.header-catch {
+  margin-top: 6px;
+
+  color: #5d493b;
+
+  font-size: clamp(18px, 3vw, 30px);
 
   font-weight: 500;
 
-  letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 
-.subtitle {
-  margin:
-    3px 0 5px;
+.pet-catch {
+  margin-top: 5px;
 
-  font-size:
-    clamp(17px, 2vw, 25px);
+  color: #765b48;
 
-  letter-spacing: 0.1em;
-}
+  font-size: 14px;
 
-
-.concept {
-  margin:
-    0 0 20px;
-
-  font-size:
-    clamp(13px, 1.5vw, 17px);
+  font-weight: bold;
 }
 
 
 /* ==================================================
-   営業状況
+   BUSINESS STATUS
 ================================================== */
 
 .business-status {
-  display: inline-block;
+  display: flex;
 
-  padding:
-    8px 24px;
+  align-items: center;
 
-  border-radius: 999px;
+  justify-content: center;
 
-  background: #e9e1d8;
+  width: fit-content;
 
-  color: #5c5048;
+  min-width: 190px;
+
+  min-height: 34px;
+
+  margin: 9px auto 0;
+
+  padding: 7px 20px;
+
+  color: #ffffff;
+
+  background: #806854;
+
+  border-radius: 30px;
 
   font-size: 14px;
 
-  font-weight: 600;
-}
+  font-weight: bold;
 
+  line-height: 1.2;
 
-.business-status.open {
-  background: #dcebd8;
-
-  color: #42623c;
-}
-
-
-.business-status.soon {
-  background: #f2dfb4;
-
-  color: #765a20;
-}
-
-
-.business-status.before-open {
-  background: #e7e0d9;
-
-  color: #625750;
+  box-shadow:
+    0 4px 10px rgba(60,40,20,.16);
 }
 
 
 .business-status.closed {
-  background: #ddd8d3;
-
-  color: #665e58;
+  background: #806854;
 }
 
 
@@ -204,126 +212,54 @@ button {
 
   flex-wrap: wrap;
 
-  gap: 5px;
+  gap: 20px;
 
-  padding:
-    10px 15px;
-
-  background: #fff;
-
-  border-top:
-    1px solid #eee5db;
-
-  border-bottom:
-    1px solid #eee5db;
-
-  position: sticky;
-
-  top: 0;
-
-  z-index: 100;
+  margin-top: 17px;
 }
 
 
 .nav a {
-  padding:
-    7px 15px;
+  font-size: 13px;
 
-  border-radius: 999px;
-
-  font-size: 14px;
-
-  transition:
-    0.25s;
-}
-
-
-.nav a:hover {
-  background: #f0e8df;
+  font-weight: bold;
 }
 
 
 /* ==================================================
    HERO
-   ★ スライドショー追加部分
 ================================================== */
 
 .hero {
-  width: 100%;
+  width: min(1100px, 94%);
 
-  overflow: hidden;
+  margin: 0 auto;
 }
 
 
-.hero-slideshow {
-  position: relative;
-
-  width: 100%;
-
-  height:
-    min(62vw, 680px);
-
-  min-height: 260px;
-
+.hero-image {
   overflow: hidden;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 28px rgba(60,40,20,.15);
 }
 
 
-.hero-slideshow .slide {
-  position: absolute;
-
-  inset: 0;
-
-  width: 100%;
-
-  height: 100%;
+.hero-image img {
+  max-height: 580px;
 
   object-fit: cover;
 
-  opacity: 0;
-
   transition:
-    opacity 1.2s ease-in-out;
-
-  pointer-events: none;
+    opacity .7s ease;
 }
 
 
-.hero-slideshow .slide.active {
-  opacity: 1;
-}
+/* スライド切り替え時 */
 
-
-/* ==================================================
-   SECTION
-================================================== */
-
-.section {
-  width: min(92%, 1000px);
-
-  margin: 0 auto;
-
-  padding:
-    70px 20px;
-}
-
-
-.section h2 {
-  margin:
-    0 0 28px;
-
-  font-size:
-    clamp(24px, 3vw, 34px);
-
-  font-weight: 500;
-
-  letter-spacing: 0.06em;
-}
-
-
-.section p {
-  margin:
-    9px 0;
+.hero-image img.fade-out {
+  opacity: 0;
 }
 
 
@@ -332,93 +268,93 @@ button {
 ================================================== */
 
 .intro {
-  padding-top: 75px;
-
-  padding-bottom: 65px;
+  padding: 40px 15px 25px;
 }
 
 
-.intro h2 {
-  font-size:
-    clamp(20px, 3vw, 31px);
+.intro h1 {
+  margin: 0 0 18px;
 
-  line-height: 1.5;
+  color: #5d493b;
+
+  font-size: clamp(18px, 3vw, 40px);
+
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
 }
 
 
 .intro p {
-  margin:
-    7px 0;
-}
+  margin: 0 0 8px;
 
+  font-size: clamp(14px, 2vw, 20px);
 
-.pet-catch {
-  display: inline-block;
-
-  margin-top: 22px;
-
-  padding:
-    8px 22px;
-
-  border:
-    1px solid #d8cbbd;
-
-  border-radius: 999px;
-
-  background: #fff;
-
-  font-size: 14px;
+  line-height: 1.4;
 }
 
 
 /* ==================================================
-   SNS
+   INSTAGRAM
 ================================================== */
 
-.sns-section {
-  padding-top: 45px;
+.instagram-section {
+  padding: 35px 20px;
 
-  padding-bottom: 60px;
+  background: #eee6dc;
 }
 
 
-.sns-buttons {
-  display: flex;
+.instagram-section h2 {
+  margin: 0 0 8px;
 
-  justify-content: center;
-
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 12px;
+  font-size: 27px;
 }
 
 
-.sns-button {
+.instagram-section p {
+  margin: 0 0 17px;
+}
+
+
+.instagram-button {
   display: inline-block;
 
-  min-width: 125px;
+  padding: 10px 24px;
 
-  padding:
-    9px 20px;
+  color: #ffffff;
 
-  border:
-    1px solid #cfc3b7;
+  background: #765b48;
 
-  border-radius: 999px;
+  border-radius: 30px;
 
-  background: #fff;
-
-  transition:
-    0.25s;
+  font-weight: bold;
 }
 
 
-.sns-button:hover {
-  background: #eee7df;
+/* ==================================================
+   SECTION
+================================================== */
 
-  transform: translateY(-2px);
+.section {
+  width: min(900px, 92%);
+
+  margin: 0 auto;
+
+  padding: 55px 0;
+}
+
+
+.section h2 {
+  margin: 0 0 27px;
+
+  color: #5a4638;
+
+  font-size: clamp(27px, 4vw, 40px);
+
+  letter-spacing: .06em;
 }
 
 
@@ -426,41 +362,46 @@ button {
    NEWS
 ================================================== */
 
-.news-section {
-  background: #f6f1ea;
+.news-list {
+  width: min(700px, 100%);
 
-  border-radius: 28px;
+  margin: 0 auto;
 }
 
 
 .news-card {
-  max-width: 720px;
+  margin-bottom: 12px;
 
-  margin:
-    14px auto;
+  padding: 15px 18px;
 
-  padding:
-    16px 20px;
+  text-align: left;
 
-  background: #fff;
+  background: #ffffff;
 
-  border-radius: 15px;
+  border-left: 4px solid #765b48;
 
-  box-shadow:
-    0 4px 15px rgba(75, 64, 56, 0.05);
+  border-radius: 12px;
+}
+
+
+.news-card time {
+  color: #806f61;
+
+  font-size: 12px;
+}
+
+
+.news-card h3 {
+  margin: 3px 0 6px;
+
+  font-size: 17px;
 }
 
 
 .news-card p {
-  margin:
-    5px 0;
-}
+  margin: 0;
 
-
-.news-date {
-  font-size: 14px;
-
-  font-weight: 600;
+  font-size: 13px;
 }
 
 
@@ -469,9 +410,7 @@ button {
 ================================================== */
 
 .calendar-section {
-  padding-top: 75px;
-
-  padding-bottom: 75px;
+  width: min(900px, 96%);
 }
 
 
@@ -482,233 +421,229 @@ button {
 
   justify-content: center;
 
-  gap: 12px;
+  gap: 10px;
+
+  touch-action: pan-y;
 }
 
 
-.calendar-container {
-  width: min(100%, 650px);
+.calendar-content {
+  width: 100%;
 
-  padding:
-    20px;
+  max-width: 780px;
+}
 
-  background: #fff;
 
-  border-radius: 22px;
+.calendar-title {
+  margin-bottom: 13px;
+
+  color: #5d493b;
+
+  font-size: 25px;
+
+  font-weight: bold;
+}
+
+
+.calendar-wrap {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border-radius: 18px;
 
   box-shadow:
-    0 5px 20px rgba(75, 64, 56, 0.07);
-}
-
-
-#calendarTitle {
-  margin:
-    0 0 18px;
-
-  font-size: 22px;
-
-  font-weight: 600;
-}
-
-
-.calendar-button {
-  flex:
-    0 0 auto;
-
-  width: 46px;
-
-  height: 46px;
-
-  border: none;
-
-  border-radius: 50%;
-
-  background: #e8ded4;
-
-  color: #4b4038;
-
-  font-size: 31px;
-
-  line-height: 1;
-}
-
-
-.calendar-button:hover {
-  background: #d8cabc;
+    0 7px 20px rgba(60,40,20,.08);
 }
 
 
 .week-header {
   display: grid;
 
-  grid-template-columns:
-    repeat(7, 1fr);
-
-  gap: 4px;
-
-  margin-bottom: 5px;
-
-  font-size: 13px;
-
-  font-weight: 600;
-}
-
-
-.week-header .sun {
-  color: #a86c60;
-}
-
-
-.week-header .sat {
-  color: #617d91;
+  grid-template-columns: repeat(7, 1fr);
 }
 
 
 .calendar {
   display: grid;
 
-  grid-template-columns:
-    repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+}
 
-  gap: 5px;
+
+.week-header > div {
+  padding: 8px 0;
+
+  background: #eadfd2;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+
+.week-header .sun {
+  color: #d33;
+}
+
+
+.week-header .sat {
+  color: #426b91;
 }
 
 
 .calendar-day {
-  min-height: 58px;
+  min-height: 88px;
 
-  display: flex;
+  padding: 6px 3px;
 
-  flex-direction: column;
+  border-top: 1px solid #eeeeee;
 
-  justify-content: center;
-
-  align-items: center;
-
-  padding: 5px;
-
-  background: #faf8f5;
-
-  border-radius: 10px;
+  border-right: 1px solid #eeeeee;
 }
 
 
 .calendar-day.empty {
-  background: transparent;
+  background: #fafafa;
 }
 
 
 .day-number {
   font-size: 15px;
+
+  font-weight: bold;
 }
 
 
-.calendar-day.sunday .day-number {
-  color: #a86c60;
+.sunday .day-number {
+  color: #d33;
 }
 
 
-.calendar-day.saturday .day-number {
-  color: #617d91;
-}
-
-
-.calendar-day.today {
-  outline:
-    2px solid #b79c83;
-
-  outline-offset:
-    -2px;
-}
-
-
-.calendar-day.holiday {
-  background: #eee5dc;
-}
-
-
-.holiday-label {
-  font-size: 10px;
-
-  line-height: 1.2;
-
-  color: #78675c;
-}
-
-
-.event-label {
-  font-size: 10px;
-
-  line-height: 1.2;
-
-  margin-top: 2px;
-
-  color: #76591c;
-}
-
-
-.calendar-note {
-  font-size: 13px;
-
-  color: #71665e;
+.saturday .day-number {
+  color: #426b91;
 }
 
 
 /* ==================================================
-   OWNER
+   HOLIDAY
 ================================================== */
 
-.owner-section {
-  background: #f6f1ea;
-
-  border-radius: 28px;
+.holiday {
+  background: #fff1f1;
 }
 
 
-.owner-content {
-  display: grid;
+.holiday-label {
+  margin-top: 5px;
 
-  grid-template-columns:
-    minmax(220px, 350px) 1fr;
+  color: #d33;
 
-  gap: 40px;
+  font-size: 10px;
 
-  align-items: center;
+  font-weight: bold;
 
-  text-align: left;
+  line-height: 1.1;
 }
 
 
-.owner-content img {
-  width: 100%;
+/* ==================================================
+   EVENT
+================================================== */
+
+.event-label {
+  margin-top: 5px;
+
+  color: #8a5a31;
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  line-height: 1.1;
+}
+
+
+/* ==================================================
+   CALENDAR ARROWS
+================================================== */
+
+.calendar-arrow {
+  flex: 0 0 auto;
+
+  width: 42px;
+
+  height: 42px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background: #765b48;
+
+  font-size: 28px;
+
+  line-height: 42px;
+
+  cursor: url("./image/point_210211.png"), auto;
+}
+
+
+.calendar-arrow:active {
+  transform: scale(.94);
+}
+
+
+/* ==================================================
+   CALENDAR NOTE
+================================================== */
+
+.calendar-note {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 13px;
+
+  font-size: 13px;
+}
+
+
+.holiday-note {
+  color: #d33;
+}
+
+
+.event-note {
+  color: #8a5a31;
+}
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about-photo {
+  width: min(500px, 100%);
+
+  margin: 0 auto 27px;
+
+  overflow: hidden;
 
   border-radius: 20px;
 }
 
 
-.owner-content p {
-  margin:
-    0 0 18px;
-}
+.about-text p {
+  margin: 0 0 9px;
 
-
-/* ==================================================
-   COFFEE
-================================================== */
-
-.coffee-section {
-  padding-top: 75px;
-
-  padding-bottom: 75px;
-}
-
-
-.coffee-section p {
-  max-width: 720px;
-
-  margin-left: auto;
-
-  margin-right: auto;
+  font-size: 15px;
 }
 
 
@@ -717,30 +652,39 @@ button {
 ================================================== */
 
 .dog-section {
-  background: #fff;
-
-  border-radius: 28px;
+  margin-top: 35px;
 }
 
 
-.dog-content {
-  display: grid;
+.dog-photo {
+  width: min(430px, 90%);
 
-  grid-template-columns:
-    minmax(220px, 400px) 1fr;
+  margin: 0 auto;
 
-  gap: 40px;
-
-  align-items: center;
-
-  text-align: left;
-}
-
-
-.dog-content img {
-  width: 100%;
+  overflow: hidden;
 
   border-radius: 20px;
+
+  box-shadow:
+    0 8px 20px rgba(60,40,20,.12);
+}
+
+
+.dog-photo img {
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+}
+
+
+.dog-message {
+  margin-top: 13px;
+
+  color: #765b48;
+
+  font-size: 14px;
+
+  font-weight: bold;
 }
 
 
@@ -748,69 +692,48 @@ button {
    SEATS
 ================================================== */
 
-.seats-section {
-  padding-top: 75px;
+.seats {
+  display: flex;
 
-  padding-bottom: 75px;
-}
+  justify-content: center;
 
+  gap: 18px;
 
-.seat-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
-  gap: 20px;
-
-  max-width: 760px;
-
-  margin: 0 auto;
+  margin-top: 32px;
 }
 
 
 .seat-card {
-  padding:
-    25px 20px;
+  width: 50%;
 
-  background: #fff;
+  padding: 18px;
 
-  border:
-    1px solid #e5dbd0;
+  background: #eee6dc;
 
-  border-radius: 20px;
-
-  box-shadow:
-    0 4px 14px rgba(75, 64, 56, 0.05);
+  border-radius: 17px;
 }
 
 
 .seat-card h3 {
-  margin-top: 0;
+  margin: 0 0 7px;
 
-  font-size: 21px;
+  font-size: 19px;
 }
 
 
 .seat-card p {
-  margin:
-    7px 0;
+  margin: 0 0 6px;
+
+  font-size: 14px;
 }
 
 
-.pet-ok {
-  display: inline-block;
+.seat-card span {
+  color: #765b48;
 
-  padding:
-    4px 14px;
+  font-size: 12px;
 
-  border-radius: 999px;
-
-  background: #eee4d9;
-
-  font-size: 13px;
-
-  font-weight: 600;
+  font-weight: bold;
 }
 
 
@@ -819,84 +742,18 @@ button {
 ================================================== */
 
 .menu-section {
-  background: #f6f1ea;
+  width: min(900px, 94%);
 
-  border-radius: 28px;
+  background: #f2ede5;
+
+  border-radius: 25px;
 }
 
 
-.menu-category {
-  max-width: 760px;
+.menu-photo {
+  width: min(600px, 100%);
 
-  margin:
-    0 auto 30px;
-
-  padding:
-    18px 24px;
-
-  background: #fff;
-
-  border-radius: 18px;
-}
-
-
-.menu-category h3 {
-  margin:
-    5px 0 15px;
-
-  font-size: 22px;
-
-  font-weight: 500;
-}
-
-
-.menu-row {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  gap: 20px;
-
-  padding:
-    11px 4px;
-
-  border-bottom:
-    1px solid #eee6dd;
-
-  text-align: left;
-}
-
-
-.menu-row:last-child {
-  border-bottom: none;
-}
-
-
-.menu-row small {
-  font-size: 12px;
-
-  color: #776b62;
-}
-
-
-/* ==================================================
-   ACCESS
-================================================== */
-
-.access-section {
-  padding-bottom: 85px;
-}
-
-
-.address {
-  line-height: 2;
-}
-
-
-.map-pc {
-  margin-top: 30px;
+  margin: 0 auto 35px;
 
   overflow: hidden;
 
@@ -904,25 +761,137 @@ button {
 }
 
 
-.map-mobile {
+.menu-category {
+  width: min(680px, 100%);
+
+  margin: 0 auto 28px;
+}
+
+
+.menu-category h3 {
+  margin: 0 0 7px;
+
+  padding-bottom: 7px;
+
+  border-bottom: 2px solid #cbbbaa;
+
+  font-size: 20px;
+}
+
+
+.menu-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 8px 7px;
+
+  border-bottom: 1px dotted #c8bbad;
+
+  font-size: 15px;
+}
+
+
+.menu-item strong {
+  white-space: nowrap;
+}
+
+
+.menu-note {
+  margin: 6px 0 0;
+
+  color: #806f61;
+
+  font-size: 12px;
+}
+
+
+/* ==================================================
+   ACCESS
+================================================== */
+
+.access-info {
+  line-height: 1.45;
+}
+
+
+.access-info h3 {
+  margin-top: 0;
+}
+
+
+.phone {
+  margin: 18px 0;
+}
+
+
+.phone a {
+  font-weight: bold;
+}
+
+
+.hours-info {
+  margin: 22px auto;
+
+  padding: 18px;
+
+  background: #eadfd2;
+
+  border-radius: 18px;
+
+  font-size: 17px;
+}
+
+
+.hours-info strong {
+  font-size: 20px;
+}
+
+
+.hours-info span {
+  font-size: 13px;
+}
+
+
+.parking {
+  color: #806f61;
+
+  font-size: 12px;
+}
+
+
+/* ==================================================
+   GOOGLE MAP
+================================================== */
+
+.map-pc {
+  width: 100%;
+
+  height: 350px;
+
+  margin: 28px auto;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+}
+
+
+.map-pc iframe {
+  width: 100%;
+
+  height: 100%;
+
+  border: 0;
+}
+
+
+.map-link {
   display: none;
-}
-
-
-.map-button {
-  display: inline-block;
-
-  padding:
-    11px 24px;
-
-  border-radius: 999px;
-
-  background: #e5dbd1;
-}
-
-
-.map-button:hover {
-  background: #d8cabc;
 }
 
 
@@ -931,63 +900,76 @@ button {
 ================================================== */
 
 .footer {
-  padding:
-    45px 20px;
+  margin-top: 35px;
 
-  background: #4b4038;
+  padding: 42px 20px;
 
-  color: #fff;
+  color: #ffffff;
 
-  text-align: center;
+  background: #5d493b;
 }
 
 
-.footer p {
-  margin:
-    7px 0;
+.footer-logo {
+  font-family:
+    Futura,
+    "Futura PT",
+    "Century Gothic",
+    "Trebuchet MS",
+    "Yu Gothic",
+    sans-serif;
+
+  font-size: 28px;
+
+  font-weight: bold;
 }
 
 
-.footer .copyright {
-  margin-top: 22px;
+.footer-place {
+  margin-top: 4px;
 
-  font-size: 12px;
+  font-size: 11px;
 
-  opacity: 0.7;
+  letter-spacing: .13em;
 }
 
 
-/* ==================================================
-   TABLET
-================================================== */
+.sns {
+  display: flex;
 
-@media (max-width: 800px) {
+  justify-content: center;
 
-  .section {
-    padding-top: 60px;
+  gap: 18px;
 
-    padding-bottom: 60px;
-  }
+  margin-top: 20px;
+}
 
 
-  .owner-content,
-  .dog-content {
-    grid-template-columns: 1fr;
+.sns a {
+  display: flex;
 
-    gap: 25px;
+  align-items: center;
 
-    text-align: center;
-  }
+  justify-content: center;
+
+  width: 43px;
+
+  height: 43px;
+
+  border: 1px solid rgba(255,255,255,.7);
+
+  border-radius: 50%;
+
+  font-size: 21px;
+
+  font-weight: bold;
+}
 
 
-  .owner-content img,
-  .dog-content img {
-    max-width: 500px;
+.copyright {
+  margin-top: 23px;
 
-    margin:
-      0 auto;
-  }
-
+  font-size: 10px;
 }
 
 
@@ -995,315 +977,374 @@ button {
    SMARTPHONE
 ================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
   body {
-    font-size: 14px;
+    line-height: 1.3;
   }
 
-
-  /* スマホではマウスポインター不要 */
-
-  html,
-  body,
-  a,
-  button {
-    cursor: auto;
-  }
-
-
-  /* ------------------------------------------
-     HEADER
-  ------------------------------------------ */
 
   .header {
-    padding:
-      30px 12px 24px;
+    padding: 22px 7px 16px;
   }
 
 
-  .header h1 {
-    font-size: 35px;
+  .logo {
+    font-size: 25px;
 
-    letter-spacing:
-      0.05em;
+    padding: 5px 14px;
+
+    border-radius: 20px;
   }
 
 
-  .subtitle {
-    font-size: 17px;
+  .header-sub {
+    font-size: 9px;
   }
 
 
-  .concept {
+  .header-catch {
+    font-size: 15px;
+
+    white-space: nowrap;
+  }
+
+
+  .pet-catch {
+    margin-top: 4px;
+
     font-size: 12px;
   }
 
 
-  /* ------------------------------------------
-     NAV
-  ------------------------------------------ */
+  .business-status {
+    min-width: 175px;
 
-  .nav {
-    gap: 2px;
+    min-height: 30px;
 
-    padding:
-      7px 4px;
-  }
+    margin-top: 6px;
 
-
-  .nav a {
-    padding:
-      6px 8px;
+    padding: 6px 14px;
 
     font-size: 11px;
   }
 
 
-  /* ------------------------------------------
-     HERO
-  ------------------------------------------ */
-
-  .hero-slideshow {
-    height: 68vw;
-
-    min-height: 230px;
-  }
-
-
-  /* ------------------------------------------
-     SECTION
-  ------------------------------------------ */
-
-  .section {
-    width: 92%;
-
-    padding:
-      55px 10px;
-  }
-
-
-  .section h2 {
-    font-size: 23px;
-
-    margin-bottom: 23px;
-  }
-
-
-  /* ------------------------------------------
-     INTRO
-  ------------------------------------------ */
-
-  .intro h2 {
-    font-size: 19px;
-  }
-
-
-  .pet-catch {
-    font-size: 12px;
-
-    padding:
-      7px 16px;
-  }
-
-
-  /* ------------------------------------------
-     SNS
-  ------------------------------------------ */
-
-  .sns-buttons {
-    gap: 7px;
-  }
-
-
-  .sns-button {
-    min-width: 95px;
-
-    padding:
-      8px 12px;
-
-    font-size: 12px;
-  }
-
-
-  /* ------------------------------------------
-     CALENDAR
-  ------------------------------------------ */
-
-  .calendar-slider {
-    gap: 5px;
-  }
-
-
-  .calendar-container {
-    padding: 10px;
-
-    border-radius: 15px;
-  }
-
-
-  #calendarTitle {
-    font-size: 18px;
-  }
-
-
-  .calendar {
-    gap: 3px;
-  }
-
-
-  .calendar-day {
-    min-height: 46px;
-
-    border-radius: 7px;
-  }
-
-
-  .day-number {
-    font-size: 13px;
-  }
-
-
-  .holiday-label,
-  .event-label {
-    font-size: 8px;
-  }
-
-
-  .calendar-button {
-    width: 38px;
-
-    height: 38px;
-
-    font-size: 26px;
-  }
-
-
-  /* ------------------------------------------
-     OWNER
-  ------------------------------------------ */
-
-  .owner-content {
-    text-align: center;
-  }
-
-
-  .owner-content img {
-    max-width: 330px;
-  }
-
-
-  /* ------------------------------------------
-     DOG
-  ------------------------------------------ */
-
-  .dog-content {
-    text-align: center;
-  }
-
-
-  .dog-content img {
-    max-width: 330px;
-  }
-
-
-  /* ------------------------------------------
-     SEATS
-  ------------------------------------------ */
-
-  .seat-grid {
-    grid-template-columns: 1fr;
-
-    gap: 15px;
-  }
-
-
-  .seat-card {
-    padding:
-      20px 15px;
-  }
-
-
-  /* ------------------------------------------
-     MENU
-  ------------------------------------------ */
-
-  .menu-category {
-    padding:
-      15px;
-  }
-
-
-  .menu-row {
-    font-size: 13px;
-
+  .nav {
     gap: 10px;
+
+    margin-top: 13px;
   }
 
 
-  .menu-row small {
+  .nav a {
     font-size: 10px;
   }
 
 
-  /* ------------------------------------------
-     ACCESS
-  ------------------------------------------ */
+  .hero {
+    width: 94%;
+  }
+
+
+  .hero-image {
+    border-radius: 15px;
+  }
+
+
+  .hero-image img {
+    min-height: 250px;
+
+    object-fit: cover;
+  }
+
+
+  .intro {
+    padding: 27px 7px 19px;
+  }
+
+
+  .intro h1 {
+    margin-bottom: 13px;
+
+    font-size: 16px;
+
+    white-space: nowrap;
+  }
+
+
+  .intro p {
+    margin-bottom: 6px;
+
+    font-size: 13px;
+
+    line-height: 1.3;
+  }
+
+
+  .instagram-section {
+    padding: 31px 15px;
+  }
+
+
+  .instagram-section h2 {
+    font-size: 23px;
+  }
+
+
+  .instagram-section p {
+    font-size: 12px;
+  }
+
+
+  .instagram-button {
+    padding: 9px 20px;
+
+    font-size: 13px;
+  }
+
+
+  .section {
+    width: 92%;
+
+    padding: 42px 0;
+  }
+
+
+  .section h2 {
+    margin-bottom: 21px;
+
+    font-size: 25px;
+  }
+
+
+  .news-card {
+    padding: 13px 12px;
+  }
+
+
+  .news-card h3 {
+    font-size: 15px;
+  }
+
+
+  .news-card p {
+    font-size: 12px;
+  }
+
+
+  .calendar-section {
+    width: 98%;
+  }
+
+
+  .calendar-slider {
+    width: 100%;
+
+    gap: 2px;
+  }
+
+
+  .calendar-content {
+    min-width: 0;
+  }
+
+
+  .calendar-arrow {
+    width: 28px;
+
+    height: 28px;
+
+    font-size: 20px;
+
+    line-height: 28px;
+  }
+
+
+  .calendar-title {
+    font-size: 19px;
+  }
+
+
+  .calendar-day {
+    min-height: 67px;
+
+    padding: 4px 1px;
+  }
+
+
+  .week-header > div {
+    padding: 6px 0;
+
+    font-size: 10px;
+  }
+
+
+  .day-number {
+    font-size: 11px;
+  }
+
+
+  .holiday-label {
+    margin-top: 4px;
+
+    font-size: 7px;
+  }
+
+
+  .event-label {
+    margin-top: 4px;
+
+    font-size: 6px;
+  }
+
+
+  .calendar-note {
+    gap: 15px;
+
+    font-size: 10px;
+  }
+
+
+  .about-text p {
+    font-size: 13px;
+  }
+
+
+  .dog-photo {
+    width: 88%;
+  }
+
+
+  .dog-message {
+    font-size: 12px;
+  }
+
+
+  .seats {
+    gap: 8px;
+
+    margin-top: 27px;
+  }
+
+
+  .seat-card {
+    padding: 13px 5px;
+
+    border-radius: 14px;
+  }
+
+
+  .seat-card h3 {
+    font-size: 16px;
+  }
+
+
+  .seat-card p {
+    font-size: 11px;
+  }
+
+
+  .seat-card span {
+    font-size: 9px;
+  }
+
+
+  .menu-section {
+    width: 94%;
+
+    border-radius: 18px;
+  }
+
+
+  .menu-category h3 {
+    font-size: 17px;
+  }
+
+
+  .menu-item {
+    padding: 7px 3px;
+
+    font-size: 12px;
+  }
+
+
+  .menu-note {
+    font-size: 10px;
+  }
+
+
+  .access-info {
+    font-size: 13px;
+  }
+
+
+  .phone a {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    background: #eadfd2;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+  }
+
+
+  .hours-info {
+    padding: 15px 9px;
+
+    font-size: 14px;
+  }
+
+
+  .hours-info strong {
+    font-size: 17px;
+  }
+
+
+  .hours-info span {
+    font-size: 11px;
+  }
+
 
   .map-pc {
     display: none;
   }
 
 
-  .map-mobile {
-    display: block;
+  .map-link {
+    display: inline-block;
 
-    margin-top: 25px;
+    margin-top: 12px;
+
+    padding: 10px 20px;
+
+    color: #ffffff;
+
+    background: #765b48;
+
+    border-radius: 25px;
+
+    font-size: 13px;
+
+    font-weight: bold;
   }
 
-
-  /* ------------------------------------------
-     FOOTER
-  ------------------------------------------ */
 
   .footer {
-    padding:
-      40px 15px;
-  }
-
-}
-
-
-/* ==================================================
-   VERY SMALL SMARTPHONE
-================================================== */
-
-@media (max-width: 380px) {
-
-  .header h1 {
-    font-size: 31px;
+    padding: 35px 15px;
   }
 
 
-  .nav a {
-    font-size: 10px;
-
-    padding:
-      5px 6px;
-  }
-
-
-  .calendar-button {
-    width: 34px;
-
-    height: 34px;
-
+  .footer-logo {
     font-size: 23px;
   }
 
 
-  .calendar-day {
-    min-height: 42px;
+  .footer-place {
+    font-size: 10px;
   }
 
 }
