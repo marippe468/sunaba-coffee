@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +12,12 @@
 
 <body>
 
-<!-- ==================================================
-     HEADER
-================================================== -->
-
 <header class="site-header">
 
   <div class="header-inner">
 
     <div class="brand-area">
+
       <h1>SUNABA COFFEE</h1>
 
       <p class="brand-route">しまなみ海道</p>
@@ -30,6 +28,7 @@
 
       <p class="station-info">
         JR今治駅、バス停から徒歩3分
+        <span class="wifi-info">🐾 Wi-Fi・電源利用可</span>
       </p>
 
       <p class="brand-message">
@@ -39,10 +38,9 @@
       <p class="dog-friendly">
         🐾 愛犬とともに・テラス席OK
       </p>
+
     </div>
 
-
-    <!-- 営業状況 -->
 
     <div class="business-info">
 
@@ -76,7 +74,11 @@
 
   <div class="mobile-nav-wrapper">
 
-    <button id="menuToggle" class="menu-toggle" aria-label="メニュー">
+    <button
+      id="menuToggle"
+      class="menu-toggle"
+      type="button"
+      aria-label="メニュー">
       ☰
     </button>
 
@@ -96,11 +98,12 @@
 
 
 
-<!-- ==================================================
-     HERO / SLIDESHOW
-================================================== -->
-
 <main>
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
 
 <section class="hero">
 
@@ -109,38 +112,32 @@
     <img
       src="image/gaikan.jpg"
       class="hero-slide active"
-      alt="SUNABA COFFEE 外観"
-    >
+      alt="SUNABA COFFEE 外観">
 
     <img
       src="image/coffee2.jpg"
       class="hero-slide"
-      alt="コーヒー"
-    >
+      alt="コーヒー">
 
     <img
       src="image/gaikan2.jpg"
       class="hero-slide"
-      alt="SUNABA COFFEE 外観"
-    >
+      alt="SUNABA COFFEE 外観">
 
     <img
       src="image/tennai1.jpg"
       class="hero-slide"
-      alt="店内"
-    >
+      alt="店内">
 
     <img
       src="image/tennai2.jpg"
       class="hero-slide"
-      alt="店内"
-    >
+      alt="店内">
 
     <img
       src="image/tennai3.jpg"
       class="hero-slide"
-      alt="店内"
-    >
+      alt="店内">
 
   </div>
 
@@ -149,14 +146,19 @@
 
 
 <!-- ==================================================
-     INTRO
+     ABOUT
 ================================================== -->
 
 <section class="intro reveal">
 
   <div class="section-heading">
+
     <span>ABOUT</span>
-    <h2>～ いつもの一杯に、旅の途中の一杯にも。～</h2>
+
+    <h2>
+      ～ いつもの一杯に、旅の途中の一杯にも。～
+    </h2>
+
   </div>
 
   <p>
@@ -178,13 +180,81 @@
 <section id="news" class="section reveal">
 
   <div class="section-heading">
+
     <span>NEWS & EVENT</span>
+
     <h2>お知らせ</h2>
+
   </div>
 
   <p class="section-lead">
     SUNABA COFFEEからのお知らせ・イベント情報です。
   </p>
+
+
+  <!-- コーヒーチケット固定 -->
+
+  <article class="ticket-news-card">
+
+    <div class="ticket-news-header">
+
+      <div>
+
+        <div class="ticket-news-label">
+          ☕ 販売中
+        </div>
+
+        <div class="ticket-news-title">
+          コーヒーチケット販売中
+        </div>
+
+      </div>
+
+      <button
+        id="ticketToggle"
+        class="ticket-toggle"
+        type="button"
+        aria-expanded="false">
+        ▽
+      </button>
+
+    </div>
+
+
+    <div id="ticketDetail" class="ticket-news-detail">
+
+      <p>
+        <strong>5杯分　2,200円</strong>
+      </p>
+
+      <p>
+        お好きな飲み物にご利用いただけます。
+      </p>
+
+      <p>
+        有効期間：購入から6か月未満
+      </p>
+
+      <p>
+        店頭のみで販売しています。
+      </p>
+
+      <p>
+        スマートフォンで残り回数を管理できるようにしています。
+      </p>
+
+      <p>
+        ご家族へのプレゼントにもおすすめです。
+      </p>
+
+      <p>
+        詳しくは店頭でお気軽にお尋ねください。
+      </p>
+
+    </div>
+
+  </article>
+
 
   <div id="newsList" class="news-list"></div>
 
@@ -196,11 +266,16 @@
      CALENDAR
 ================================================== -->
 
-<section id="calendar-section" class="section reveal">
+<section
+  id="calendar-section"
+  class="section reveal">
 
   <div class="section-heading">
+
     <span>CALENDAR</span>
+
     <h2>カレンダー</h2>
+
   </div>
 
   <p class="calendar-note">
@@ -210,14 +285,21 @@
 
   <div class="calendar-controls">
 
-    <button id="prevMonth" type="button">〈 前月</button>
+    <button
+      id="prevMonth"
+      type="button">
+      〈 前月
+    </button>
 
     <h3 id="calendarTitle"></h3>
 
-    <button id="nextMonth" type="button">次月 〉</button>
+    <button
+      id="nextMonth"
+      type="button">
+      次月 〉
+    </button>
 
   </div>
-
 
   <div id="calendar" class="calendar"></div>
 
@@ -226,14 +308,19 @@
 
 
 <!-- ==================================================
-     OWNER / 店主のつぶやき
+     OWNER
 ================================================== -->
 
-<section id="about" class="section reveal">
+<section
+  id="about"
+  class="section reveal">
 
   <div class="section-heading">
+
     <span>OWNER'S NOTE</span>
+
     <h2>店主のつぶやき</h2>
+
   </div>
 
 
@@ -242,12 +329,14 @@
     <img
       src="image/owner.jpg"
       alt="店主"
-      class="owner-photo"
-    >
+      class="owner-photo">
+
 
     <div class="owner-text">
 
-      <h3>気軽に立ち寄れる、駅前の喫茶店</h3>
+      <h3>
+        気軽に立ち寄れる、駅前の喫茶店
+      </h3>
 
       <p>
         駅前で、気軽に立ち寄っていただける喫茶店を
@@ -260,7 +349,9 @@
       </p>
 
 
-      <h3>コーヒーのこだわり</h3>
+      <h3>
+        コーヒーのこだわり
+      </h3>
 
       <p>
         私はブラジルコーヒーが好きで、
@@ -269,7 +360,9 @@
       </p>
 
 
-      <h3>愛犬家、テラス席</h3>
+      <h3>
+        愛犬家、テラス席
+      </h3>
 
       <p>
         私は大の愛犬家です。
@@ -282,18 +375,47 @@
   </div>
 
 
+  <!-- Dog Friendly Terrace -->
+
   <div class="dog-terrace-card">
 
-    <div class="dog-terrace-icon">🐾</div>
+    <div class="dog-terrace-photo">
 
-    <div>
-      <h3>Dog Friendly Terrace</h3>
+      <img
+        src="image/dog.jpg"
+        alt="愛犬とテラス席">
+
+    </div>
+
+
+    <div class="dog-terrace-text">
+
+      <span class="dog-terrace-en">
+        DOG FRIENDLY TERRACE
+      </span>
+
+      <h3>
+        Dog Friendly Terrace
+      </h3>
+
       <p>
         愛犬と一緒に、ゆっくりどうぞ。
       </p>
+
+      <p>
+        テラス席はペットOK。
+        お散歩の途中や旅の途中にも、
+        愛犬と一緒に気軽にお立ち寄りください。
+      </p>
+
     </div>
 
   </div>
+
+
+  <p class="station-message">
+    電車の音が聞こえたら、もうすぐ駅です。
+  </p>
 
 </section>
 
@@ -303,11 +425,16 @@
      MENU
 ================================================== -->
 
-<section id="menu" class="section reveal">
+<section
+  id="menu"
+  class="section reveal">
 
   <div class="section-heading">
+
     <span>MENU</span>
+
     <h2>メニュー</h2>
+
   </div>
 
   <p class="section-lead">
@@ -323,23 +450,25 @@
     <div class="menu-box menu-photo-box">
 
       <div class="menu-box-title">
+
         <span>PHOTO</span>
+
         <h3>写真</h3>
+
       </div>
+
 
       <div class="menu-photo-slideshow">
 
         <img
           src="image/menu.jpg"
           class="menu-photo active"
-          alt="サンドイッチ"
-        >
+          alt="サンドイッチ">
 
         <img
           src="image/coffee2.jpg"
           class="menu-photo"
-          alt="コーヒー"
-        >
+          alt="コーヒー">
 
       </div>
 
@@ -352,8 +481,11 @@
     <div class="menu-box">
 
       <div class="menu-box-title">
+
         <span>MORNING</span>
+
         <h3>モーニング</h3>
+
       </div>
 
       <p class="menu-time">
@@ -362,35 +494,20 @@
 
 
       <div class="menu-item">
-
-        <span>
-          トースト、サラダ、コーヒー
-        </span>
-
+        <span>トースト、サラダ、コーヒー</span>
         <strong>500円</strong>
-
       </div>
 
-
       <div class="menu-item">
-
-        <span>
-          ホットサンド、サラダ、コーヒー
-        </span>
-
+        <span>ホットサンド、サラダ、コーヒー</span>
         <strong>550円</strong>
-
       </div>
 
-
       <div class="menu-item">
-
         <span>
           和食セット（おにぎり2個、卵、サラダ）、コーヒー
         </span>
-
         <strong>600円</strong>
-
       </div>
 
     </div>
@@ -402,12 +519,13 @@
     <div class="menu-box">
 
       <div class="menu-box-title">
+
         <span>LIGHT MEAL</span>
+
         <h3>軽食</h3>
+
       </div>
 
-
-      <!-- おすすめ -->
 
       <div class="recommended-menu">
 
@@ -416,8 +534,8 @@
         </div>
 
         <div class="recommend-name">
-          日替わりサンドイッチ<br>
-          （地産野菜、たまご）
+          日替わりサンドイッチ
+          <span>（地産野菜、たまご）</span>
         </div>
 
         <div class="recommend-limit">
@@ -432,57 +550,28 @@
 
 
       <div class="menu-item">
-
-        <span>
-          サンドイッチ（たまご）
-        </span>
-
+        <span>サンドイッチ（たまご）</span>
         <strong>650円</strong>
-
       </div>
 
-
       <div class="menu-item">
-
-        <span>
-          サンドイッチ（ハム・レタス）
-        </span>
-
+        <span>サンドイッチ（ハム・レタス）</span>
         <strong>650円</strong>
-
       </div>
 
-
       <div class="menu-item">
-
-        <span>
-          カレー（ミニサラダ付き）
-        </span>
-
+        <span>カレー（ミニサラダ付き）</span>
         <strong>750円</strong>
-
       </div>
 
-
       <div class="menu-item">
-
-        <span>
-          エビフライカレー（ミニサラダ付き）
-        </span>
-
+        <span>エビフライカレー（ミニサラダ付き）</span>
         <strong>850円</strong>
-
       </div>
 
-
       <div class="menu-item">
-
-        <span>
-          ピラフ（ミニサラダ付き）
-        </span>
-
+        <span>ピラフ（ミニサラダ付き）</span>
         <strong>800円</strong>
-
       </div>
 
     </div>
@@ -494,25 +583,10 @@
     <div class="menu-box">
 
       <div class="menu-box-title">
+
         <span>DRINK</span>
+
         <h3>飲み物</h3>
-      </div>
-
-
-      <div class="coffee-special">
-
-        <span class="coffee-special-label">
-          店主おすすめ
-        </span>
-
-        <strong>
-          BRAZIL COFFEE
-        </strong>
-
-        <p>
-          香りと飲みやすさを楽しめる、
-          店主お気に入りの一杯。
-        </p>
 
       </div>
 
@@ -542,6 +616,37 @@
         <strong>550円</strong>
       </div>
 
+
+      <!-- コーヒーチケット -->
+
+      <div class="drink-ticket">
+
+        <div class="drink-ticket-title">
+          ☕ コーヒーチケット
+        </div>
+
+        <div class="drink-ticket-price">
+          2,200円
+        </div>
+
+        <p>
+          5杯分・お好きな飲み物にご利用いただけます。
+        </p>
+
+        <p>
+          有効期間：購入から6か月未満
+        </p>
+
+        <p>
+          店頭のみで販売しています。
+        </p>
+
+        <p>
+          スマートフォンで残り回数を管理できます。
+        </p>
+
+      </div>
+
     </div>
 
 
@@ -551,16 +656,17 @@
     <div class="menu-box">
 
       <div class="menu-box-title">
+
         <span>DESSERT</span>
+
         <h3>デザート</h3>
+
       </div>
 
 
       <div class="menu-item">
 
-        <span>
-          日替わりデザート
-        </span>
+        <span>日替わりデザート</span>
 
         <strong>
           店内メニューをご覧ください
@@ -571,9 +677,7 @@
 
       <div class="menu-item">
 
-        <span>
-          パンケーキ
-        </span>
+        <span>パンケーキ</span>
 
         <strong>
           店内メニューをご覧ください
@@ -584,9 +688,7 @@
 
       <div class="menu-item">
 
-        <span>
-          ケーキセット
-        </span>
+        <span>ケーキセット</span>
 
         <strong>800円</strong>
 
@@ -601,16 +703,17 @@
     <div class="menu-box">
 
       <div class="menu-box-title">
+
         <span>TAKE OUT</span>
+
         <h3>テイクアウト</h3>
+
       </div>
 
 
       <div class="menu-item">
 
-        <span>
-          コーヒー
-        </span>
+        <span>コーヒー</span>
 
         <strong>
           店内メニューをご覧ください
@@ -621,49 +724,13 @@
 
       <div class="menu-item">
 
-        <span>
-          サンドイッチ
-        </span>
+        <span>サンドイッチ</span>
 
         <strong>
           店内メニューをご覧ください
         </strong>
 
       </div>
-
-    </div>
-
-
-
-    <!-- コーヒーチケット -->
-
-    <div class="menu-box coffee-ticket-box">
-
-      <div class="menu-box-title">
-        <span>COFFEE TICKET</span>
-        <h3>コーヒーチケット</h3>
-      </div>
-
-
-      <div class="ticket-price">
-        2,200円
-      </div>
-
-      <p class="ticket-count">
-        5杯分
-      </p>
-
-      <p>
-        お好きな飲み物にご利用いただけます。
-      </p>
-
-      <p>
-        有効期間：購入から6か月未満
-      </p>
-
-      <p class="ticket-store">
-        <strong>店頭のみで販売しています。</strong>
-      </p>
 
     </div>
 
@@ -678,11 +745,16 @@
      ACCESS
 ================================================== -->
 
-<section id="access" class="section reveal">
+<section
+  id="access"
+  class="section reveal">
 
   <div class="section-heading">
+
     <span>ACCESS</span>
+
     <h2>アクセス</h2>
+
   </div>
 
 
@@ -700,7 +772,8 @@
       </p>
 
       <p>
-        JR今治駅、バス停から徒歩3分
+        JR今治駅、バス停から徒歩3分<br>
+        🐾 Wi-Fi・電源利用可
       </p>
 
       <p>
@@ -714,7 +787,6 @@
     </div>
 
 
-
     <div class="access-card">
 
       <h3>駐車場</h3>
@@ -725,7 +797,6 @@
       </p>
 
     </div>
-
 
 
     <div class="access-card">
@@ -743,11 +814,13 @@
 
     </div>
 
-
   </div>
 
 
-  <!-- Google Map -->
+  <p class="station-message access-message">
+    電車の音が聞こえたら、もうすぐ駅です。
+  </p>
+
 
   <div class="map-wrapper">
 
@@ -760,8 +833,6 @@
   </div>
 
 
-  <!-- SNS -->
-
   <div class="sns-links">
 
     <a href="#" target="_blank">Instagram</a>
@@ -771,8 +842,6 @@
   </div>
 
 
-  <!-- QR -->
-
   <div class="qr-area">
 
     <p>
@@ -781,15 +850,13 @@
 
     <img
       id="qrCode"
-      alt="SUNABA COFFEE QRコード"
-    >
+      alt="SUNABA COFFEE QRコード">
 
     <small>
       スマホでアクセス
     </small>
 
   </div>
-
 
 </section>
 
@@ -803,17 +870,19 @@
 
 <footer class="site-footer">
 
-  <p>
+  <div class="footer-name">
     SUNABA COFFEE
-  </p>
+  </div>
 
-  <p>
+  <div class="footer-sub">
     ～愛媛県今治市・夫婦で営む小さな駅前カフェ～
-  </p>
+  </div>
 
-  <p>
-    © SUNABA COFFEE
-  </p>
+  <div class="footer-line"></div>
+
+  <div class="footer-copy">
+    © 2026 SUNABA COFFEE
+  </div>
 
 </footer>
 
@@ -826,7 +895,8 @@
 <button
   id="topButton"
   class="top-button"
-  aria-label="トップへ戻る">
+  aria-label="トップへ戻る"
+  type="button">
   🐾
 </button>
 
